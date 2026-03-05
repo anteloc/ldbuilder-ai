@@ -1,0 +1,23 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: ldbuilder-ai
+message: >-
+  If you use this software or research work, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Carlos
+    family-names: Antelo
+repository-code: 'https://github.com/anteloc/ldbuilder-ai'
+abstract: LDraw/LEGO CAD models assembly by agentic AI
+keywords:
+  - ldraw
+  - agentic
+  - AI
+  - LEGO
+  - generative
+  - LLM
+  - CAD
+license: CC-BY-SA-4.0
