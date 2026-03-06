@@ -1,0 +1,156 @@
+0 FILE generated_fighter_jet.mpd
+0 Fighter Jet
+0 Name: generated_fighter_jet.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_main.ldr
+
+
+
+0 FILE jet_main.ldr
+0 Fighter Jet Main
+0 Name: jet_main.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_fuselage.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_wings.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_nose.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_engines.ldr
+
+
+
+0 FILE jet_fuselage.ldr
+0 Fuselage
+0 Name: jet_fuselage.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+1 4 0 -8 -10 -1 0 0 0 1 0 0 0 -1 3023b.dat
+1 4 0 -8 10 -1 0 0 0 1 0 0 0 -1 3023b.dat
+0 STEP
+1 72 0 -16 0 0 0 1 0 1 0 -1 0 0 3022.dat
+1 72 0 -16 -20 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+1 4 30 -24 -20 0 0 -1 0 1 0 1 0 0 3665a.dat
+1 4 -30 -24 -20 0 0 1 0 1 0 -1 0 0 3665a.dat
+1 4 30 -24 20 0 0 -1 0 1 0 1 0 0 3665a.dat
+1 4 -30 -24 20 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 STEP
+1 72 0 -24 -40 0 0 1 0 1 0 -1 0 0 3832.dat
+0 STEP
+1 4 0 -32 -30 0 0 1 0 1 0 -1 0 0 3022.dat
+1 4 0 -32 -50 0 0 1 0 1 0 -1 0 0 3022.dat
+0 STEP
+1 4 30 -32 0 0 0 1 0 1 0 -1 0 0 4085b.dat
+1 4 -30 -32 0 0 0 -1 0 1 0 1 0 0 4085b.dat
+0 STEP
+1 4 0 -40 -20 0 0 1 0 1 0 -1 0 0 3001.dat
+0 STEP
+1 47 0 -48 0 0 0 1 0 1 0 -1 0 0 4474.dat
+0 STEP
+1 4 0 -56 10 0 0 1 0 1 0 -1 0 0 3039.dat
+1 4 0 -56 -30 0 0 -1 0 1 0 1 0 0 3039.dat
+0 STEP
+1 72 0 -56 -90 1 0 0 0 1 0 0 0 1 3701.dat
+1 72 0 -64 -90 1 0 0 0 1 0 0 0 1 3701.dat
+
+
+
+0 FILE jet_wings.ldr
+0 Wings
+0 Name: jet_wings.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 4 140 -40 100 0 0 -1 0 1 0 1 0 0 3933.dat
+1 4 -140 -40 100 0 0 1 0 1 0 -1 0 0 3934.dat
+0 STEP
+1 72 140 -48 100 0 0 -1 0 1 0 1 0 0 2419.dat
+1 72 -140 -48 100 0 0 1 0 1 0 -1 0 0 2419.dat
+0 STEP
+1 4 30 -48 60 0 0 -1 0 1 0 1 0 0 4871.dat
+1 4 -30 -48 60 0 0 1 0 1 0 -1 0 0 4871.dat
+0 STEP
+1 4 30 -56 50 0 0 -1 0 1 0 1 0 0 4070.dat
+1 4 -30 -56 50 0 0 1 0 1 0 -1 0 0 4070.dat
+0 STEP
+1 36 30 -64 70 0 0 -1 0 1 0 1 0 0 3070b.dat
+1 36 -30 -64 70 0 0 1 0 1 0 -1 0 0 3070b.dat
+0 STEP
+1 4 0 -72 100 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+1 4 30 -64 110 0 0 1 0 1 0 -1 0 0 4854.dat
+1 4 -30 -64 110 0 0 -1 0 1 0 1 0 0 4871.dat
+0 STEP
+1 36 30 -80 80 0 0 -1 0 0 1 -1 0 0 3070b.dat
+1 36 -30 -80 80 0 0 1 0 0 -1 -1 0 0 3070b.dat
+
+
+
+0 FILE jet_nose.ldr
+0 Nose Cone
+0 Name: jet_nose.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 4 0 -24 -130 1 0 0 0 1 0 0 0 1 3747a.dat
+1 4 0 -24 -170 1 0 0 0 1 0 0 0 1 3747a.dat
+0 STEP
+1 4 0 -32 -150 -1 0 0 0 1 0 0 0 -1 3023b.dat
+0 STEP
+1 4 30 -32 -110 0 0 -1 0 1 0 1 0 0 4070.dat
+1 4 -30 -32 -110 0 0 1 0 1 0 -1 0 0 4070.dat
+0 STEP
+1 4 0 -40 -130 1 0 0 0 1 0 0 0 1 3039.dat
+1 4 0 -40 -170 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+1 4 0 -48 -150 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+1 4 0 -56 -150 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 STEP
+1 4 0 -64 -148 1 0 0 0 1 0 0 0 1 4589.dat
+0 STEP
+1 36 30 -32 -148 0 0 1 -1 0 0 0 -1 0 3957a.dat
+1 36 -30 -32 -148 0 0 -1 1 0 0 0 -1 0 3957a.dat
+
+
+
+0 FILE jet_engines.ldr
+0 Engines
+0 Name: jet_engines.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 72 30 -24 150 0 0 1 0 1 0 -1 0 0 3956.dat
+1 72 -30 -24 150 0 0 1 0 1 0 -1 0 0 3956.dat
+0 STEP
+1 72 30 -32 160 -1 0 0 0 0 1 0 1 0 3941.dat
+1 72 -30 -32 160 -1 0 0 0 0 1 0 1 0 3941.dat
+0 STEP
+1 0 30 -32 175 1 0 0 0 0 1 0 -1 0 4740.dat
+1 0 -30 -32 175 1 0 0 0 0 1 0 -1 0 4740.dat
+0 STEP
+1 4 30 -56 130 0 0 -1 0 1 0 1 0 0 4589.dat
+1 4 -30 -56 130 0 0 1 0 1 0 -1 0 0 4589.dat
+0 STEP
+1 72 30 -64 130 1 0 0 0 1 0 0 0 1 3062b.dat
+1 72 -30 -64 130 1 0 0 0 1 0 0 0 1 3062b.dat
+

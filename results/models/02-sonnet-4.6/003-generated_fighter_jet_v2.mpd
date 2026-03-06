@@ -1,0 +1,189 @@
+0 FILE generated_fighter_jet.mpd
+0 Fighter Jet
+0 Name: generated_fighter_jet.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_main.ldr
+
+
+
+0 FILE jet_main.ldr
+0 Fighter Jet Main
+0 Name: jet_main.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_fuselage.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_wings.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_nose.ldr
+0 STEP
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 jet_engines.ldr
+
+
+
+0 FILE jet_fuselage.ldr
+0 Fuselage
+0 Name: jet_fuselage.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Base plate — wide central body
+1 4 0 0 0 0 0 1 0 1 0 -1 0 0 3030.dat
+0 STEP
+0 Side plates flush on fuselage top — symmetric at +10 / -10
+1 4 0 -8 10 -1 0 0 0 1 0 0 0 -1 3023b.dat
+1 4 0 -8 -10 -1 0 0 0 1 0 0 0 -1 3023b.dat
+0 STEP
+0 Grey accent plates — symmetric at +20 / -20
+1 72 0 -16 20 0 0 1 0 1 0 -1 0 0 3022.dat
+1 72 0 -16 -20 0 0 -1 0 1 0 1 0 0 3022.dat
+0 STEP
+0 Side slope shoulders — 4 pieces, fully symmetric left+right, front+rear
+1 4 30 -24 20 0 0 -1 0 1 0 1 0 0 3665a.dat
+1 4 -30 -24 20 0 0 1 0 1 0 -1 0 0 3665a.dat
+1 4 30 -24 -20 0 0 -1 0 1 0 1 0 0 3665a.dat
+1 4 -30 -24 -20 0 0 1 0 1 0 -1 0 0 3665a.dat
+0 STEP
+0 Central spine plate
+1 72 0 -24 0 0 0 1 0 1 0 -1 0 0 3832.dat
+0 STEP
+0 Fuselage body bricks — central, symmetric
+1 4 0 -32 20 0 0 1 0 1 0 -1 0 0 3022.dat
+1 4 0 -32 -20 0 0 -1 0 1 0 1 0 0 3022.dat
+0 STEP
+0 Fuselage side clips — symmetric left/right
+1 4 30 -32 0 0 0 1 0 1 0 -1 0 0 4085b.dat
+1 4 -30 -32 0 0 0 -1 0 1 0 1 0 0 4085b.dat
+0 STEP
+0 Central raised body section
+1 4 0 -40 0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 STEP
+0 Cockpit canopy — centered on fuselage, rotated correctly to open forward
+1 47 0 -48 -10 0 0 1 0 1 0 -1 0 0 4474.dat
+0 STEP
+0 Rear fuselage slopes — symmetric front/rear
+1 4 0 -56 20 0 0 1 0 1 0 -1 0 0 3039.dat
+1 4 0 -56 -20 0 0 -1 0 1 0 1 0 0 3039.dat
+0 STEP
+0 Tail technic struts — symmetric
+1 72 0 -56 60 1 0 0 0 1 0 0 0 1 3701.dat
+1 72 0 -64 60 1 0 0 0 1 0 0 0 1 3701.dat
+
+
+
+0 FILE jet_wings.ldr
+0 Wings
+0 Name: jet_wings.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Main wing panels — mirrored left/right using 3933 (left) and 3934 (right)
+1 4 140 -40 60 0 0 -1 0 1 0 1 0 0 3933.dat
+1 4 -140 -40 60 0 0 1 0 1 0 -1 0 0 3934.dat
+0 STEP
+0 Wing extension plates — symmetric positions and rotations
+1 72 140 -48 60 0 0 -1 0 1 0 1 0 0 2419.dat
+1 72 -140 -48 60 0 0 1 0 1 0 -1 0 0 2419.dat
+0 STEP
+0 Wing root inner slopes — symmetric: right side +30 CCW, left side -30 CW
+1 4 30 -48 20 0 0 -1 0 1 0 1 0 0 4871.dat
+1 4 -30 -48 20 0 0 1 0 1 0 -1 0 0 4871.dat
+0 STEP
+0 Wing root headlight detail — symmetric
+1 4 30 -56 20 0 0 -1 0 1 0 1 0 0 4070.dat
+1 4 -30 -56 20 0 0 1 0 1 0 -1 0 0 4070.dat
+0 STEP
+0 Wing tip accent tiles — symmetric
+1 36 30 -64 40 0 0 -1 0 1 0 1 0 0 3070b.dat
+1 36 -30 -64 40 0 0 1 0 1 0 -1 0 0 3070b.dat
+0 STEP
+0 Central wing spine — single centered piece
+1 4 0 -72 60 0 0 -1 0 1 0 1 0 0 3666.dat
+1 4 0 -72 -40 0 0 -1 0 1 0 1 0 0 3666.dat
+0 STEP
+0 Tail fins — BOTH use 4854 (4x4 double inverted), symmetric orientations
+1 4 30 -64 80 0 0 1 0 1 0 -1 0 0 4854.dat
+1 4 -30 -64 80 0 0 -1 0 1 0 1 0 0 4854.dat
+0 STEP
+0 Tail fin tip tiles — symmetric
+1 36 30 -80 70 0 0 -1 0 0 1 -1 0 0 3070b.dat
+1 36 -30 -80 70 0 0 1 0 0 -1 -1 0 0 3070b.dat
+
+
+
+0 FILE jet_nose.ldr
+0 Nose Cone
+0 Name: jet_nose.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Nose inverted slopes — symmetric left/right
+1 4 0 -24 -110 1 0 0 0 1 0 0 0 1 3747a.dat
+1 4 0 -24 -150 1 0 0 0 1 0 0 0 1 3747a.dat
+0 STEP
+0 Nose central plate
+1 4 0 -32 -130 -1 0 0 0 1 0 0 0 -1 3023b.dat
+0 STEP
+0 Nose side headlight bricks — symmetric
+1 4 30 -32 -110 0 0 -1 0 1 0 1 0 0 4070.dat
+1 4 -30 -32 -110 0 0 1 0 1 0 -1 0 0 4070.dat
+0 STEP
+0 Nose slope bricks — symmetric front/back pair
+1 4 0 -40 -110 1 0 0 0 1 0 0 0 1 3039.dat
+1 4 0 -40 -150 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+0 Nose tip brick
+1 4 0 -48 -130 1 0 0 0 1 0 0 0 1 3003.dat
+0 STEP
+0 Nose ramp slope
+1 4 0 -56 -130 0 0 1 0 1 0 -1 0 0 3040b.dat
+0 STEP
+0 Nose tip cone
+1 4 0 -64 -128 1 0 0 0 1 0 0 0 1 4589.dat
+0 STEP
+0 Side antennas — symmetric left/right
+1 36 30 -32 -130 0 0 1 -1 0 0 0 -1 0 3957a.dat
+1 36 -30 -32 -130 0 0 -1 1 0 0 0 -1 0 3957a.dat
+
+
+
+0 FILE jet_engines.ldr
+0 Engines
+0 Name: jet_engines.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Engine mounting brackets — mirrored: right uses CW rotation, left uses CCW
+1 72 30 -32 130 0 0 -1 0 1 0 1 0 0 3956.dat
+1 72 -30 -32 130 0 0 1 0 1 0 -1 0 0 3956.dat
+0 STEP
+0 Engine round body — symmetric, identical rotation (round part, rotation-neutral)
+1 72 30 -32 150 -1 0 0 0 0 1 0 1 0 3941.dat
+1 72 -30 -32 150 -1 0 0 0 0 1 0 1 0 3941.dat
+0 STEP
+0 Engine exhaust dishes — symmetric
+1 0 30 -32 165 1 0 0 0 0 1 0 -1 0 4740.dat
+1 0 -30 -32 165 1 0 0 0 0 1 0 -1 0 4740.dat
+0 STEP
+0 Engine intake cones — symmetric, mirrored facing
+1 4 30 -32 110 0 0 -1 0 1 0 1 0 0 4589.dat
+1 4 -30 -32 110 0 0 1 0 1 0 -1 0 0 4589.dat
+0 STEP
+0 Engine detail studs — symmetric
+1 72 30 -32 120 1 0 0 0 1 0 0 0 1 3062b.dat
+1 72 -30 -32 120 1 0 0 0 1 0 0 0 1 3062b.dat
+

@@ -17,3 +17,8 @@
 {"category":"City / Town","description":"(RESULT) remove the people from the attached model","keywords":["train","station","minifig"],"name":"01-opus-4.5/011-train_station_no_people.glb"}
 {"category":"Everyday Life / Interior","description":"(INPUT) ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"01-opus-4.5/012-10267-1.mpd"}
 {"category":"Everyday Life / Interior","description":"(RESULT) ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"01-opus-4.5/012-generated_10267_with_people.mpd"}
+{"category":"Vehicles","description":"Create a car, you decide about its features","keywords":["car","vehicle","model car","custom car","automobile"],"name":"02-sonnet-4.6/001-generated_sports_car.glb"}
+{"category":"Animals","description":"now, a cat","keywords":["cat","animal","pet"],"name":"02-sonnet-4.6/002-generated_cat.glb"}
+{"category":"Vehicles","description":"now, a plane, a fast one!","keywords":["plane","vehicle","model plane","custom plane","aircraft"],"name":"02-sonnet-4.6/003-generated_fighter_jet.glb"}
+{"category":"Vehicles","description":"it has some structural defects, symmetry errors... fix them.","keywords":["plane","vehicle","model plane","custom plane","aircraft"],"name":"02-sonnet-4.6/003-generated_fighter_jet_v2.glb"}
+
