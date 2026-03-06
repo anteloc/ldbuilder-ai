@@ -1,0 +1,129 @@
+// LDraw grammar (Lark) - unified MPD model approach
+//
+// This grammar treats all LDraw files as MPD models.
+// A plain (non-MPD) file is simply an MPD with one subfile that has no FILE line.
+//
+// Key changes:
+//  - Removed plain_model as a separate alternative
+//  - Made file_line optional in subfile_header
+//  - All files parse as mpd_model with one or more subfiles
+//
+
+// Some files start with one or more blank lines
+start: empty_line* mpd_model
+
+// MPD container: one or more subfiles
+// Each subfile may or may not have a FILE line
+mpd_model: subfile+
+
+// A subfile has an optional FILE line, then description and other headers, then body
+subfile: subfile_header body
+
+// --- Headers ---
+// Subfile header: optional FILE line, then description, then other header lines
+subfile_header: file_line? description_line header_line*
+
+// The first description line in LDraw files is type 0 and can be any text (often the model title).
+// Some files also start with an empty "0" line; allow that too.
+description_line: CMD_0 TEXT? NEWLINE?
+
+// Header lines we explicitly recognize + a fallback for any other type-0 line.
+?header_line: name_line
+            | author_line
+            | ldraw_org_line
+            | license_line
+            | step_line
+            | meta_line
+            | empty_line
+
+file_line: META_FILE TEXT NEWLINE?
+name_line: META_NAME TEXT? NEWLINE?
+author_line: META_AUTHOR TEXT? NEWLINE?
+ldraw_org_line: META_LDRAW_ORG TEXT? NEWLINE?
+license_line: META_LICENSE TEXT? NEWLINE?
+
+// STEP can appear in headers in some MPDs, and in bodies.
+step_line: META_STEP NEWLINE?
+
+// Any other type-0 line (including !KEYWORDS, !CATEGORY, BFC, etc.)
+meta_line: CMD_0 TEXT? NEWLINE?
+
+// --- Body ---
+body: line*
+
+?line: part_line
+     | line_line
+     | tri_line
+     | quad_line
+     | cond_line
+     | step_line
+     | author_line
+     | ldraw_org_line
+     | license_line
+     | meta_line
+     | empty_line
+
+// Line Type 1: Sub-file reference
+part_line: CMD_1 color position matrix file_ref NEWLINE?
+
+// Line Type 2: Line
+line_line: CMD_2 color point point NEWLINE?
+
+// Line Type 3: Triangle
+tri_line: CMD_3 color point point point NEWLINE?
+
+// Line Type 4: Quadrilateral
+quad_line: CMD_4 color point point point point NEWLINE?
+
+// Line Type 5: Conditional line
+cond_line: CMD_5 color point point point point NEWLINE?
+
+position: NUMBER NUMBER NUMBER
+matrix: NUMBER NUMBER NUMBER NUMBER NUMBER NUMBER NUMBER NUMBER NUMBER
+point: NUMBER NUMBER NUMBER
+
+color: COLOR
+file_ref: TEXT
+
+empty_line: NEWLINE
+
+// --- Terminals ---
+// Priorities ensure meta directives are tokenized as single tokens rather than CMD_0 + TEXT.
+//
+// IMPORTANT:
+// - Do NOT use inline global flags like (?m) in token regexes because Lark may
+//   combine them into a single master regex; Python then errors with
+//   "global flags not at the start".
+// - We must also ensure command/meta tokens only match at the start of a line,
+//   otherwise "0 1" can become CMD_0 + CMD_1, breaking description/comment lines.
+//
+// Anchor = start-of-input OR preceded by "\n"
+META_FILE.5: /(?:^|(?<=\n))0[ \t]+FILE/
+META_NAME.4: /(?:^|(?<=\n))0[ \t]+Name:/
+META_AUTHOR.4: /(?:^|(?<=\n))0[ \t]+Author:/
+META_STEP.4: /(?:^|(?<=\n))0[ \t]+STEP/
+
+// Accept both "0 !LDRAW_ORG" and "0 LDRAW_ORG"
+META_LDRAW_ORG.3: /(?:^|(?<=\n))0[ \t]+!?LDRAW_ORG/
+
+// Accept both "0 !LICENSE" and "0 LICENSE"
+META_LICENSE.3: /(?:^|(?<=\n))0[ \t]+!?LICENSE/
+
+// Command digits (anchored to beginning-of-line).
+CMD_0: /(?:^|(?<=\n))0/
+CMD_1: /(?:^|(?<=\n))1[ \t]+/
+CMD_2: /(?:^|(?<=\n))2[ \t]+/
+CMD_3: /(?:^|(?<=\n))3[ \t]+/
+CMD_4: /(?:^|(?<=\n))4[ \t]+/
+CMD_5: /(?:^|(?<=\n))5[ \t]+/
+
+// Everything to end of line (no newline). Used for filenames, comments, etc.
+TEXT: /[^\r\n]+/
+
+// Color can be an integer or extended hex
+COLOR: /0x[0-9A-Fa-f]+|-?\d+/
+
+%import common.SIGNED_NUMBER -> NUMBER
+%import common.NEWLINE       -> NEWLINE
+%import common.WS_INLINE
+%ignore WS_INLINE
