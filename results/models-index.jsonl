@@ -1,19 +1,19 @@
-{"category":"Vehicles","description":"Create a car, you decide about its features","keywords":["car","vehicle","model car","custom car","automobile"],"name":"2026-01-22/001-generated_sports_car.glb"}
-{"category":"Castles","description":"now, create a paladin","keywords":["knight","medieval","minifig"],"name":"2026-01-22/002-generated_paladin.glb"}
-{"category":"Castles","description":"now, another paladin, but this time, a dragonslayer","keywords":["knight","medieval","minifig"],"name":"2026-01-22/002-generated_dragonslayer.glb"}
-{"category":"City / Town","description":"now, a skyscraper, in silver and red, with big windows","keywords":["skyscraper","city","building"],"name":"2026-01-22/004-generated_skyscraper.glb"}
-{"category":"Space","description":"build the Millenium Falcon","keywords":["space","spaceship","millenium falcon"],"name":"2026-01-22/005-generated_millennium_falcon.glb"}
-{"category":"City / Town","description":"create a squad of 4 firemen","keywords":["firemen","city","minifig"],"name":"2026-01-22/006-generated_fireman_squad.glb"}
-{"category":"Vehicles","description":"now, a pilot sitting in a F1 car","keywords":["f1","car","pilot"],"name":"2026-01-22/007-generated_f1_car_with_pilot.glb"}
-{"category":"Space","description":"(INPUT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship","keywords":["space","spaceship","millenium falcon"],"name":"2026-01-22/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.glb"}
-{"category":"Space","description":"(RESULT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship","keywords":["space","spaceship","millenium falcon"],"name":"2026-01-22/008-crimson_interceptor.glb"}
-{"category":"Space","description":"(INPUT 1) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"2026-01-22/009-4882_Speed_Wings-Model_A.lxf.glb"}
-{"category":"Space","description":"(INPUT 2) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"2026-01-22/009-4882_Speed_Wings-Model_B.lxf.glb"}
-{"category":"Space","description":"(RESULT) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"2026-01-22/009-speed_falcon_hybrid.glb"}
-{"category":"City / Town","description":"(INPUT) from the attached model, create a new one that contains only the plane","keywords":["forest","firefighters","minifig"],"name":"2026-01-22/010-4209_Ffire_Plane.lxf.glb"}
-{"category":"City / Town","description":"(RESULT 1) from the attached model, create a new one that contains only the plane","keywords":["forest","firefighters","minifig"],"name":"2026-01-22/010-A-fire_plane_only.glb"}
-{"category":"City / Town","description":"(RESULT 1 - FIX) actually, this is not the plane, but the car and its wagon. try again.","keywords":["city","car","wagon"],"name":"2026-01-22/010-B-fire_plane_only.glb"}
-{"category":"City / Town","description":"(INPUT) remove the people from the attached model","keywords":["train","station","minifig"],"name":"2026-01-22/011-2150_Ttrain_Station.glb"}
-{"category":"City / Town","description":"(RESULT) remove the people from the attached model","keywords":["train","station","minifig"],"name":"2026-01-22/011-train_station_no_people.glb"}
-{"category":"Everyday Life / Interior","description":"(INPUT) describe the scene depicted on the attached model. ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"2026-01-22/012-10267-1.mpd"}
-{"category":"Everyday Life / Interior","description":"(RESULT) describe the scene depicted on the attached model. ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"2026-01-22/012-generated_10267_with_people.mpd"}
+{"category":"Vehicles","description":"Create a car, you decide about its features","keywords":["car","vehicle","model car","custom car","automobile"],"name":"01-opus-4.5/001-generated_sports_car.glb"}
+{"category":"Castles","description":"now, create a paladin","keywords":["knight","medieval","minifig"],"name":"01-opus-4.5/002-generated_paladin.glb"}
+{"category":"Castles","description":"now, another paladin, but this time, a dragonslayer","keywords":["knight","medieval","minifig"],"name":"01-opus-4.5/003-generated_dragonslayer.glb"}
+{"category":"City / Town","description":"now, a skyscraper, in silver and red, with big windows","keywords":["skyscraper","city","building"],"name":"01-opus-4.5/004-generated_skyscraper.glb"}
+{"category":"Space","description":"build the Millenium Falcon","keywords":["space","spaceship","millenium falcon"],"name":"01-opus-4.5/005-generated_millennium_falcon.glb"}
+{"category":"City / Town","description":"create a squad of 4 firemen","keywords":["firemen","city","minifig"],"name":"01-opus-4.5/006-generated_fireman_squad.glb"}
+{"category":"Vehicles","description":"now, a pilot sitting in a F1 car","keywords":["f1","car","pilot"],"name":"01-opus-4.5/007-generated_f1_car_with_pilot.glb"}
+{"category":"Space","description":"(INPUT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship","keywords":["space","spaceship","millenium falcon"],"name":"01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.glb"}
+{"category":"Space","description":"(RESULT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship","keywords":["space","spaceship","millenium falcon"],"name":"01-opus-4.5/008-crimson_interceptor.glb"}
+{"category":"Space","description":"(INPUT 1) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.glb"}
+{"category":"Space","description":"(INPUT 2) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.glb"}
+{"category":"Space","description":"(RESULT) create a hybrid of these two attached models","keywords":["space","spaceship","small"],"name":"01-opus-4.5/009-speed_falcon_hybrid.glb"}
+{"category":"City / Town","description":"(INPUT) from the attached model, create a new one that contains only the plane","keywords":["forest","firefighters","minifig"],"name":"01-opus-4.5/010-4209_Ffire_Plane.lxf.glb"}
+{"category":"City / Town","description":"(RESULT 1) from the attached model, create a new one that contains only the plane","keywords":["forest","firefighters","minifig"],"name":"01-opus-4.5/010-A-fire_plane_only.glb"}
+{"category":"City / Town","description":"(RESULT 1 - FIX) actually, this is not the plane, but the car and its wagon. try again.","keywords":["city","car","wagon"],"name":"01-opus-4.5/010-B-fire_plane_only.glb"}
+{"category":"City / Town","description":"(INPUT) remove the people from the attached model","keywords":["train","station","minifig"],"name":"01-opus-4.5/011-2150_Ttrain_Station.glb"}
+{"category":"City / Town","description":"(RESULT) remove the people from the attached model","keywords":["train","station","minifig"],"name":"01-opus-4.5/011-train_station_no_people.glb"}
+{"category":"Everyday Life / Interior","description":"(INPUT) ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"01-opus-4.5/012-10267-1.mpd"}
+{"category":"Everyday Life / Interior","description":"(RESULT) ok, now: add some people to the model, dressed accordingly","keywords":["minifig","interior","everyday life"],"name":"01-opus-4.5/012-generated_10267_with_people.mpd"}
