@@ -1,0 +1,177 @@
+0 FILE generated_millennium_falcon.mpd
+0 Millennium Falcon
+0 Name: generated_millennium_falcon.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 millennium_falcon_ship.ldr
+
+0 FILE millennium_falcon_ship.ldr
+0 Millennium Falcon Ship
+0 Name: millennium_falcon_ship.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ========== MAIN BODY - BOTTOM LAYER ==========
+0 // Central core plates - light bluish grey
+1 71 0 0 0 1 0 0 0 1 0 0 0 1 41539.dat
+1 71 80 0 0 1 0 0 0 1 0 0 0 1 41539.dat
+1 71 -80 0 0 1 0 0 0 1 0 0 0 1 41539.dat
+1 71 0 0 -80 1 0 0 0 1 0 0 0 1 41539.dat
+1 71 80 0 -80 1 0 0 0 1 0 0 0 1 41539.dat
+1 71 -80 0 -80 1 0 0 0 1 0 0 0 1 41539.dat
+0 STEP
+
+0 // Front mandible plates - the forked front
+1 71 -60 0 80 1 0 0 0 1 0 0 0 1 3795.dat
+1 71 60 0 80 1 0 0 0 1 0 0 0 1 3795.dat
+1 71 -60 0 140 1 0 0 0 1 0 0 0 1 3795.dat
+1 71 60 0 140 1 0 0 0 1 0 0 0 1 3795.dat
+1 71 -60 0 200 1 0 0 0 1 0 0 0 1 3020.dat
+1 71 60 0 200 1 0 0 0 1 0 0 0 1 3020.dat
+0 STEP
+
+0 // Rear section plates
+1 71 0 0 -160 1 0 0 0 1 0 0 0 1 3034.dat
+1 71 80 0 -160 1 0 0 0 1 0 0 0 1 3034.dat
+1 71 -80 0 -160 1 0 0 0 1 0 0 0 1 3034.dat
+0 STEP
+
+0 // Corner cut-off plates for saucer shape
+1 71 -120 0 60 1 0 0 0 1 0 0 0 1 2450.dat
+1 71 120 0 60 -1 0 0 0 1 0 0 0 -1 2450.dat
+1 71 -120 0 -140 1 0 0 0 1 0 0 0 1 2450.dat
+1 71 120 0 -140 -1 0 0 0 1 0 0 0 -1 2450.dat
+0 STEP
+
+0 // ========== UPPER HULL DETAILS ==========
+0 // Central raised section - dark bluish grey
+1 72 0 -8 -40 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 0 -8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 0 -8 -80 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 20 -8 -40 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 20 -8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 20 -8 -80 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 -20 -8 -40 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 -20 -8 -60 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 -20 -8 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+
+0 // Upper hull greebles - grille tiles for detail
+1 72 40 -8 -20 1 0 0 0 1 0 0 0 1 2412b.dat
+1 72 -40 -8 -20 1 0 0 0 1 0 0 0 1 2412b.dat
+1 72 60 -8 -40 1 0 0 0 1 0 0 0 1 2412b.dat
+1 72 -60 -8 -40 1 0 0 0 1 0 0 0 1 2412b.dat
+1 72 40 -8 -100 1 0 0 0 1 0 0 0 1 2412b.dat
+1 72 -40 -8 -100 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+
+0 // ========== COCKPIT - Offset to starboard side ==========
+0 // Cockpit tube base
+1 71 -100 -8 40 0 0 1 0 1 0 -1 0 0 3710.dat
+1 71 -100 -8 80 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+
+0 // Cockpit walls
+1 72 -110 -16 60 0 0 1 0 1 0 -1 0 0 3004.dat
+1 72 -90 -16 60 0 0 1 0 1 0 -1 0 0 3004.dat
+0 STEP
+
+0 // Cockpit canopy - trans clear
+1 47 -100 -24 60 0 0 1 0 1 0 -1 0 0 4740.dat
+0 STEP
+
+0 // ========== SENSOR DISH - Top of ship ==========
+0 // Dish mount
+1 71 0 -16 -60 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+
+0 // Radar dish - light bluish grey
+1 71 0 -24 -60 1 0 0 0 1 0 0 0 1 3960.dat
+0 STEP
+
+0 // ========== MANDIBLE DETAILS ==========
+0 // Left mandible edge details
+1 72 -80 -8 100 0 0 1 0 1 0 -1 0 0 3710.dat
+1 72 -80 -8 160 0 0 1 0 1 0 -1 0 0 3710.dat
+0 STEP
+
+0 // Right mandible edge details
+1 72 80 -8 100 0 0 -1 0 1 0 1 0 0 3710.dat
+1 72 80 -8 160 0 0 -1 0 1 0 1 0 0 3710.dat
+0 STEP
+
+0 // Mandible front tips
+1 72 -60 -8 220 1 0 0 0 1 0 0 0 1 3023.dat
+1 72 60 -8 220 1 0 0 0 1 0 0 0 1 3023.dat
+0 STEP
+
+0 // Mandible gap filler at front
+1 71 0 0 160 1 0 0 0 1 0 0 0 1 3022.dat
+1 71 0 0 180 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+
+0 // ========== ENGINE SECTION - REAR ==========
+0 // Main engine housing - dark bluish grey
+1 72 -40 -8 -180 1 0 0 0 1 0 0 0 1 3010.dat
+1 72 0 -8 -180 1 0 0 0 1 0 0 0 1 3010.dat
+1 72 40 -8 -180 1 0 0 0 1 0 0 0 1 3010.dat
+0 STEP
+
+0 // Engine exhausts - trans light blue glow
+1 43 -50 -8 -200 1 0 0 0 1 0 0 0 1 3022.dat
+1 43 -10 -8 -200 1 0 0 0 1 0 0 0 1 3022.dat
+1 43 30 -8 -200 1 0 0 0 1 0 0 0 1 3022.dat
+1 43 70 -8 -200 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+
+0 // Engine vents - grille detail
+1 72 -60 -8 -160 0 0 1 0 1 0 -1 0 0 2412b.dat
+1 72 -20 -8 -160 0 0 1 0 1 0 -1 0 0 2412b.dat
+1 72 20 -8 -160 0 0 1 0 1 0 -1 0 0 2412b.dat
+1 72 60 -8 -160 0 0 1 0 1 0 -1 0 0 2412b.dat
+0 STEP
+
+0 // ========== QUAD LASER TURRETS ==========
+0 // Top turret mount
+1 72 40 -16 20 1 0 0 0 1 0 0 0 1 3022.dat
+1 71 40 -24 20 1 0 0 0 1 0 0 0 1 4740.dat
+0 STEP
+
+0 // Bottom turret mount (inverted)
+1 72 40 8 20 1 0 0 0 1 0 0 0 1 3022.dat
+1 71 40 16 20 1 0 0 0 -1 0 0 0 -1 4740.dat
+0 STEP
+
+0 // ========== SIDE DETAILS ==========
+0 // Port side panels
+1 72 -100 -8 -20 0 0 1 0 1 0 -1 0 0 3021.dat
+1 72 -100 -8 -60 0 0 1 0 1 0 -1 0 0 3021.dat
+1 72 -100 -8 -100 0 0 1 0 1 0 -1 0 0 3021.dat
+0 STEP
+
+0 // Starboard side panels
+1 72 100 -8 -20 0 0 -1 0 1 0 1 0 0 3021.dat
+1 72 100 -8 -60 0 0 -1 0 1 0 1 0 0 3021.dat
+1 72 100 -8 -100 0 0 -1 0 1 0 1 0 0 3021.dat
+0 STEP
+
+0 // ========== LANDING GEAR AREA ==========
+0 // Landing gear wells - dark grey underneath
+1 72 -40 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 40 8 0 1 0 0 0 1 0 0 0 1 3022.dat
+1 72 0 8 -80 1 0 0 0 1 0 0 0 1 3022.dat
+0 STEP
+
+0 // ========== DOCKING RINGS AND HATCHES ==========
+0 // Docking ring - starboard
+1 71 80 -8 40 1 0 0 0 1 0 0 0 1 4150.dat
+0 STEP
+
+0 // Escape pod hatches
+1 71 -60 -8 -120 1 0 0 0 1 0 0 0 1 3024.dat
+1 71 60 -8 -120 1 0 0 0 1 0 0 0 1 3024.dat
+0 STEP
+

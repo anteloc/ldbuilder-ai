@@ -1,0 +1,72 @@
+0 FILE generated_paladin.mpd
+0 Paladin Knight
+0 Name: generated_paladin.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 paladin_figure.ldr
+
+0 FILE paladin_figure.ldr
+0 Paladin Figure
+0 Name: paladin_figure.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Castle helmet with face grille - pearl silver
+1 179 0 -27 0 1 0 0 0 1 0 0 0 1 4503.dat
+0 STEP
+
+0 // Head with standard grin - yellow/flesh
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - pearl light grey (silver armor)
+1 135 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Armor breastplate - pearl silver
+1 179 0 0 0 1 0 0 0 1 0 0 0 1 2587.dat
+0 STEP
+
+0 // Cape - white with formed shape
+1 15 0 0 0 1 0 0 0 1 0 0 0 1 50231c01.dat
+0 STEP
+
+0 // Hips - dark blue (leg armor)
+1 272 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - pearl light grey
+1 135 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - pearl light grey
+1 135 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - pearl silver (gauntlet)
+1 179 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - pearl silver (gauntlet)
+1 179 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - dark blue
+1 272 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - dark blue
+1 272 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Sword greatsword in right hand - pearl light gold
+1 142 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 59.dat
+0 STEP
+
+0 // Triangular shield in left hand - white
+1 15 28.798 31.676 -17.541 0.087 0.146 -0.985 0.507 0.844 0.17 0.857 -0.515 0 3846.dat
+0 STEP
+

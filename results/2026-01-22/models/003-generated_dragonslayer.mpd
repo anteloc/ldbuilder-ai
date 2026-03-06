@@ -1,0 +1,72 @@
+0 FILE generated_dragonslayer.mpd
+0 Dragonslayer Paladin
+0 Name: generated_dragonslayer.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 dragonslayer_figure.ldr
+
+0 FILE dragonslayer_figure.ldr
+0 Dragonslayer Figure
+0 Name: dragonslayer_figure.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Castle helmet closed with eye slit - flat silver (battle-worn)
+1 315 0 -27 0 1 0 0 0 1 0 0 0 1 89520.dat
+0 STEP
+
+0 // Head with standard grin - yellow/flesh (hidden under helmet)
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - dark bluish grey (dark armor)
+1 72 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Armor breastplate - flat silver
+1 315 0 0 0 1 0 0 0 1 0 0 0 1 2587.dat
+0 STEP
+
+0 // Spiked shoulder armor pads - dark red (dragon blood stained)
+1 320 0 0 0 1 0 0 0 1 0 0 0 1 12618.dat
+0 STEP
+
+0 // Hips - black (dark armor)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - dark bluish grey
+1 72 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - dark bluish grey
+1 72 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - flat silver (gauntlet)
+1 315 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - flat silver (gauntlet)
+1 315 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Longsword with thick guard in right hand - flat silver blade
+1 315 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 18031.dat
+0 STEP
+
+0 // Dragon shield ovoid with fire dragon pattern in left hand - shows dragon trophy
+1 16 28.798 31.676 -17.541 0.087 0.146 -0.985 0.507 0.844 0.17 0.857 -0.515 0 2586p4n.dat
+0 STEP
+

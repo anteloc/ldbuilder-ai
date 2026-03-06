@@ -1,0 +1,233 @@
+0 FILE generated_fireman_squad.mpd
+0 Fireman Squad
+0 Name: generated_fireman_squad.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Squad of 4 firemen standing in a row
+1 16 -90 0 0 1 0 0 0 1 0 0 0 1 fireman_axe.ldr
+1 16 -30 0 0 1 0 0 0 1 0 0 0 1 fireman_hose.ldr
+1 16 30 0 0 1 0 0 0 1 0 0 0 1 fireman_megaphone.ldr
+1 16 90 0 0 1 0 0 0 1 0 0 0 1 fireman_radio.ldr
+
+0 FILE fireman_axe.ldr
+0 Fireman with Axe
+0 Name: fireman_axe.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Fire helmet - red
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3834.dat
+0 STEP
+
+0 // Head with standard grin - yellow
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - red (firefighter uniform)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Air tanks on back - black
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 STEP
+
+0 // Hips - black (pants)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - red
+1 4 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - red
+1 4 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - yellow
+1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - yellow
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Fire axe in right hand - dark bluish grey
+1 72 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 3835.dat
+0 STEP
+
+0 FILE fireman_hose.ldr
+0 Fireman with Hose
+0 Name: fireman_hose.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Fire helmet - red
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3834.dat
+0 STEP
+
+0 // Head with standard grin - yellow
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - red (firefighter uniform)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Air tanks on back - black
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 STEP
+
+0 // Hips - black (pants)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - red
+1 4 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - red
+1 4 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - yellow
+1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - yellow
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Hose nozzle in right hand - dark bluish grey
+1 72 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 22921.dat
+0 STEP
+
+0 FILE fireman_megaphone.ldr
+0 Fireman with Megaphone
+0 Name: fireman_megaphone.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Fire helmet - red
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3834.dat
+0 STEP
+
+0 // Head with standard grin - yellow
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - red (firefighter uniform)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Air tanks on back - black
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 STEP
+
+0 // Hips - black (pants)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - red
+1 4 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - red
+1 4 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - yellow
+1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - yellow
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Megaphone in right hand - red
+1 4 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 39144.dat
+0 STEP
+
+0 FILE fireman_radio.ldr
+0 Fireman with Radio
+0 Name: fireman_radio.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // Fire helmet - red
+1 4 0 -27 0 1 0 0 0 1 0 0 0 1 3834.dat
+0 STEP
+
+0 // Head with standard grin - yellow
+1 14 0 -27 0 1 0 0 0 1 0 0 0 1 3626bp01.dat
+0 STEP
+
+0 // Torso - red (firefighter uniform)
+1 4 0 0 0 1 0 0 0 1 0 0 0 1 973.dat
+0 STEP
+
+0 // Air tanks on back - black
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+0 STEP
+
+0 // Hips - black (pants)
+1 0 0 32 0 1 0 0 0 1 0 0 0 1 3815b.dat
+0 STEP
+
+0 // Right arm - red
+1 4 -15.552 9 0 0.985 -0.17 0 0.17 0.985 0 0 0 1 3818.dat
+0 STEP
+
+0 // Left arm - red
+1 4 15.552 9 0 0.985 0.17 0 -0.17 0.985 0 0 0 1 3819.dat
+0 STEP
+
+0 // Right hand - yellow
+1 14 -23.8634 26.5956 -10.321 0.985 -0.12019 0.12019 0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Left hand - yellow
+1 14 23.8634 26.5956 -10.321 0.985 0.12019 -0.12019 -0.17 0.696395 -0.696395 0 0.707 0.707 3820.dat
+0 STEP
+
+0 // Right leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3816b.dat
+0 STEP
+
+0 // Left leg - black
+1 0 0 44 0 1 0 0 0 1 0 0 0 1 3817b.dat
+0 STEP
+
+0 // Radio in right hand - black
+1 0 -23.8951 26.7794 -26.9666 -0.14567 0.0874983 -0.985 -0.844031 0.506976 0.17 0.514696 0.856884 0 3962a.dat
+0 STEP
+

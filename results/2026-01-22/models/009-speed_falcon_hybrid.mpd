@@ -1,0 +1,185 @@
+0 FILE Speed_Falcon_Hybrid.mpd
+0 Speed Falcon Hybrid - Combined from Speed Wings A and B
+0 Name: Speed_Falcon_Hybrid.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 // ========== MAIN FUSELAGE (from Model B style) ==========
+0 // Central body plate - yellow
+1 14 20 -8 20 0 0 -1 0 1 0 1 0 0 3795.dat
+0 STEP
+
+0 // Round plates for body structure (from Model A)
+1 0 20 -16 -20 1 0 0 0 1 0 0 0 1 4032a.dat
+1 0 20 -16 20 1 0 0 0 1 0 0 0 1 4032a.dat
+1 0 20 -16 60 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+
+0 // Upper round plates
+1 0 20 8 -20 1 0 0 0 1 0 0 0 1 4032a.dat
+1 0 20 8 60 1 0 0 0 1 0 0 0 1 4032a.dat
+0 STEP
+
+0 // ========== COCKPIT SECTION (from Model B) ==========
+0 // Cockpit dome - trans clear
+1 40 20 -16 0 1 0 0 0 1 0 0 0 1 30602.dat
+0 STEP
+
+0 // Cockpit slopes - yellow
+1 14 10 -40 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+1 14 30 -40 30 -1 0 0 0 1 0 0 0 -1 3040b.dat
+0 STEP
+
+0 // Cockpit rear slope (from Model B)
+1 1 20 -64 -10 -1 0 0 0 1 0 0 0 -1 3039.dat
+0 STEP
+
+0 // Cockpit canopy top (from Model B)
+1 1 20 -80 -10 1 0 0 0 1 0 0 0 1 44661.dat
+0 STEP
+
+0 // ========== NOSE SECTION ==========
+0 // Nose grille - yellow
+1 14 20 -24 70 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+
+0 // Nose plates - yellow with jumper plates
+1 14 30 0 60 0 0 -1 0 1 0 1 0 0 44567b.dat
+1 14 10 0 60 0 0 1 0 1 0 -1 0 0 44567b.dat
+0 STEP
+
+0 // ========== TAIL SECTION (from Model B) ==========
+0 // Tail grilles - blue
+1 1 20 -72 -50 1 0 0 0 1 0 0 0 1 2412b.dat
+1 1 20 -72 -90 1 0 0 0 1 0 0 0 1 2412b.dat
+1 14 20 -72 -70 1 0 0 0 1 0 0 0 1 2412b.dat
+0 STEP
+
+0 // Tail fins (from Model B) - blue
+1 14 30 -72 -20 0 0 -1 0 1 0 1 0 0 2540.dat
+1 14 10 -72 -20 0 0 1 0 1 0 -1 0 0 2540.dat
+0 STEP
+
+0 // Tail wedges (from Model B) - blue
+1 1 30 -64 -60 0 0 -1 0 1 0 1 0 0 30414.dat
+1 1 10 -64 -60 0 0 1 0 1 0 -1 0 0 30414.dat
+0 STEP
+
+0 // Tail base plate
+1 0 20 -40 -60 0 0 -1 0 1 0 1 0 0 3034.dat
+0 STEP
+
+0 // Rear engine dome - trans orange
+1 40 20 -40 -120 1 0 0 0 1 0 0 0 1 30602.dat
+0 STEP
+
+0 // ========== FRONT FINS (from Model A) ==========
+1 14 30 0 -20 0 0 -1 0 1 0 1 0 0 2540.dat
+1 14 10 0 -20 0 0 1 0 1 0 -1 0 0 2540.dat
+0 STEP
+
+0 // ========== FRONT LANDING SKIDS (from Model A) ==========
+1 0 50 1.80 -40 0.71 0 0.71 0.71 0 -0.71 0 1 0 44676a.dat
+1 0 -10 1.80 -40 0.62 0 -0.78 -0.78 0 -0.62 0 1 0 44676a.dat
+0 STEP
+
+0 // ========== RIGHT WING ASSEMBLY (from Model A) ==========
+0 // Wing base plate - yellow
+1 14 80 0 60 -1 0 0 0 1 0 0 0 -1 44302b.dat
+0 STEP
+
+0 // Wing upper plate - dark bluish grey
+1 72 80 8 60 1 0 0 0 1 0 0 0 1 44567b.dat
+0 STEP
+
+0 // Wing tip - yellow
+1 14 90 -8 50 0 0 -1 0 1 0 1 0 0 43722.dat
+0 STEP
+
+0 // Wing strut - dark bluish grey
+1 72 80 9.80 30 -1 0 0 0 1 0 0 0 -1 30553.dat
+0 STEP
+
+0 // Engine pylon - light bluish grey
+1 71 80 9.80 0 0 0 1 0 1 0 -1 0 0 4519.dat
+0 STEP
+
+0 // Engine nacelle - dark bluish grey
+1 72 80 9.80 -41.81 0 0 1 1 0 0 0 1 0 30361d.dat
+0 STEP
+
+0 // Engine exhaust - dark bluish grey
+1 72 80 9.80 -75.81 0 0 1 1 0 0 0 1 0 30367c.dat
+0 STEP
+
+0 // Engine intake - light bluish grey
+1 71 80 9.80 5 1 0 0 0 -1 0 0 0 -1 32187.dat
+0 STEP
+
+0 // ========== LEFT WING ASSEMBLY (from Model A) ==========
+0 // Wing base plate - yellow
+1 14 -40 0 60 1 0 0 0 1 0 0 0 1 44302b.dat
+0 STEP
+
+0 // Wing upper plate - dark bluish grey
+1 72 -40 8 60 1 0 0 0 1 0 0 0 1 44567b.dat
+0 STEP
+
+0 // Wing tip - yellow
+1 14 -50 -8 50 0 0 1 0 1 0 -1 0 0 43723.dat
+0 STEP
+
+0 // Wing strut - dark bluish grey
+1 72 -40 9.80 30 -1 0 0 0 1 0 0 0 -1 30553.dat
+0 STEP
+
+0 // Engine pylon - light bluish grey
+1 71 -40 9.80 0 0 0 1 0 1 0 -1 0 0 4519.dat
+0 STEP
+
+0 // Engine nacelle - dark bluish grey
+1 72 -40 9.80 -41.81 0 0 1 1 0 0 0 1 0 30361d.dat
+0 STEP
+
+0 // Engine exhaust - dark bluish grey
+1 72 -40 9.80 -75.81 0 0 1 1 0 0 0 1 0 30367c.dat
+0 STEP
+
+0 // Engine intake - light bluish grey
+1 71 -40 9.80 5 1 0 0 0 -1 0 0 0 -1 32187.dat
+0 STEP
+
+0 // ========== EXTRA DETAILS (from Model B) ==========
+0 // Side thrusters - right side
+1 0 126 -54 -40 0 0 1 1 0 0 0 1 0 4589.dat
+1 1 136 -54 -10 0 -1 0 1 0 0 0 0 1 4070.dat
+1 151 126 -54 0 0 0 1 1 0 0 0 1 0 6141.dat
+1 38 126 -54 8 0 0 1 1 0 0 0 1 0 4589.dat
+0 STEP
+
+0 // Side thrusters - left side
+1 0 -86 -54 -40 0 0 1 1 0 0 0 1 0 4589.dat
+1 1 -96 -54 -10 0 1 0 -1 0 0 0 0 1 4070.dat
+1 151 -86 -54 0 0 0 1 1 0 0 0 1 0 6141.dat
+1 38 -86 -54 8 0 0 1 1 0 0 0 1 0 4589.dat
+0 STEP
+
+0 // Side weapon mounts (from Model B)
+1 1 112 -54 -20 0 -1 0 1 0 0 0 0 1 2340.dat
+1 1 -72 -54 -20 0 1 0 -1 0 0 0 0 1 2340.dat
+0 STEP
+
+0 // Radar dish on top (from Model B)
+1 72 20 -8 -20 1 0 0 0 1 0 0 0 1 2654a.dat
+0 STEP
+
+0 // Fuselage ridges (from Model B)
+1 1 30 -32 -40 1 0 0 0 1 0 0 0 1 41763.dat
+1 1 10 -32 -40 1 0 0 0 1 0 0 0 1 41763.dat
+0 STEP
+
+0 // Cockpit slope detail (from Model B)
+1 1 20 -32 -10 -1 0 0 0 1 0 0 0 -1 3660b.dat
+0 STEP
+
