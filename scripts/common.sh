@@ -1,5 +1,8 @@
 #!/bin/bash
 
+base_dir="$(dirname "$0")/.."
+base_dir="$(realpath "$base_dir")"
+
 function extract_meta() {
     local meta_name="$1"
     local dest_file="$2"

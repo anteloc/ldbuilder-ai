@@ -2,8 +2,6 @@
 
 set -euo pipefail
 
-source "$(dirname "$0")/../../include/env.inc.sh"
-
 db_schema_ddl="$(dirname "$0")/build-ldraw-db.sql"
 
 dest_db="$1"
@@ -59,24 +57,6 @@ PART_KEYWORDS.tsv
 MODELS.tsv
 EOF
 )
-
-# tsv_files=$(cat <<EOF
-# CATEGORIES.tsv
-# COLORS.tsv
-# MODEL_AI_CAT_DESC_KWS.tsv
-# MODEL_NUM_PARTS.tsv
-# MODEL_CATEGORIES.tsv
-# MODEL_KEYWORDS.tsv
-# MODEL_SIZES.tsv
-# MODEL_THEMES.tsv
-# PART_BBOXES.tsv
-# PART_CATEGORIES.tsv
-# PART_INFOS.tsv
-# PART_KEYWORDS.tsv
-# EOF
-# )
-
-# issues with PARTS_REBRICKABLE_CAT.tsv, PARTS_BRICKLINK_CAT.tsv not UNIQUE aliases, so skipping for now
 
 for t in $(echo "$tsv_files"); do 
     tbl_name=$(echo "$t" | cut -d. -f1)

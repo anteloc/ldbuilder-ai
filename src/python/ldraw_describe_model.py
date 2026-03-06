@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 import os
 import sys
 from collections import defaultdict
@@ -42,6 +42,10 @@ _PHRASES = {
 _TMPL_MODEL_HEADER = """
 # LDraw Model: '{model_name}'
 
++ **Description:** {model_description}
++ **Category:** {model_category}
++ **Keywords:** {model_keywords}
+
 {intention}
 
 ## Model source code
@@ -68,15 +72,6 @@ _TMPL_PIECE = """
     And then:
     {desc_position}
     """
-
-_TMPL_OVERALL = """
-## Overall Model Description:
-
-Now, let's summarize the overall model pieces placement, back-to-front and left-to-right:
-
-{overall_description}
-"""
-
 
 # ---------------------------------------------------------------------------
 # Coordinate helpers
@@ -178,6 +173,17 @@ def part_info_bbox(conn: sqlite3.Connection, alias: str) -> tuple[dict[str, str]
 
     return dict(p_info), dict(p_bbox)
 
+@lru_cache(maxsize=200_000)
+def model_cat_desc_kws(conn: sqlite3.Connection, alias: str) -> dict[str, str]:
+    cur = conn.execute("""
+                                SELECT alias, category, description, keywords
+                                FROM MODEL_AI_CAT_DESC_KWS
+                                WHERE UPPER(alias) = UPPER(?)
+                            """, (alias,))
+    m_cat_desc_kws = cur.fetchone()
+    cur.close()
+    return dict(m_cat_desc_kws) if m_cat_desc_kws else {"name": "unknown category", "description": "no description available"}
+
 # ---------------------------------------------------------------------------
 # Rotation description
 # ---------------------------------------------------------------------------
@@ -250,6 +256,7 @@ def describe_group_position(sorted_lr_group: list) -> str:
     ]
     return "\n".join(lines)
 
+# TODO decide if this is worth keeping
 def describe_grouped_pieces(all_pieces: list) -> str:
     grouped_bf  = group_pieces_by_coordinate(all_pieces, "z")
     bf_groups   = sort_groups_by_coordinate(grouped_bf, "z", "asc")
@@ -303,8 +310,16 @@ def describe_model(conn: sqlite3.Connection, model_name: str, grammar_contents: 
 
     semantic_model = parse_model_semantic(model_contents, grammar_contents)
 
+    model_info = model_cat_desc_kws(conn, model_name)
+    model_category = model_info.get("category", "unknown category")
+    model_description = model_info.get("description", "no description available")
+    model_keywords = model_info.get("keywords", "no keywords available")
+
     print(_TMPL_MODEL_HEADER.format(
         model_name     = model_name,
+        model_category = model_category,
+        model_description = model_description,
+        model_keywords = model_keywords,
         intention      = phrases["intention"],
         model_contents = model_contents,
     ))
@@ -336,7 +351,6 @@ def describe_model(conn: sqlite3.Connection, model_name: str, grammar_contents: 
                     print(describe_part_ref(conn, part_ref, mode))
                     print("-----")
 
-    print(_TMPL_OVERALL.format(overall_description=describe_grouped_pieces(all_pieces)))
     print(f"\n{phrases['finish']}\n")
 
 

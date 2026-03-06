@@ -1,7 +1,8 @@
 #!/bin/bash
 
-source "$(dirname "$0")/../../include/env.inc.sh"
 source "$(dirname "$0")/common.sh"
+
+data_dir="$(dirname "$0")/../data"
 
 function usage() {
   echo "Usage: $(basename "$0") [--yes] [--step <step-num>] <models-dir> <output-dir>"
@@ -170,7 +171,7 @@ function build_db() {
     local tmp_work_dir="$2"
     local db_file="$3"
 
-    local ai_files_tsvs="$ai_files_dir/tsv"
+    local ai_files_tsvs="$data_dir/tsv"
 
     touch "$db_file"
     db_file="$(realpath "$db_file")"
@@ -224,7 +225,7 @@ fi
 
 set -euo pipefail
 
-DB="$ai_files_dir/ldraw-info.db"
+DB="$data_dir/ldraw-info.db"
 
 S01_OUT="01-MODEL_SIZES.tsv"
 S02_OUT="02-SELECTED_BY_SIZE.tsv"

@@ -1,0 +1,2 @@
+- Add per-architecture versions of ldrlayout tool to bin dir
+- modify ldraw-calculate-bboxes-batch.sh to use the right version according to the current architecture
