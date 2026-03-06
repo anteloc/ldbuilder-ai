@@ -479,7 +479,7 @@
       <div class="sidebar-title">Display</div>
       <div class="toggle-row">
         <span class="toggle-label">Edges</span>
-        <div class="toggle on" id="toggle-edges"></div>
+        <div class="toggle" id="toggle-edges"></div>
       </div>
       <div class="toggle-row">
         <span class="toggle-label">Grid</span>
@@ -625,7 +625,7 @@ const LIGHTS_EDGES_OFF = { ambient: 0.45, dir: 1.1, envIntensity: 0.1 };
 // MR boosts ambient to compensate for bright passthrough background.
 // Keep the same ratio between edges-on and edges-off.
 const LIGHTS_MR_EDGES_ON  = { ambient: 1.2, dir: 1.5, envIntensity: 1.0 };
-const LIGHTS_MR_EDGES_OFF = { ambient: 0.9, dir: 1.1, envIntensity: 0.1 };
+const LIGHTS_MR_EDGES_OFF = { ambient: 0.9, dir: 1.1, envIntensity: 0.25 };
 
 function applyLightIntensities() {
   const mr     = (currentMode === 'mr');
@@ -871,7 +871,7 @@ window.addEventListener('resize', () => { resize(); invalidate(); });
 const models = [];   // all currently loaded models, in load order
 const _meshList = []; // cached models.map(e => e.mesh) — updated on load/remove
 
-let edgesVisible  = true;
+let edgesVisible  = false;
 let orbVisible    = false;  // whether the trackball orb shows during grab
 let selectedEntry = null;   // model currently selected for keyboard nudge
 
@@ -1239,6 +1239,7 @@ function onModelLoaded(model, filename, { isLDraw = true } = {}) {
       if (o.isMesh) o.geometry.computeBoundsTree();   // BVH — O(log n) raycasts
     } else if (o.isLineSegments) {
       o.raycast = () => {};             // edges are visual only — never raycasted
+      o.visible = edgesVisible;
     }
   });
 
@@ -2172,7 +2173,7 @@ function makeMiniDisplay() {
   group.userData.focusCol  = 'tabs'; // 'tabs' | 'panel'
   group.userData.focusRow  = 0;
   group.userData.menuMode  = false;
-  group.userData.edgesOn   = true;   // synced to global edgesVisible on open
+  group.userData.edgesOn   = false;  // synced to global edgesVisible on open
   group.userData.orbOn     = false;  // synced to global orbVisible on open
 
   // Expose draw so updateXRControls can trigger redraws
@@ -3370,7 +3371,11 @@ fetchModelList();
 function loadFromBrowser(url, name) {
   closeGallery();
   showLoading('Loading model…', name);
-  loadMPDFromURL(url, name, 'Could not load model.');
+  if (isGLB(url)) {
+    loadGLBFromURL(url, url.split('/').pop());
+  } else {
+    loadMPDFromURL(url, name, 'Could not load model.');
+  }
 }
 
 function escHtml(s) {
