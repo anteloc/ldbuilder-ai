@@ -1,0 +1,3854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ModelScope XR v0.9.1</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0e0e10; --panel: #16161a; --border: #2a2a30;
+    --accent: #ffcc00; --accent-mr: #00ddff; --text: #e8e8ec; --muted: #6b6b78;
+  }
+  body { background: var(--bg); color: var(--text); font-family: 'Syne', sans-serif; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+  header { display: flex; align-items: center; justify-content: space-between; padding: 12px 24px; border-bottom: 1px solid var(--border); background: var(--panel); flex-shrink: 0; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo-brick { width: 28px; height: 20px; background: var(--accent); border-radius: 2px; position: relative; }
+  .logo-brick::before, .logo-brick::after { content: ''; position: absolute; top: -7px; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; }
+  .logo-brick::before { left: 4px; } .logo-brick::after { right: 4px; }
+  .logo h1 { font-size: 16px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+  .logo span { color: var(--accent); }
+  .controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .btn { font-family: 'Space Mono', monospace; font-size: 11px; padding: 7px 14px; border-radius: 4px; border: 1px solid var(--border); background: transparent; color: var(--text); cursor: pointer; text-transform: uppercase; letter-spacing: .08em; transition: all .15s; white-space: nowrap; }
+  .btn:hover { border-color: var(--accent); color: var(--accent); }
+  /* Destructive / exit actions — red idle, red-fill on hover */
+  .btn.btn-danger          { border-color: #ff4444; color: #ff4444; background: transparent; }
+  .btn.btn-danger:hover    { border-color: #ff4444; color: var(--bg); background: #ff4444; }
+  .btn.btn-danger:disabled { border-color: var(--border); color: var(--muted); background: transparent; cursor: not-allowed; }
+  .btn.primary { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
+  .btn.primary:hover { background: #ffd633; }
+  /* MR button gets a cyan accent */
+  .btn.mr-btn { border-color: var(--accent-mr); color: var(--accent-mr); }
+  .btn.mr-btn:hover { background: var(--accent-mr); color: #000; }
+  .btn.mr-btn:disabled { border-color: var(--border); color: var(--muted); cursor: not-allowed; }
+  .workspace { flex: 1; display: flex; overflow: hidden; }
+  #canvas-container { flex: 1; position: relative; background: radial-gradient(ellipse at center, #1a1a2e 0%, #0e0e10 70%); }
+  canvas { display: block; }
+  .sidebar { width: 220px; background: var(--panel); border-left: 1px solid var(--border); display: flex; flex-direction: column; flex-shrink: 0; overflow-y: auto; }
+  .sidebar-section { padding: 16px; border-bottom: 1px solid var(--border); }
+  .sidebar-title { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; color: var(--muted); margin-bottom: 12px; }
+  .info-row { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 6px; font-family: 'Space Mono', monospace; }
+  .info-row .label { color: var(--muted); }
+  .info-row .value { color: var(--text); }
+  .toggle-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+  .toggle-label { font-size: 11px; font-family: 'Space Mono', monospace; text-transform: uppercase; letter-spacing: .05em; }
+  .toggle { width: 34px; height: 18px; background: var(--border); border-radius: 9px; cursor: pointer; position: relative; transition: background .2s; }
+  .toggle.on { background: var(--accent); }
+  .toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px; background: #fff; border-radius: 50%; transition: left .2s; }
+  .toggle.on::after { left: 18px; }
+  .hint { font-size: 10px; color: var(--muted); font-family: 'Space Mono', monospace; line-height: 1.8; }
+  .hint b { color: var(--text); }
+  .url-input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; padding: 7px 8px; color: var(--text); font-family: 'Space Mono', monospace; font-size: 10px; margin-bottom: 6px; outline: none; }
+  .url-input:focus { border-color: var(--accent); }
+  .url-input::placeholder { color: var(--muted); }
+  #drop-zone { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; cursor: pointer; }
+  .drop-icon { width: 80px; height: 56px; border: 2px dashed var(--border); border-radius: 8px; display: flex; align-items: center; justify-content: center; transition: all .2s; }
+  .drop-zone-brick { width: 36px; height: 24px; background: var(--border); border-radius: 2px; position: relative; transition: background .2s; }
+  .drop-zone-brick::before, .drop-zone-brick::after { content: ''; position: absolute; top: -9px; width: 10px; height: 10px; background: var(--border); border-radius: 50%; transition: background .2s; }
+  .drop-zone-brick::before { left: 5px; } .drop-zone-brick::after { right: 5px; }
+  .drop-text { text-align: center; }
+  .drop-text h2 { font-size: 15px; font-weight: 600; }
+  .drop-text p { font-size: 11px; color: var(--muted); font-family: 'Space Mono', monospace; margin-top: 4px; }
+  #drop-zone.dragging .drop-icon, #drop-zone:hover .drop-icon { border-color: var(--accent); }
+  #drop-zone.dragging .drop-zone-brick, #drop-zone:hover .drop-zone-brick,
+  #drop-zone.dragging .drop-zone-brick::before, #drop-zone.dragging .drop-zone-brick::after,
+  #drop-zone:hover .drop-zone-brick::before, #drop-zone:hover .drop-zone-brick::after { background: var(--accent); }
+  #loading-overlay { display: none; position: absolute; inset: 0; background: rgba(14,14,16,.8); align-items: center; justify-content: center; flex-direction: column; gap: 14px; }
+  #loading-overlay.visible { display: flex; }
+  .spinner { width: 32px; height: 32px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-text { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--text); }
+  .loading-sub { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--muted); max-width: 280px; text-align: center; line-height: 1.6; }
+  #status { position: absolute; bottom: 16px; left: 16px; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--muted); pointer-events: none; }
+  /* Mode badge — shown in VR/MR so user knows what mode they entered */
+  #mode-badge { position: absolute; top: 16px; right: 16px; font-family: 'Space Mono', monospace; font-size: 10px; padding: 4px 10px; border-radius: 3px; display: none; pointer-events: none; }
+  #mode-badge.vr { display: block; background: rgba(255,204,0,.15); border: 1px solid var(--accent); color: var(--accent); }
+  #mode-badge.mr { display: block; background: rgba(0,221,255,.15); border: 1px solid var(--accent-mr); color: var(--accent-mr); }
+  #file-input { display: none; }
+  .error-banner { display: none; position: absolute; top: 16px; left: 50%; transform: translateX(-50%); background: #2a1010; border: 1px solid #663333; border-radius: 6px; padding: 12px 20px; max-width: 420px; width: 90%; z-index: 10; }
+  .error-banner.visible { display: flex; align-items: flex-start; gap: 10px; }
+  .error-banner-text { flex: 1; font-size: 11px; font-family: 'Space Mono', monospace; color: #ff8888; line-height: 1.6; white-space: pre-wrap; }
+  .error-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 16px; line-height: 1; padding: 0; flex-shrink: 0; }
+  /* MR shadow catcher — a subtle disc under the model in MR */
+  /* (handled via Three.js object, no CSS needed) */
+
+  /* ─── Gallery overlay ───────────────────────────────────────────────────────── */
+  #model-gallery {
+    display: none;
+    position: fixed; inset: 0; z-index: 110;
+    background: rgba(8,8,10,.96);
+    /* backdrop-filter omitted — interferes with WebXR dom-overlay compositing */
+    flex-direction: column;
+  }
+  #model-gallery.open { display: flex; }
+
+  .gallery-topbar {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--panel);
+    flex-shrink: 0;
+  }
+  .gallery-topbar-title {
+    font-size: 10px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .15em; color: var(--muted); white-space: nowrap;
+  }
+  .gallery-search-wrap {
+    flex: 1; position: relative; max-width: 480px;
+  }
+  .gallery-search {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 9px 14px 9px 36px;
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    outline: none;
+    transition: border-color .15s;
+  }
+  .gallery-search:focus { border-color: var(--accent); }
+  .gallery-search::placeholder { color: var(--muted); }
+  .gallery-search-icon {
+    position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+    color: var(--muted); font-size: 14px; pointer-events: none;
+  }
+  .gallery-status {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--muted); white-space: nowrap; flex-shrink: 0;
+  }
+
+  .gallery-body {
+    flex: 1; display: flex; overflow: hidden;
+  }
+
+  .gallery-sidebar {
+    width: 180px; flex-shrink: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 16px 14px;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .gallery-sidebar::-webkit-scrollbar { width: 3px; }
+  .gallery-sidebar::-webkit-scrollbar-track { background: transparent; }
+  .gallery-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .gallery-filter-title {
+    font-size: 9px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .15em; color: var(--muted); margin-bottom: 8px;
+  }
+  .gallery-filter-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 0; cursor: pointer;
+  }
+  .gallery-filter-item input[type=checkbox] {
+    accent-color: var(--accent); width: 13px; height: 13px; cursor: pointer; flex-shrink: 0;
+  }
+  .gallery-filter-label {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--text); white-space: nowrap; overflow: hidden;
+    text-overflow: ellipsis; flex: 1;
+  }
+  .gallery-filter-count {
+    font-family: 'Space Mono', monospace; font-size: 9px; color: var(--muted); flex-shrink: 0;
+  }
+
+  .gallery-sort-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 4px 0; cursor: pointer;
+  }
+  .gallery-sort-item input[type=radio] {
+    accent-color: var(--accent); width: 13px; height: 13px; cursor: pointer; flex-shrink: 0;
+  }
+  .gallery-sort-label {
+    font-family: 'Space Mono', monospace; font-size: 10px; color: var(--text);
+  }
+
+  .gallery-main {
+    flex: 1; overflow-y: auto; padding: 20px 24px;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .gallery-main::-webkit-scrollbar { width: 4px; }
+  .gallery-main::-webkit-scrollbar-track { background: transparent; }
+  .gallery-main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .gallery-card {
+    width: 100%; min-width: 0; height: 220px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    display: flex; flex-direction: column;
+    cursor: pointer; overflow: hidden;
+    transition: border-color .15s, box-shadow .15s, transform .15s;
+    position: relative;
+  }
+  .gallery-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 20px rgba(255,204,0,.12);
+    transform: translateY(-2px);
+  }
+  .gallery-card:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px rgba(255,204,0,.3);
+  }
+
+  .gallery-card-thumb-wrap {
+    width: 100%; height: 140px; flex-shrink: 0;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .gallery-card-thumb {
+    width: 100%; height: 100%; object-fit: contain;
+    opacity: 0; transition: opacity .2s;
+  }
+  .gallery-card-thumb.loaded { opacity: 1; }
+
+  /* Brick placeholder — shown while thumb is loading or on error */
+  .gallery-card-placeholder {
+    width: 44px; height: 32px;
+    background: var(--border); border-radius: 2px; position: relative;
+    flex-shrink: 0;
+  }
+  .gallery-card-placeholder::before,
+  .gallery-card-placeholder::after {
+    content: ''; position: absolute; top: -11px;
+    width: 13px; height: 13px; background: var(--border); border-radius: 50%;
+  }
+  .gallery-card-placeholder::before { left: 6px; }
+  .gallery-card-placeholder::after  { right: 6px; }
+
+  .gallery-card-info {
+    flex: 1; padding: 6px 8px 8px;
+    display: flex; flex-direction: column; gap: 2px; overflow: hidden;
+  }
+  .gallery-card-name {
+    font-family: 'Space Mono', monospace; font-size: 10px; font-weight: 700;
+    color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .gallery-card-file {
+    font-family: 'Space Mono', monospace; font-size: 9px; color: var(--muted);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .gallery-card-cats,
+  .gallery-card-kwd {
+    font-family: 'Space Mono', monospace; font-size: 9px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    line-height: 1.3;
+  }
+  .gallery-card-cats { color: var(--muted); }
+  .gallery-card-kwd  { color: #4a8a6a; }   /* muted green — visually distinct from categories */
+  .gallery-card-field-label {
+    color: var(--muted); opacity: .6; margin-right: 2px;
+  }
+
+  .gallery-load-more-wrap {
+    display: flex; justify-content: center; padding-bottom: 8px;
+  }
+  .gallery-load-more {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    padding: 10px 32px; border-radius: 4px;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--text); cursor: pointer; text-transform: uppercase; letter-spacing: .08em;
+    transition: all .15s;
+  }
+  .gallery-load-more:hover { border-color: var(--accent); color: var(--accent); }
+
+  .gallery-empty {
+    grid-column: 1/-1; text-align: center; padding: 48px 20px;
+    font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); line-height: 2;
+  }
+
+  /* ─── Scene model list ───────────────────────────────────────────────────── */
+  .model-list-item {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 5px 0; gap: 8px; border-bottom: 1px solid var(--border);
+  }
+  .model-list-item:last-child { border-bottom: none; }
+  .model-list-name {
+    font-family: 'Space Mono', monospace; font-size: 10px; color: var(--text);
+    flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .model-list-remove {
+    background: none; border: none; color: var(--muted); cursor: pointer;
+    font-size: 14px; line-height: 1; padding: 0 2px; flex-shrink: 0;
+    transition: color .15s;
+  }
+  .model-list-remove:hover { color: #ff5555; }
+  .model-list-empty {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--muted); font-style: italic;
+  }
+  .model-list-count {
+    font-family: 'Space Mono', monospace; font-size: 10px;
+    color: var(--muted); margin-bottom: 8px;
+  }
+  .model-list-item.selected .model-list-name { color: var(--accent); }
+  .model-list-item.selected { border-color: rgba(255,204,0,.25); }
+  /* Show move cursor when hovering canvas in drag-ready state */
+  #canvas-container.drag-ready  { cursor: grab; }
+  #canvas-container.drag-active { cursor: grabbing; }
+
+  /* ─── XR buttons (VR + MR) injected by JS ───────────────────────────────── */
+  .btn.xr-btn, .btn.xr-btn-mr {
+    position: static !important;
+    width: auto !important; bottom: auto !important;
+    left: auto !important;  right: auto !important;
+  }
+  .btn.xr-btn    { border-color: var(--border); color: var(--text); }
+  .btn.xr-btn-mr { border-color: var(--accent-mr); color: var(--accent-mr); }
+  .btn.xr-btn:hover    { border-color: var(--accent); color: var(--accent); background: var(--border); }
+  .btn.xr-btn-mr:hover { border-color: var(--accent-mr); color: #000; background: var(--accent-mr); }
+  .btn.xr-btn:disabled, .btn.xr-btn-mr:disabled { border-color: var(--border); color: var(--muted); cursor: not-allowed; }
+
+
+  /* ─── Welcome modal ─────────────────────────────────────────────────────────── */
+  #welcome-backdrop {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(6,6,8,0.82);
+    display: flex; align-items: center; justify-content: center;
+    animation: wbFadeIn .35s ease both;
+  }
+  #welcome-backdrop.closing {
+    animation: wbFadeOut .25s ease both;
+  }
+  @keyframes wbFadeIn  { from { opacity:0 } to { opacity:1 } }
+  @keyframes wbFadeOut { from { opacity:1 } to { opacity:0 } }
+
+  #welcome-modal {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: min(480px, 92vw);
+    padding: 36px 36px 28px;
+    position: relative;
+    box-shadow: 0 32px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(255,204,0,.08);
+    animation: wmSlideIn .38s cubic-bezier(.22,1,.36,1) both;
+  }
+  #welcome-backdrop.closing #welcome-modal {
+    animation: wmSlideOut .22s ease both;
+  }
+  @keyframes wmSlideIn  { from { opacity:0; transform:translateY(18px) } to { opacity:1; transform:none } }
+  @keyframes wmSlideOut { from { opacity:1; transform:none } to { opacity:0; transform:translateY(10px) } }
+
+  /* Accent top stripe */
+  #welcome-modal::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+    border-radius: 8px 8px 0 0;
+  }
+
+  #welcome-modal .wm-eyebrow {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 10px;
+  }
+  #welcome-modal h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px; font-weight: 800; line-height: 1.2;
+    color: var(--text); margin-bottom: 14px;
+  }
+  #welcome-modal h2 span { color: var(--accent); }
+  #welcome-modal p {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px; line-height: 1.8; color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .wm-actions {
+    display: flex; gap: 10px; flex-wrap: wrap;
+  }
+  .wm-btn-watch {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    padding: 9px 18px; border-radius: 4px; cursor: pointer;
+    text-transform: uppercase; letter-spacing: .08em;
+    border: 1px solid var(--accent); background: var(--accent);
+    color: #000; font-weight: 700;
+    transition: background .15s, transform .1s;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .wm-btn-watch:hover { background: #ffd633; transform: translateY(-1px); }
+  .wm-btn-watch::before { content: '▶'; font-size: 9px; }
+
+  .wm-btn-continue {
+    font-family: 'Space Mono', monospace; font-size: 11px;
+    padding: 9px 18px; border-radius: 4px; cursor: pointer;
+    text-transform: uppercase; letter-spacing: .08em;
+    border: 1px solid var(--border); background: transparent;
+    color: var(--muted);
+    transition: border-color .15s, color .15s;
+  }
+  .wm-btn-continue:hover { border-color: var(--text); color: var(--text); }
+
+  #welcome-modal .wm-close {
+    position: absolute; top: 14px; right: 16px;
+    background: none; border: none; color: var(--muted);
+    font-size: 18px; cursor: pointer; line-height: 1; padding: 2px 4px;
+    transition: color .15s;
+  }
+  #welcome-modal .wm-close:hover { color: var(--text); }
+</style>
+</head>
+<body>
+
+<!-- ─── Welcome modal ──────────────────────────────────────────────────────────── -->
+<div id="welcome-backdrop">
+  <div id="welcome-modal" role="dialog" aria-modal="true" aria-labelledby="wm-title">
+    <button class="wm-close" id="wm-close" aria-label="Close">✕</button>
+    <div class="wm-eyebrow">Welcome</div>
+    <h2 id="wm-title">MODELSCOPE <span>XR</span></h2>
+    <p>
+      Browse and load LDraw models directly in your browser.<br>
+      Enter <b>VR / MR</b> mode to place and interact with models<br>
+      in your real environment using a Meta Quest headset.
+    </p>
+    <div class="wm-actions">
+      <button class="wm-btn-watch" id="wm-watch">Watch Video</button>
+      <button class="wm-btn-continue" id="wm-continue">Continue</button>
+    </div>
+  </div>
+</div>
+
+
+<header>
+  <div class="logo">
+    <div class="logo-brick"></div>
+    <h1>MODELSCOPE <span>XR</span> <span style="font-size:11px;opacity:.4;color:var(--text)">v0.9.1</span></h1>
+  </div>
+  <div class="controls">
+    <button class="btn" id="btn-browse">Browse Models</button>
+    <button class="btn" id="btn-reset-view">Reset View</button>
+    <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="anteloc" data-color="#FFDD00" data-emoji="☕" data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>
+    <input type="file" id="file-input" accept=".ldr,.mpd,.dat,.glb">
+    <!-- VR and MR buttons are injected here by JS after checking support -->
+  </div>
+</header>
+
+<div class="workspace">
+  <div id="canvas-container">
+    <div id="drop-zone">
+      <div class="drop-icon"><div class="drop-zone-brick"></div></div>
+      <div class="drop-text">
+        <h2>Drop LDraw File</h2>
+        <p>.ldr &nbsp;·&nbsp; .mpd &nbsp;·&nbsp; .dat &nbsp;·&nbsp; .glb</p>
+        <p style="margin-top:10px;font-size:10px;opacity:.6">Packed .mpd files work best<br>sub-parts are self-contained</p>
+      </div>
+    </div>
+    <div id="loading-overlay">
+      <div class="spinner"></div>
+      <div class="loading-text" id="loading-msg">Loading…</div>
+      <div class="loading-sub" id="loading-sub"></div>
+    </div>
+    <div class="error-banner" id="error-banner">
+      <div class="error-banner-text" id="error-text"></div>
+      <button class="error-close" id="btn-error-close">✕</button>
+    </div>
+    <div id="mode-badge"></div>
+    <div id="status">No model loaded</div>
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Scene</div>
+      <div class="model-list-count" id="scene-count">No models loaded</div>
+      <div id="scene-model-list"><span class="model-list-empty">—</span></div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Display</div>
+      <div class="toggle-row">
+        <span class="toggle-label">Edges</span>
+        <div class="toggle on" id="toggle-edges"></div>
+      </div>
+      <div class="toggle-row">
+        <span class="toggle-label">Grid</span>
+        <div class="toggle on" id="toggle-grid"></div>
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Load</div>
+      <input type="text" class="url-input" id="url-input" placeholder="https://…/model.mpd or .glb">
+      <button class="btn" id="btn-load-url" style="width:100%;margin-top:2px">Load from URL</button>
+      <div style="border-top:1px solid var(--border);margin:10px 0"></div>
+      <button class="btn primary" id="btn-open-file" style="width:100%">Open File…</button>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Browser Controls</div>
+      <div class="hint">
+        Left drag — Orbit<br>
+        Right drag — Pan camera<br>
+        Scroll — Zoom<br>
+        Double-click — Focus<br>
+        <br>
+        <b>Move a model:</b><br>
+        Right-drag on model<br>
+        Click model, then<br>
+        arrow keys to nudge
+      </div>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">VR / MR Controls</div>
+      <div class="hint">
+        Aim at a model, then:<br>
+        <b>Trigger/Grip</b> — grab &amp; move<br>
+        <b>Trigger + Stick ↑↓</b> — push/pull<br>
+        <b>Trigger + Stick ←→</b> — resize<br>
+        <b>Grip + Stick ←→↑↓</b> — rotate<br>
+        <b>B / Y</b> — remove model<br>
+        <b>A / X</b> — menu on/off
+      </div>
+    </div>
+    <div class="sidebar-section" style="flex:1">
+      <div class="sidebar-title">File Format Tips</div>
+      <div class="hint">
+        Packed .mpd files load<br>fully self-contained.<br><br>
+        Plain .ldr files need<br>sub-parts fetched from<br>the LDraw CDN — requires<br>internet access.<br><br>
+        .glb files load as-is.<br>Meshopt-compressed GLB<br>is supported.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/",
+    "three-mesh-bvh": "https://cdn.jsdelivr.net/npm/three-mesh-bvh@0.9.4/src/index.js",
+    "fflate": "https://cdn.jsdelivr.net/npm/fflate@0.8.2/esm/browser.js",
+    "troika-three-text": "https://esm.sh/troika-three-text@0.52.4?deps=three@0.169.0"
+  }
+}
+</script>
+
+<!-- Fuse.js for fuzzy search -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/7.0.0/fuse.min.js"></script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls }            from 'three/addons/controls/OrbitControls.js';
+import { LDrawLoader }              from 'three/addons/loaders/LDrawLoader.js';
+import { LDrawUtils }               from 'three/addons/utils/LDrawUtils.js';
+import { RoomEnvironment }          from 'three/addons/environments/RoomEnvironment.js';
+import { XRControllerModelFactory } from 'three/addons/webxr/XRControllerModelFactory.js';
+import { GLTFLoader }               from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader }              from 'three/addons/loaders/DRACOLoader.js';
+import { MeshoptDecoder }           from 'three/addons/libs/meshopt_decoder.module.js';
+import { computeBoundsTree, disposeBoundsTree, acceleratedRaycast } from 'three-mesh-bvh';
+import { Text as TroikaText, preloadFont } from 'troika-three-text';
+import { unzipSync }                from 'fflate';
+
+// Patch Three.js prototypes once — every Mesh and BufferGeometry in the scene
+// automatically gets BVH-accelerated raycasting after this point.
+THREE.BufferGeometry.prototype.computeBoundsTree  = computeBoundsTree;
+THREE.BufferGeometry.prototype.disposeBoundsTree  = disposeBoundsTree;
+THREE.Mesh.prototype.raycast                      = acceleratedRaycast;
+
+
+// ─── §1  Config ───────────────────────────────────────────────────────────────
+
+
+const BASE_REPO   = 'anteloc/ldbuilder-ai';
+const REPO_BRANCH = 'master';
+const PARTS_CDN    = `https://raw.githubusercontent.com/anteloc/ldraw-lib/master/ldraw/`;
+const DEMO_MODEL   = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models/2026-01-22/009-speed_falcon_hybrid.mpd`;
+const MODELS_INDEX = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models-index.jsonl`;
+const RAW_BASE     = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models/`;  // for loading models by filename from the index
+const DEMO_VIDEO   = 'https://youtu.be/WIP';
+// const DEMO_VIDEO   = 'https://anteloc.github.io/assets/demo.mp4';
+
+// XR scene hierarchy constants
+// LDU → metres: 1 LDU = 0.4 mm = 0.0004 m
+const LDU_TO_METERS = 0.0004;
+const MAX_MODELS    = 5;
+const MODEL_SPACING = 0.35;   // metres between model pivots in XR
+const MODEL_PIVOT_Y = 0.9;    // metres above floor
+const MODEL_PIVOT_Z = -0.6;   // metres in front of user
+
+// XR controller / laser constants
+const LASER_LENGTH          = 5;      // metres
+const LASER_RADIUS          = 0.003;  // metres — visible thickness in VR
+const COLOR_IDLE            = 0xffffff;
+const COLOR_HIT             = 0x44ff44;  // green — laser touching a model, interaction ready
+const COLOR_GRABBED         = 0xff2222;
+const SCALE_SPEED           = 0.02;   // scale change per frame at full thumbstick deflection
+const PUSH_SPEED            = 0.04;   // metres per frame at full thumbstick deflection
+const ROTATE_SPEED          = 1.5;    // radians/sec at full thumbstick deflection (≈ 86°/sec)
+// Raycasting throttle: when no gesture is active, only raycast every N frames.
+// At 72fps, N=3 gives ~24 laser updates/sec — imperceptible for idle aiming.
+// Active gestures always raycast every frame for precision.
+const RAYCAST_IDLE_INTERVAL = 3;
+
+// Browser interaction constants — world space is metres in browser mode
+const NUDGE_STEP = 0.04;  // metres (4 cm)
+const GRID_HALF  = 2.0;   // metres — half the grid width; models are clamped to ±this
+
+// XR menu navigation timing (milliseconds)
+const MENU_NAV_DELAY  = 600;  // initial hold before repeat starts
+const MENU_NAV_REPEAT = 150;  // repeat interval while thumbstick held
+
+// Model browser / gallery
+const GALLERY_PAGE_SIZE = 48;
+const THUMB_BASE        = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/thumbnails/`;
+
+// Scene background colour — saved here so onXRSessionEnd can restore it
+const BROWSER_BG = new THREE.Color(0x0e0e10);
+
+// Light intensities — two sets so toggling edges feels perceptually neutral.
+// Edges act like dark grout between tiles; without them surfaces read ~25% brighter,
+// so we compensate by dimming lights when edges are hidden.
+const LIGHTS_EDGES_ON  = { ambient: 0.6, dir: 1.5, envIntensity: 1.0 };
+const LIGHTS_EDGES_OFF = { ambient: 0.45, dir: 1.1, envIntensity: 0.1 };
+
+
+// MR boosts ambient to compensate for bright passthrough background.
+// Keep the same ratio between edges-on and edges-off.
+const LIGHTS_MR_EDGES_ON  = { ambient: 1.2, dir: 1.5, envIntensity: 1.0 };
+const LIGHTS_MR_EDGES_OFF = { ambient: 0.9, dir: 1.1, envIntensity: 0.1 };
+
+function applyLightIntensities() {
+  const mr     = (currentMode === 'mr');
+  const on     = edgesVisible;
+  const preset = mr
+    ? (on ? LIGHTS_MR_EDGES_ON  : LIGHTS_MR_EDGES_OFF)
+    : (on ? LIGHTS_EDGES_ON     : LIGHTS_EDGES_OFF);
+  ambientLight.intensity = preset.ambient;
+  dirLight.intensity     = preset.dir;
+  scene.environmentIntensity = preset.envIntensity;
+}
+
+// ─── §1b  Format detection ────────────────────────────────────────────────────
+
+function isGLB(name) { return /\.glb$/i.test(name); }
+
+// Convert shared-geometry meshes into InstancedMesh to slash draw calls.
+// The GLB converter's dedup() step ensures many mesh nodes share the same
+// BufferGeometry + Material.  InstancedMesh renders all instances in ONE
+// draw call without modifying geometry data (no winding / normal issues).
+function instanceGLBScene(gltfScene) {
+  gltfScene.updateMatrixWorld(true);
+
+  const rootInv = new THREE.Matrix4().copy(gltfScene.matrixWorld).invert();
+  const groups = new Map(); // "geoId|matId" → { geometry, material, pos[], neg[] }
+  const passthrough = []; // meshes we cannot safely instance
+  const lineGroups = new Map(); // materialId → { material, segs: [{geometry, matrix}] }
+
+  gltfScene.traverse((o) => {
+    if (o.isLineSegments) {
+      // Collect edge lines — merged later into one draw call per material.
+      const rel = new THREE.Matrix4().multiplyMatrices(rootInv, o.matrixWorld);
+      if (!lineGroups.has(o.material.id))
+        lineGroups.set(o.material.id, { material: o.material, segs: [] });
+      lineGroups.get(o.material.id).segs.push({ geometry: o.geometry, matrix: rel });
+      return;
+    }
+    if (!o.isMesh) return;
+    const rel = new THREE.Matrix4().multiplyMatrices(rootInv, o.matrixWorld);
+
+    // Skinned/morph/multi-material meshes are not safe to batch this way.
+    if (
+      o.isSkinnedMesh ||
+      o.morphTargetInfluences ||
+      Array.isArray(o.material)
+    ) {
+      passthrough.push({
+        geometry: o.geometry,
+        material: o.material,
+        matrix: rel,
+      });
+      return;
+    }
+
+    const key = o.geometry.id + "|" + o.material.id;
+    if (!groups.has(key)) {
+      groups.set(key, {
+        geometry: o.geometry,
+        material: o.material,
+        pos: [],
+        neg: [],
+      });
+    }
+    // Negative determinant means mirrored transform. Mixing mirrored and
+    // non-mirrored transforms in one material causes front-face winding issues.
+    if (rel.determinant() < 0) groups.get(key).neg.push(rel);
+    else groups.get(key).pos.push(rel);
+  });
+
+  // Replace the deep hierarchy with flat instanced meshes
+  while (gltfScene.children.length) gltfScene.remove(gltfScene.children[0]);
+
+  for (const { geometry, material, pos, neg } of groups.values()) {
+    const matrices = pos;
+    if (matrices.length === 1) {
+      const mesh = new THREE.Mesh(geometry, material);
+      mesh.matrixAutoUpdate = false;
+      mesh.matrix.copy(matrices[0]);
+      mesh.matrixWorldNeedsUpdate = true;
+      gltfScene.add(mesh);
+    } else {
+      const im = new THREE.InstancedMesh(geometry, material, matrices.length);
+      for (let i = 0; i < matrices.length; i++) im.setMatrixAt(i, matrices[i]);
+      im.instanceMatrix.needsUpdate = true;
+      im.computeBoundingSphere();
+      gltfScene.add(im);
+    }
+
+    if (neg.length > 0) {
+      // Negative-determinant (mirrored) transforms cannot be safely rendered
+      // with InstancedMesh + FrontSide because front-face winding is fixed per draw.
+      // Keep them as individual meshes so Three.js can set frontFace per object.
+      for (const matrix of neg) {
+        const mesh = new THREE.Mesh(geometry, material);
+        mesh.matrixAutoUpdate = false;
+        mesh.matrix.copy(matrix);
+        mesh.matrixWorldNeedsUpdate = true;
+        gltfScene.add(mesh);
+      }
+    }
+  }
+
+  for (const { geometry, material, matrix } of passthrough) {
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.matrixAutoUpdate = false;
+    mesh.matrix.copy(matrix);
+    mesh.matrixWorldNeedsUpdate = true;
+    gltfScene.add(mesh);
+  }
+
+  // Merge all edge LineSegments per material into one object each.
+  // Baking transforms into vertex positions means: one draw call per edge colour
+  // (almost always just one), correct bounding box, and no raycasting interference.
+  const _ev = new THREE.Vector3();
+  for (const { material, segs } of lineGroups.values()) {
+    let totalVerts = 0;
+    for (const { geometry } of segs) totalVerts += geometry.attributes.position.count;
+
+    const positions = new Float32Array(totalVerts * 3);
+    let off = 0;
+    for (const { geometry, matrix } of segs) {
+      const pos = geometry.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        _ev.fromBufferAttribute(pos, i).applyMatrix4(matrix);
+        positions[off++] = _ev.x;
+        positions[off++] = _ev.y;
+        positions[off++] = _ev.z;
+      }
+    }
+
+    const merged = new THREE.BufferGeometry();
+    merged.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const ls = new THREE.LineSegments(merged, material);
+    ls.raycast = () => {}; // visual only — never raycasted
+    gltfScene.add(ls);
+  }
+
+  return gltfScene;
+}
+
+
+
+// ─── §2  Renderer + Scene ─────────────────────────────────────────────────────
+
+const container = document.getElementById('canvas-container');
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+// renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // TODO review this, performance seems better but cause some blurriness on the models when in XR
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFShadowMap;    // PCFSoft is overkill; PCF is a good balance
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.0;
+renderer.xr.enabled = true;
+container.appendChild(renderer.domElement);
+
+let _needsRender = true;
+function invalidate() { _needsRender = true; }
+
+const scene = new THREE.Scene();
+scene.background = BROWSER_BG;
+
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment()).texture;
+
+
+// ─── §3  Scene objects — lights, grid, ground, MR shadow disc ────────────────
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+scene.add(ambientLight);
+
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
+dirLight.position.set(0.5, 1, 0.5);   // metre-scale scene
+dirLight.castShadow = true;
+dirLight.shadow.mapSize.set(1024, 1024);
+Object.assign(dirLight.shadow.camera, { near: 0.001, far: 10, left: -2, right: 2, top: 2, bottom: -2 });
+scene.add(dirLight);
+
+// Grid & shadow ground — browser / VR only, hidden in MR
+const gridHelper = new THREE.GridHelper(4, 50, 0x333344, 0x222230);  // 4 m, 8 cm cells
+scene.add(gridHelper);
+
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(20, 20),   // 20 m shadow catcher
+  new THREE.ShadowMaterial({ opacity: 0.2 })
+);
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// MR shadow disc — subtle circle anchoring the model to the real-world surface.
+// Replaces the grid in MR mode where an opaque floor plane is inappropriate.
+const mrShadowDisc = new THREE.Mesh(
+  new THREE.CircleGeometry(0.18, 64),
+  new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.25, depthWrite: false })
+);
+mrShadowDisc.rotation.x = -Math.PI / 2;
+mrShadowDisc.visible = false; // shown only in MR
+scene.add(mrShadowDisc);
+
+
+// ─── §4  Camera + OrbitControls ───────────────────────────────────────────────
+
+const camera = new THREE.PerspectiveCamera(45, 1, 0.001, 100);
+// Near-plane values — browser and XR are both in metres now.
+// Browser near is tighter (1 mm) so close-up inspection stays crisp.
+const CAMERA_NEAR_BROWSER = 0.001;  // 1 mm — tight for metre-scale browser depth precision
+const CAMERA_NEAR_XR      = 0.01;   // 1 cm — keeps controllers/menu visible at arm's reach
+camera.position.set(0, 0.5, 1.5);  // reasonable starting point; fitCamera() overrides on load
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.06;
+controls.addEventListener('change', invalidate);
+controls.addEventListener('start', () => { _orbitActive = true;  _hoverPending = false; container.classList.remove('drag-ready'); });
+controls.addEventListener('end',   () => { _orbitActive = false; });
+
+function resize() {
+  const w = container.clientWidth, h = container.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+  invalidate();
+}
+resize();
+window.addEventListener('resize', () => { resize(); invalidate(); });
+
+
+// ─── §5  Model registry ───────────────────────────────────────────────────────
+//
+// Each loaded model lives in a ModelEntry:
+//
+//   scene
+//     ├── (browser) entry.mesh   ← normal scale, LDU units
+//     └── entry.pivot            ← world position of model in XR
+//           ├── entry.root       ← uniform scale (LDU→metres) + rotation
+//           │     └── (XR) entry.mesh
+//           └── entry.orb        ← trackball orb, shown during rotate gesture
+//                 ├── invisible sphere  (intercepts laser raycast)
+//                 └── three ring lines  (red=X, green=Y, blue=Z)
+
+const models = [];   // all currently loaded models, in load order
+const _meshList = []; // cached models.map(e => e.mesh) — updated on load/remove
+
+let edgesVisible  = true;
+let orbVisible    = false;  // whether the trackball orb shows during grab
+let selectedEntry = null;   // model currently selected for keyboard nudge
+
+// Shadows are expensive: each frame with dirLight.castShadow=true adds a FULL
+// recursive traversal of the entire scene graph (WebGLShadowMap.renderObject).
+// Only enable when at least one LDraw model needs shadows.
+function updateShadows() {
+  if (renderer.xr.isPresenting) return;   // XR manages shadows separately
+  dirLight.castShadow = models.some(e => e.isLDraw);
+}
+
+// ── Trackball orb ─────────────────────────────────────────────────────────────
+//
+// Built once per entry; shown when a grab starts, hidden on release.
+// The invisible sphere intercepts the laser; the three torus rings (RGB = XYZ)
+// give visual feedback during grip-rotation.
+
+function makeOrb(entry) {
+  const orb = new THREE.Group();
+  orb.visible = false;
+
+  // Invisible sphere — raycasted as if solid, but never rendered.
+  // Radius is set in _setupEntryForXR once we know the model's bounding sphere.
+  const sphereGeo = new THREE.SphereGeometry(1, 32, 24);
+  const sphereMat = new THREE.MeshBasicMaterial({
+    transparent: true, opacity: 0, depthWrite: false, side: THREE.FrontSide,
+  });
+  const sphere = new THREE.Mesh(sphereGeo, sphereMat);
+  sphere.userData.orbEntry = entry;   // laser hit → look up entry
+  orb.add(sphere);
+
+  // Three ring lines — TorusGeometry, one per axis
+  const torusSeg = 128;   // smooth circle
+  const tubeR    = 0.012; // thin tube in metres (scaled with orb)
+  const rings = [
+    { color: 0xff2222, rx: 0,           ry: 0           },   // X-axis ring (lies in YZ plane)
+    { color: 0x22ff22, rx: Math.PI / 2, ry: 0           },   // Y-axis ring (lies in XZ plane)
+    { color: 0x2266ff, rx: 0,           ry: Math.PI / 2 },   // Z-axis ring (lies in XY plane)
+  ];
+
+  rings.forEach(({ color, rx, ry }) => {
+    const geo  = new THREE.TorusGeometry(1, tubeR, 12, torusSeg);
+    const mat  = new THREE.MeshBasicMaterial({ color, depthTest: false, transparent: true, opacity: 0.85 });
+    const mesh = new THREE.Mesh(geo, mat);
+    mesh.rotation.x = rx;
+    mesh.rotation.y = ry;
+    orb.add(mesh);
+  });
+
+  return { orb, sphere };
+}
+
+// ── Scale label — floating percentage tag shown while resizing ───────────────
+//
+// One label per model entry. Parented to the pivot so it floats above the
+// model at a fixed world-space offset. Redrawn only when the scale value
+// changes; hidden automatically after SCALE_LABEL_HIDE_MS of no change.
+
+const SCALE_LABEL_W        = 256;
+const SCALE_LABEL_H        = 80;
+const SCALE_LABEL_HIDE_MS  = 1200;   // ms after last scale change before hiding
+
+// Apparent height of the scale label as a fraction of viewport height.
+// 0.06 = ~6% of the screen height — readable but not obtrusive.
+const SCALE_LABEL_FRAC = 0.06;
+
+function makeScaleLabel() {
+  const canvas  = document.createElement('canvas');
+  canvas.width  = SCALE_LABEL_W;
+  canvas.height = SCALE_LABEL_H;
+  const ctx     = canvas.getContext('2d');
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.generateMipmaps = true;
+  texture.minFilter       = THREE.LinearMipmapLinearFilter;
+  texture.magFilter       = THREE.LinearFilter;
+  texture.anisotropy      = renderer.capabilities.getMaxAnisotropy();
+
+  const mat    = new THREE.SpriteMaterial({
+    map: texture, transparent: true, depthTest: false,
+  });
+  const sprite = new THREE.Sprite(mat);
+  // Scale is set each frame by _updateScaleLabels() to maintain constant apparent size.
+  sprite.renderOrder   = 1001;
+  sprite.frustumCulled = false;
+  sprite.visible       = false;
+  return { sprite, ctx, texture };
+}
+
+function _drawScaleLabel(entry, pct) {
+  const { ctx, texture } = entry.scaleLabel;
+  ctx.clearRect(0, 0, SCALE_LABEL_W, SCALE_LABEL_H);
+
+  // Pill background
+  const r = SCALE_LABEL_H / 2;
+  ctx.beginPath();
+  ctx.moveTo(r, 0);
+  ctx.lineTo(SCALE_LABEL_W - r, 0);
+  ctx.quadraticCurveTo(SCALE_LABEL_W, 0, SCALE_LABEL_W, r);
+  ctx.quadraticCurveTo(SCALE_LABEL_W, SCALE_LABEL_H, SCALE_LABEL_W - r, SCALE_LABEL_H);
+  ctx.lineTo(r, SCALE_LABEL_H);
+  ctx.quadraticCurveTo(0, SCALE_LABEL_H, 0, r);
+  ctx.quadraticCurveTo(0, 0, r, 0);
+  ctx.closePath();
+  ctx.fillStyle = 'rgba(10,10,18,0.88)';
+  ctx.fill();
+  ctx.strokeStyle = HUD_ACCENT;
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  ctx.font         = 'bold 38px monospace';
+  ctx.fillStyle    = HUD_ACCENT;
+  ctx.textAlign    = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(pct + '%', SCALE_LABEL_W / 2, SCALE_LABEL_H / 2);
+
+  texture.needsUpdate = true;
+}
+
+function showScaleLabel(entry, newScale) {
+  const pct = Math.round(newScale / entry.xrScale * 100);
+  _drawScaleLabel(entry, pct);
+  entry.scaleLabel.sprite.visible = true;
+
+  // Reset hide timer
+  clearTimeout(entry.scaleLabel.hideTimer);
+  entry.scaleLabel.hideTimer = setTimeout(() => {
+    entry.scaleLabel.sprite.visible = false;
+    invalidate();
+  }, SCALE_LABEL_HIDE_MS);
+}
+
+function createEntry(mesh, name, xrScale = LDU_TO_METERS) {
+  // Place new XR pivot to the right of all existing ones
+  const pivotX = models.reduce((maxX, e) => Math.max(maxX, e.pivot.position.x), 0)
+    + (models.length > 0 ? MODEL_SPACING : 0);
+
+  const pivot = new THREE.Group();
+  pivot.position.set(pivotX, MODEL_PIVOT_Y, MODEL_PIVOT_Z);
+  scene.add(pivot);
+
+  const root = new THREE.Group();
+  root.scale.setScalar(xrScale);
+  pivot.add(root);
+
+  // Orb is parented to root — rigidly attached to the model, rotates with it.
+  // Sized in onXRSessionStart once the mesh is re-centred into root-local space.
+  const entry = { mesh, pivot, root, name, xrScale, orb: null, orbSphere: null, scaleLabel: null };
+  const { orb, sphere } = makeOrb(entry);
+  entry.orb        = orb;
+  entry.orbSphere  = sphere;
+  root.add(orb);
+
+  // Scale label — floats above the model; parented to pivot so it moves with it
+  const scaleLabel = makeScaleLabel();
+  scaleLabel.sprite.position.set(0, 0.18, 0);   // 18 cm above pivot centre
+  pivot.add(scaleLabel.sprite);
+  entry.scaleLabel = scaleLabel;
+
+  return entry;
+}
+
+function fitCamera() {
+  if (models.length === 0) {
+    camera.position.set(0, 0.5, 1.5);
+    controls.target.set(0, 0, 0);
+    controls.update();
+    return;
+  }
+  const box = new THREE.Box3();
+  for (const entry of models) box.expandByObject(entry.mesh);
+  const size   = box.getSize(new THREE.Vector3());
+  const centre = box.getCenter(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const dist   = (maxDim / (2 * Math.tan(camera.fov * Math.PI / 360))) * 1.6;
+  controls.target.copy(centre);
+  camera.position.set(centre.x + dist * 0.3, centre.y + dist * 0.4, centre.z + dist);
+  controls.update();
+  gridHelper.position.y = box.min.y;
+  ground.position.y     = box.min.y;
+}
+
+function renderModelList() {
+  sceneCountEl.textContent = models.length === 0
+    ? 'No models loaded'
+    : `${models.length} / ${MAX_MODELS} model${models.length > 1 ? 's' : ''}`;
+
+  sceneModelListEl.innerHTML = models.length === 0
+    ? '<span class="model-list-empty">—</span>'
+    : models.map((entry, i) =>
+        `<div class="model-list-item${entry === selectedEntry ? ' selected' : ''}">` +
+          `<span class="model-list-name" title="${escHtml(entry.name)}">${escHtml(entry.name)}</span>` +
+          `<button class="model-list-remove" data-idx="${i}" title="Remove from scene">✕</button>` +
+        `</div>`
+      ).join('');
+}
+
+function disposeMesh(mesh) {
+  mesh.traverse(o => {
+    if (o.geometry) { o.geometry.disposeBoundsTree?.(); o.geometry.dispose(); }
+    if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach(m => m.dispose());
+  });
+}
+
+function removeEntry(entry) {
+  // Release any XR slot targeting this entry
+  for (const slot of slots) {
+    if (slot.grab.entry === entry) endInteraction(slot);
+  }
+  if (selectedEntry === entry) selectedEntry = null;
+
+  const { mesh, pivot, root, orb, scaleLabel } = entry;
+  mesh.parent?.remove(mesh);
+  scene.remove(pivot);
+  disposeMesh(mesh);
+  if (orb) orb.traverse(o => {
+    if (o.geometry) o.geometry.dispose();
+    if (o.material) o.material.dispose();
+  });
+  if (scaleLabel) {
+    clearTimeout(scaleLabel.hideTimer);
+    scaleLabel.texture?.dispose();
+    scaleLabel.sprite.material?.dispose();
+  }
+
+  models.splice(models.indexOf(entry), 1);
+  _meshList.splice(_meshList.indexOf(entry.mesh), 1);
+  updateShadows();
+  renderModelList();
+
+  if (models.length === 0) {
+    dropZone.style.display = '';
+    setStatus('No model loaded');
+  } else {
+    fitCamera();
+  }
+}
+
+function clearAllModels() {
+  for (const entry of models.slice()) removeEntry(entry); // slice — don't mutate while iterating
+}
+
+
+// ─── §6  Model loading ────────────────────────────────────────────────────────
+
+// Shared utilities used by both galleries
+function _capFirst(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+
+// Build [{name, count}] sorted alpha from a list of model objects (plain) or Fuse results
+function _buildCategoryCounts(items) {
+  const isWrapped = items[0]?.item !== undefined;
+  const counts = new Map();
+  for (const entry of items) {
+    const m = isWrapped ? entry.item : entry;
+    const k = _capFirst(m.category ?? 'Other');
+      counts.set(k, (counts.get(k) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([name, count]) => ({ name, count }));
+}
+
+function loadModelFromURL(url) {
+  if (!url) return;
+  const name = url.split('/').pop();
+  showLoading('Fetching…', url);
+  if (isGLB(url)) {
+    loadGLBFromURL(url, name);
+  } else {
+    loadMPDFromURL(url, name, 'Could not load URL — CORS may be blocking it.\nTry downloading and opening locally.');
+  }
+}
+
+//
+// makeLDrawLoader — constructs and primes a loader in one await.
+//   preloadMaterials failure is swallowed; the loader still resolves
+//   colours correctly for packed .mpd files without it.
+//
+// loadMPDFromURL  — resolves with the model group (throws on error).
+// loadMPDModelFromText — synchronous: parse() returns the group directly.
+//
+// Both call onModelLoaded on success; errors are surfaced via showError.
+
+function onProgress(xhr) {
+  if (xhr.total) loadingSub.textContent = 'Downloading… ' + Math.round(xhr.loaded / xhr.total * 100) + '%';
+}
+
+async function makeLDrawLoader() {
+  const loader = new LDrawLoader();
+  loader.setPartsLibraryPath(PARTS_CDN);
+  await loader.preloadMaterials(PARTS_CDN + 'LDConfig.ldr').catch(() => {});
+  return loader;
+}
+
+async function loadMPDFromURL(url, name, errorMsg) {
+  try {
+    if (url.endsWith('.zip')) {
+      // ── Zipped model: fetch as binary, decompress in-memory, parse as text ──
+      const resp   = await fetch(url);
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const buffer = await resp.arrayBuffer();
+      const files  = unzipSync(new Uint8Array(buffer));
+      const entries = Object.keys(files);
+      if (entries.length === 0) throw new Error('Zip archive is empty');
+      // Take the first file — archives contain exactly one .mpd/.ldr
+      const text = new TextDecoder().decode(files[entries[0]]);
+      const displayName = name.replace(/\.zip$/i, '');
+      onModelLoaded(await _parseWithLoader(text), displayName);
+    } else {
+      const loader = await makeLDrawLoader();
+      const model  = await loader.loadAsync(url, onProgress);
+      onModelLoaded(model, name);
+    }
+  } catch (err) {
+    showError(errorMsg + '\n\n' + err);
+  }
+}
+
+// Shared helper: build a loader and parse model text via a temporary Blob URL.
+// LDrawLoader.parse() expects callbacks and is not safely callable without them;
+// wrapping the text in a Blob and using loadAsync drives the full lifecycle correctly.
+// The object URL is revoked immediately after the load resolves to avoid memory leaks.
+async function _parseWithLoader(text) {
+  const loader = await makeLDrawLoader();
+  const blob   = new Blob([text], { type: 'text/plain' });
+  const url    = URL.createObjectURL(blob);
+  try {
+    return await loader.loadAsync(url, onProgress);
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+async function loadMPDModelFromText(text, name) {
+  try {
+    onModelLoaded(await _parseWithLoader(text), name);
+  } catch (err) {
+    console.error(err);
+    showError('Parse error: ' + (err?.message || String(err)) +
+      '\n\nPacked .mpd files work best — all sub-parts are bundled inside.');
+  }
+}
+
+// isLDraw=true  → apply mergeObject, Y-flip, disable edge raycasts, LDU_TO_METERS XR scale
+// isLDraw=false → GLB path: skip those steps, use scale 1.0 (GLB is already Y-up, in metres)
+function onModelLoaded(model, filename, { isLDraw = true } = {}) {
+  if (models.length >= MAX_MODELS) {
+    showError(`Maximum ${MAX_MODELS} models in scene. Remove one first.`);
+    return;
+  }
+
+  if (isLDraw) {
+    model = LDrawUtils.mergeObject(model); // flatten hierarchy for raycasting
+    model.rotation.x = Math.PI;           // LDraw Y-down → Three.js Y-up
+  } else {
+    model = instanceGLBScene(model);       // reduce draw calls via InstancedMesh
+  }
+
+  errorBanner.classList.remove('visible');
+  model.traverse(o => {
+    if (o.isMesh || o.isInstancedMesh) {
+      if (isLDraw) {
+        o.castShadow = true;
+        o.receiveShadow = true;
+      }
+      if (o.isMesh) o.geometry.computeBoundsTree();   // BVH — O(log n) raycasts
+    } else if (o.isLineSegments) {
+      o.raycast = () => {};             // edges are visual only — never raycasted
+    }
+  });
+
+  const xrScale = isLDraw ? LDU_TO_METERS : 1.0;
+
+  scene.add(model);
+  const entry = createEntry(model, filename, xrScale);
+  entry.isLDraw = isLDraw;
+  models.push(entry);
+  updateShadows();
+  _meshList.push(model);
+
+  // Scale the mesh to metres for browser display.
+  // XR uses root.scale (entry.xrScale) instead, so this is reset in _setupEntryForXR
+  // and restored in onXRSessionEnd.
+  if (!renderer.xr.isPresenting) {
+    model.scale.setScalar(entry.xrScale);
+  }
+
+  // In browser mode, separate models along X so they don't stack on top of each other.
+  // Bounding boxes are now in metres (mesh already scaled above).
+  if (models.length > 1) {
+    const existingBox = new THREE.Box3();
+    for (const e of models.slice(0, -1)) existingBox.expandByObject(e.mesh);
+    const newBox  = new THREE.Box3().setFromObject(model);
+    const newSize = newBox.getSize(new THREE.Vector3());
+    const gap     = newSize.x * 0.2;   // 20% of own width as breathing room
+    model.position.x = existingBox.max.x + gap + newSize.x / 2 - newBox.getCenter(new THREE.Vector3()).x;
+  }
+
+  if (models.length === 1) dropZone.style.display = 'none';
+
+  if (renderer.xr.isPresenting) {
+    // XR is active — move mesh into the entry's root, re-centre, size orb.
+    // The mesh was added to scene by createEntry above; _setupEntryForXR
+    // re-parents it into root (inside the pivot hierarchy) at correct scale.
+    _setupEntryForXR(entry);
+
+    requestPivotPlacement();
+  } else {
+    fitCamera();
+  }
+
+  renderModelList();
+  hideLoading();
+  setStatus(`Loaded: ${filename} (${models.length}/${MAX_MODELS} in scene)`);
+  invalidate();
+}
+
+function loadFile(file) {
+  if (!file) return;
+  if (isGLB(file.name)) {
+    showLoading('Reading GLB…', file.name);
+    loadGLBFromFile(file);
+    return;
+  }
+  showLoading('Reading file…', file.name);
+  const reader = new FileReader();
+  reader.onload = e => {
+    showLoading('Parsing model…', 'Sub-parts resolved from LDraw CDN — needs internet');
+    loadMPDModelFromText(e.target.result, file.name);
+  };
+  reader.onerror = () => showError('Could not read file.');
+  reader.readAsText(file);
+}
+
+function loadFromURL() {
+  const url = document.getElementById('url-input').value.trim();
+  loadModelFromURL(url);
+}
+
+// ── GLB loading ───────────────────────────────────────────────────────────────
+//
+// GLB is already Y-up and in metres — no Y-flip, no LDU scaling, no edge suppression.
+// Both functions converge on onModelLoaded with { isLDraw: false }.
+
+const _dracoLoader = new DRACOLoader()
+  .setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/libs/draco/');
+
+function makeGLTFLoader() {
+  return new GLTFLoader()
+    .setDRACOLoader(_dracoLoader)
+    .setMeshoptDecoder(MeshoptDecoder);
+}
+
+async function loadGLBFromURL(url, name) {
+  try {
+    const gltf = await makeGLTFLoader().loadAsync(url, onProgress);
+    onModelLoaded(gltf.scene, name, { isLDraw: false });
+  } catch (err) {
+    showError('Could not load GLB — CORS may be blocking it.\nTry downloading and opening locally.\n\n' + err);
+  }
+}
+
+async function loadGLBFromFile(file) {
+  try {
+    const buffer = await file.arrayBuffer();
+    const blob   = new Blob([buffer], { type: 'model/gltf-binary' });
+    const url    = URL.createObjectURL(blob);
+    try {
+      const gltf = await makeGLTFLoader().loadAsync(url, onProgress);
+      onModelLoaded(gltf.scene, file.name, { isLDraw: false });
+    } finally {
+      URL.revokeObjectURL(url);
+    }
+  } catch (err) {
+    showError('Parse error: ' + (err?.message || String(err)));
+  }
+}
+
+
+// ─── §7  Browser interaction — drag, select, focus, nudge ────────────────────
+//
+// Right-click drag on a model → move it in X/Z on its own ground plane.
+// Left-click on a model       → select it (arrow keys nudge it).
+// Right-click on empty space  → falls through to OrbitControls pan.
+// Quest 3 browser: click-and-hold (150 ms) triggers drag same as right-drag.
+
+// Reusable temporaries — never allocated per event
+const _browserRay = new THREE.Raycaster();
+_browserRay.firstHitOnly = true;   // BVH short-circuits after first hit
+const _dragPlane  = new THREE.Plane();
+const _dragOffset = new THREE.Vector3();
+const _planeHit   = new THREE.Vector3();
+const _ndcVec     = new THREE.Vector2();
+
+let _dragEntry      = null;   // entry currently being dragged
+let _dragActive     = false;
+let _orbitActive    = false;  // true while OrbitControls is rotating/panning/zooming
+let _hoverPending   = false;  // a pointermove arrived; process hover in next frame
+let _hoverClientX   = 0;
+let _hoverClientY   = 0;
+let _holdTimer      = null;   // for Quest-style click-and-hold
+let _pointerDownPos = null;   // { x, y } at pointerdown
+
+// Sets _browserRay from a DOM client-space coordinate.
+// Centralises the NDC conversion used by raycast, drag-start, and drag-move.
+function setRayFromClient(clientX, clientY) {
+  const rect = renderer.domElement.getBoundingClientRect();
+  _ndcVec.set(
+    ((clientX - rect.left)  / rect.width)  * 2 - 1,
+    -((clientY - rect.top) / rect.height) * 2 + 1
+  );
+  _browserRay.setFromCamera(_ndcVec, camera);
+}
+
+function browserRaycast(clientX, clientY) {
+  setRayFromClient(clientX, clientY);
+  const hits = _browserRay.intersectObjects(_meshList, true);
+  return hits.length > 0 ? hits[0] : null;
+}
+
+function hitToEntry(hit) {
+  // Each entry's mesh is the root of the loaded model — if the hit object
+  // lives anywhere inside it, getObjectById will find it in one call.
+  return models.find(e => e.mesh.getObjectById(hit.object.id)) ?? null;
+}
+
+function selectEntry(entry) {
+  selectedEntry = entry;
+  renderModelList();
+}
+
+function startDrag(entry, clientX, clientY) {
+  _dragEntry  = entry;
+  _dragActive = true;
+  controls.enabled = false;
+  container.classList.add('drag-active');
+  container.classList.remove('drag-ready');
+
+  // Build a horizontal plane at the model's current Y
+  _dragPlane.set(new THREE.Vector3(0, 1, 0), -entry.mesh.position.y);
+
+  // Record offset from plane hit to model origin so it doesn't snap to cursor
+  setRayFromClient(clientX, clientY);
+  _browserRay.ray.intersectPlane(_dragPlane, _planeHit);
+  _dragOffset.set(entry.mesh.position.x - _planeHit.x, 0, entry.mesh.position.z - _planeHit.z);
+}
+
+// Clamp a mesh's X/Z position to the grid boundary so it can't be dragged
+// or nudged off the visible floor into unreachable space.
+function clampToFloor(mesh) {
+  mesh.position.x = THREE.MathUtils.clamp(mesh.position.x, -GRID_HALF, GRID_HALF);
+  mesh.position.z = THREE.MathUtils.clamp(mesh.position.z, -GRID_HALF, GRID_HALF);
+}
+
+function moveDrag(clientX, clientY) {
+  if (!_dragActive || !_dragEntry) return;
+  setRayFromClient(clientX, clientY);
+  if (_browserRay.ray.intersectPlane(_dragPlane, _planeHit)) {
+    _dragEntry.mesh.position.x = _planeHit.x + _dragOffset.x;
+    _dragEntry.mesh.position.z = _planeHit.z + _dragOffset.z;
+    clampToFloor(_dragEntry.mesh);
+    invalidate();
+  }
+}
+
+function endDrag() {
+  if (_holdTimer) { clearTimeout(_holdTimer); _holdTimer = null; }
+  if (!_dragActive) return;
+  _dragActive = false;
+  _dragEntry  = null;
+  controls.enabled = true;
+  container.classList.remove('drag-active');
+}
+
+function resetView() {
+  if (renderer.xr.isPresenting) {
+    let x = 0;
+    for (const entry of models) {
+      entry.root.scale.setScalar(entry.xrScale);
+      entry.root.rotation.set(0, 0, 0);
+      entry.pivot.position.set(x, MODEL_PIVOT_Y, MODEL_PIVOT_Z);
+      x += MODEL_SPACING;
+    }
+    mrShadowDisc.position.set(0, 0.02, MODEL_PIVOT_Z);
+    mrShadowDisc.scale.setScalar(1);
+  } else {
+    fitCamera();
+  }
+}
+
+function toggleEdges() {
+  edgesVisible = !edgesVisible;
+  document.getElementById('toggle-edges').classList.toggle('on', edgesVisible);
+  for (const entry of models) {
+    entry.mesh.traverse(o => { if (o.isLineSegments) o.visible = edgesVisible; });
+  }
+  applyLightIntensities();
+  invalidate();
+}
+
+function toggleGrid() {
+  const on = !gridHelper.visible;
+  gridHelper.visible = on;
+  document.getElementById('toggle-grid').classList.toggle('on', on);
+  invalidate();
+}
+
+
+// ─── §8  XR controllers — lasers, slots, per-frame interaction ────────────────
+//
+// Three.js exposes two separate tracked spaces per physical controller:
+//   getController(i)     → pointer / target-ray space  (laser origin)
+//   getControllerGrip(i) → grip space                  (where the hand holds it)
+//
+// The controller model from XRControllerModelFactory must be attached to the
+// grip space; the laser must be attached to the pointer space.
+// Both are added to the scene and their poses are updated automatically by the
+// XR runtime each frame — no manual position/quaternion sync needed.
+//
+// Each physical controller has its own independent interaction slot so both
+// hands can interact with different models simultaneously.
+//
+// slot.type      — null | 'grab' | 'rotate'
+// slot.grab      — grab state, valid while type === 'grab'
+// slot.rotate    — rotate state, valid while type === 'rotate'
+//
+// Cross-controller rule: two grabs on the *same* model are denied — they would
+// fight each other. Any other combination is allowed.
+
+const controllerModelFactory = new XRControllerModelFactory();
+
+// Reusable temporaries — never allocated per-frame
+const _ctrlWorldPos  = new THREE.Vector3();
+const _ctrlWorldQuat = new THREE.Quaternion();
+const _ctrlWorldQInv = new THREE.Quaternion();
+const _raycaster     = new THREE.Raycaster();
+_raycaster.firstHitOnly = true;   // BVH short-circuits after first hit — much faster
+const _rayOrigin     = new THREE.Vector3();
+const _rayDir        = new THREE.Vector3();
+const _pushVec       = new THREE.Vector3();
+const _rotQuat       = new THREE.Quaternion();
+
+let _frameCount = 0;
+
+// ── Laser — cylinder beam + tip ring ──────────────────────────────────────────
+//
+// A CylinderGeometry is used instead of Line because WebGL does not support
+// line widths > 1px on most drivers, making Line invisible at VR scale.
+// The cylinder is oriented along –Z (the pointer forward direction).
+
+function makeLaser() {
+  const group = new THREE.Group();
+  group.renderOrder = 1002;   // group-level sort key — ensures laser renders above gallery (999/1000)
+
+  // Beam — thin cylinder from origin to LASER_LENGTH along –Z
+  const beamMat = new THREE.MeshBasicMaterial({ color: COLOR_IDLE, transparent: true, opacity: 0.6,
+    depthTest: false });
+  const beam = new THREE.Mesh(new THREE.CylinderGeometry(LASER_RADIUS, LASER_RADIUS, LASER_LENGTH, 8), beamMat);
+  beam.rotation.x   = Math.PI / 2;
+  beam.position.z   = -LASER_LENGTH / 2;
+  beam.renderOrder  = 1002;   // must exceed gallery bg (999) and troika text (1000)
+  group.add(beam);
+
+  // Tip ring — faces along the ray axis (perpendicular to –Z)
+  const ringMat = new THREE.MeshBasicMaterial({ color: COLOR_IDLE, side: THREE.DoubleSide,
+    transparent: true, opacity: 0.9, depthTest: false });
+  const ring = new THREE.Mesh(new THREE.RingGeometry(0.006, 0.012, 32), ringMat);
+  ring.position.z  = -LASER_LENGTH;
+  ring.renderOrder = 1002;
+  group.add(ring);
+
+  return { group, beam, ring };
+}
+
+function setLaserColor(ctrl, color) {
+  ctrl.laserBeam.material.color.setHex(color);
+  ctrl.laserRing.material.color.setHex(color);
+}
+
+function setLaserVisible(ctrl, visible) {
+  ctrl.laserBeam.parent.visible = visible;  // laser group
+}
+
+// Reset beam to full length (pointer not hitting anything)
+function resetLaser(ctrl) {
+  ctrl.laserBeam.scale.z    = 1;
+  ctrl.laserRing.position.z = -LASER_LENGTH;
+}
+
+// Shorten beam and move ring tip to distance d along the ray
+function setLaserDist(ctrl, d) {
+  ctrl.laserBeam.scale.z    = d / LASER_LENGTH;
+  ctrl.laserRing.position.z = -d;
+}
+
+// Called every frame for each controller. Casts a ray against all loaded
+// models, scales the beam and repositions the tip ring to the hit point
+// (or restores full length on a miss). Updates ctrl.hitPoint/hitEntry/rayDir.
+function updateLaser(ctrl) {
+  const { pointer } = ctrl;
+
+  if (models.length === 0) {
+    resetLaser(ctrl);
+    ctrl.hitPoint = null;
+    ctrl.hitEntry = null;
+    return;
+  }
+
+  pointer.getWorldPosition(_rayOrigin);
+  _rayDir.set(0, 0, -1).transformDirection(pointer.matrixWorld);
+  _raycaster.set(_rayOrigin, _rayDir);
+  ctrl.rayDir.copy(_rayDir);
+
+  // Test all loaded models; prefer orb sphere when rotating (orb visible),
+  // otherwise test the mesh directly. Pick nearest hit across all entries.
+  let nearestDist  = Infinity;
+  let nearestPoint = null;
+  let nearestEntry = null;
+
+  for (const entry of models) {
+    const target = (entry.orb?.visible) ? entry.orbSphere : entry.mesh;
+    const hits   = _raycaster.intersectObject(target, /* recursive */ true);
+    if (hits.length > 0 && hits[0].distance < nearestDist) {
+      nearestDist  = hits[0].distance;
+      nearestPoint = hits[0].point;
+      nearestEntry = entry;
+    }
+  }
+
+  if (nearestEntry === null) {
+    resetLaser(ctrl);
+    ctrl.hitPoint = null;
+    ctrl.hitEntry = null;
+    return;
+  }
+
+  ctrl.laserBeam.scale.z    = nearestDist / LASER_LENGTH;
+  ctrl.laserRing.position.z = -nearestDist;
+  ctrl.hitPoint = nearestPoint;
+  ctrl.hitEntry = nearestEntry;
+}
+
+// ── Interaction slots ──────────────────────────────────────────────────────────
+
+function makeSlot() {
+  return {
+    type: null,   // null | 'grab'
+    ctrl: null,
+    grab: {
+      entry:      null,
+      offsetPos:  new THREE.Vector3(),
+      offsetQuat: new THREE.Quaternion(),
+    },
+  };
+}
+
+const slots = [makeSlot(), makeSlot()];
+
+function otherSlot(slot) {
+  return slot === slots[0] ? slots[1] : slots[0];
+}
+
+function startGrab(slot, ctrl, hitPoint, hitEntry) {
+  // Deny if the other hand is already grabbing the same model
+  const other = otherSlot(slot);
+  if (other.type === 'grab' && other.grab.entry === hitEntry) return;
+
+  const { pivot, root } = hitEntry;
+  ctrl.pointer.getWorldPosition(_ctrlWorldPos);
+  ctrl.pointer.getWorldQuaternion(_ctrlWorldQuat);
+  _ctrlWorldQInv.copy(_ctrlWorldQuat).invert();
+
+  slot.grab.entry = hitEntry;
+  slot.grab.offsetPos
+    .copy(pivot.position)
+    .sub(_ctrlWorldPos)
+    .applyQuaternion(_ctrlWorldQInv);
+  slot.grab.offsetQuat
+    .multiplyQuaternions(_ctrlWorldQInv, root.getWorldQuaternion(new THREE.Quaternion()));
+
+  slot.type    = 'grab';
+  slot.ctrl    = ctrl;
+  setLaserColor(ctrl, COLOR_GRABBED);
+}
+
+function endInteraction(slot) {
+  if (!slot.type) return;
+  if (slot.ctrl) setLaserColor(slot.ctrl, COLOR_IDLE);
+  if (slot.grab.entry?.orb) slot.grab.entry.orb.visible = false;
+  slot.type       = null;
+  slot.ctrl       = null;
+  slot.grab.entry = null;
+}
+
+function applyGrab(slot) {
+  const { pivot, root } = slot.grab.entry;
+  const ctrl = slot.ctrl;
+  ctrl.pointer.getWorldPosition(_ctrlWorldPos);
+  ctrl.pointer.getWorldQuaternion(_ctrlWorldQuat);
+
+  pivot.position
+    .copy(slot.grab.offsetPos)
+    .applyQuaternion(_ctrlWorldQuat)
+    .add(_ctrlWorldPos);
+
+  root.quaternion.multiplyQuaternions(_ctrlWorldQuat, slot.grab.offsetQuat);
+
+  mrShadowDisc.position.x = pivot.position.x;
+  mrShadowDisc.position.z = pivot.position.z;
+}
+
+// Apply world-locked yaw/pitch rotation from grip + thumbstick.
+// Axes are fixed to the world frame — independent of head orientation or model state:
+//   thumbX → yaw  around world Y (0,1,0) — spins like an exhibition turntable
+//   thumbY → pitch around world X (1,0,0) — tilts like a globe
+// Rotation is baked into slot.grab.offsetQuat so applyGrab preserves it
+// on subsequent frames instead of resetting to the original orientation.
+const _yawAxis   = new THREE.Vector3(0, 1, 0);
+const _pitchAxis = new THREE.Vector3(1, 0, 0);
+
+function applyGripRotation(slot, thumbX, thumbY, dt) {
+  const angle = ROTATE_SPEED * dt;
+
+  if (Math.abs(thumbX) > 0.1) {
+    _rotQuat.setFromAxisAngle(_yawAxis, thumbX * angle);
+    slot.grab.offsetQuat.premultiply(_rotQuat);
+  }
+
+  if (Math.abs(thumbY) > 0.1) {
+    _rotQuat.setFromAxisAngle(_pitchAxis, thumbY * angle);
+    slot.grab.offsetQuat.premultiply(_rotQuat);
+  }
+
+  applyGrab(slot);
+}
+
+// Close the mini-display on a given controller and fully restore model interaction.
+// Called from: A/X toggle, and when the XR gallery opens.
+function _closeMenu(ctrl) {
+  const display = ctrl.miniDisplay;
+  if (!display) return;
+  display.visible           = false;
+  display.userData.menuMode = false;
+  // Laser visibility is restored automatically next frame by the raycast block
+  // (setLaserVisible(ctrl, true) runs when menuMode is false).
+}
+
+// Called every frame while XR is presenting
+function updateXRControls() {
+  _frameCount++;
+
+  // Deferred pivot placement — requested by onXRSessionStart / onModelLoaded.
+  // Runs here because this is the only place guaranteed to execute inside the
+  // XR animation loop, where renderer.xr.getFrame() is valid.
+  if (_pendingPivotPlacement) {
+    _pendingPivotPlacement = false;
+    _placeAllPivots();
+  }
+
+  // Deferred menu open — auto-show on the left controller when entering XR.
+  // Runs here (not in onXRSessionStart) because xrInputSource / handedness are
+  // only populated after the 'connected' event, which fires inside the XR loop.
+  if (_pendingMenuOpen) {
+    const leftCtrl = controllers.find(c => c.handedness === 'left') ?? controllers[1];
+    if (leftCtrl.handedness !== null || _frameCount > 10) {
+      // Controller identity confirmed (or enough frames elapsed — open anyway)
+      _pendingMenuOpen = false;
+      const { miniDisplay } = leftCtrl;
+      miniDisplay.userData.edgesOn  = edgesVisible;
+      miniDisplay.userData.orbOn    = orbVisible;
+      miniDisplay.userData.focusCol = 'tabs';
+      miniDisplay.userData.focusRow = miniDisplay.userData.activeTab;
+      miniDisplay.userData.menuMode = true;
+      miniDisplay.userData.draw();
+      miniDisplay.visible = true;
+    }
+  }
+
+  const anyActive = slots.some(s => s.type !== null);
+  const doRaycast = anyActive || (_frameCount % RAYCAST_IDLE_INTERVAL === 0);
+  const dt        = 1 / 72;   // nominal frame time; good enough for rotation feel
+  const now       = performance.now();
+
+  for (const ctrl of controllers) {
+    const { slot, miniDisplay, xrInputSource: src } = ctrl;
+    const gp      = src?.gamepad;
+    const inMenu  = miniDisplay.userData.menuMode;
+
+    // ── 1. Laser + raycast ──────────────────────────────────────────────────────
+    if (doRaycast) {
+      if (inMenu) {
+        setLaserVisible(ctrl, false);
+        ctrl.hitPoint = null;
+        ctrl.hitEntry = null;
+      } else {
+        setLaserVisible(ctrl, true);
+        const trigNow      = gp?.buttons[0]?.pressed ?? false;
+        const galHit       = _galUpdateLaser(ctrl, trigNow, ctrl.galTrigWas);
+        ctrl.galTrigWas    = trigNow;
+        if (galHit) {
+          ctrl.hitPoint = null;
+          ctrl.hitEntry = null;
+          setLaserColor(ctrl, COLOR_HIT);
+        } else {
+          updateLaser(ctrl);
+          if (slot.type === null)
+            setLaserColor(ctrl, ctrl.hitEntry ? COLOR_HIT : COLOR_IDLE);
+        }
+      }
+    }
+
+    // ── 2. Apply grab (move + optional grip-rotation) ───────────────────────────
+    if (slot.type === 'grab') {
+      const gripNow = gp?.buttons[1]?.pressed ?? false;
+      if (gripNow) {
+        applyGripRotation(slot, gp.axes[2] ?? 0, gp.axes[3] ?? 0, dt);
+      } else {
+        applyGrab(slot);
+      }
+    }
+
+    // ── 3. Thumbstick scale + push/pull — trigger (not grip) held while grabbing.
+    //    Dominant-axis gate dispatches: |X| > |Y| → scale, |Y| > |X| → push/pull.
+    if (!inMenu && slot.type === 'grab' && gp) {
+      const trigHeld = gp.buttons[0]?.pressed ?? false;
+      const gripHeld = gp.buttons[1]?.pressed ?? false;
+      if (trigHeld && !gripHeld) {
+        const thumbX = gp.axes[2] ?? 0;
+        const thumbY = gp.axes[3] ?? 0;
+        const axX = Math.abs(thumbX), axY = Math.abs(thumbY);
+
+        if (axX > 0.1 && axX > axY) {
+          // Scale
+          const entry    = slot.grab.entry;
+          const newScale = THREE.MathUtils.clamp(
+            entry.root.scale.x * (1 + thumbX * SCALE_SPEED),
+            entry.xrScale * 0.05, entry.xrScale * 30
+          );
+          entry.root.scale.setScalar(newScale);
+          mrShadowDisc.scale.setScalar(newScale / LDU_TO_METERS);
+          showScaleLabel(entry, newScale);
+        } else if (axY > 0.1 && axY > axX) {
+          // Push / pull — delta baked into offsetPos so applyGrab carries it forward
+          ctrl.pointer.getWorldQuaternion(_ctrlWorldQuat);
+          _ctrlWorldQInv.copy(_ctrlWorldQuat).invert();
+          _pushVec.copy(ctrl.rayDir)
+            .multiplyScalar(-thumbY * PUSH_SPEED)
+            .applyQuaternion(_ctrlWorldQInv);
+          slot.grab.offsetPos.add(_pushVec);
+        }
+      }
+    }
+
+    // ── 4. B/Y — remove the model the laser is currently hitting (rising edge) ──
+    const byNow    = gp?.buttons[5]?.pressed ?? false;
+    if (byNow && !ctrl.prevBY && ctrl.hitEntry) removeEntry(ctrl.hitEntry);
+    ctrl.prevBY = byNow;
+
+    // ── 5. A/X — toggle mini-display (rising edge, mutual exclusion) ────────────
+    const axNow = gp?.buttons[4]?.pressed ?? false;
+    if (axNow && !ctrl.prevAX) {
+      if (miniDisplay.visible) {
+        _closeMenu(ctrl);
+      } else {
+        // Close the other controller's display first
+        const other = controllers.find(c => c !== ctrl);
+        if (other?.miniDisplay.visible) _closeMenu(other);
+
+        miniDisplay.userData.edgesOn  = edgesVisible;
+        miniDisplay.userData.orbOn    = orbVisible;
+        miniDisplay.userData.focusCol = 'tabs';
+        miniDisplay.userData.focusRow = miniDisplay.userData.activeTab;
+        miniDisplay.userData.menuMode = true;
+        miniDisplay.userData.draw();
+        miniDisplay.visible = true;
+      }
+    }
+    ctrl.prevAX = axNow;
+
+    // ── 6. Menu navigation (thumbstick + trigger) — only when menu is open ──────
+    if (!miniDisplay.visible || !inMenu || !gp) continue;
+
+    const st      = miniDisplay.userData;
+    let   changed = false;
+
+    // Thumbstick Y: up/down with time-based repeat
+    const thumbY   = gp.axes[3] ?? 0;
+    const yDeflect = Math.abs(thumbY) > 0.7;
+    if (!yDeflect) {
+      ctrl.menuNavRepeatTime = 0;
+      ctrl.menuNavFired      = false;
+    } else {
+      const delay = ctrl.menuNavFired ? MENU_NAV_REPEAT : MENU_NAV_DELAY;
+      if (now - ctrl.menuNavRepeatTime >= delay) {
+        ctrl.menuNavRepeatTime = now;
+        ctrl.menuNavFired      = true;
+        const dir      = thumbY > 0 ? 1 : -1;
+        const rowCount = st.focusCol === 'tabs' ? MENU_TABS.length : MODELS_PANEL_ITEMS.length;
+        st.focusRow = (st.focusRow + dir + rowCount) % rowCount;
+        changed = true;
+      }
+    }
+
+    // Thumbstick X: switch column, rising edge
+    const thumbX   = gp.axes[2] ?? 0;
+    const xPressed = Math.abs(thumbX) > 0.8;
+    if (xPressed && !ctrl.menuXActive) {
+      if (thumbX > 0 && st.focusCol === 'tabs' && st.activeTab === 0) {
+        st.focusCol = 'panel'; st.focusRow = 0; changed = true;
+      } else if (thumbX < 0 && st.focusCol === 'panel') {
+        st.focusCol = 'tabs'; st.focusRow = st.activeTab; changed = true;
+      }
+    }
+    ctrl.menuXActive = xPressed;
+
+    // Trigger: confirm, rising edge
+    const trigNow = gp.buttons[0]?.pressed ?? false;
+    if (trigNow && !ctrl.menuTrigWas) {
+      if (st.focusCol === 'tabs') {
+        if (st.focusRow !== st.activeTab) { st.activeTab = st.focusRow; changed = true; }
+      } else {
+        const item = MODELS_PANEL_ITEMS[st.focusRow];
+        if (item.id === 'edges') {
+          toggleEdges(); st.edgesOn = edgesVisible; changed = true;
+        } else if (item.id === 'orb') {
+          orbVisible = !orbVisible; st.orbOn = orbVisible; changed = true;
+        } else if (item.id === 'browse') {
+          // Mark galTrigWas=true on this controller so the gallery's first
+          // laser update sees trigger as "held, not newly pressed" — prevents
+          // the same trigger press from immediately selecting the first model.
+          ctrl.galTrigWas = true;
+          openXRGallery(ctrl);
+        }
+      }
+    }
+    ctrl.menuTrigWas = trigNow;
+
+    // Moving focus within tabs immediately activates that tab
+    if (changed && st.focusCol === 'tabs') st.activeTab = st.focusRow;
+    if (changed) st.draw();
+  }
+}
+
+// ── Mini-display ─────────────────────────────────────────────────────────────
+//
+// A tabbed control panel attached to the controller grip (wrist-mounted).
+// Drawn entirely on a CanvasTexture — redrawn only on state change, zero
+// per-frame cost between interactions.
+//
+// Layout (W=512, H=288):
+//   ┌──────────┬──────────────────────────────┐
+//   │ TAB BAR  │  TAB PANEL                   │
+//   │  MODELS◀ │  (content for active tab)    │
+//   │  MODELS  │                              │
+//   └──────────┴──────────────────────────────┘
+//
+// userData on the group:
+//   activeTab   0=MODELS | 1=HELP
+//   focusCol   'tabs' | 'panel'
+//   focusRow    index within current column
+//   menuMode    bool — thumbstick+trigger routed to menu when true
+//   edgesOn     mirrors global edgesVisible
+//   draw()      call to redraw canvas after any state change
+
+// ── Canvas drawing helpers ─────────────────────────────────────────────────────
+
+// 768×432 — 1.5× the old 512×288, same 16:9 ratio.
+// Higher pixel density makes text noticeably sharper at wrist distance in VR.
+const MENU_W = 768, MENU_H = 432;
+
+// ── Shared HUD palette — used by mini-display and XR gallery ─────────────────
+const HUD_BG       = 'rgba(10,10,18,0.92)';
+const HUD_BORDER   = 'rgba(255,255,255,0.18)';
+const HUD_ACCENT   = '#ffcc00';
+const HUD_TEXT     = '#e8e8ec';
+const HUD_MUTED    = '#6b6b78';
+const HUD_FOCUS_BG = 'rgba(255,204,0,0.18)';
+const HUD_SEP      = 'rgba(255,255,255,0.10)';
+const HUD_HOVER    = 'rgba(255,204,0,0.14)';
+const HUD_CAT_ON   = 'rgba(255,204,0,0.22)';
+// Subtle active-tab fill — slightly lighter than the panel background
+const HUD_TAB_ACTIVE_BG = 'rgba(255,255,255,0.06)';
+
+// Tab definitions — label and panel renderer
+const MENU_TABS = ['MODELS', 'HELP'];
+
+// TAB_W: width of the left tab sidebar (wider than before for legibility)
+const TAB_W = 140;
+
+// Reusable rounded-rect path helper (used by menu and gallery)
+function _menuRoundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+// Pill-shaped toggle drawn at (cx, cy) — cx/cy are the centre of the pill.
+// on=true → filled accent track + right knob; on=false → dim track + left knob.
+function _menuDrawToggle(ctx, cx, cy, on) {
+  const tw = 52, th = 28, r = th / 2;
+  const tx = cx - tw / 2, ty = cy - th / 2;
+
+  // Track
+  _menuRoundRect(ctx, tx, ty, tw, th, r);
+  ctx.fillStyle = on ? 'rgba(255,204,0,0.35)' : 'rgba(255,255,255,0.10)';
+  ctx.fill();
+  ctx.strokeStyle = on ? HUD_ACCENT : HUD_MUTED;
+  ctx.lineWidth = 1.5;
+  ctx.stroke();
+
+  // Knob
+  const knobX = on ? tx + tw - r : tx + r;
+  ctx.beginPath();
+  ctx.arc(knobX, cy, r - 4, 0, Math.PI * 2);
+  ctx.fillStyle = on ? HUD_ACCENT : HUD_MUTED;
+  ctx.fill();
+}
+
+function _menuBackground(ctx) {
+  _menuRoundRect(ctx, 0, 0, MENU_W, MENU_H, 24);
+  ctx.fillStyle = HUD_BG;
+  ctx.fill();
+  ctx.strokeStyle = HUD_BORDER;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+  // Vertical divider between tab bar and panel
+  ctx.beginPath();
+  ctx.moveTo(TAB_W, 10); ctx.lineTo(TAB_W, MENU_H - 10);
+  ctx.strokeStyle = HUD_SEP;
+  ctx.lineWidth = 1;
+  ctx.stroke();
+}
+
+function _menuDrawTabs(ctx, activeTab, focusCol, focusRow) {
+  const tabH = MENU_H / MENU_TABS.length;
+  MENU_TABS.forEach((label, i) => {
+    const y         = i * tabH;
+    const isActive  = i === activeTab;
+    const isFocused = focusCol === 'tabs' && i === focusRow;
+
+    // Active tab: subtle fill so it reads as the "open" panel
+    if (isActive) {
+      ctx.fillStyle = HUD_TAB_ACTIVE_BG;
+      ctx.fillRect(2, y + 1, TAB_W - 3, tabH - 2);
+    }
+
+    // Focus highlight (controller cursor)
+    if (isFocused) {
+      ctx.fillStyle = HUD_FOCUS_BG;
+      ctx.fillRect(2, y + 2, TAB_W - 4, tabH - 4);
+    }
+
+    // Active tab — left accent bar
+    if (isActive) {
+      ctx.fillStyle = HUD_ACCENT;
+      ctx.fillRect(2, y + tabH * 0.2, 4, tabH * 0.6);
+    }
+
+    ctx.font      = 'bold 27px Arial, sans-serif';
+    ctx.fillStyle = isActive ? HUD_ACCENT : (isFocused ? HUD_TEXT : HUD_MUTED);
+    ctx.textAlign    = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(label, TAB_W / 2, y + tabH / 2);
+  });
+}
+
+// ── Panel renderers ────────────────────────────────────────────────────────────
+
+function _menuDrawHelp(ctx) {
+  const x0 = TAB_W + 16;
+  const rows = [
+    { label: 'Trigger',        desc: 'Grab / move'      },
+    { label: 'Trig + Stick↑↓', desc: 'Push / pull'      },
+    { label: 'Trig + Stick←→', desc: 'Scale'            },
+    { label: 'Grip',           desc: 'Grab / rotate'    },
+    { label: 'Grip + Stick',   desc: 'Rotate yaw/pitch' },
+    { label: 'B / Y',          desc: 'Remove model'     },
+    { label: 'A / X',          desc: 'Toggle menu'      },
+  ];
+  // Distribute rows evenly with top/bottom padding
+  const pad  = 20;
+  const rowH = (MENU_H - pad * 2) / rows.length;
+  rows.forEach((row, i) => {
+    const y = pad + i * rowH + rowH / 2;
+
+    // Subtle separator between rows
+    if (i > 0) {
+      ctx.fillStyle = HUD_SEP;
+      ctx.fillRect(x0, pad + i * rowH, MENU_W - x0 - 16, 1);
+    }
+
+    ctx.font      = 'bold 22px Arial, sans-serif';
+    ctx.fillStyle = HUD_TEXT;
+    ctx.textAlign    = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(row.label, x0, y);
+
+    ctx.font      = '19px Arial, sans-serif';
+    ctx.fillStyle = HUD_MUTED;
+    ctx.textAlign = 'right';
+    ctx.fillText(row.desc, MENU_W - 18, y);
+  });
+}
+
+// Items in the MODELS panel — order maps directly to focusRow index
+const MODELS_PANEL_ITEMS = [
+  { id: 'browse', label: 'Browse models', hasToggle: false },
+  { id: 'edges',  label: 'Edges',         hasToggle: true  },
+  { id: 'orb',    label: 'Rotation orb',  hasToggle: true  },
+];
+
+function _menuDrawModels(ctx, focusCol, focusRow, edgesOn, orbOn) {
+  const x0    = TAB_W + 18;
+  const itemH = 80;   // 3 items × 80px = 240px, leaves room for hint in 432px canvas
+  const items = MODELS_PANEL_ITEMS;
+
+  items.forEach(({ id, label, hasToggle }, i) => {
+    const y         = 24 + i * itemH;
+    const isFocused = focusCol === 'panel' && i === focusRow;
+    const midY      = y + itemH / 2;
+
+    // Focus highlight
+    if (isFocused) {
+      _menuRoundRect(ctx, x0 - 6, y + 4, MENU_W - x0 - 10, itemH - 8, 10);
+      ctx.fillStyle = HUD_FOCUS_BG;
+      ctx.fill();
+      ctx.strokeStyle = HUD_ACCENT;
+      ctx.lineWidth   = 1.5;
+      ctx.stroke();
+    }
+
+    // Row separator
+    if (i > 0) {
+      ctx.fillStyle = HUD_SEP;
+      ctx.fillRect(x0, y, MENU_W - x0 - 16, 1);
+    }
+
+    ctx.font      = 'bold 25px Arial, sans-serif';
+    ctx.fillStyle = isFocused ? HUD_ACCENT : HUD_TEXT;
+    ctx.textAlign    = 'left';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(label, x0 + 8, midY);
+
+    // Right side: pill toggle for toggleable items, chevron for actions
+    if (hasToggle) {
+      const on = (id === 'edges') ? edgesOn : orbOn;
+      _menuDrawToggle(ctx, MENU_W - 46, midY, on);
+    } else {
+      ctx.font      = '22px Arial, sans-serif';
+      ctx.fillStyle = HUD_MUTED;
+      ctx.textAlign = 'right';
+      ctx.fillText('›', MENU_W - 18, midY);
+    }
+  });
+
+  // Navigation hint at the bottom
+  ctx.font      = '16px Arial, sans-serif';
+  ctx.fillStyle = HUD_MUTED;
+  ctx.textAlign    = 'center';
+  ctx.textBaseline = 'bottom';
+  ctx.fillText('‹ back  ·  ↑↓ navigate  ·  trigger: select', TAB_W + (MENU_W - TAB_W) / 2, MENU_H - 10);
+}
+
+// ── Main draw entry point ──────────────────────────────────────────────────────
+
+function _drawMenu(ctx, texture, state) {
+  ctx.clearRect(0, 0, MENU_W, MENU_H);
+  _menuBackground(ctx);
+  _menuDrawTabs(ctx, state.activeTab, state.focusCol, state.focusRow);
+
+  if (state.activeTab === 0) _menuDrawModels(ctx, state.focusCol, state.focusRow, state.edgesOn, state.orbOn);
+  else                       _menuDrawHelp(ctx);
+
+  texture.needsUpdate = true;
+}
+
+// ── makeMiniDisplay ────────────────────────────────────────────────────────────
+
+function makeMiniDisplay() {
+  const group = new THREE.Group();
+  group.visible = false;
+
+  const canvas  = document.createElement('canvas');
+  canvas.width  = MENU_W;
+  canvas.height = MENU_H;
+  const ctx     = canvas.getContext('2d');
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.generateMipmaps = true;
+  texture.minFilter       = THREE.LinearMipmapLinearFilter;
+  texture.magFilter       = THREE.LinearFilter;
+  texture.anisotropy      = renderer.capabilities.getMaxAnisotropy();
+
+  // Menu state — lives on userData so updateXRControls can read/write it
+  group.userData.activeTab = 0;      // 0=MODELS, 1=HELP
+  group.userData.focusCol  = 'tabs'; // 'tabs' | 'panel'
+  group.userData.focusRow  = 0;
+  group.userData.menuMode  = false;
+  group.userData.edgesOn   = true;   // synced to global edgesVisible on open
+  group.userData.orbOn     = false;  // synced to global orbVisible on open
+
+  // Expose draw so updateXRControls can trigger redraws
+  group.userData.draw = () => _drawMenu(ctx, texture, group.userData);
+  group.userData.draw();
+
+  // Flat Mesh plane — stays anchored to the wrist unlike a billboarding Sprite.
+  // Physical size 0.32×0.18 m gives comfortable reading distance at arm's length.
+  const mat  = new THREE.MeshBasicMaterial({ map: texture, transparent: true, depthTest: false, side: THREE.DoubleSide });
+  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(0.32, 0.18), mat);
+  group.add(mesh);
+
+  // Position helper — called once from 'connected' event.
+  // Tilts the panel to face the user when the hand is held naturally at waist height.
+  group.userData.positionForHand = (handedness) => {
+    const side = handedness === 'left' ? 1 : -1;
+    group.position.set(side * 0.10, 0.07, 0.01);
+    group.rotation.set(-Math.PI * 0.5, 0, side * Math.PI * 0.10);
+  };
+
+  return group;
+}
+
+// ── Build both controllers ─────────────────────────────────────────────────────
+
+// ── Controller state object ────────────────────────────────────────────────────
+//
+// All per-controller state lives here — no ad-hoc properties on pointer.userData.
+// pointer.userData retains only what Three.js internals require (none in our case).
+//
+//   pointer / grip     Three.js tracked-space objects (poses updated by XR runtime)
+//   laserBeam/Ring     mesh references for laser visuals
+//   miniDisplay        wrist-mounted HUD group
+//   slot               interaction slot (shared with slots[])
+//   xrInputSource      XRInputSource, set on 'connected', cleared on 'disconnected'
+//   handedness         'left' | 'right'
+//   hitPoint/Entry     last raycast result — written each frame, read by grab/remove
+//   rayDir             last ray direction — needed for push/pull offset math
+//   galHighlight       last hovered gallery row index (avoids unnecessary redraws)
+//   -- button edge-detection state (all initialised explicitly, no lazy ?? guards) --
+//   prevBY             B/Y button previous frame
+//   prevAX             A/X button previous frame
+//   galTrigWas         trigger state for gallery laser (previous frame)
+//   menuTrigWas        trigger state for menu confirm (previous frame)
+//   menuXActive        thumbstick-X deflection state for menu column switch
+//   menuNavRepeatTime  timestamp of last menu-nav repeat fire
+//   menuNavFired       whether the initial nav delay has elapsed
+
+function buildController(index) {
+  // Pointer space — laser lives here
+  const pointer = renderer.xr.getController(index);
+  const { group: laserGroup, beam: laserBeam, ring: laserRing } = makeLaser();
+  pointer.add(laserGroup);
+  scene.add(pointer);
+
+  // Grip space — hardware model + mini-display live here
+  const grip = renderer.xr.getControllerGrip(index);
+  grip.add(controllerModelFactory.createControllerModel(grip));
+
+  const miniDisplay = makeMiniDisplay();
+  grip.add(miniDisplay);
+  scene.add(grip);
+
+  const ctrl = {
+    pointer, grip,
+    laserBeam, laserRing,
+    miniDisplay,
+    slot:           slots[index],
+    xrInputSource:  null,
+    handedness:     null,
+    hitPoint:       null,
+    hitEntry:       null,
+    rayDir:         new THREE.Vector3(),
+    galHighlight:   -1,
+    // button edge state — explicit, never lazy-defaulted
+    prevBY:              false,
+    prevAX:              false,
+    galTrigWas:          false,
+    menuTrigWas:         false,
+    menuXActive:         false,
+    menuNavRepeatTime:   0,
+    menuNavFired:        false,
+  };
+
+  pointer.addEventListener('connected', e => {
+    ctrl.xrInputSource = e.data;
+    ctrl.handedness    = e.data.handedness;
+    miniDisplay.userData.positionForHand?.(e.data.handedness);
+  });
+  pointer.addEventListener('disconnected', () => { ctrl.xrInputSource = null; });
+
+  // Both trigger (select) and grip (squeeze) start a grab.
+  // The orb is shown immediately so grip-rotation has visual feedback from the start.
+  function tryStartGrab() {
+    if (ctrl.slot.type) return;
+    if (miniDisplay.userData.menuMode) return;
+    if (!ctrl.hitEntry) return;
+    startGrab(ctrl.slot, ctrl, ctrl.hitPoint, ctrl.hitEntry);
+    if (ctrl.hitEntry.orb && orbVisible) ctrl.hitEntry.orb.visible = true;
+  }
+
+  pointer.addEventListener('squeezestart', tryStartGrab);
+  pointer.addEventListener('squeezeend',   () => { if (ctrl.slot.type === 'grab') endInteraction(ctrl.slot); });
+  pointer.addEventListener('selectstart',  tryStartGrab);
+  pointer.addEventListener('selectend',    () => { if (ctrl.slot.type === 'grab') endInteraction(ctrl.slot); });
+
+  return ctrl;
+}
+
+const controllers = [buildController(0), buildController(1)];
+
+
+// ─── §8b  XR Gallery panel ────────────────────────────────────────────────────
+//
+// A world-space CanvasTexture plane that floats in front of the user.
+// Opened by: BROWSE MODELS in the mini-display menu.
+// Closed by: "CLOSE" button on the panel, or session end.
+//
+// ─── §8  XR Gallery — troika-three-text + per-mesh thumbnails ────────────────
+//
+// Architecture:
+//   _galGroup  — THREE.Group containing everything; positioned/rotated as a unit
+//   _galBgPlane — canvas-textured PlaneGeometry for non-text chrome (bg, borders,
+//                 row separators, checkboxes, hover highlight, thumbnail placeholder)
+//   _galTexts  — pool of TroikaText objects (title, pagination, category labels,
+//                row labels ×2 per slot, nav buttons, search hint/query, IN SCENE)
+//   _galThumbMeshes — 8 PlaneGeometry meshes, one per row slot, with TextureLoader
+//                     textures swapped on page change
+//
+// Raycasting: unchanged — _galUpdateLaser hits _galBgPlane via UV, same hit-rect
+//             system as before (hit-rects are in canvas-pixel coordinates).
+
+// ── Constants ──────────────────────────────────────────────────────────────────
+
+const GAL_W  = 1920, GAL_H  = 1200;  // canvas for chrome only — text is geometry
+const GAL_PW = 1.30, GAL_PH = 0.81;  // physical panel size in metres (larger for sharper thumbs)
+const GAL_PAGE_SIZE = 9;              // 3 × 3 card grid
+
+// Layout pixel values (canvas coords, 1920×1200)
+const GAL_TOP_H    = 120;
+const GAL_NAV_H    = 100;
+const GAL_SEARCH_H = 110;
+const GAL_COLS     = 3;
+const GAL_ROWS     = 3;
+// Thumb size: fills most of card height, sized in _galDraw (derived, not fixed)
+
+// Colours
+const GAL_BG      = 'rgba(10,10,18,0.96)';
+const GAL_BORDER  = HUD_BORDER;
+const GAL_ACCENT  = HUD_ACCENT;
+const GAL_TEXT    = HUD_TEXT;
+const GAL_MUTED   = HUD_MUTED;
+const GAL_HOVER   = HUD_HOVER;
+const GAL_SEP     = 'rgba(255,255,255,0.08)';
+const GAL_CAT_ON  = HUD_CAT_ON;
+
+// Convert a CSS colour string like 'rgba(r,g,b,a)' or '#rrggbb' to a hex number
+// for troika's `color` property.
+function _cssToHex(css) {
+  // fast path for #rrggbb / #rgb
+  if (css.startsWith('#')) return parseInt(css.slice(1).replace(/^(.)(.)(.)$/, '$1$1$2$2$3$3'), 16);
+  // rgba(...) / rgb(...)
+  const m = css.match(/[\d.]+/g);
+  if (!m) return 0xffffff;
+  const r = Math.round(parseFloat(m[0])), g = Math.round(parseFloat(m[1])), b = Math.round(parseFloat(m[2]));
+  return (r << 16) | (g << 8) | b;
+}
+// Pre-compute colours troika will use
+const TC_ACCENT = _cssToHex(GAL_ACCENT);  // e.g. 0x00d4ff
+const TC_TEXT   = _cssToHex(GAL_TEXT);    // e.g. 0xffffff or near
+const TC_MUTED  = _cssToHex(GAL_MUTED);
+const TC_RED    = 0xff6666;
+const TC_GREEN  = 0x44ff88;
+
+// ── State ──────────────────────────────────────────────────────────────────────
+
+let _galGroup    = null;   // THREE.Group — the whole panel
+let _galBgPlane  = null;   // THREE.Mesh  — canvas chrome background
+let _galTexture  = null;   // THREE.CanvasTexture on the bg plane
+let _galCtx      = null;
+
+let _galHitRects   = [];
+let _galResults    = [];
+let _galPage       = 0;
+let _galHighlight  = -1;
+let _galSearchQuery  = '';
+let _galSearchActive = false;
+let _galSearchInput  = null;
+
+const _galThumbCache = new Map();   // url → { tex: THREE.Texture|null, loaded: bool }
+
+const _galRayOrigin = new THREE.Vector3();
+const _galRayDir    = new THREE.Vector3();
+const _galRaycaster = new THREE.Raycaster();
+
+// ── Troika text pool ───────────────────────────────────────────────────────────
+// Created once in _makeGalleryPanel, updated in _galDraw.
+// Naming convention: _t_<role>[_<index>]
+const _galTroikaPool = {};   // name → TroikaText
+
+function _makeTxt(name, opts = {}) {
+  const t = new TroikaText();
+  if (opts.font) t.font = opts.font;                  // omit → troika default (Roboto)
+  t.fontSize    = opts.fontSize    ?? 0.018;
+  t.color       = opts.color       ?? TC_TEXT;
+  t.anchorX     = opts.anchorX     ?? 'left';
+  t.anchorY     = opts.anchorY     ?? 'middle';
+  t.maxWidth    = opts.maxWidth    ?? undefined;
+  t.overflowWrap = 'break-word';
+  t.depthOffset = -1;                                 // render on top of bg plane
+  t.renderOrder = 1000;
+  if (opts.bold) t.fontWeight = 'bold';
+  _galTroikaPool[name] = t;
+  _galGroup.add(t);
+  return t;
+}
+
+function _setTxt(name, text, x, y, opts = {}) {
+  const t = _galTroikaPool[name];
+  if (!t) return;
+  t.text     = String(text);
+  t.color    = opts.color    ?? t.color;
+  t.fontSize = opts.fontSize ?? t.fontSize;
+  t.anchorX  = opts.anchorX  ?? t.anchorX;
+  t.anchorY  = opts.anchorY  ?? t.anchorY;
+  if (opts.bold !== undefined) t.fontWeight = opts.bold ? 'bold' : 'normal';
+  // Convert canvas pixel coords → metres relative to panel centre
+  // Panel is GAL_PW × GAL_PH with origin at centre.
+  // Canvas: x=0 left, y=0 top; Three.js plane: x=-PW/2 left, y=PH/2 top
+  t.position.x = (x / GAL_W) * GAL_PW - GAL_PW / 2;
+  t.position.y = GAL_PH / 2 - (y / GAL_H) * GAL_PH;
+  t.position.z = 0.001;
+  t.visible    = true;
+  t.sync();
+}
+
+function _hideTxt(name) {
+  const t = _galTroikaPool[name];
+  if (t) t.visible = false;
+}
+
+// ── Thumbnail meshes ───────────────────────────────────────────────────────────
+
+const _galThumbMeshes = [];   // length = GAL_PAGE_SIZE
+const _galThumbLoader = new THREE.TextureLoader();
+
+function _makeThumbMesh() {
+  const geo  = new THREE.PlaneGeometry(1, 1);  // size set per-use
+  const mat  = new THREE.MeshBasicMaterial({ transparent: true, depthTest: false });
+  const mesh = new THREE.Mesh(geo, mat);
+  mesh.renderOrder = 1000;
+  mesh.visible = false;
+  _galGroup.add(mesh);
+  return mesh;
+}
+
+// Load a thumbnail into a thumb mesh slot. Returns immediately; updates mesh async.
+// cx, cy — canvas pixel coords of thumb centre; w, h — slot size in WORLD METRES.
+function _galSetThumb(slotIndex, url, cx, cy, w, h) {
+  const mesh = _galThumbMeshes[slotIndex];
+  if (!mesh) return;
+
+  // Position from canvas coords; size already in world metres
+  const wx = (cx / GAL_W) * GAL_PW - GAL_PW / 2;
+  const wy = GAL_PH / 2 - (cy / GAL_H) * GAL_PH;
+  const ww = w;   // already metres
+  const wh = h;   // already metres
+
+  mesh.position.set(wx, wy, 0.001);
+  mesh.scale.set(ww, wh, 1);
+  mesh.visible = false;   // show once texture is ready
+
+  if (!url) return;
+
+  const cached = _galThumbCache.get(url);
+  if (cached) {
+    mesh.material.map = cached;
+    mesh.material.needsUpdate = true;
+    mesh.visible = true;
+    return;
+  }
+
+  _galThumbLoader.load(
+    url,
+    tex => {
+      tex.colorSpace       = THREE.SRGBColorSpace;
+      tex.premultiplyAlpha = true;
+      tex.generateMipmaps  = true;
+      tex.minFilter        = THREE.LinearMipmapLinearFilter;
+      tex.magFilter        = THREE.LinearFilter;
+      tex.anisotropy       = renderer.capabilities.getMaxAnisotropy();
+      tex.needsUpdate      = true;
+      _galThumbCache.set(url, tex);
+      if (mesh.visible !== undefined) {   // still in use
+        mesh.material.map = tex;
+        mesh.material.needsUpdate = true;
+        // Correct aspect ratio: fit image inside slot (object-fit: contain)
+        const imgAspect  = tex.image.width / tex.image.height;
+        const slotAspect = ww / wh;
+        if (imgAspect > slotAspect) {
+          mesh.scale.set(ww, ww / imgAspect, 1);   // wider than slot — pin width
+        } else {
+          mesh.scale.set(wh * imgAspect, wh, 1);   // taller than slot — pin height
+        }
+        mesh.visible = true;
+      }
+    },
+    undefined,
+    () => { /* error — keep placeholder on bg canvas */ }
+  );
+}
+
+// ── Panel construction ─────────────────────────────────────────────────────────
+
+function _makeGalleryPanel() {
+  _galGroup = new THREE.Group();
+  _galGroup.renderOrder = 999;
+  scene.add(_galGroup);
+
+  // ── Background canvas (non-text chrome only) ─────────────────────────────────
+  const canvas  = document.createElement('canvas');
+  canvas.width  = GAL_W;
+  canvas.height = GAL_H;
+  _galCtx       = canvas.getContext('2d');
+  _galTexture   = new THREE.CanvasTexture(canvas);
+  _galTexture.generateMipmaps  = true;
+  _galTexture.minFilter        = THREE.LinearMipmapLinearFilter;
+  _galTexture.magFilter        = THREE.LinearFilter;
+  _galTexture.anisotropy       = renderer.capabilities.getMaxAnisotropy();
+
+  const mat  = new THREE.MeshBasicMaterial({ map: _galTexture, transparent: true,
+                                              side: THREE.DoubleSide, depthTest: false });
+  _galBgPlane             = new THREE.Mesh(new THREE.PlaneGeometry(GAL_PW, GAL_PH), mat);
+  // BgPlane geometry is rebuilt here so any GAL_PW/GAL_PH change is reflected
+  _galBgPlane.renderOrder = 999;
+  _galGroup.add(_galBgPlane);
+
+  // ── Troika text nodes ────────────────────────────────────────────────────────
+  // Static / semi-static nodes
+  _makeTxt('title',      { fontSize: 0.040, bold: true,  color: TC_ACCENT, anchorX: 'left'  });
+  _makeTxt('pagination', { fontSize: 0.028, color: TC_MUTED, anchorX: 'right' });
+
+  _makeTxt('searchHint', { fontSize: 0.030, color: TC_MUTED, anchorX: 'left' });
+  _makeTxt('searchQuery',{ fontSize: 0.030, color: TC_TEXT,  anchorX: 'left' });
+  _makeTxt('prevBtn',    { fontSize: 0.030, bold: true,  anchorX: 'center' });
+  _makeTxt('nextBtn',    { fontSize: 0.030, bold: true,  anchorX: 'center' });
+  _makeTxt('emptyMsg',   { fontSize: 0.030, color: TC_MUTED, anchorX: 'center' });
+
+  // Per-result cards (9 slots — 3×3 grid)
+  for (let i = 0; i < GAL_PAGE_SIZE; i++) {
+    _makeTxt(`rowMain_${i}`,  { fontSize: 0.015, bold: true,  anchorX: 'center', maxWidth: GAL_PW * 0.28 });
+    _makeTxt(`rowSub_${i}`,   { fontSize: 0.012, color: TC_MUTED, anchorX: 'center', maxWidth: GAL_PW * 0.28 });
+    _makeTxt(`rowBadge_${i}`, { fontSize: 0.011, bold: true,  color: TC_GREEN, anchorX: 'center' });
+  }
+
+  // ── Thumbnail meshes ─────────────────────────────────────────────────────────
+  for (let i = 0; i < GAL_PAGE_SIZE; i++) {
+    _galThumbMeshes.push(_makeThumbMesh());
+  }
+
+  // ── Hidden search input ──────────────────────────────────────────────────────
+  _galSearchInput = document.createElement('input');
+  _galSearchInput.type         = 'text';
+  _galSearchInput.autocomplete = 'off';
+  _galSearchInput.style.cssText = 'position:absolute;left:-9999px;top:0;width:1px;height:1px;opacity:0;';
+  document.body.appendChild(_galSearchInput);
+
+  _galSearchInput.addEventListener('input', () => {
+    _galSearchQuery = _galSearchInput.value;
+    _galPage        = 0;
+    _galHighlight   = -1;
+    _galDraw();
+  });
+  _galSearchInput.addEventListener('blur', () => {
+    _galSearchActive = false;
+    _galDraw();
+  });
+
+  // Preload default font so first open has no pop-in delay
+  preloadFont({}, () => {});
+
+  _galGroup.visible = false;
+}
+_makeGalleryPanel();
+
+function _galFocusSearch() {
+  if (!_galSearchInput) return;
+  _galSearchActive = true;
+  _galSearchInput.focus();
+  _galDraw();
+}
+function _galBlurSearch() {
+  if (!_galSearchInput) return;
+  _galSearchInput.blur();
+}
+
+function openXRGallery(ctrl) {
+  if (!renderer.xr.isPresenting) return;
+  if (ctrl) _closeMenu(ctrl);
+
+  if (_xrDomOverlayActive) {
+    openGallery();
+    return;
+  }
+
+  _galResults        = mbModels.slice();
+  _galPage           = 0;
+  _galHighlight      = -1;
+  _galSearchQuery    = '';
+  _galSearchActive   = false;
+  if (_galSearchInput) _galSearchInput.value = '';
+
+  const frame    = renderer.xr.getFrame();
+  const refSpace = renderer.xr.getReferenceSpace();
+  if (frame && refSpace) {
+    const pose = frame.getViewerPose(refSpace);
+    if (pose) {
+      const h   = pose.transform;
+      const fwd = new THREE.Vector3(0, 0, -1).applyQuaternion(
+        new THREE.Quaternion(h.orientation.x, h.orientation.y, h.orientation.z, h.orientation.w)
+      );
+      fwd.y = 0; fwd.normalize();
+      _galGroup.position.set(
+        h.position.x + fwd.x * 1.5,
+        h.position.y,
+        h.position.z + fwd.z * 1.5
+      );
+      _galGroup.lookAt(h.position.x, _galGroup.position.y, h.position.z);
+    }
+  }
+
+  _galDraw();
+  _galGroup.visible = true;
+}
+
+function closeXRGallery() {
+  if (_xrDomOverlayActive) { closeGallery(); return; }
+  _galBlurSearch();
+  _galGroup.visible  = false;
+  _galResults        = [];
+  _galHitRects       = [];
+  _galHighlight      = -1;
+  for (const ctrl of controllers) ctrl.galHighlight = -1;
+}
+
+function _galFilteredResults() {
+  if (_galSearchQuery && mbFuse) return mbFuse.search(_galSearchQuery).map(r => r.item);
+  return _galResults;
+}
+
+// ── Canvas chrome draw (backgrounds, separators, checkboxes, card placeholders) ──
+function _galDrawChrome(pageItems, filtered) {
+  const ctx     = _galCtx;
+  const total   = filtered.length;
+  const maxPage = Math.max(0, Math.ceil(total / GAL_PAGE_SIZE) - 1);
+  const hasPrev = _galPage > 0;
+  const hasNext = _galPage < maxPage;
+
+  ctx.clearRect(0, 0, GAL_W, GAL_H);
+  ctx.fillStyle = GAL_BG;
+  ctx.fillRect(0, 0, GAL_W, GAL_H);
+
+  // Outer border
+  ctx.strokeStyle = GAL_BORDER; ctx.lineWidth = 2;
+  ctx.strokeRect(1, 1, GAL_W - 2, GAL_H - 2);
+
+  // Top bar separator + gradient
+  ctx.fillStyle = GAL_SEP; ctx.fillRect(0, GAL_TOP_H, GAL_W, 1);
+  const hg = ctx.createLinearGradient(0, GAL_TOP_H, 0, GAL_TOP_H + 32);
+  hg.addColorStop(0, 'rgba(0,0,0,0.22)'); hg.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = hg; ctx.fillRect(0, GAL_TOP_H, GAL_W, 32);
+
+  // Body layout — full width
+  const bodyY = GAL_TOP_H + 1;
+  const bodyH = GAL_H - GAL_TOP_H - GAL_NAV_H - 1;
+
+  // Search bar chrome — full width
+  const srchX = 12, srchY = bodyY + 8;
+  const srchW = GAL_W - 24, srchH = GAL_SEARCH_H - 16;
+  _menuRoundRect(ctx, srchX, srchY, srchW, srchH, 8);
+  ctx.fillStyle = _galSearchActive ? 'rgba(255,255,255,0.10)' : 'rgba(255,255,255,0.06)'; ctx.fill();
+  ctx.strokeStyle = _galSearchActive ? GAL_ACCENT : GAL_BORDER;
+  ctx.lineWidth   = _galSearchActive ? 2 : 1.5; ctx.stroke();
+
+  // Search cursor
+  if (_galSearchActive) {
+    const srchTextX = srchX + 44;
+    ctx.fillStyle = GAL_ACCENT;
+    if (_galSearchQuery) {
+      ctx.font = '44px Arial, sans-serif';
+      const m = ctx.measureText(_galSearchQuery.length > 42 ? '…' + _galSearchQuery.slice(-40) : _galSearchQuery);
+      ctx.fillRect(srchTextX + m.width + 3, srchY + 8, 2, srchH - 16);
+    } else {
+      ctx.fillRect(srchTextX, srchY + 8, 2, srchH - 16);
+    }
+  }
+
+  // Clear button chrome + ✕ label
+  if (_galSearchQuery) {
+    const clrW = 100, clrH = srchH - 8;
+    const clrX = srchX + srchW - clrW - 4, clrY = srchY + 4;
+    _menuRoundRect(ctx, clrX, clrY, clrW, clrH, 6);
+    ctx.fillStyle = 'rgba(255,255,255,0.08)'; ctx.fill();
+    ctx.strokeStyle = GAL_MUTED; ctx.lineWidth = 1.5; ctx.stroke();
+    ctx.font = 'bold 36px Arial, sans-serif';
+    ctx.fillStyle = GAL_MUTED;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText('✕', clrX + clrW / 2, clrY + clrH / 2);
+  }
+
+  // Search icon
+  ctx.font = '44px Arial, sans-serif'; ctx.fillStyle = GAL_MUTED;
+  ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+  ctx.fillText('\uD83D\uDD0D', srchX + 16, srchY + srchH / 2);
+
+  // Separator below search
+  ctx.fillStyle = GAL_SEP; ctx.fillRect(0, bodyY + GAL_SEARCH_H, GAL_W, 1);
+
+  // ── 3×3 card grid chrome — full width ────────────────────────────────────────
+  const gridY   = bodyY + GAL_SEARCH_H + 1;
+  const gridH   = bodyH - GAL_SEARCH_H - 1;
+  const gridX   = 12;
+  const gridW   = GAL_W - 20;
+  const cardW   = Math.floor(gridW / GAL_COLS);
+  const cardH   = Math.floor(gridH / GAL_ROWS);
+  const thumbH  = Math.floor(cardH * 0.62);
+  const thumbW  = thumbH;
+  const thumbX0 = Math.floor((cardW - thumbW) / 2);
+
+  pageItems.forEach((m, i) => {
+    const col = i % GAL_COLS, row = Math.floor(i / GAL_COLS);
+    const cx  = gridX + col * cardW, cy = gridY + row * cardH;
+    const isHover = i === _galHighlight;
+    _menuRoundRect(ctx, cx + 4, cy + 4, cardW - 8, cardH - 8, 10);
+    ctx.fillStyle = isHover ? GAL_HOVER : 'rgba(255,255,255,0.03)'; ctx.fill();
+    ctx.strokeStyle = isHover ? GAL_ACCENT : GAL_BORDER; ctx.lineWidth = isHover ? 1.5 : 1; ctx.stroke();
+    const tx = cx + thumbX0, ty = cy + 8;
+    ctx.fillStyle = 'rgba(255,255,255,0.05)';
+    ctx.fillRect(tx, ty, thumbW, thumbH);
+    ctx.strokeStyle = isHover ? 'rgba(255,204,0,0.5)' : 'rgba(255,204,0,0.2)';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(tx + 0.5, ty + 0.5, thumbW - 1, thumbH - 1);
+  });
+
+  // Nav bar separator + buttons
+  const navY = GAL_H - GAL_NAV_H;
+  ctx.fillStyle = GAL_SEP; ctx.fillRect(0, navY, GAL_W, 1);
+  const btnW = 280, btnH = GAL_NAV_H - 20;
+  const prevX = 24, prevY = navY + 10;
+  const nextX = GAL_W - btnW - 24, nextY = navY + 10;
+  [[prevX, prevY, hasPrev], [nextX, nextY, hasNext]].forEach(([bx, by, enabled]) => {
+    _menuRoundRect(ctx, bx, by, btnW, btnH, 10);
+    ctx.fillStyle = enabled ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.03)'; ctx.fill();
+    ctx.strokeStyle = enabled ? GAL_BORDER : 'rgba(255,255,255,0.12)'; ctx.lineWidth = 1.5; ctx.stroke();
+  });
+
+  _galTexture.needsUpdate = true;
+}
+
+// ── Main draw — updates troika text nodes + thumbnail meshes ───────────────────
+function _galDraw() {
+  const filtered  = _galFilteredResults();
+  const total     = filtered.length;
+  const maxPage   = Math.max(0, Math.ceil(total / GAL_PAGE_SIZE) - 1);
+  _galPage        = Math.min(_galPage, maxPage);
+  const pageItems = filtered.slice(_galPage * GAL_PAGE_SIZE, (_galPage + 1) * GAL_PAGE_SIZE);
+
+  _galHitRects = [];
+  _galDrawChrome(pageItems, filtered);
+
+  // Coordinate helpers
+  // Canvas coords → world X: (cx/GAL_W)*GAL_PW - GAL_PW/2
+  // Canvas coords → world Y: GAL_PH/2 - (cy/GAL_H)*GAL_PH
+  const cx2w = cx => (cx / GAL_W) * GAL_PW - GAL_PW / 2;
+  const cy2w = cy => GAL_PH / 2 - (cy / GAL_H) * GAL_PH;
+
+  // ── Top bar text ─────────────────────────────────────────────────────────────
+  _setTxt('title', 'Browse Models', 24, GAL_TOP_H / 2);
+  _setTxt('pagination',
+    `${_galPage + 1} / ${maxPage + 1}  ·  ${total} models`,
+    GAL_W - 16, GAL_TOP_H / 2, { anchorX: 'right' }
+  );
+
+  // ── Search ────────────────────────────────────────────────────────────────────
+  const bodyY  = GAL_TOP_H + 1;
+  const bodyH  = GAL_H - GAL_TOP_H - GAL_NAV_H - 1;
+  const srchX  = 12, srchY = bodyY + 8;
+  const srchW  = GAL_W - 24, srchH = GAL_SEARCH_H - 16;
+  const srchTextX = srchX + 72;
+
+  if (_galSearchQuery) {
+    let q = _galSearchQuery;
+    if (q.length > 42) q = '…' + q.slice(-40);
+    _setTxt('searchQuery', q, srchTextX, srchY + srchH / 2, { color: TC_TEXT });
+    _hideTxt('searchHint');
+    const clrW = 100, clrH = srchH - 8;
+    const clrX = srchX + srchW - clrW - 4, clrY = srchY + 4;
+    // Search hit rect stops exactly where clear button starts
+    _galHitRects.push({ x: srchX, y: srchY, w: clrX - srchX, h: srchH, action: () => _galFocusSearch() });
+    _galHitRects.push({ x: clrX, y: clrY, w: clrW, h: clrH,
+      action: () => {
+        _galSearchQuery = '';
+        if (_galSearchInput) _galSearchInput.value = '';
+        _galPage = 0; _galHighlight = -1;
+        _galBlurSearch(); _galDraw();
+      }
+    });
+  } else {
+    _hideTxt('searchQuery');
+    if (!_galSearchActive) {
+      _setTxt('searchHint', 'Search models…', srchTextX, srchY + srchH / 2, { color: TC_MUTED });
+    } else {
+      _hideTxt('searchHint');
+    }
+    // Full-width hit rect when no query
+    _galHitRects.push({ x: srchX, y: srchY, w: srchW, h: srchH, action: () => _galFocusSearch() });
+  }
+
+  // ── 3×3 card grid — full width ───────────────────────────────────────────────
+  const gridY  = bodyY + GAL_SEARCH_H + 1;
+  const gridH  = bodyH - GAL_SEARCH_H - 1;
+  const gridX  = 12;
+  const gridW  = GAL_W - 20;
+  const cardW  = Math.floor(gridW / GAL_COLS);
+  const cardH  = Math.floor(gridH / GAL_ROWS);
+  const thumbH = Math.floor(cardH * 0.62);
+  const thumbW = thumbH;
+  const thumbX0 = Math.floor((cardW - thumbW) / 2);
+  const loadedNames = new Set(models.map(e => e.name));
+
+  for (let i = 0; i < GAL_PAGE_SIZE; i++) {
+    if (i < pageItems.length) {
+      const m       = pageItems[i];
+      const col     = i % GAL_COLS, row = Math.floor(i / GAL_COLS);
+      const cx      = gridX + col * cardW, cy = gridY + row * cardH;
+      const isHover = i === _galHighlight;
+      const cardCX  = cx + cardW / 2;
+
+      let label = m.description || m.name;
+      if (label.length > 22) label = label.slice(0, 21) + '…';
+      _setTxt(`rowMain_${i}`, label, cardCX, cy + thumbH + 20 + (cardH - thumbH) * 0.30,
+              { color: isHover ? TC_ACCENT : TC_TEXT, bold: true, anchorX: 'center' });
+
+      let sub = m.displayName || m.name;
+      if (sub.length > 22) sub = sub.slice(0, 21) + '…';
+      _setTxt(`rowSub_${i}`, sub, cardCX, cy + thumbH + 20 + (cardH - thumbH) * 0.68,
+              { color: TC_MUTED, anchorX: 'center' });
+
+      const modelLabel = m.description || m.displayName || m.name;
+      if (loadedNames.has(modelLabel)) {
+        _setTxt(`rowBadge_${i}`, '● IN SCENE', cardCX, cy + thumbH + 20 + (cardH - thumbH) * 0.68,
+                { color: TC_GREEN, anchorX: 'center' });
+      } else {
+        _hideTxt(`rowBadge_${i}`);
+      }
+
+      const thumbCX = cx + thumbX0 + thumbW / 2;
+      const thumbCY = cy + 8 + thumbH / 2;
+      const thumbWm = (thumbW / GAL_W) * GAL_PW;
+      const thumbHm = (thumbH / GAL_H) * GAL_PH;
+      _galSetThumb(i, m.thumb || null, thumbCX, thumbCY, thumbWm, thumbHm);
+
+      _galHitRects.push({ x: cx + 4, y: cy + 4, w: cardW - 8, h: cardH - 8,
+        action: () => { closeXRGallery(); loadFromBrowser(m.url, m.description || m.displayName || m.name); }
+      });
+    } else {
+      _hideTxt(`rowMain_${i}`); _hideTxt(`rowSub_${i}`); _hideTxt(`rowBadge_${i}`);
+      const mesh = _galThumbMeshes[i];
+      if (mesh) mesh.visible = false;
+    }
+  }
+
+  // Empty state
+  if (pageItems.length === 0) {
+    const emptyMsg = _galSearchQuery ? `No results for "${_galSearchQuery}"` : 'No models found.';
+    _setTxt('emptyMsg', emptyMsg, GAL_W / 2, gridY + gridH / 2, { anchorX: 'center', color: TC_MUTED });
+  } else {
+    _hideTxt('emptyMsg');
+  }
+
+  // ── Nav bar ───────────────────────────────────────────────────────────────────
+  const navY = GAL_H - GAL_NAV_H;
+  const btnW = 280, btnH = GAL_NAV_H - 20;
+  const prevX = 24, prevY = navY + 10;
+  const nextX = GAL_W - btnW - 24, nextY = navY + 10;
+  const hasPrev2 = _galPage > 0, hasNext2 = _galPage < maxPage;
+
+  _setTxt('prevBtn', '◄  Prev', prevX + btnW / 2, prevY + btnH / 2,
+          { color: hasPrev2 ? TC_TEXT : TC_MUTED, anchorX: 'center' });
+  _setTxt('nextBtn', 'Next  ►', nextX + btnW / 2, nextY + btnH / 2,
+          { color: hasNext2 ? TC_TEXT : TC_MUTED, anchorX: 'center' });
+
+  if (hasPrev2) _galHitRects.push({ x: prevX, y: prevY, w: btnW, h: btnH,
+    action: () => { _galPage--; _galHighlight = -1; _galDraw(); } });
+  if (hasNext2) _galHitRects.push({ x: nextX, y: nextY, w: btnW, h: btnH,
+    action: () => { _galPage++; _galHighlight = -1; _galDraw(); } });
+}
+
+// ── Laser raycasting — unchanged logic, _galBgPlane is the hit target ──────────
+function _galUpdateLaser(ctrl, triggerPressed, triggerWas) {
+  if (_xrDomOverlayActive) return false;
+  if (!_galGroup.visible) return false;
+
+  const { pointer } = ctrl;
+  pointer.getWorldPosition(_galRayOrigin);
+  _galRayDir.set(0, 0, -1).transformDirection(pointer.matrixWorld);
+  _galRaycaster.set(_galRayOrigin, _galRayDir);
+
+  const hits = _galRaycaster.intersectObject(_galBgPlane);
+  if (hits.length === 0) {
+    if (ctrl.galHighlight !== -1) {
+      ctrl.galHighlight = -1; _galHighlight = -1; _galDraw();
+    }
+    // Trigger press outside the panel → close gallery
+    if (triggerPressed && !triggerWas) closeXRGallery();
+    resetLaser(ctrl); return false;
+  }
+
+  setLaserDist(ctrl, hits[0].distance);
+
+  const uv = hits[0].uv;
+  const cx = uv.x * GAL_W;
+  const cy = (1 - uv.y) * GAL_H;
+
+  let newHighlight = -1;
+  const bodyY  = GAL_TOP_H + 1;
+  const bodyH  = GAL_H - GAL_TOP_H - GAL_NAV_H - 1;
+  const gridY  = bodyY + GAL_SEARCH_H + 1;
+  const gridH  = bodyH - GAL_SEARCH_H - 1;
+  const gridX  = 12;
+  const gridW  = GAL_W - 20;
+  const cardW  = Math.floor(gridW / GAL_COLS);
+  const cardH  = Math.floor(gridH / GAL_ROWS);
+  if (cy >= gridY && cy < gridY + gridH && cx >= gridX) {
+    const col = Math.floor((cx - gridX) / cardW);
+    const row = Math.floor((cy - gridY) / cardH);
+    if (col >= 0 && col < GAL_COLS && row >= 0 && row < GAL_ROWS) {
+      newHighlight = row * GAL_COLS + col;
+      if (newHighlight >= GAL_PAGE_SIZE) newHighlight = -1;
+    }
+  }
+
+  if (newHighlight !== ctrl.galHighlight) {
+    ctrl.galHighlight = newHighlight; _galHighlight = newHighlight; _galDraw();
+  }
+
+  if (triggerPressed && !triggerWas) {
+    for (const r of _galHitRects) {
+      if (cx >= r.x && cx <= r.x + r.w && cy >= r.y && cy <= r.y + r.h) { r.action(); break; }
+    }
+  }
+  return true;
+}
+
+// ─── §9  XR session lifecycle — mode tracking, VR/MR buttons ─────────────────
+//
+// currentMode: 'browser' | 'vr' | 'mr'
+//
+// Both buttons manage their own session lifecycle manually so onXRSessionStart
+// can be called directly with the correct mode — no side-channel flag needed.
+
+let currentMode = 'browser';
+
+const modeBadge   = document.getElementById('mode-badge');
+const controlsBar = document.querySelector('.controls');
+
+function setMode(mode) {
+  currentMode = mode;
+  modeBadge.className = '';
+  if (mode === 'vr') { modeBadge.className = 'vr'; modeBadge.textContent = '● VR'; }
+  if (mode === 'mr') { modeBadge.className = 'mr'; modeBadge.textContent = '● MR'; }
+}
+
+// Move a model entry into the XR root hierarchy and size its orb.
+// Called by onXRSessionStart for pre-existing models, and by onModelLoaded
+// for models loaded while XR is already presenting.
+function _setupEntryForXR(entry) {
+  const { mesh, root } = entry;
+  // Reset the browser-mode scale so geometry is in native units (LDU / metres as authored).
+  // root.scale (entry.xrScale) takes over from here.
+  mesh.scale.setScalar(1);
+  // Move mesh from scene root into the entry's root group (inside pivot)
+  if (mesh.parent !== root) {
+    if (mesh.parent) mesh.parent.remove(mesh);
+    root.add(mesh);
+  }
+  // Re-centre mesh so the orb and rotation pivot sit at the model's centroid.
+  // 1. Zero any browser-mode position offset so the box reflects geometry only.
+  mesh.position.set(0, 0, 0);
+  // Force-update world matrices from pivot downward before computing bounds.
+  // Three.js defers matrix updates to the render loop; when a mesh has just
+  // been reparented (scene.add → root.add), matrixWorld is still stale from
+  // the previous parent, causing Box3.setFromObject to return garbage bounds.
+  entry.pivot.updateWorldMatrix(true, true);
+  // 2. Box3 world centre now equals pivot.position + rootScale * geometryCentre_rootLocal.
+  const centreWorld = new THREE.Box3().setFromObject(mesh).getCenter(new THREE.Vector3());
+  const pivotWorld  = new THREE.Vector3();
+  entry.pivot.getWorldPosition(pivotWorld);
+  // 3. Convert to root-local space and negate to shift geometry to root origin.
+  const centreLocal = centreWorld.sub(pivotWorld).divideScalar(root.scale.x);
+  mesh.position.set(-centreLocal.x, -centreLocal.y, -centreLocal.z);
+
+  // Size the orb to tightly wrap the re-centred mesh.
+  // bs.radius is in world space (includes root.scale); divide back to root-local
+  // units so the orb children (parented to root) are sized correctly.
+  if (entry.orb && entry.orbSphere) {
+    // After re-centring, mesh bounding sphere is centred at root origin.
+    // Its radius is in world space; divide by rootScale to get root-local units.
+    const bs = new THREE.Box3().setFromObject(mesh).getBoundingSphere(new THREE.Sphere());
+    const r  = (bs.radius / root.scale.x) * 1.05;
+    entry.orbSphere.scale.setScalar(r);
+    entry.orb.children.forEach((c, i) => { if (i > 0) c.scale.setScalar(r); });
+  }
+}
+
+function onXRSessionStart(mode) {
+  setMode(mode);
+
+  // Switch near plane to metres — XR reference space is in real-world metres,
+  // so the browser value (1 LDU) would clip everything within ~1 m of the headset.
+  camera.near = CAMERA_NEAR_XR;
+  camera.updateProjectionMatrix();
+
+  // Check whether dom-overlay is actually active in this session.
+  // renderer.xr.getSession() is valid from this point onward.
+  const session = renderer.xr.getSession();
+  renderer.xr.setFoveation(1.0);
+
+  _xrDomOverlayActive = !!(session?.enabledFeatures?.includes('dom-overlay'));
+
+  // ── Flush OrbitControls damping before handing camera to XR ──────────────
+  // Even with controls.enabled = false, controls.update() with dampingFactor
+  // > 0 keeps applying residual momentum to camera.position every frame.
+  // Drain that momentum NOW before the XR runtime takes ownership of the
+  // camera, so there is zero leftover delta fighting the head-pose tracker.
+  controls.saveState();           // snapshot so we can restore on session end
+  controls.dampingFactor = 0;     // kill damping temporarily
+  controls.update();              // one tick to flush pending delta to zero
+  controls.dampingFactor = 0.06;  // restore (won't run again until session ends)
+  controls.enabled = false;       // disable input handling
+
+  gridHelper.visible = false;
+  ground.visible = false;
+  dirLight.castShadow = false;   // shadows off in XR — saves a full shadow map render every frame
+
+  if (mode === 'mr') {
+    // Transparent background → passthrough shows through
+    scene.background = null;
+    renderer.setClearColor(0x000000, 0);
+    mrShadowDisc.visible = true;
+  } else {
+    // VR: solid opaque black — gives the XR compositor a proper opaque layer.
+    // null/transparent in VR causes the compositor to blend against undefined
+    // content, contributing to silhouette-edge flicker.
+    scene.background = new THREE.Color(0x000000);
+    renderer.setClearColor(0x000000, 1);
+    mrShadowDisc.visible = false;
+  }
+  applyLightIntensities();
+
+  for (const entry of models) {
+    _setupEntryForXR(entry);
+  }
+
+  requestPivotPlacement();
+  requestMenuOpen();
+}
+
+// Spread all loaded model pivots evenly in XR space.
+// Must be called from within the XR animation loop (updateXRControls) where
+// renderer.xr.getFrame() is guaranteed to return a valid XRFrame.
+// Call requestPivotPlacement() from outside the loop — it sets a flag that
+// updateXRControls picks up on the very next XR frame.
+
+let _pendingPivotPlacement = false;
+let _pendingMenuOpen       = false;  // auto-open menu on first XR frame
+
+function requestPivotPlacement() {
+  _pendingPivotPlacement = true;
+}
+
+function requestMenuOpen() {
+  _pendingMenuOpen = true;
+}
+
+function _placeAllPivots() {
+  const mrMode = (currentMode === 'mr');
+  let x = 0;
+  for (const entry of models) {
+    entry.pivot.position.set(x, MODEL_PIVOT_Y, MODEL_PIVOT_Z);
+    x += MODEL_SPACING;
+  }
+  if (mrMode) mrShadowDisc.position.set(0, 0.02, MODEL_PIVOT_Z);
+}
+
+function onXRSessionEnd() {
+  setMode('browser');
+  _xrDomOverlayActive = false;
+
+  // Drop all active interactions, close any open menus/gallery, restore lasers
+  for (const slot of slots) endInteraction(slot);
+  closeXRGallery();
+  for (const ctrl of controllers) {
+    _closeMenu(ctrl);
+    setLaserVisible(ctrl, true);
+    setLaserColor(ctrl, COLOR_IDLE);
+    ctrl.hitPoint      = null;
+    ctrl.hitEntry      = null;
+    ctrl.xrInputSource = null;
+    ctrl.prevBY        = false;
+  }
+
+  // Restore OrbitControls to the exact state they were in before XR started
+  controls.reset();       // returns to saveState() snapshot
+  controls.enabled = true;
+
+  // Restore browser visuals
+  camera.near = CAMERA_NEAR_BROWSER;
+  camera.updateProjectionMatrix();
+  scene.background = BROWSER_BG;
+  renderer.setClearColor(0x000000, 1);
+  applyLightIntensities();
+  gridHelper.visible = document.getElementById('toggle-grid').classList.contains('on');
+  ground.visible = true;
+  updateShadows();   // re-enable shadows only if LDraw models are in the scene
+  mrShadowDisc.visible = false;
+
+  // Return all models to scene root
+  for (const entry of models) {
+    const { mesh, pivot, root } = entry;
+    root.remove(mesh);
+    mesh.position.set(0, 0, 0);
+    mesh.scale.setScalar(entry.xrScale);  // restore browser-mode metre scale
+    scene.add(mesh);
+    // Reset XR transforms for next session
+    root.scale.setScalar(entry.xrScale);
+    root.rotation.set(0, 0, 0);
+  }
+  if (models.length > 0) fitCamera();
+}
+
+renderer.xr.addEventListener('sessionend', onXRSessionEnd);
+
+// ── Shared session-request options ────────────────────────────────────────────
+// dom-overlay lets the existing HTML gallery render at native display resolution
+// inside XR — pixel-perfect text and thumbnails, no canvas texture involved.
+// Built lazily so getElementById runs after the DOM element exists.
+function makeXRSessionOpts() {
+  const overlayRoot = document.getElementById('model-gallery');
+  return {
+    requiredFeatures: ['local-floor'],
+    optionalFeatures: [
+      'bounded-floor', 
+      'hand-tracking', 
+      'dom-overlay',
+      'foveation-level' // request foveated rendering, free on Quest hardware
+    ],
+    domOverlay: { root: overlayRoot },
+  };
+}
+
+// True while a session has confirmed dom-overlay is active.
+let _xrDomOverlayActive = false;
+
+// ── VR button ─────────────────────────────────────────────────────────────────
+
+function makeXRButton(label, className) {
+  const btn = document.createElement('button');
+  btn.className = className;
+  btn.textContent = label;
+  btn.disabled = true;
+  return btn;
+}
+
+const vrButton = makeXRButton('ENTER VR', 'btn xr-btn');
+
+if (navigator.xr) {
+  navigator.xr.isSessionSupported('immersive-vr').then(supported => {
+    vrButton.disabled = !supported;
+    vrButton.textContent = supported ? 'ENTER VR' : 'VR NOT SUPPORTED';
+  }).catch(() => { vrButton.disabled = true; vrButton.textContent = 'VR NOT SUPPORTED'; });
+
+  let vrSession = null;
+  vrButton.addEventListener('click', () => {
+    if (vrSession === null) {
+      navigator.xr.requestSession('immersive-vr', makeXRSessionOpts())
+        .then(session => {
+          renderer.xr.setSession(session);
+          onXRSessionStart('vr');
+          vrSession = session;
+          vrButton.textContent = 'EXIT VR';
+          vrButton.classList.add('btn-danger');
+          session.addEventListener('end', () => {
+            vrSession = null;
+            vrButton.textContent = 'ENTER VR';
+            vrButton.classList.remove('btn-danger');
+          });
+        }).catch(err => console.error('VR session request failed:', err));
+    } else {
+      vrSession.end();
+    }
+  });
+} else {
+  vrButton.textContent = 'VR NOT SUPPORTED';
+}
+
+controlsBar.prepend(vrButton);
+
+// ── MR button ─────────────────────────────────────────────────────────────────
+
+const mrButton = makeXRButton('ENTER MR', 'btn xr-btn-mr');
+
+if (navigator.xr) {
+  navigator.xr.isSessionSupported('immersive-ar').then(supported => {
+    mrButton.disabled = !supported;
+    mrButton.textContent = supported ? 'ENTER MR' : 'MR NOT SUPPORTED';
+  }).catch(() => { mrButton.disabled = true; mrButton.textContent = 'MR NOT SUPPORTED'; });
+
+  let mrSession = null;
+  mrButton.addEventListener('click', () => {
+    if (mrSession === null) {
+      navigator.xr.requestSession('immersive-ar', makeXRSessionOpts())
+        .then(session => {
+          renderer.xr.setSession(session);
+          onXRSessionStart('mr');
+          mrSession = session;
+          mrButton.textContent = 'EXIT MR';
+          mrButton.classList.add('btn-danger');
+          session.addEventListener('end', () => {
+            mrSession = null;
+            mrButton.textContent = 'ENTER MR';
+            mrButton.classList.remove('btn-danger');
+          });
+        }).catch(err => console.error('MR session request failed:', err));
+    } else {
+      mrSession.end();
+    }
+  });
+} else {
+  mrButton.textContent = 'MR NOT SUPPORTED';
+}
+
+vrButton.insertAdjacentElement('afterend', mrButton);
+
+// ── Animation loop ────────────────────────────────────────────────────────────
+// IMPORTANT: controls.update() must NOT run while XR is presenting.
+// The XR runtime owns the camera pose during a session. If OrbitControls
+// also runs update() every frame — even with enabled=false, the damping
+// momentum still nudges camera.position — it fights the XR pose tracker
+// and produces the rapid head-movement jitter.
+// Keep scale labels at constant apparent size regardless of camera distance.
+// Called every frame; only touches visible labels so cost is near-zero normally.
+const _labelWorldPos = new THREE.Vector3();
+function _updateScaleLabels() {
+  for (const entry of models) {
+    const sp = entry.scaleLabel?.sprite;
+    if (!sp?.visible) continue;
+    sp.getWorldPosition(_labelWorldPos);
+    const dist      = camera.position.distanceTo(_labelWorldPos);
+    const halfFovY  = (camera.fov * Math.PI / 180) / 2;
+    const worldH    = 2 * dist * Math.tan(halfFovY) * SCALE_LABEL_FRAC;
+    const aspect    = SCALE_LABEL_W / SCALE_LABEL_H;
+    sp.scale.set(worldH * aspect, worldH, 1);
+  }
+}
+
+// ── Performance diagnostics (remove after debugging) ──────────────────────────
+let _diagFrames = 0, _diagStart = performance.now(), _diagRenderMs = 0;
+function _logDiag() {
+  
+  return; // disable logging for now — re-enable when needed
+
+  const elapsed = performance.now() - _diagStart;
+  if (elapsed < 2000) return;
+  const fps = (_diagFrames / elapsed * 1000).toFixed(1);
+  const avg = _diagFrames > 0 ? (_diagRenderMs / _diagFrames).toFixed(2) : '—';
+  const info = renderer.info.render;
+  let meshCount = 0, triCount = 0;
+  scene.traverse(o => { if (o.isMesh) meshCount++; });
+  console.log(
+    `[PERF] ${fps} fps | ${avg} ms/render | ` +
+    `calls=${info.calls} tris=${info.triangles} | ` +
+    `meshes=${meshCount} | shadow=${dirLight.castShadow} | ` +
+    `programs=${renderer.info.programs?.length ?? '?'}`
+  );
+  _diagFrames = 0; _diagRenderMs = 0; _diagStart = performance.now();
+}
+// ──────────────────────────────────────────────────────────────────────────────
+
+renderer.setAnimationLoop((timestamp, frame) => {
+  if (renderer.xr.isPresenting && frame) {
+    // XR runtime requires a render call every frame regardless of scene changes.
+    updateXRControls();
+    _updateScaleLabels();
+    const t0 = performance.now();
+    renderer.render(scene, camera);
+    _diagRenderMs += performance.now() - t0;
+    _diagFrames++;
+    _logDiag();
+  } else {
+    // controls.update() applies damping momentum and fires 'change' if the
+    // camera actually moved — which sets _needsRender via the listener above.
+    controls.update();
+    // D: process at most one hover raycast per frame (deferred from pointermove)
+    if (_hoverPending) {
+      _hoverPending = false;
+      container.classList.toggle('drag-ready', !!browserRaycast(_hoverClientX, _hoverClientY));
+    }
+    if (_needsRender) {
+      _updateScaleLabels();
+      const t0 = performance.now();
+      renderer.render(scene, camera);
+      _diagRenderMs += performance.now() - t0;
+      _diagFrames++;
+      _needsRender = false;
+    }
+    _logDiag();
+  }
+});
+
+// renderer.setAnimationLoop((timestamp, frame) => {
+//   if (renderer.xr.isPresenting && frame) {
+//     updateXRControls();
+//   } else {
+//     controls.update();
+//   }
+//   _updateScaleLabels();
+//   renderer.render(scene, camera);
+// });
+
+
+// ─── §10  Model data ──────────────────────────────────────────────────────────
+//
+// fetchModelList — fetches the JSONL index, parses new-format records
+// (description / categories / keywords) with graceful fallback for old ones.
+// Builds the Fuse instance used by the gallery search.
+
+let mbModels = [];   // [{ name, description, categories, keywords, url, thumb }]
+let mbFuse   = null; // Fuse instance, built after model list loads
+
+async function fetchModelList() {
+  try {
+    const res = await fetch(MODELS_INDEX);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const text = await res.text();
+
+    // model names could include subpath components, so encode each path component but not the slashes
+    const encodeURIComponents = (p) => p.split('/').map(c => encodeURIComponent(c)).join('/')
+
+    mbModels = text
+      .split('\n')
+      .filter(line => line.trim())
+      .map(line => {
+        const rec         = JSON.parse(line);
+        const description = rec.description ?? rec.search_key ?? rec.name;
+        const category    = _capFirst(rec.category ?? 'Other');
+        const keywords    = rec.keywords ?? [];
+        // Strip .zip suffix for display name and thumbnail — the zip contains
+        // a single file whose name is rec.name minus the .zip extension.
+        const baseName    = rec.name.replace(/\.zip$/i, '');
+        return {
+          name:        rec.name,   // original index name (may end in .zip) — used for the fetch URL
+          displayName: baseName,   // .zip stripped — shown in UI and passed to onModelLoaded
+          description,
+          category,
+          keywords,
+          url:   RAW_BASE   + encodeURIComponents(rec.name),
+          thumb: THUMB_BASE + encodeURIComponents(baseName.replace(/\.[^.]+$/, '.png')),
+        };
+      });
+
+    mbFuse = new Fuse(mbModels, {
+      keys: [
+        { name: 'description', weight: 3   },
+        { name: 'category',    weight: 2   },
+        { name: 'keywords',    weight: 1.5 },
+        { name: 'name',        weight: 1   },
+      ],
+      threshold:          0.35,
+      distance:           200,
+      minMatchCharLength: 1,
+      includeScore:       true,
+      includeMatches:     true,
+    });
+
+    // If gallery is already open (user clicked Browse before index loaded), refresh it
+    if (galleryOverlay.classList.contains('open')) openGallery();
+
+  } catch (err) {
+    console.warn('Model list fetch failed:', err);
+  }
+}
+fetchModelList();
+
+function loadFromBrowser(url, name) {
+  closeGallery();
+  showLoading('Loading model…', name);
+  loadMPDFromURL(url, name, 'Could not load model.');
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function highlightField(text, matches, key) {
+  if (!text) return '';
+  if (!matches?.length) return escHtml(text);
+
+  const marked = new Set();
+  for (const m of matches) {
+    if (m.key === key) {
+      for (const [start, end] of m.indices) {
+        for (let i = start; i <= end; i++) marked.add(i);
+      }
+    }
+  }
+  if (marked.size === 0) return escHtml(text);
+
+  let html = '', inMark = false;
+  for (let i = 0; i < text.length; i++) {
+    if ( marked.has(i) && !inMark) { html += '<mark>'; inMark = true;  }
+    if (!marked.has(i) &&  inMark) { html += '</mark>'; inMark = false; }
+    html += escHtml(text[i]);
+  }
+  if (inMark) html += '</mark>';
+  return html;
+}
+
+
+// ─── §10b  Gallery ────────────────────────────────────────────────────────────
+//
+// Single entry point: openGallery() — no arguments, always shows all models.
+// Gallery has its own fuzzy search (no minimum character requirement).
+// Category filter sidebar sorted alphabetically, first letter uppercased.
+// Cards are 200×220px, 4 columns, lazy thumbnails via IntersectionObserver.
+
+const galleryOverlay    = document.getElementById('model-gallery');
+const galleryGridEl     = document.getElementById('gallery-grid');
+const galleryStatusEl   = document.getElementById('gallery-status');
+const galleryFiltersEl  = document.getElementById('gallery-filters');
+const galleryLoadMoreEl = document.getElementById('gallery-load-more-wrap');
+const gallerySearchEl   = document.getElementById('gallery-search-input');
+
+// ── State ──────────────────────────────────────────────────────────────────────
+let _gallerySourceResults    = [];  // current Fuse results (or wrapped full list)
+let _galleryFiltered         = [];  // after category filter + sort
+let _galleryPage             = 0;
+let _galleryObserver         = null;
+let _galleryActiveCategories = new Set();  // empty = show all
+
+// ── Helpers ────────────────────────────────────────────────────────────────────
+
+// Wrap plain model objects into Fuse-result shape so downstream code is uniform.
+function _wrapModels(models) {
+  return models.map(item => ({ item, score: 1, matches: [] }));
+}
+
+// ── Open / close ───────────────────────────────────────────────────────────────
+
+function openGallery() {
+  if (renderer.xr.isPresenting) return;
+  gallerySearchEl.value    = '';
+  _galleryActiveCategories = new Set();
+  galleryOverlay.classList.add('open');
+
+  if (mbModels.length === 0) {
+    // Index not yet loaded — fetchModelList() will call openGallery() again when ready
+    galleryStatusEl.textContent     = 'Loading model list…';
+    galleryGridEl.innerHTML         = '<div class="gallery-empty">Fetching model index…</div>';
+    galleryFiltersEl.innerHTML      = '';
+    galleryLoadMoreEl.style.display = 'none';
+    return;
+  }
+
+  _gallerySourceResults = _wrapModels(mbModels);
+  _buildCategoryFilters(_gallerySourceResults);
+  _applyGalleryFilters();
+  requestAnimationFrame(() => gallerySearchEl.focus());
+}
+
+function closeGallery() {
+  galleryOverlay.classList.remove('open');
+  _galleryObserver?.disconnect();
+  _galleryObserver        = null;
+  galleryGridEl.innerHTML = '';
+  galleryLoadMoreEl.style.display = 'none';
+}
+
+// ── Category filters ───────────────────────────────────────────────────────────
+
+function _buildCategoryFilters(results) {
+  const sorted = _buildCategoryCounts(results);
+
+  galleryFiltersEl.innerHTML = sorted.map(({ name: cat, count: n }) =>
+    `<label class="gallery-filter-item">` +
+      `<input type="checkbox" class="gallery-cat-cb" value="${escHtml(cat)}">` +
+      `<span class="gallery-filter-label">${escHtml(cat)}</span>` +
+      `<span class="gallery-filter-count">${n}</span>` +
+    `</label>`
+  ).join('');
+
+  galleryFiltersEl.querySelectorAll('.gallery-cat-cb').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked) _galleryActiveCategories.add(cb.value);
+      else            _galleryActiveCategories.delete(cb.value);
+      _applyGalleryFilters();
+    });
+  });
+}
+
+// ── Filter + sort ──────────────────────────────────────────────────────────────
+
+function _applyGalleryFilters() {
+  let items = _gallerySourceResults;
+
+  if (_galleryActiveCategories.size > 0) {
+    items = items.filter(r =>
+        _galleryActiveCategories.has(_capFirst(r.item.category ?? 'Other'))
+    );
+  }
+
+  const sortVal = document.querySelector('input[name="gallery-sort"]:checked')?.value ?? 'relevance';
+  if (sortVal === 'name') {
+    items = [...items].sort((a, b) =>
+      (a.item.description ?? a.item.name).localeCompare(b.item.description ?? b.item.name)
+    );
+  }
+
+  _galleryFiltered = items;
+  _galleryPage     = 0;
+  galleryGridEl.innerHTML = '';
+  _galleryObserver?.disconnect();
+  _galleryObserver = new IntersectionObserver(_onThumbVisible, { rootMargin: '120px' });
+
+  _renderGalleryPage();
+
+  const n = _galleryFiltered.length;
+  galleryStatusEl.textContent = n + ' model' + (n !== 1 ? 's' : '');
+}
+
+// ── Render a page of cards ─────────────────────────────────────────────────────
+
+function _renderGalleryPage() {
+  const start = _galleryPage * GALLERY_PAGE_SIZE;
+  const slice = _galleryFiltered.slice(start, start + GALLERY_PAGE_SIZE);
+
+  if (slice.length === 0 && _galleryPage === 0) {
+    galleryGridEl.innerHTML         = '<div class="gallery-empty">No models match the current filters.</div>';
+    galleryLoadMoreEl.style.display = 'none';
+    return;
+  }
+
+  for (const r of slice) {
+    const { name, displayName, description, url, thumb, category, keywords } = r.item;
+    const card       = document.createElement('div');
+    card.className   = 'gallery-card';
+    card.tabIndex    = 0;
+    card.dataset.url   = url;
+    card.dataset.name  = description || displayName;
+    card.dataset.thumb = thumb;
+
+    const catsHtml = `<div class="gallery-card-cats">` +
+      `<span class="gallery-card-field-label">CAT</span>` +
+      escHtml(category ?? 'Other') +
+      `</div>`;
+
+    const kwdHtml = (keywords?.length)
+      ? `<div class="gallery-card-kwd">` +
+          `<span class="gallery-card-field-label">KWD</span>` +
+          escHtml(keywords.join(', ')) +
+        `</div>`
+      : '';
+
+    card.innerHTML =
+      `<div class="gallery-card-thumb-wrap">` +
+        `<div class="gallery-card-placeholder"></div>` +
+      `</div>` +
+      `<div class="gallery-card-info">` +
+        `<div class="gallery-card-name">${escHtml(description || displayName)}</div>` +
+        `<div class="gallery-card-file">${escHtml(displayName)}</div>` +
+        catsHtml +
+        kwdHtml +
+      `</div>`;
+
+    card.addEventListener('click',   () => loadFromBrowser(card.dataset.url, card.dataset.name));
+    card.addEventListener('keydown', e  => { if (e.key === 'Enter') card.click(); });
+    galleryGridEl.appendChild(card);
+    _galleryObserver.observe(card);
+  }
+
+  const hasMore = (start + GALLERY_PAGE_SIZE) < _galleryFiltered.length;
+  galleryLoadMoreEl.style.display = hasMore ? 'flex' : 'none';
+}
+
+// ── Lazy thumbnail loading ─────────────────────────────────────────────────────
+
+function _onThumbVisible(entries) {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    const card = entry.target;
+    _galleryObserver.unobserve(card);
+
+    const wrap  = card.querySelector('.gallery-card-thumb-wrap');
+    const thumb = card.dataset.thumb;
+    if (!thumb) continue;
+
+    const img     = document.createElement('img');
+    img.className = 'gallery-card-thumb';
+    img.alt       = card.dataset.name;
+    img.onload    = () => { img.classList.add('loaded'); wrap.querySelector('.gallery-card-placeholder')?.remove(); };
+    img.onerror   = () => img.remove();
+    img.src       = thumb;
+    wrap.appendChild(img);
+  }
+}
+
+// ── Gallery search — no minimum character requirement ─────────────────────────
+
+let _gallerySearchTimer = null;
+
+gallerySearchEl.addEventListener('input', () => {
+  clearTimeout(_gallerySearchTimer);
+  _gallerySearchTimer = setTimeout(() => {
+    const q = gallerySearchEl.value.trim();
+
+    if (!q) {
+      _gallerySourceResults = _wrapModels(mbModels);
+    } else {
+      if (!mbFuse) return;
+      _gallerySourceResults = mbFuse.search(q);
+    }
+
+    // Rebuild filters for new result set, preserving any checked categories that still apply
+    const prevActive = new Set(_galleryActiveCategories);
+    _buildCategoryFilters(_gallerySourceResults);
+    _galleryActiveCategories = new Set();
+    galleryFiltersEl.querySelectorAll('.gallery-cat-cb').forEach(cb => {
+      if (prevActive.has(cb.value)) { cb.checked = true; _galleryActiveCategories.add(cb.value); }
+    });
+
+    _applyGalleryFilters();
+  }, 200);
+});
+
+// ── Event wiring ───────────────────────────────────────────────────────────────
+
+document.getElementById('btn-gallery-close').addEventListener('click', closeGallery);
+galleryOverlay.addEventListener('click', e => { if (e.target === galleryOverlay) closeGallery(); });
+document.getElementById('btn-gallery-load-more').addEventListener('click', () => {
+  _galleryPage++;
+  _renderGalleryPage();
+  document.getElementById('gallery-main').scrollBy({ top: 400, behavior: 'smooth' });
+});
+document.querySelectorAll('input[name="gallery-sort"]').forEach(radio => {
+  radio.addEventListener('change', _applyGalleryFilters);
+});
+
+
+// ─── §11  UI helpers + DOM references ────────────────────────────────────────
+
+const dropZone         = document.getElementById('drop-zone');
+const loadingOverlay   = document.getElementById('loading-overlay');
+const loadingMsg       = document.getElementById('loading-msg');
+const loadingSub       = document.getElementById('loading-sub');
+const statusEl         = document.getElementById('status');
+const errorBanner      = document.getElementById('error-banner');
+const errorText        = document.getElementById('error-text');
+const sceneCountEl     = document.getElementById('scene-count');
+const sceneModelListEl = document.getElementById('scene-model-list');
+
+function showLoading(msg, sub) {
+  loadingMsg.textContent = msg || 'Loading…';
+  loadingSub.textContent = sub || '';
+  loadingOverlay.classList.add('visible');
+  errorBanner.classList.remove('visible');
+}
+function hideLoading() { loadingOverlay.classList.remove('visible'); }
+function showError(msg) { hideLoading(); errorText.textContent = msg; errorBanner.classList.add('visible'); }
+function setStatus(s)   { statusEl.textContent = s; }
+
+
+// ─── §12  UI event wiring ─────────────────────────────────────────────────────
+// All HTML→JS connections in one place; no onclick attributes in the markup.
+
+// Header buttons
+document.getElementById('btn-browse').addEventListener('click', openGallery);
+document.getElementById('btn-reset-view').addEventListener('click', resetView);
+document.getElementById('btn-open-file').addEventListener('click', () => document.getElementById('file-input').click());
+
+// File input & drag-drop
+document.getElementById('file-input').addEventListener('change', function() {
+  if (this.files[0]) loadFile(this.files[0]);
+  this.value = '';
+});
+container.addEventListener('dragover',  e => { e.preventDefault(); dropZone.classList.add('dragging'); });
+container.addEventListener('dragleave', () => dropZone.classList.remove('dragging'));
+container.addEventListener('drop', e => {
+  e.preventDefault();
+  dropZone.classList.remove('dragging');
+  if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]);
+});
+dropZone.addEventListener('click', () => document.getElementById('file-input').click());
+
+// Sidebar controls
+document.getElementById('btn-load-url').addEventListener('click', loadFromURL);
+document.getElementById('toggle-edges').addEventListener('click', toggleEdges);
+document.getElementById('toggle-grid').addEventListener('click', toggleGrid);
+// Delegated remove — one listener handles all ✕ buttons in the scene model list
+sceneModelListEl.addEventListener('click', e => {
+  const btn = e.target.closest('.model-list-remove');
+  if (btn) removeEntry(models[+btn.dataset.idx]);
+});
+
+// Error banner
+document.getElementById('btn-error-close').addEventListener('click', () => errorBanner.classList.remove('visible'));
+
+// Canvas — double-click to focus orbit target on clicked point
+renderer.domElement.addEventListener('dblclick', e => {
+  if (models.length === 0 || renderer.xr.isPresenting) return;
+  const hit = browserRaycast(e.clientX, e.clientY);
+  if (hit) { controls.target.copy(hit.point); controls.update(); }
+});
+
+// Canvas — pointer events for drag, select, deselect
+renderer.domElement.addEventListener('pointerdown', e => {
+  if (renderer.xr.isPresenting || models.length === 0) return;
+  _pointerDownPos = { x: e.clientX, y: e.clientY };
+
+  const hit   = browserRaycast(e.clientX, e.clientY);
+  const entry = hit ? hitToEntry(hit) : null;
+
+  if (e.button === 2 && entry) {
+    e.preventDefault();
+    selectEntry(entry);
+    startDrag(entry, e.clientX, e.clientY);
+    return;
+  }
+
+  if (e.button === 0 && entry) {
+    selectEntry(entry);
+    container.classList.add('drag-ready');
+    _holdTimer = setTimeout(() => {
+      if (_pointerDownPos) startDrag(entry, _pointerDownPos.x, _pointerDownPos.y);
+    }, 150);
+  }
+});
+
+renderer.domElement.addEventListener('pointermove', e => {
+  if (renderer.xr.isPresenting) return;
+  if (_dragActive) { moveDrag(e.clientX, e.clientY); return; }
+  if (_orbitActive || models.length === 0) return;   // B: skip during orbit; D: defer to frame
+  _hoverPending = true;
+  _hoverClientX = e.clientX;
+  _hoverClientY = e.clientY;
+});
+
+renderer.domElement.addEventListener('pointerup', e => {
+  if (renderer.xr.isPresenting) return;
+  if (_holdTimer) { clearTimeout(_holdTimer); _holdTimer = null; }
+  container.classList.remove('drag-ready');
+  _pointerDownPos = null;
+  if (_dragActive) { endDrag(); return; }
+  if (e.button === 0) {
+    const hit = browserRaycast(e.clientX, e.clientY);
+    if (!hit) { selectedEntry = null; renderModelList(); }
+  }
+});
+
+renderer.domElement.addEventListener('pointercancel', endDrag);
+renderer.domElement.addEventListener('contextmenu', e => e.preventDefault()); // allow right-drag
+
+// Keyboard — nudge selected model (browser) or navigate model browser (overlay)
+document.addEventListener('keydown', e => {
+  // Model browser keyboard nav takes priority when open
+  if (e.key === 'Escape' && galleryOverlay.classList.contains('open')) {
+    closeGallery(); return;
+  }
+
+  // Arrow-key nudge for the selected model
+  if (renderer.xr.isPresenting || !selectedEntry) return;
+  if (document.activeElement?.tagName === 'INPUT') return;
+  let moved = true;
+  switch (e.key) {
+    case 'ArrowLeft':  selectedEntry.mesh.position.x -= NUDGE_STEP; break;
+    case 'ArrowRight': selectedEntry.mesh.position.x += NUDGE_STEP; break;
+    case 'ArrowUp':    selectedEntry.mesh.position.z -= NUDGE_STEP; break;
+    case 'ArrowDown':  selectedEntry.mesh.position.z += NUDGE_STEP; break;
+    default: moved = false;
+  }
+  if (moved) { 
+    clampToFloor(selectedEntry.mesh); 
+    e.preventDefault(); 
+    invalidate(); 
+  }
+});
+
+
+
+// ─── Auto-load demo on page load ─────────────────────────────────────────────
+// Fires immediately so the model is rendering behind the welcome modal.
+showLoading('Loading demo…', 'Fetching packed .mpd from GitHub');
+loadModelFromURL(DEMO_MODEL);
+
+// ─── Welcome modal ────────────────────────────────────────────────────────────
+(function () {
+  const backdrop = document.getElementById('welcome-backdrop');
+
+  function dismissModal() {
+    backdrop.classList.add('closing');
+    // Remove after the CSS fade-out duration (250 ms) — don't rely on
+    // animationend, which can silently fail when the animation hasn't
+    // started yet or the element is partially obscured.
+    setTimeout(() => backdrop.remove(), 300);
+  }
+
+  document.getElementById('wm-continue').addEventListener('click', dismissModal);
+  document.getElementById('wm-close').addEventListener('click', dismissModal);
+  document.getElementById('wm-watch').addEventListener('click', () => {
+    window.open(DEMO_VIDEO, '_blank', 'noopener');
+  });
+
+  // Also dismiss on backdrop click (outside the modal box)
+  backdrop.addEventListener('click', e => { if (e.target === backdrop) dismissModal(); });
+
+  // Keyboard: Escape closes
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && document.getElementById('welcome-backdrop')) dismissModal();
+  }, { once: true });
+})();
+</script>
+
+<!-- ─── Gallery overlay ─────────────────────────────────────────────────────── -->
+<div id="model-gallery">
+  <div class="gallery-topbar">
+    <span class="gallery-topbar-title">Gallery</span>
+    <div class="gallery-search-wrap">
+      <span class="gallery-search-icon">⌕</span>
+      <input
+        type="text"
+        class="gallery-search"
+        id="gallery-search-input"
+        placeholder="Filter gallery (3+ chars)…"
+        autocomplete="off"
+        spellcheck="false"
+      >
+    </div>
+    <span class="gallery-status" id="gallery-status"></span>
+    <button class="btn btn-danger" id="btn-gallery-close" title="Close gallery">Close</button>
+  </div>
+  <div class="gallery-body">
+    <div class="gallery-sidebar">
+      <div>
+        <div class="gallery-filter-title">Category</div>
+        <div id="gallery-filters"></div>
+      </div>
+      <div>
+        <div class="gallery-filter-title">Sort by</div>
+        <label class="gallery-sort-item">
+          <input type="radio" name="gallery-sort" value="relevance" checked> <span class="gallery-sort-label">Relevance</span>
+        </label>
+        <label class="gallery-sort-item">
+          <input type="radio" name="gallery-sort" value="name"> <span class="gallery-sort-label">Name A→Z</span>
+        </label>
+      </div>
+    </div>
+    <div class="gallery-main" id="gallery-main">
+      <div class="gallery-grid" id="gallery-grid"></div>
+      <div class="gallery-load-more-wrap" id="gallery-load-more-wrap" style="display:none">
+        <button class="gallery-load-more" id="btn-gallery-load-more">Load more</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
