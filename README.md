@@ -40,11 +40,15 @@ I didn't give it more hints, and it took care of even choosing a proper shield.
 
 ### **Prompt:** _now, a skyscraper, in silver and red, with big windows_
 
-Here in the rendering *looks* white and red, but in 3D/VR it's actually *silver* (like a mirror) and red.
+Here in the rendering, windows are missing and it *looks* white and red, but in 3D/VR it has windows and it's actually *silver* (like a mirror) and red.
 
 | [01-opus-4.5/004-generated_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/004-generated_skyscraper.mpd) |
 |:--:|
 | ![now, a skyscraper, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/004-generated_skyscraper.png) |
+
+A better screenshot, taken directly from a model viewer:
+
+![[skyscraper-viewer.png]]
 
 ### **Prompt:** _build the Millenium Falcon_
 
