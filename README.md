@@ -7,9 +7,11 @@ An AI skill that builds LDraw/LEGO models
 
 The main goal for this project is: making an LLM **build virtual LDraw/LEGO models**.
 
-[LDraw](https://www.ldraw.org/) is an **extremely simple programming language** for building virtual models, mostly LEGO ones, and LLMs currently are pretty good at generating source code, which means that, in theory, **we could prompt an LLM to create LDraw source code that will generate virtual models.**
+[LDraw](https://www.ldraw.org/) is an **extremely simple programming language** for building virtual models, mostly LEGO ones, and LLMs currently are pretty good at generating source code. This means that, in theory, **we could prompt an LLM to create LDraw source code files that will generate virtual models.**
 
 The skill is not ready yet, however I've tested this theory with a [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) I created, *very similar* in nature to a skill, that can be uploaded to an **agentic LLM**  (like e.g. **Claude.ai** or **ChatGPT**) as an attachment to a conversation.
+
+This iteration is based on **prompt engineering and agentic script execution only**, i.e. **no RAG, or fine tuning or anything else**.
 
 See the **Results** section below for several virtual models I generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6)
 
@@ -41,7 +43,7 @@ As with LDView, these tools may also require configuration for using the parts l
 ### Model Generation
 
 Start a **new conversation** and generate a **first model** as follows:
-- First, log in to the chat website for an agentic LLM (e.g. https://claude.ai/ or https://chatgpt.com/) 
+- Log in to the chat website for an agentic LLM (e.g. https://claude.ai/ or https://chatgpt.com/) 
 - Start a new conversation
 - Add the following to the initial message:
 	- Attach the [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) you downloaded before
@@ -62,7 +64,13 @@ That's it!
 
 ## How It Works
 
-TODO
+**TODO**
+- [ ] The LDraw language
+- [ ] Parsing the language
+- [ ] Adjusting the geometry for the LLM
+- [ ] BOMs
+- [ ] Models library
+- [ ] etc.
 
 ## Results
 
@@ -906,3 +914,4 @@ lines += ["", ""]
 output = "\n".join(lines)
 print(output)
 ```
+
