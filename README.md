@@ -48,7 +48,7 @@ Here in the rendering, windows are missing and it *looks* white and red, but in 
 
 A better screenshot, taken directly from a model viewer:
 
-![[skyscraper-viewer.png]]
+![skyscraper-viewer.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/skyscraper-viewer.png)
 
 ### **Prompt:** _build the Millenium Falcon_
 
