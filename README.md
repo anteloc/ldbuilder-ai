@@ -81,9 +81,9 @@ In return, Claude generated and provided the models you see below, available for
 
 These models are **actual CAD models**, i.e. not only meshes but the **full assembly:**
 
-|                                                                                                                              |                                                                                                                                |
-| :--------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------ |
-| ![hybrid-falcon-cad.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/assets//assets/hybrid-falcon-cad.png) | ![hybrid-falcon-cad-geom.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/assets/hybrid-falcon-cad-geom.png) |
+|                                                                                                                      |                                                                                                                                |
+| :------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------ |
+| ![hybrid-falcon-cad.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/assets/hybrid-falcon-cad.png) | ![hybrid-falcon-cad-geom.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/assets/hybrid-falcon-cad-geom.png) |
 
 ### **Prompt:** _Create a car, you decide about its features_
 
