@@ -45,10 +45,10 @@ while IFS= read -r line; do
 
     # Output markdown for this model
     src_link="${raw_base}/models/$subdir/$model_filename"
-    thumb_link="${raw_base}/thumbnails-small/$subdir/$thumb_file"
+    thumb_link="${raw_base}/thumbnails-small/$subdir/${file_base}.png"
 
     printf '### **Prompt:** _%s_\n\n' "$description"
-    printf '| [%s](%s) |\n' "$model_filename" "$src_link"
+    printf '| [%s](%s) |\n' "$subdir/$model_filename" "$src_link"
     printf '|:--:|\n'
     printf '| ![%s](%s) |\n\n' "$description" "$thumb_link"
 
