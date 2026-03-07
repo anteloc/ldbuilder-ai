@@ -40,7 +40,7 @@ I didn't give it more hints, and it took care of even choosing a proper shield.
 
 ### **Prompt:** _now, a skyscraper, in silver and red, with big windows_
 
-Here in the rendering, windows are missing and it *looks* white and red, but in 3D/VR it has windows and it's actually *silver* (like a mirror) and red.
+Here in the rendering, windows are barely visible and it *looks* white and red, but in 3D/VR it has windows and it's actually *silver* (like a mirror) and red.
 
 | [01-opus-4.5/004-generated_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/004-generated_skyscraper.mpd) |
 |:--:|
@@ -214,3 +214,12 @@ This really amazed me, even though the resulting model has structural defects, I
 |:--:|
 | [![now, a skyscraper, 25 floors, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/004-generated_25_floors_skyscraper.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/004-generated_25_floors_skyscraper.png) |
 
+### **Prompt:** _build a stadium_
+
+This one I really like, 743 parts across 9 sub-models according to Sonnet 4.6, the supports under the base plate don't seem to make much sense, but anyway, structurally speaking it seems pretty good. 
+
+| [02-sonnet-4.6/005-generated_stadium.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/005-generated_stadium.mpd) |
+
+|:--:|
+
+| [![build a stadium](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/005-generated_stadium.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/005-generated_stadium.png) |
