@@ -1,0 +1,207 @@
+0 FILE generated_skyscraper.mpd
+0 Silver and Red Skyscraper - 25 Floors
+0 Name: generated_skyscraper.mpd
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 sky_main.ldr
+
+
+
+0 FILE sky_main.ldr
+0 Skyscraper Main
+0 Name: sky_main.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Foundation plates 6x6
+1 0 -30 8 -30 1 0 0 0 1 0 0 0 1 3958.dat
+1 0 30 8 -30 1 0 0 0 1 0 0 0 1 3958.dat
+1 0 -30 8 30 1 0 0 0 1 0 0 0 1 3958.dat
+1 0 30 8 30 1 0 0 0 1 0 0 0 1 3958.dat
+1 0 -30 0 -30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 -30 0 30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 -10 0 -30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 -10 0 30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 10 0 -30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 10 0 30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 30 0 -30 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 30 0 30 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 STEP
+0 Floor 1
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 2
+1 16 0 -128 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 3
+1 16 0 -256 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 4
+1 16 0 -384 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 5
+1 16 0 -512 0 1 0 0 0 1 0 0 0 1 sky_floor_accent.ldr
+0 STEP
+0 Floor 6
+1 16 0 -640 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 7
+1 16 0 -768 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 8
+1 16 0 -896 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 9
+1 16 0 -1024 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 10
+1 16 0 -1152 0 1 0 0 0 1 0 0 0 1 sky_floor_accent.ldr
+0 STEP
+0 Floor 11
+1 16 0 -1280 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 12
+1 16 0 -1408 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 13
+1 16 0 -1536 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 14
+1 16 0 -1664 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 15
+1 16 0 -1792 0 1 0 0 0 1 0 0 0 1 sky_floor_accent.ldr
+0 STEP
+0 Floor 16
+1 16 0 -1920 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 17
+1 16 0 -2048 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 18
+1 16 0 -2176 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 19
+1 16 0 -2304 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 20
+1 16 0 -2432 0 1 0 0 0 1 0 0 0 1 sky_floor_accent.ldr
+0 STEP
+0 Floor 21
+1 16 0 -2560 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 22
+1 16 0 -2688 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 23
+1 16 0 -2816 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 24
+1 16 0 -2944 0 1 0 0 0 1 0 0 0 1 sky_floor_std.ldr
+0 STEP
+0 Floor 25
+1 16 0 -3072 0 1 0 0 0 1 0 0 0 1 sky_floor_accent.ldr
+
+0 STEP
+0 Spire
+1 16 0 -3200 0 1 0 0 0 1 0 0 0 1 sky_spire.ldr
+
+
+0 FILE sky_floor_std.ldr
+0 Standard Floor
+0 Name: sky_floor_std.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 315 0 0 0 0 0 -1 0 1 0 1 0 0 3035.dat
+0 Front window
+1 315 0 -8 -20 1 0 0 0 1 0 0 0 1 2493b.dat
+1 47 0 -8 -20 1 0 0 0 1 0 0 0 1 2494.dat
+1 315 -30 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 315 30 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 4 -10 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 4 10 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+0 Back window
+1 315 0 -8 20 -1 0 0 0 1 0 0 0 -1 2493b.dat
+1 47 0 -8 20 -1 0 0 0 1 0 0 0 -1 2494.dat
+1 315 -30 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 315 30 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 4 -10 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 4 10 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+0 Left side wall
+1 315 -30 -8 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 315 -30 -32 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 315 -30 -56 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 315 -30 -80 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 315 -30 -104 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 Right side wall
+1 315 30 -8 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 315 30 -32 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 315 30 -56 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 315 30 -80 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 315 30 -104 0 0 0 -1 0 1 0 1 0 0 3010.dat
+
+
+0 FILE sky_floor_accent.ldr
+0 Accent Floor
+0 Name: sky_floor_accent.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+1 4 0 0 0 0 0 -1 0 1 0 1 0 0 3035.dat
+0 Front window
+1 4 0 -8 -20 1 0 0 0 1 0 0 0 1 2493b.dat
+1 47 0 -8 -20 1 0 0 0 1 0 0 0 1 2494.dat
+1 4 -30 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 4 30 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 315 -10 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+1 315 10 -8 -20 1 0 0 0 1 0 0 0 1 2453a.dat
+0 Back window
+1 4 0 -8 20 -1 0 0 0 1 0 0 0 -1 2493b.dat
+1 47 0 -8 20 -1 0 0 0 1 0 0 0 -1 2494.dat
+1 4 -30 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 4 30 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 315 -10 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+1 315 10 -8 20 -1 0 0 0 1 0 0 0 -1 2453a.dat
+0 Left side wall
+1 4 -30 -8 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 4 -30 -32 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 4 -30 -56 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 4 -30 -80 0 0 0 1 0 1 0 -1 0 0 3010.dat
+1 4 -30 -104 0 0 0 1 0 1 0 -1 0 0 3010.dat
+0 Right side wall
+1 4 30 -8 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 4 30 -32 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 4 30 -56 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 4 30 -80 0 0 0 -1 0 1 0 1 0 0 3010.dat
+1 4 30 -104 0 0 0 -1 0 1 0 1 0 0 3010.dat
+0 Red accent band tiles
+1 4 0 0 -20 1 0 0 0 1 0 0 0 1 4162.dat
+1 4 0 0 20 -1 0 0 0 1 0 0 0 -1 4162.dat
+1 4 -30 0 0 0 0 1 0 1 0 -1 0 0 2431.dat
+1 4 30 0 0 0 0 -1 0 1 0 1 0 0 2431.dat
+
+
+0 FILE sky_spire.ldr
+0 Spire
+0 Name: sky_spire.ldr
+0 Author: Claude
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 STEP
+0 Roof plate
+1 4 0 0 0 0 0 -1 0 1 0 1 0 0 3035.dat
+1 315 0 -8 0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 4 0 -16 0 1 0 0 0 1 0 0 0 1 3003.dat
+1 315 0 -40 0 1 0 0 0 1 0 0 0 1 3004.dat
+1 4 0 -48 0 1 0 0 0 1 0 0 0 1 3942c.dat
+1 315 0 -80 0 1 0 0 0 1 0 0 0 1 3957a.dat
+

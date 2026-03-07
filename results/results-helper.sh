@@ -5,8 +5,17 @@ base_dir="$(realpath $base_dir)"
 ldraw_dir="$base_dir/../../ldraw-lib/ldraw"
 ldraw_dir="$(realpath $ldraw_dir)"
 
+# example: results-helper.sh 02-sonnet-4.6/003-generated_fighter_jet.glb
+single_model_name="${1:-}"
+
 while IFS= read -r line; do
     name="$(echo "$line" | jq -r '.name')"
+
+    # if given, only process the specified model (by name, which is the path relative to models/ without extension)
+    if [[ -n "$single_model_name" && "$name" != "$single_model_name" ]]; then
+        continue
+    fi
+
     subdir="$(dirname "$name")"
     filename="$(basename "$name")"
     file_base="${filename%.*}" # remove file extension for thumbnail and links
@@ -39,18 +48,19 @@ while IFS= read -r line; do
             thumb_file="${file_base}-${view}.png"
         fi
 
-        ldr2img --view "$view" --ldraw-dir "$ldraw_dir" -o "thumbnails/$subdir/$thumb_file" "models/$subdir/$model_filename" 1>&2
+        ldr2img --background --view "$view" --ldraw-dir "$ldraw_dir" -o "thumbnails/$subdir/$thumb_file" "models/$subdir/$model_filename" 1>&2
         magick "thumbnails/$subdir/$thumb_file" -resize 50% "thumbnails-small/$subdir/$thumb_file"
     done
 
     # Output markdown for this model
     src_link="${raw_base}/models/$subdir/$model_filename"
     thumb_link="${raw_base}/thumbnails-small/$subdir/${file_base}.png"
+    thumb_big_link="${raw_base}/thumbnails/$subdir/${file_base}.png"
 
     printf '### **Prompt:** _%s_\n\n' "$description"
     printf '| [%s](%s) |\n' "$subdir/$model_filename" "$src_link"
     printf '|:--:|\n'
-    printf '| ![%s](%s) |\n\n' "$description" "$thumb_link"
+    printf '| [![%s](%s)](%s) |\n\n' "$description" "$thumb_link" "$thumb_big_link"
 
 done < models-index.jsonl > results.md
 

@@ -20,7 +20,7 @@ This one caught me by surprise, it has quite some defects, but simmetry is prett
 
 | [01-opus-4.5/001-generated_sports_car.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/001-generated_sports_car.mpd) |
 |:--:|
-| ![Create a car, you decide about its features](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/001-generated_sports_car.png) |
+| [![Create a car, you decide about its features](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/001-generated_sports_car.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/001-generated_sports_car.png) |
 
 ### **Prompt:** _now, create a paladin_
 
@@ -28,7 +28,7 @@ It took care of dressing the minifig accordingly by itself.
 
 | [01-opus-4.5/002-generated_paladin.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/002-generated_paladin.mpd) |
 |:--:|
-| ![now, create a paladin](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/002-generated_paladin.png) |
+| [![now, create a paladin](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/002-generated_paladin.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/002-generated_paladin.png) |
 
 ### **Prompt:** _now, another paladin, but this time, a dragonslayer_
 
@@ -36,7 +36,7 @@ I didn't give it more hints, and it took care of even choosing a proper shield.
 
 | [01-opus-4.5/003-generated_dragonslayer.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/003-generated_dragonslayer.mpd) |
 |:--:|
-| ![now, another paladin, but this time, a dragonslayer](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/003-generated_dragonslayer.png) |
+| [![now, another paladin, but this time, a dragonslayer](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/003-generated_dragonslayer.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/003-generated_dragonslayer.png) |
 
 ### **Prompt:** _now, a skyscraper, in silver and red, with big windows_
 
@@ -44,7 +44,7 @@ Here in the rendering, windows are missing and it *looks* white and red, but in 
 
 | [01-opus-4.5/004-generated_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/004-generated_skyscraper.mpd) |
 |:--:|
-| ![now, a skyscraper, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/004-generated_skyscraper.png) |
+| [![now, a skyscraper, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/004-generated_skyscraper.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/004-generated_skyscraper.png) |
 
 A better screenshot, taken directly from a model viewer:
 
@@ -56,7 +56,7 @@ Not a good result, only slightly similar to the original one in the outline.
 
 | [01-opus-4.5/005-generated_millennium_falcon.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/005-generated_millennium_falcon.mpd) |
 |:--:|
-| ![build the Millenium Falcon](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/005-generated_millennium_falcon.png) |
+| [![build the Millenium Falcon](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/005-generated_millennium_falcon.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/005-generated_millennium_falcon.png) |
 
 ### **Prompt:** _create a squad of 4 firemen_
 
@@ -66,7 +66,7 @@ Two things I've noticed:
 
 | [01-opus-4.5/006-generated_fireman_squad.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/006-generated_fireman_squad.mpd) |
 |:--:|
-| ![create a squad of 4 firemen](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/006-generated_fireman_squad.png) |
+| [![create a squad of 4 firemen](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/006-generated_fireman_squad.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/006-generated_fireman_squad.png) |
 
 ### **Prompt:** _now, a pilot sitting in a F1 car_
 
@@ -74,7 +74,7 @@ Not a good one, it often happens that it gets rotations wrong, like e.g. with th
 
 | [01-opus-4.5/007-generated_f1_car_with_pilot.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/007-generated_f1_car_with_pilot.mpd) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|   ![now, a pilot sitting in a F1 car](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/007-generated_f1_car_with_pilot.png)   |
+| [![now, a pilot sitting in a F1 car](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/007-generated_f1_car_with_pilot.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/007-generated_f1_car_with_pilot.png) |
 
 ### **Prompt:** attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship_
 
@@ -82,31 +82,31 @@ I gave it this as a baseline to start working.
 
 | [01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd) |
 |:--:|
-| ![(INPUT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.png) |
+| [![(INPUT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.png) |
 
 It complained about the model being too big (which is true), and it decided to create a new spaceship just by slightly altering the original, mostly switching colors to red, and giving it the name *"The Crimson Interceptor"*.
 
 | [01-opus-4.5/008-crimson_interceptor.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/008-crimson_interceptor.mpd) |
 |:--:|
-| ![(RESULT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/008-crimson_interceptor.png) |
+| [![(RESULT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/008-crimson_interceptor.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/008-crimson_interceptor.png) |
 
 ### **Prompt:** _create a hybrid of these two attached models_
 
 After verifying that I could ask for altering a model, I tried something different: gave it two models, and asked it to "merge" them.
 
-The end result is pretty good, it's like it copied the engines from A and pasted them on B.
+The end result is pretty good, it's like it copied the engines and rear wings from A and pasted them onto B.
 
 |     [Model A: 01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.mpd)     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![(INPUT 1) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.png) |
+| [![(INPUT 1) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.png) |
 
 |     [Model B: 01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.mpd)     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![(INPUT 2) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.png) |
+| [![(INPUT 2) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.png) |
 
 |       [Model A + B: 01-opus-4.5/009-speed_falcon_hybrid.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-speed_falcon_hybrid.mpd)       |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![(RESULT) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-speed_falcon_hybrid.png) |
+| [![(RESULT) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-speed_falcon_hybrid.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/009-speed_falcon_hybrid.png) |
 
 ### **Prompt:** _from the attached model, create a new one that contains only the plane_
 
@@ -120,7 +120,7 @@ It failed the first attempt, and extracted the car and wagon, instead of the pla
 
 | [01-opus-4.5/010-A-fire_plane_only.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/010-A-fire_plane_only.mpd) |
 |:--:|
-| ![(RESULT 1) from the attached model, create a new one that contains only the plane](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/010-A-fire_plane_only.png) |
+| [![(RESULT 1) from the attached model, create a new one that contains only the plane](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/010-A-fire_plane_only.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/010-A-fire_plane_only.png) |
 
 ### **Prompt:** _actually, this is not the plane, but the car and its wagon. try again._
 
@@ -128,7 +128,7 @@ Second attempt, it extracted most of the plane.
 
 | [01-opus-4.5/010-B-fire_plane_only.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/010-B-fire_plane_only.mpd) |
 |:--:|
-| ![(RESULT 1 - FIX) actually, this is not the plane, but the car and its wagon. try again.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/010-B-fire_plane_only.png) |
+| [![(RESULT 1 - FIX) actually, this is not the plane, but the car and its wagon. try again.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/010-B-fire_plane_only.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/010-B-fire_plane_only.png) |
 
 ### **Prompt:** _remove the people from the attached model_
 
@@ -136,13 +136,13 @@ This was an actual surprise, I gave it the following model:
 
 |        [01-opus-4.5/011-2150_Ttrain_Station.ldr](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/011-2150_Ttrain_Station.ldr)         |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![(INPUT) remove the people from the attached model](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/011-2150_Ttrain_Station.png) |
+| [![(INPUT) remove the people from the attached model](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/011-2150_Ttrain_Station.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/011-2150_Ttrain_Station.png) |
 
 ... and it "*removed"* the people there, but left most of their clothes, hair, etc. **intact** (!)
 
 |       [01-opus-4.5/011-train_station_no_people.ldr](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/011-train_station_no_people.ldr)       |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![(RESULT) remove the people from the attached model](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/011-train_station_no_people.png) |
+| [![(RESULT) remove the people from the attached model](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/011-train_station_no_people.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/011-train_station_no_people.png) |
 
 ### **Prompt:** _ok, now: add some people to the model, dressed accordingly_
 
@@ -150,11 +150,11 @@ Didn't manage to do much with this, but not too bad taking into account that I d
 
 | [01-opus-4.5/012-10267-1.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/012-10267-1.mpd) |
 |:--:|
-| ![(INPUT) ok, now: add some people to the model, dressed accordingly](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/012-10267-1.png) |
+| [![(INPUT) ok, now: add some people to the model, dressed accordingly](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/012-10267-1.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/012-10267-1.png) |
 
 | [01-opus-4.5/012-generated_10267_with_people.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/012-generated_10267_with_people.mpd) |
 |:--:|
-| ![(RESULT) ok, now: add some people to the model, dressed accordingly](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/012-generated_10267_with_people.png) |
+| [![(RESULT) ok, now: add some people to the model, dressed accordingly](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/012-generated_10267_with_people.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/012-generated_10267_with_people.png) |
 
 ### **Prompt:** _Create a car, you decide about its features_
 
@@ -163,7 +163,7 @@ Outcome was way better!
 
 | [02-sonnet-4.6/001-generated_sports_car.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/001-generated_sports_car.mpd) |
 |:--:|
-| ![Create a car, you decide about its features](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/001-generated_sports_car.png) |
+| [![Create a car, you decide about its features](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/001-generated_sports_car.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/001-generated_sports_car.png) |
 
 ### **Prompt:** _now, a cat_
 
@@ -171,7 +171,7 @@ It didn't spend much time thinking, just took a ready-made minifig and placed it
 
 | [02-sonnet-4.6/002-generated_cat.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/002-generated_cat.mpd) |
 |:--:|
-| ![now, a cat](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/002-generated_cat.png) |
+| [![now, a cat](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/002-generated_cat.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/002-generated_cat.png) |
 
 ### **Prompt:** _now, a plane, a fast one!_
 
@@ -179,7 +179,7 @@ Not a good result, simmetry was clearly wrong.
 
 | [02-sonnet-4.6/003-generated_fighter_jet.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet.mpd) |
 |:--:|
-| ![now, a plane, a fast one!](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet.png) |
+| [![now, a plane, a fast one!](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet.png) |
 
 
 ### **Prompt:** _it has some structural defects, symmetry errors... fix them._
@@ -190,16 +190,27 @@ Partially fixed version:
 
 |             [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)              |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2.png) |
+| [![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet_v2.png) |
 
 Before:
 
 | [02-sonnet-4.6/003-generated_fighter_jet.mpd (top)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet.mpd) |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|     ![now, a plane, a fast one!](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet-top.png)      |
+|     [![now, a plane, a fast one!](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet-top.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet-top.png)      |
 
 After:
 
 |             [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd (top)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)              |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| ![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2-top.png) |
+| [![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2-top.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet_v2-top.png) |
+
+### **Prompt:** _now, a skyscraper, 25 floors, in silver and red, with big windows_
+
+This really amazed me, even though the resulting model has structural defects, I thought it would end up making a mistake on the number of floors, but it got it right by creating a small python script to create all the floors by repeating the same one... 25 times!
+
+![skyscraper_25_prompt.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/skyscraper_25_prompt.png)
+
+| [02-sonnet-4.6/004-generated_25_floors_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/004-generated_25_floors_skyscraper.mpd) |
+|:--:|
+| [![now, a skyscraper, 25 floors, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/004-generated_25_floors_skyscraper.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/004-generated_25_floors_skyscraper.png) |
+

@@ -512,9 +512,9 @@
       <div class="hint">
         Aim at a model, then:<br>
         <b>Trigger/Grip</b> — grab &amp; move<br>
-        <b>Trigger + Stick ↑↓</b> — push/pull<br>
-        <b>Trigger + Stick ←→</b> — resize<br>
-        <b>Grip + Stick ←→↑↓</b> — rotate<br>
+        <b>Trigger + Thumbstick ↑↓</b> — push/pull<br>
+        <b>Trigger + Thumbstick ←→</b> — resize<br>
+        <b>Grip + Thumbstick ←→↑↓</b> — rotate<br>
         <b>B / Y</b> — remove model<br>
         <b>A / X</b> — menu on/off
       </div>
@@ -572,7 +572,7 @@ THREE.Mesh.prototype.raycast                      = acceleratedRaycast;
 const BASE_REPO   = 'anteloc/ldbuilder-ai';
 const REPO_BRANCH = 'master';
 const PARTS_CDN    = `https://raw.githubusercontent.com/anteloc/ldraw-lib/master/ldraw/`;
-const DEMO_MODEL   = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models/2026-01-22/009-speed_falcon_hybrid.mpd`;
+const DEMO_MODEL   = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models/01-opus-4.5/009-speed_falcon_hybrid.mpd`;
 const MODELS_INDEX = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models-index.jsonl`;
 const RAW_BASE     = `https://raw.githubusercontent.com/${BASE_REPO}/${REPO_BRANCH}/results/models/`;  // for loading models by filename from the index
 const DEMO_VIDEO   = 'https://youtu.be/WIP';
@@ -1715,6 +1715,7 @@ function _closeMenu(ctrl) {
   if (!display) return;
   display.visible           = false;
   display.userData.menuMode = false;
+  ctrl.menuHintLine.visible = false;
   // Laser visibility is restored automatically next frame by the raycast block
   // (setLaserVisible(ctrl, true) runs when menuMode is false).
 }
@@ -1747,6 +1748,7 @@ function updateXRControls() {
       miniDisplay.userData.menuMode = true;
       miniDisplay.userData.draw();
       miniDisplay.visible = true;
+      leftCtrl.menuHintLine.visible = true;
     }
   }
 
@@ -1847,6 +1849,7 @@ function updateXRControls() {
         miniDisplay.userData.menuMode = true;
         miniDisplay.userData.draw();
         miniDisplay.visible = true;
+        ctrl.menuHintLine.visible = true;
       }
     }
     ctrl.prevAX = axNow;
@@ -2047,11 +2050,11 @@ function _menuDrawTabs(ctx, activeTab, focusCol, focusRow) {
 function _menuDrawHelp(ctx) {
   const x0 = TAB_W + 16;
   const rows = [
-    { label: 'Trigger',        desc: 'Grab / move'      },
-    { label: 'Trig + Stick↑↓', desc: 'Push / pull'      },
-    { label: 'Trig + Stick←→', desc: 'Scale'            },
-    { label: 'Grip',           desc: 'Grab / rotate'    },
-    { label: 'Grip + Stick',   desc: 'Rotate yaw/pitch' },
+    { label: 'Trigger',        desc: 'Grab'      },
+    { label: 'Trigger + Thumbstick↑↓', desc: 'Push / pull'      },
+    { label: 'Trigger + Thumbstick←→', desc: 'Scale'            },
+    { label: 'Grip',           desc: 'Grab'    },
+    { label: 'Grip + Thumbstick',   desc: 'Rotate yaw/pitch' },
     { label: 'B / Y',          desc: 'Remove model'     },
     { label: 'A / X',          desc: 'Toggle menu'      },
   ];
@@ -2187,11 +2190,60 @@ function makeMiniDisplay() {
   group.add(mesh);
 
   // Position helper — called once from 'connected' event.
-  // Tilts the panel to face the user when the hand is held naturally at waist height.
+  // Panel stands parallel to the controller's longitudinal axis (grip-space Y) so
+  // thumbstick up/down maps directly to up/down on the canvas.
   group.userData.positionForHand = (handedness) => {
     const side = handedness === 'left' ? 1 : -1;
-    group.position.set(side * 0.10, 0.07, 0.01);
-    group.rotation.set(-Math.PI * 0.5, 0, side * Math.PI * 0.10);
+    group.position.set(side * 0.22, 0.07, 0.01);
+    // Ry(side * π/2): rotates the plane so its normal faces outward (away from controller)
+    // and its local Y axis aligns with the grip's longitudinal Y axis.
+    group.rotation.set(-Math.PI / 2, 0, 0);
+    // group.rotation.set(0, side * Math.PI / 2, 0);
+  };
+
+  return group;
+}
+
+// ── makeMenuHintLine ───────────────────────────────────────────────────────────
+// A dashed line from the approximate X/A button position on the controller to
+// the centre of the menu panel, so the user can see which button opens the menu.
+// Both endpoints are in grip-local space and are set once on 'connected'.
+function makeMenuHintLine() {
+  const positions = new Float32Array(6);
+  const geometry  = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+  const material = new THREE.LineDashedMaterial({
+    color: 0xffcc00, transparent: true, opacity: 0.55,
+    depthTest: false, dashSize: 0.014, gapSize: 0.007,
+  });
+  const line = new THREE.Line(geometry, material);
+  line.renderOrder = 1001;
+
+  // Small sphere at the button end to mark where the X/A button is
+  const dotMat = new THREE.MeshBasicMaterial({ color: 0xffcc00, transparent: true, opacity: 0.7, depthTest: false });
+  const dot    = new THREE.Mesh(new THREE.SphereGeometry(0.005, 8, 6), dotMat);
+  dot.renderOrder = 1001;
+
+  const group = new THREE.Group();
+  group.add(line);
+  group.add(dot);
+  group.visible = false;
+
+  // Called once from 'connected' — endpoints must match positionForHand in makeMiniDisplay.
+  group.userData.positionForHand = (handedness) => {
+    const side = handedness === 'left' ? 1 : -1;
+    // Approximate X/A button position in grip space (Quest controller face buttons).
+    // X/A is the lower face button; Y/B is the upper one (higher by ~0.012 m).
+    const bx = side * 0.002, by = 0.0, bz = -0.015;
+    // const bx = side * 0.018, by = 0.010, bz = -0.028;
+    // Menu panel centre in grip space — mirrors the offset set in makeMiniDisplay
+    const mx = side * 0.22, my = 0.07, mz = 0.01;
+    positions[0] = bx; positions[1] = by; positions[2] = bz;
+    positions[3] = mx; positions[4] = my; positions[5] = mz;
+    geometry.attributes.position.needsUpdate = true;
+    line.computeLineDistances();
+    dot.position.set(bx, by, bz);
   };
 
   return group;
@@ -2235,12 +2287,15 @@ function buildController(index) {
 
   const miniDisplay = makeMiniDisplay();
   grip.add(miniDisplay);
+  const hintLine = makeMenuHintLine();
+  grip.add(hintLine);
   scene.add(grip);
 
   const ctrl = {
     pointer, grip,
     laserBeam, laserRing,
     miniDisplay,
+    menuHintLine: hintLine,
     slot:           slots[index],
     xrInputSource:  null,
     handedness:     null,
@@ -2262,6 +2317,7 @@ function buildController(index) {
     ctrl.xrInputSource = e.data;
     ctrl.handedness    = e.data.handedness;
     miniDisplay.userData.positionForHand?.(e.data.handedness);
+    hintLine.userData.positionForHand?.(e.data.handedness);
   });
   pointer.addEventListener('disconnected', () => { ctrl.xrInputSource = null; });
 
@@ -3023,7 +3079,7 @@ function onXRSessionStart(mode) {
     // Transparent background → passthrough shows through
     scene.background = null;
     renderer.setClearColor(0x000000, 0);
-    mrShadowDisc.visible = true;
+    // mrShadowDisc removed — position in XR is unreliable
   } else {
     // VR: solid opaque black — gives the XR compositor a proper opaque layer.
     // null/transparent in VR causes the compositor to blend against undefined
