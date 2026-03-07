@@ -2,8 +2,8 @@
 
 Copyright (c) 2026 Carlos Antelo
 
-The research notes, documentation, and other materials in this `/docs` directory are
-licensed under **CC BY-SA 4.0** (see `docs/LICENSE`).
+The research notes, documentation, and other materials in this repository are
+licensed under **CC BY-SA 4.0** (see `CC-BY-SA-4.0` file).
 
 ## How to attribute
 When reusing or adapting this material, please provide attribution as:
