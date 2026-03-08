@@ -1,6 +1,6 @@
-### **Prompt:** _now, build me this other attached building_
+### **Prompt:** _Girl with a Pearl Earring by Johannes Vermeer_
 
-| [04-opus-4.6/002-generated_tiered_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/002-generated_tiered_building.mpd) |
+| [04-opus-4.6/003-generated_mosaic.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/003-generated_mosaic.mpd) |
 |:--:|
-| [![now, build me this other attached building](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/002-generated_tiered_building.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/002-generated_tiered_building.png) |
+| [![Girl with a Pearl Earring by Johannes Vermeer](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/003-generated_mosaic.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/003-generated_mosaic.png) |
 

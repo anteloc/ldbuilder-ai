@@ -1,9 +1,10 @@
 # LDBuilder AI
+
 An AI skill to build virtual LDraw/LEGO models
 
 ## Overview
 > [!WARNING]
-**WIP**: the skill is not ready yet, and the current source code doesn't fully work.
+**WIP**: the skill is not ready yet, and the current source code doesn't fully work, but **models can be generated** using a **bundle zip file** on this repository.
 
 The main goal for this project is: making an **agentic LLM** build **virtual LDraw/LEGO models**.
 
@@ -15,7 +16,7 @@ Part of this system is the[ LDraw language](https://www.ldraw.org/article/218.ht
 
 This makes possible for an **agentic LLM** to **generate LDraw source code**, that's **equivalent** to **generating a virtual model**.
 
-See the **Results** section below for several generated virtual models.
+See the **Results** section below for samples of generated virtual models.
 
 ## Quick Start
 
@@ -27,18 +28,18 @@ Generating models via an **agentic LLM** involves just a few easy steps, detaile
 ### Preliminars
 
 The following are **required** downloads:
-- The **instructions** [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip)
-- The [official LDraw zipped parts library](https://library.ldraw.org/library/updates/complete.zip)
+- The **instructions, information and tools** [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip)
+- The [Official LDraw zipped parts library](https://library.ldraw.org/library/updates/complete.zip)
 - [LDView](https://github.com/tcobbs/ldview/releases), an LDraw **models viewer**
 
-Extract the parts library zip file and then **configure** LDView to use it.
+Extract the parts library zip file and then [configure LDView](https://trevorsandy.github.io/lpub3d/assets/docs/ldview/Help.html#LDrawLibrary) to use it.
 
 These other downloads are **optional**:
-- Some [official LDraw models](https://library.ldraw.org/omr) for experimenting
-- Some **models editor**:
+- [Official LDraw models](https://library.ldraw.org/omr) for experimenting
+- Models editors:
 	- [Stud.io](https://www.bricklink.com/v3/studio/download.page)
 	- [LeoCAD](https://www.leocad.org/index.html)
-	- [Blender](https://www.blender.org/) + **[ldr_tools_blender addon](https://github.com/ScanMountGoat/ldr_tools_blender)**
+	- [Blender](https://www.blender.org/) + [ldr_tools_blender addon](https://github.com/ScanMountGoat/ldr_tools_blender)
 
 As with LDView, these tools may also require configuration for using the parts library.
 
@@ -73,7 +74,8 @@ That's it!
 - [ ] BOMs
 - [ ] Models library creation
 - [ ] The validation-feedback process loop
-- [ ] etc.
+- [ ] Pending - RAG
+- [ ] Pending - Fine tuning
 
 ## Results
 
@@ -86,12 +88,15 @@ That's it!
  The following models have been generated using **Claude.ai** (Opus 4.5, Opus 4.6 and Sonnet 4.6).
 
 It was a simple process:
-- I gave it a **simple prompt**, no constraints, so it could be creative
+- I gave it a **simple prompt**, no constraints, so it would be creative
 - Then, it would start the **creation process**, by **generating LDraw source code**
 - At the end of the process, I would download the **generated sources (.mpd file)**
 - After that, **I would open them in LDView** for inspecting the generated model
 
-The resulting models are **actual editable CAD models**, not only meshes:
+The resulting models are **actual editable CAD models**, not only meshes.
+This is a model I opened in **Blender**:
+
+[Model A + B: 01-opus-4.5/009-speed_falcon_hybrid.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-speed_falcon_hybrid.mpd)
 
 |                                                                                                                      |                                                                                                                                |
 | :------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -187,13 +192,13 @@ The end result it's like it copied the engines and rear wings from A and pasted 
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![(INPUT 2) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/009-4882_Speed_Wings-Model_B.lxf.png) |
 
-|       [Model A + B: 01-opus-4.5/009-speed_falcon_hybrid.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-speed_falcon_hybrid.mpd)       |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                     [Model A + B: 01-opus-4.5/009-speed_falcon_hybrid.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-speed_falcon_hybrid.mpd)                                                                     |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![(RESULT) create a hybrid of these two attached models](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/009-speed_falcon_hybrid.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/009-speed_falcon_hybrid.png) |
 
 ### **Prompt:** _from the attached model, create a new one that contains only the plane_
 
-Now, I tested extracting something from a model: only the plane.
+Now, I tested extracting a submodel from a model: get me the plane alone!
 
 | [01-opus-4.5/010-4209_Ffire_Plane.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/010-4209_Ffire_Plane.lxf.mpd) |
 |:--:|
@@ -230,7 +235,7 @@ This was an actual surprise, I gave it the following model:
 
 ### **Prompt:** _ok, now: add some people to the model, dressed accordingly_
 
-It added several minifigs, in winter garments, but oddly their hats were wrongly attached.
+It added several minifigs, in winter garments, but their hats were oddly attached.
 
 | [01-opus-4.5/012-10267-1.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/012-10267-1.mpd) |
 |:--:|
@@ -267,13 +272,7 @@ Not a good result, simmetry was clearly wrong.
 
 ### **Prompt:** _it has some structural defects, symmetry errors... fix them._
 
-Besides this prompt, I also attached a screenshot from top perspective for the previous model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
-
-This is the partially fixed version:
-
-|             [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)              |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet_v2.png) |
+Besides this prompt, I also attached a screenshot from top perspective for the previous defective model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
 
 Before:
 
@@ -286,6 +285,13 @@ After:
 |             [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd (top)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)              |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2-top.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet_v2-top.png) |
+
+End result (partially fixed):
+
+|                                                                         [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd (isometric)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)                                                                         |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![it has some structural defects, symmetry errors... fix them.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/003-generated_fighter_jet_v2.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/003-generated_fighter_jet_v2.png) |
+
 
 ### **Prompt:** _now, a skyscraper, 25 floors, in silver and red, with big windows_
 
@@ -301,7 +307,7 @@ It got it right by creating a small python script that would create all the floo
 
 ### **Prompt:** _build a stadium_
 
-This one took **743 parts (pieces) across 9 sub-models**, according to itself Sonnet 4.6. 
+This one took **743 parts (pieces) across 9 sub-models**, according to itself (Sonnet 4.6. )
 The supports under the base plate don't make much sense, but for the rest, structurally speaking, it seems pretty good. 
 
 [This is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
@@ -312,9 +318,11 @@ The supports under the base plate don't make much sense, but for the rest, struc
 
 ### **Prompt:** _build me the attached building_
 
-I gave it this photo from an iconic building, the Bradbury, just to test how accurate it is when copying something real. Because it is a famous building, it had extra information besides the one it extracted from the photo.
+I gave it this photo from an iconic building, the Bradbury, just to test how accurate it is when copying something real. 
 
 [![building-small.jpg](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building-small.jpg)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building.jpg)
+
+Because of being a famous building, it had extra information, took that into account, and this is the end result:
 
 |                                                                [04-opus-4.6/001-generated_bradbury_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/001-generated_bradbury_building.mpd)                                                                |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -322,9 +330,12 @@ I gave it this photo from an iconic building, the Bradbury, just to test how acc
 
 ### **Prompt:** _now, build me this other attached building_
 
-I gave it a drawing of a regular building, so it wouldn't have any extra information besides what it could extract from the picture.
+I gave it a drawing of a regular building, so it wouldn't have any extra information besides what it could infer from the picture.
 
 ![building-drawing.jpeg](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building-drawing.jpeg)
+
+The floors on the lower levels have four windows per side, instead of the three in the picture.
+However, windows in the picture are of different sizes, but in the model they are the same size.
 
 |                                                                      [04-opus-4.6/002-generated_tiered_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/002-generated_tiered_building.mpd)                                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -338,4 +349,4 @@ I'd like to thank the following:
 - [LDView](https://tcobbs.github.io/ldview/)'s authors and contributors.
 - [LeoCAD](https://github.com/leozide/leocad)'s authors and contributors.
 
-... and thanks to all of the other creators!
+... and thanks to all of the many other LDraw creators!
