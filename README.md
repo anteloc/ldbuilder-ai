@@ -49,7 +49,7 @@ To **start generating** models:
 - Add the following to the initial chat message:
 	- The [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) you downloaded before
 	- The prompt message: 
-		- ***"Follow the instructions.md in the attached bundle. Build me a XXX"***
+		- ***"Follow the instructions.md in the attached bundle. Build me a ______"***
 - Send the message
 
 Create **more models** on the same conversation by entering more prompts like e.g.:
@@ -230,7 +230,7 @@ This was an actual surprise, I gave it the following model:
 
 ### **Prompt:** _ok, now: add some people to the model, dressed accordingly_
 
-It added several minifigs, in winter garments, but oddly their hats were wrong.
+It added several minifigs, in winter garments, but oddly their hats were wrongly attached.
 
 | [01-opus-4.5/012-10267-1.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/012-10267-1.mpd) |
 |:--:|
@@ -267,7 +267,7 @@ Not a good result, simmetry was clearly wrong.
 
 ### **Prompt:** _it has some structural defects, symmetry errors... fix them._
 
-Besides this prompg, I also attached a screenshot from top perspective for the previous model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
+Besides this prompt, I also attached a screenshot from top perspective for the previous model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
 
 This is the partially fixed version:
 
@@ -302,7 +302,7 @@ It got it right by creating a small python script that would create all the floo
 ### **Prompt:** _build a stadium_
 
 This one took **743 parts (pieces) across 9 sub-models**, according to itself Sonnet 4.6. 
-The supports under the base plate don't make much sense, but structurally speaking it seems pretty good. 
+The supports under the base plate don't make much sense, but for the rest, structurally speaking, it seems pretty good. 
 
 [This is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
 
