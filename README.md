@@ -1,30 +1,28 @@
-# ldbuilder-ai
-An AI skill that builds LDraw/LEGO models
+# LDBuilder AI
+An AI skill to build virtual LDraw/LEGO models
 
 ## Overview
 > [!WARNING]
-> This repo is currently **WIP**, the current source code for the repository is non-functional.
+**WIP**: the skill is not ready yet, and the current source code doesn't fully work.
 
-The main goal for this project is: making an LLM **build virtual LDraw/LEGO models**.
+The main goal for this project is: making an **agentic LLM** build **virtual LDraw/LEGO models**.
 
-According to **their own definition**, [LDraw](https://www.ldraw.org/) is:
+According to their own **definition**, [LDraw](https://www.ldraw.org/) is:
 
 *"..a completely unofficial, community run free CAD system which represents official parts produced by the LEGO company."*
 
-The[ LDraw language](https://www.ldraw.org/article/218.html) is an **extremely simple programming language** for building virtual models, mostly LEGO ones, and LLMs currently are pretty good at generating source code. This means that, *in theory*, **we could prompt an LLM to create LDraw source code files that will generate virtual models.**
+Part of this system is the[ LDraw language](https://www.ldraw.org/article/218.html), an **extremely simple programming language** for **building virtual models**, mostly LEGOs.
 
-The skill is not ready yet, however I've tested this theory with a [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) I created, *very similar* in nature to a skill, that can be uploaded to an **agentic LLM**  (like e.g. **Claude.ai** or **ChatGPT**) as an attachment to a conversation.
+This makes possible for an **agentic LLM** to **generate LDraw source code**, that's **equivalent** to **generating a virtual model**.
 
-This iteration is based on **prompt engineering and agentic script execution only**, i.e. **no RAG, or fine tuning or anything else**.
-
-See the **Results** section below for several virtual models I generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6)
+See the **Results** section below for several generated virtual models.
 
 ## Quick Start
 
-Generating models yourself via an LLM involves just a few easy steps, detailed below.
-
 > [!WARNING]
 > Not *every attempt* at generating a new model will be successful!
+
+Generating models via an **agentic LLM** involves just a few easy steps, detailed below.
 
 ### Preliminars
 
@@ -37,7 +35,7 @@ Extract the parts library zip file and then **configure** LDView to use it.
 
 These other downloads are **optional**:
 - Some [official LDraw models](https://library.ldraw.org/omr) for experimenting
-- Some **models editor**, I use these:
+- Some **models editor**:
 	- [Stud.io](https://www.bricklink.com/v3/studio/download.page)
 	- [LeoCAD](https://www.leocad.org/index.html)
 	- [Blender](https://www.blender.org/) + **[ldr_tools_blender addon](https://github.com/ScanMountGoat/ldr_tools_blender)**
@@ -46,21 +44,21 @@ As with LDView, these tools may also require configuration for using the parts l
 
 ### Model Generation
 
-Start a **new conversation** and generate a **first model** as follows:
-- Log in to the chat website for an agentic LLM (e.g. https://claude.ai/ or https://chatgpt.com/) 
-- Start a new conversation
-- Add the following to the initial message:
-	- Attach the [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) you downloaded before
-	- Enter the following prompt message: ***"Follow the instructions.md in the attached bundle. Build me a {thing name}"***
-	- Send the message
+To **start generating** models:
+- Log in to the chat website (e.g. https://claude.ai/ or https://chatgpt.com/) 
+- Add the following to the initial chat message:
+	- The [zip bundle](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/bundles/2026-01-22/build-instructions-01.zip) you downloaded before
+	- The prompt message: 
+		- ***"Follow the instructions.md in the attached bundle. Build me a XXX"***
+- Send the message
 
-Create **new models** by entering prompt messages like e.g.:
-	***Build me a car*** 
-	***Build me a house***
-	***Generate a wizard***
-	...
+Create **more models** on the same conversation by entering more prompts like e.g.:
+- ***Build me a car***
+- ***Build me a house***
+- ***Generate a wizard***
+- ...
 
-Then, the agentic LLM will **start the building process** and, at the end of it, it will provide a **downloadable LDraw** `.mpd` file.
+Then, the agentic LLM will **start the building process** and provide an **LDraw .mpd file** for download when finished.
 
 To **inspect the resulting mode**l, download the `.mpd` file and open it on [LDView](https://tcobbs.github.io/ldview/).
 
@@ -82,17 +80,18 @@ That's it!
 > [!TIP]
 > Browse these generated models and more on a **3D/VR environment** at:
 > [https://anteloc.github.io/ldbuilder-ai-viewer.html](https://anteloc.github.io/ldbuilder-ai-viewer.html)
+> 
 > **NOTE:** **VR mode** requires a **WebXR-compatible** headset like e.g. *Meta Quest*
 
-The following are models entirely generated by **Claude.ai** (Opus 4.5 and Sonnet 4.6).
+ The following models have been generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6)
 
-It was a simple two-step process:
-- **First**, I gave it a **simple promp**t, no constraints, so it could be creative.
-- **Second**, it provided the **resulting models** for download and inspection.
+It was a simple process:
+- I gave it a **simple prompt**, no constraints, so it could be creative
+- Then, it would start the **creation process**, by **generating LDraw source code**
+- At the end of the process, I would download the **generated sources**
+- After that, **open them in LDView** for inspecting the generated model
 
-In return, Claude generated and provided the models you see below, available for download.
-
-These models are **actual CAD models**, i.e. not only meshes but the **editable, full assemblies:**
+The resulting models are **actual editable CAD models**, not only meshes:
 
 |                                                                                                                      |                                                                                                                                |
 | :------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -100,7 +99,7 @@ These models are **actual CAD models**, i.e. not only meshes but the **editable,
 
 ### **Prompt:** _Create a car, you decide about its features_
 
-This one caught me by surprise, it has quite some defects, but simmetry is pretty good.
+It has quite some defects, but symmetry is pretty good.
 
 | [01-opus-4.5/001-generated_sports_car.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/001-generated_sports_car.mpd) |
 |:--:|
@@ -108,7 +107,7 @@ This one caught me by surprise, it has quite some defects, but simmetry is prett
 
 ### **Prompt:** _now, create a paladin_
 
-It took care of dressing the minifig accordingly by itself.
+It took care itself of dressing the minifig accordingly.
 
 | [01-opus-4.5/002-generated_paladin.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/002-generated_paladin.mpd) |
 |:--:|
@@ -116,7 +115,7 @@ It took care of dressing the minifig accordingly by itself.
 
 ### **Prompt:** _now, another paladin, but this time, a dragonslayer_
 
-I didn't give it more hints, and it took care of even choosing a proper shield.
+Even with only one hint, *"dragonslayer"*, it took care of even choosing a proper shield.
 
 | [01-opus-4.5/003-generated_dragonslayer.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/003-generated_dragonslayer.mpd) |
 |:--:|
@@ -124,19 +123,19 @@ I didn't give it more hints, and it took care of even choosing a proper shield.
 
 ### **Prompt:** _now, a skyscraper, in silver and red, with big windows_
 
-Here in the rendering, windows are barely visible and it *looks* white and red, but in 3D/VR it has windows and it's actually *silver* (like a mirror) and red.
+In 3D/VR it's actually *silver* (like a mirror) and red.
 
 | [01-opus-4.5/004-generated_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/004-generated_skyscraper.mpd) |
 |:--:|
 | [![now, a skyscraper, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/004-generated_skyscraper.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/004-generated_skyscraper.png) |
 
-A better screenshot, taken directly from a model viewer:
+A better screenshot, from LDView:
 
 ![skyscraper-viewer.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/skyscraper-viewer.png)
 
 ### **Prompt:** _build the Millenium Falcon_
 
-Not a good result, only slightly similar to the original one in the outline.
+The result is only slightly similar to the original one, with a similar outline.
 
 | [01-opus-4.5/005-generated_millennium_falcon.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/005-generated_millennium_falcon.mpd) |
 |:--:|
@@ -154,7 +153,7 @@ Two things I've noticed:
 
 ### **Prompt:** _now, a pilot sitting in a F1 car_
 
-Not a good one, it often happens that it gets rotations wrong, like e.g. with the pilot facing rear instead of front.
+It often happens that it gets rotations wrong, like in this case, with the pilot facing rear instead of front.
 
 | [01-opus-4.5/007-generated_f1_car_with_pilot.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/007-generated_f1_car_with_pilot.mpd) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -164,11 +163,11 @@ Not a good one, it often happens that it gets rotations wrong, like e.g. with th
 
 I gave it this as a baseline to start working.
 
-| [01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd) |
-|:--:|
+|                                                                                                       [01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.mpd)                                                                                                       |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![(INPUT) attached you will find a model for the Millenium Falcon.Modify it in order to create a new spaceship](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/008-10179_Ultimate_Collectors_Millennium_Falcon.lxf.png) |
 
-It complained about the model being too big (which is true), and it decided to create a new spaceship just by slightly altering the original, mostly switching colors to red, and giving it the name *"The Crimson Interceptor"*.
+The model being too big, instead of changing its shape, it decided to make it red, and gave it the name *"The Crimson Interceptor"*.
 
 | [01-opus-4.5/008-crimson_interceptor.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/008-crimson_interceptor.mpd) |
 |:--:|
@@ -176,9 +175,9 @@ It complained about the model being too big (which is true), and it decided to c
 
 ### **Prompt:** _create a hybrid of these two attached models_
 
-After verifying that I could ask for altering a model, I tried something different: gave it two models, and asked it to "merge" them.
+Here I tried something different: gave it two models, and asked it to "merge" them.
 
-The end result is pretty good, it's like it copied the engines and rear wings from A and pasted them onto B.
+The end result it's like it copied the engines and rear wings from A and pasted them onto B.
 
 |     [Model A: 01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/009-4882_Speed_Wings-Model_A.lxf.mpd)     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -208,7 +207,8 @@ It failed the first attempt, and extracted the car and wagon, instead of the pla
 
 ### **Prompt:** _actually, this is not the plane, but the car and its wagon. try again._
 
-Second attempt, it extracted most of the plane.
+Second attempt at extracting the plane, this came out better than before.
+The plane is missing several parts, but the ones present seem to be correct.
 
 | [01-opus-4.5/010-B-fire_plane_only.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/010-B-fire_plane_only.mpd) |
 |:--:|
@@ -230,7 +230,7 @@ This was an actual surprise, I gave it the following model:
 
 ### **Prompt:** _ok, now: add some people to the model, dressed accordingly_
 
-Didn't manage to do much with this, but not too bad taking into account that I didn't give it specific instructions.
+It added several minifigs, in winter garments, but oddly their hats were wrong.
 
 | [01-opus-4.5/012-10267-1.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/012-10267-1.mpd) |
 |:--:|
@@ -242,8 +242,7 @@ Didn't manage to do much with this, but not too bad taking into account that I d
 
 ### **Prompt:** _Create a car, you decide about its features_
 
-Tried this same prompt I used before with Opus 4.5, but now with Sonnet 4.6.
-Outcome was way better!
+Same prompt I used before with Claude Opus 4.5, now with Sonnet 4.6 is way better!
 
 | [02-sonnet-4.6/001-generated_sports_car.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/001-generated_sports_car.mpd) |
 |:--:|
@@ -251,7 +250,7 @@ Outcome was way better!
 
 ### **Prompt:** _now, a cat_
 
-It didn't spend much time thinking, just took a ready-made minifig and placed it on a base.
+Just took a ready-made minifig and placed it on a base.
 
 | [02-sonnet-4.6/002-generated_cat.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/002-generated_cat.mpd) |
 |:--:|
@@ -268,9 +267,9 @@ Not a good result, simmetry was clearly wrong.
 
 ### **Prompt:** _it has some structural defects, symmetry errors... fix them._
 
-For correcting the previous one, I also attached a screenshot from top perspective for the previous model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
+Besides this prompg, I also attached a screenshot from top perspective for the previous model. It analyzed the image, correctly detected several symmetry errors, and partially fixed them.
 
-Partially fixed version:
+This is the partially fixed version:
 
 |             [02-sonnet-4.6/003-generated_fighter_jet_v2.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/003-generated_fighter_jet_v2.mpd)              |
 | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -300,10 +299,10 @@ This really amazed me, even though the resulting model has structural defects, I
 
 ### **Prompt:** _build a stadium_
 
-This one I really like, **743 parts across 9 sub-models** according to itself Sonnet 4.6. 
-The supports under the base plate don't seem to make much sense, but anyway, structurally speaking it seems pretty good. 
+This one took **743 parts (pieces) across 9 sub-models** according to itself Sonnet 4.6. 
+The supports under the base plate don't make much sense, but structurally speaking it seems pretty good. 
 
-And, just in case you want to take a look, [this is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
+[This is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
 
 | [02-sonnet-4.6/005-generated_stadium.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/005-generated_stadium.mpd) |
 |:--:|
