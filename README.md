@@ -83,7 +83,7 @@ That's it!
 > 
 > **NOTE:** **VR mode** requires a **WebXR-compatible** headset like e.g. *Meta Quest*
 
- The following models have been generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6).
+ The following models have been generated using **Claude.ai** (Opus 4.5, Opus 4.6 and Sonnet 4.6).
 
 It was a simple process:
 - I gave it a **simple prompt**, no constraints, so it could be creative
@@ -306,9 +306,29 @@ The supports under the base plate don't make much sense, but for the rest, struc
 
 [This is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
 
-| [02-sonnet-4.6/005-generated_stadium.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/005-generated_stadium.mpd) |
-|:--:|
+|                                                        [02-sonnet-4.6/005-generated_stadium.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/02-sonnet-4.6/005-generated_stadium.mpd)                                                         |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![build a stadium](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/02-sonnet-4.6/005-generated_stadium.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/02-sonnet-4.6/005-generated_stadium.png) |
+
+### **Prompt:** _build me the attached building_
+
+I gave it this photo from an iconic building, the Bradbury, just to test how accurate it is when copying something real. Because it is a famous building, it had extra information besides the one it extracted from the photo.
+
+[![building-small.jpg](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building-small.jpg)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building.jpg)
+
+|                                                                [04-opus-4.6/001-generated_bradbury_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/001-generated_bradbury_building.mpd)                                                                |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![build me the attached building](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/001-generated_bradbury_building.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/001-generated_bradbury_building.png) |
+
+### **Prompt:** _now, build me this other attached building_
+
+I gave it a drawing of a regular building, so it wouldn't have any extra information besides what it could extract from the picture.
+
+![building-drawing.jpeg](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building-drawing.jpeg)
+
+|                                                                      [04-opus-4.6/002-generated_tiered_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/002-generated_tiered_building.mpd)                                                                      |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [![now, build me this other attached building](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/002-generated_tiered_building.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/002-generated_tiered_building.png) |
 
 ## Acknowledgements
 

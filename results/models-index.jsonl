@@ -28,3 +28,5 @@
 {"category":"Castles","description":"generate a wizard","keywords":["wizard","medieval","minifig"],"name":"03-chatgpt-5.4/001-generated_wizard.glb"}
 {"category":"City / Town","description":"now, a skyscraper, 25 floors, in silver and red, with big windows","keywords":["skyscraper","city","building"],"name":"03-chatgpt-5.4/002-generated_25_floors_skyscraper.glb"}
 
+{"category":"City / Town","description":"build me the attached building","keywords":["bradbury","city","building"],"name":"04-opus-4.6/001-generated_bradbury_building.glb"}
+{"category":"City / Town","description":"now, build me this other attached building","keywords":["tiered","city","building"],"name":"04-opus-4.6/002-generated_tiered_building.glb"}
