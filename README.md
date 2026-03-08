@@ -78,18 +78,18 @@ That's it!
 ## Results
 
 > [!TIP]
-> Browse these generated models and more on a **3D/VR environment** at:
+> Browse these generated models and more on a **3D or VR environment** at:
 > [https://anteloc.github.io/ldbuilder-ai-viewer.html](https://anteloc.github.io/ldbuilder-ai-viewer.html)
 > 
 > **NOTE:** **VR mode** requires a **WebXR-compatible** headset like e.g. *Meta Quest*
 
- The following models have been generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6)
+ The following models have been generated using **Claude.ai** (Opus 4.5 and Sonnet 4.6).
 
 It was a simple process:
 - I gave it a **simple prompt**, no constraints, so it could be creative
 - Then, it would start the **creation process**, by **generating LDraw source code**
-- At the end of the process, I would download the **generated sources**
-- After that, **open them in LDView** for inspecting the generated model
+- At the end of the process, I would download the **generated sources (.mpd file)**
+- After that, **I would open them in LDView** for inspecting the generated model
 
 The resulting models are **actual editable CAD models**, not only meshes:
 
@@ -123,13 +123,13 @@ Even with only one hint, *"dragonslayer"*, it took care of even choosing a prope
 
 ### **Prompt:** _now, a skyscraper, in silver and red, with big windows_
 
-In 3D/VR it's actually *silver* (like a mirror) and red.
+This rendered image is missing several details:
 
 | [01-opus-4.5/004-generated_skyscraper.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/01-opus-4.5/004-generated_skyscraper.mpd) |
 |:--:|
 | [![now, a skyscraper, in silver and red, with big windows](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/01-opus-4.5/004-generated_skyscraper.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/01-opus-4.5/004-generated_skyscraper.png) |
 
-A better screenshot, from LDView:
+A better screenshot, from LDView, proof that the requested features are present:
 
 ![skyscraper-viewer.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/skyscraper-viewer.png)
 
@@ -289,7 +289,9 @@ After:
 
 ### **Prompt:** _now, a skyscraper, 25 floors, in silver and red, with big windows_
 
-This really amazed me, even though the resulting model has structural defects, I thought it would end up making a mistake on the number of floors, but it got it right by creating a small python script to create all the floors by repeating the same one... 25 times!
+This really amazed me, even though the resulting model has structural defects. 
+
+It got it right by creating a small python script that would create all the floors by repeating the same one... 25 times!
 
 ![skyscraper_25_prompt.png](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/skyscraper_25_prompt.png)
 
@@ -299,7 +301,7 @@ This really amazed me, even though the resulting model has structural defects, I
 
 ### **Prompt:** _build a stadium_
 
-This one took **743 parts (pieces) across 9 sub-models** according to itself Sonnet 4.6. 
+This one took **743 parts (pieces) across 9 sub-models**, according to itself Sonnet 4.6. 
 The supports under the base plate don't make much sense, but structurally speaking it seems pretty good. 
 
 [This is the script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_stadium.py) it created and run itself for generating the stadium.
