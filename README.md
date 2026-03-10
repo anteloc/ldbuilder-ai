@@ -346,7 +346,9 @@ However, windows in the picture are of different sizes, but in the model they ar
 
 The picture I gave it was:
 
-![[vermeer-girl-pearl-small.png]]
+<a href="results/assets/vermeer-girl-pearl-small.png">
+	<img src="results/assets/vermeer-girl-pearl-small.png" width="35%"/>
+</a>
 
 The resulting model, oddly, was upside-down:
 
