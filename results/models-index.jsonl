@@ -30,4 +30,5 @@
 
 {"category":"City / Town","description":"build me the attached building","keywords":["bradbury","city","building"],"name":"04-opus-4.6/001-generated_bradbury_building.glb"}
 {"category":"City / Town","description":"now, build me this other attached building","keywords":["tiered","city","building"],"name":"04-opus-4.6/002-generated_tiered_building.glb"}
-{"category":"Other","description":"Girl with a Pearl Earring by Johannes Vermeer","keywords":["art","painting","vermeer"],"name":"04-opus-4.6/003-generated_mosaic.glb"}
+{"category":"Other","description":"now, replicate the attached picture on a mosaic, using blocks","keywords":["art","painting","vermeer"],"name":"04-opus-4.6/003-generated_mosaic.glb"}
+{"category":"Other","description":"attached you will find the image of a transparent vase.","keywords":["art","vase","globe"],"name":"04-opus-4.6/004-generated_vase.glb"}

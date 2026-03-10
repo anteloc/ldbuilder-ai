@@ -81,6 +81,7 @@ That's it!
 
 > [!TIP]
 > Browse these generated models and more on a **3D or VR environment** at:
+> 
 > [https://anteloc.github.io/ldbuilder-ai-viewer.html](https://anteloc.github.io/ldbuilder-ai-viewer.html)
 > 
 > **NOTE:** **VR mode** requires a **WebXR-compatible** headset like e.g. *Meta Quest*
@@ -88,7 +89,7 @@ That's it!
  The following models have been generated using **Claude.ai** (Opus 4.5, Opus 4.6 and Sonnet 4.6).
 
 It was a simple process:
-- I gave it a **simple prompt**, no constraints, so it would be creative
+- I gave it a **simple prompt**, few constraints, so it would be creative
 - Then, it would start the **creation process**, by **generating LDraw source code**
 - At the end of the process, I would download the **generated sources (.mpd file)**
 - After that, **I would open them in LDView** for inspecting the generated model
@@ -334,12 +335,53 @@ I gave it a drawing of a regular building, so it wouldn't have any extra informa
 
 ![building-drawing.jpeg](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/building-drawing.jpeg)
 
-The floors on the lower levels have four windows per side, instead of the three in the picture.
+The floors on the lower levels of the model have four windows per side, instead of the three in the picture.
 However, windows in the picture are of different sizes, but in the model they are the same size.
 
 |                                                                      [04-opus-4.6/002-generated_tiered_building.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/002-generated_tiered_building.mpd)                                                                      |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [![now, build me this other attached building](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/002-generated_tiered_building.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/002-generated_tiered_building.png) |
+
+### **Prompt:** _now, replicate the attached picture on a mosaic, using blocks_
+
+The picture I gave it was:
+
+![[vermeer-girl-pearl-small.png]]
+
+The resulting model, oddly, was upside-down:
+
+| [04-opus-4.6/003-generated_mosaic.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/003-generated_mosaic.mpd) |
+|:--:|
+| [![Girl with a Pearl Earring by Johannes Vermeer](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/003-generated_mosaic.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/003-generated_mosaic.png) |
+
+After opening the model in LDView and rotating it, I got this:
+
+<a href="results/assets/vermeer-girl-pearl-mosaic-viewer.png">
+	<img src="results/assets/vermeer-girl-pearl-mosaic-viewer.png" width="35%"/>
+</a>
+
+### **Prompt:** _attached you will find the image of a transparent vase._
+
+Here I asked for it to **create a python script** that would **generate** the LDraw source code to build the attached image.
+
+**Full prompt** was: 
+
+*now, the following task will be different. attached you will find the image of a transparent vase. I want you to create a big vase, but because I want a huge number of pieces, we will do the following:*
+
+- *instead of directly building the vase, create a python script that generates the required ldraw instructions to create it*
+- *instead of using custom pieces, use 1-stud pieces as if they were voxels*
+
+The attached vase image:
+
+<a href="results/assets/vase.png">
+	<img src="results/assets/vase.png" width="35%"/>
+</a>
+
+It successfully created the requested [python script](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/assets/generate_vase.py) to **generate the vase**, **5,074 pieces** in size.
+
+| [04-opus-4.6/004-generated_vase.mpd](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/models/04-opus-4.6/004-generated_vase.mpd) |
+|:--:|
+| [![attached you will find the image of a transparent vase.](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails-small/04-opus-4.6/004-generated_vase.png)](https://raw.githubusercontent.com/anteloc/ldbuilder-ai/master/results/thumbnails/04-opus-4.6/004-generated_vase.png) |
 
 ## Acknowledgements
 
