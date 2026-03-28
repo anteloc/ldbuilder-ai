@@ -57,6 +57,14 @@ def sanitize_line_ref(line: str, ref_start_idx: int) -> str:
     ref = " ".join(tokens[ref_start_idx:])
     return " ".join(tokens[:ref_start_idx] + [sanitize_filepath(ref)])
 
+def apply_to_ref(line: str, ref_start_idx: int, func) -> str:
+    tokens = line.split()
+    if len(tokens) <= ref_start_idx:
+        return line  # unexpected format; keep as-is
+
+    ref = " ".join(tokens[ref_start_idx:])
+    return " ".join(tokens[:ref_start_idx] + [func(ref)])
+
 
 # Global variable to avoid issues with lru_cache trying to cache defaultdict (unhashable) if we put it as an instance variable. 
 # This is a bit hacky but keeps the caching working.
@@ -215,6 +223,7 @@ class LDrawSanitizer:
         file.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+    ### TODO remove this, it will cause several issues with file dependencies
     def process_file_references(self, file: Path) -> None:
         click.echo(f"Processing file references in: {file.name}")
 
@@ -242,6 +251,22 @@ class LDrawSanitizer:
         dst = file.with_name(new_name)
         click.echo(f"Renaming {file.name} -> {dst.name}")
         file.rename(dst)
+
+    def process_part_references(self, file: Path) -> None:
+        click.echo(f"Processing part references in: {file.name}")
+
+        lines = file.read_text(encoding="utf-8", errors="replace").splitlines()
+        out: list[str] = []
+
+        for line in lines:
+            line = line.strip()
+            if line.startswith("1 "):
+                out.append(apply_to_ref(line, 14, lambda ref: ref.lower()))
+            else:
+                out.append(line)
+
+        self.fix_type1_refs_in_place(out)
+        file.write_text("\n".join(out) + "\n", encoding="utf-8")
 
     def dos2unix_batch(self, fps: list[Path]) -> None:
         for f in fps:
@@ -279,6 +304,13 @@ def env_ldraw_dir() -> str | None:
     type=click.Path(file_okay=True, dir_okay=True, readable=True, writable=True, exists=True, resolve_path=True),
     help="DEPRECATED: Inline edit FILE or files under DIR and type-1 lines: normalize paths, lowercase, remove spaces/symbols, and fix missing/ambiguous refs.",
 )
+
+@click.option(
+    "--part-references",
+    type=click.Path(file_okay=True, dir_okay=True, readable=True, writable=True, exists=True, resolve_path=True),
+    help="Sanitize part references in FILE or files under DIR and type-1 lines: lowercase parts filenames refs",
+)
+
 @click.option(
     "--filepath",
     type=click.Path(file_okay=True, dir_okay=True, readable=True, writable=True, exists=True, resolve_path=True),
@@ -306,9 +338,9 @@ def env_ldraw_dir() -> str | None:
     type=click.Path(file_okay=True, dir_okay=True, readable=True, exists=True, resolve_path=True),
     help="Convert the given file from DOS to Unix, and also fix some UTF-8 encoding issues.",
 )
-def main(file_references: str | None, filepath: str | None, coords: str | None, rots: str | None, ldraw_dir: str | None, dos2unix: str | None) -> None:
-    if not file_references and not filepath and not coords and not rots and not dos2unix:
-        raise click.UsageError("Nothing to do. Provide one of: --file-references or --filepath or --coords or --rots.")
+def main(file_references: str | None, filepath: str | None, part_references: str | None, coords: str | None, rots: str | None, ldraw_dir: str | None, dos2unix: str | None) -> None:
+    if not file_references and not filepath and not part_references and not coords and not rots and not dos2unix:
+        raise click.UsageError("Nothing to do. Provide one of: --file-references or --filepath or --part-references or --coords or --rots.")
 
     sanitizer = None
 
@@ -325,9 +357,19 @@ def main(file_references: str | None, filepath: str | None, coords: str | None, 
     #             click.echo(f"Error processing {fp}: {e}", err=True)
     #     return # skip other processing
 
+    
+
 
     # sanitizer with a dummy root: the following don't require the full LDraw library
     sanitizer = LDrawSanitizer(ldraw_dir=Path("."))
+
+    if part_references:
+        for fp in iter_ldraw_files([part_references]):
+            try:
+                sanitizer.process_part_references(fp)
+            except Exception as e:
+                click.echo(f"Error processing part references in {fp}: {e}", err=True)
+        return # skip other processing
 
     if coords:
         for fp in iter_ldraw_files([coords]):

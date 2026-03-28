@@ -182,10 +182,13 @@ function build_db() {
     local tmp_work_dir="$2"
     local db_file="$3"
 
+
     local tsvs_dir="$data_dir/tsv"
 
     touch "$db_file"
     db_file="$(realpath "$db_file")"
+
+    [ -f "$db_file" ] && rm -f "$db_file"
 
     sel_models_dir="$(realpath "$sel_models_dir")"
 
@@ -269,6 +272,7 @@ cd "$output_dir" || exit 1
 # prepare a full database for other tools to use, instead of scraping info from the filesystem
 LDRAW_INFO_DB="$output_dir/ldraw-info.db"
 
+[ -f "$LDRAW_INFO_DB" ] && rm -f "$LDRAW_INFO_DB"
 build-ldraw-db.sh "$LDRAW_INFO_DB" "$data_dir/tsv"
 
 ### STEP
@@ -313,9 +317,10 @@ next_step "Sanitizing dos2unix contents" && \
 #     ldraw_sanitize.py --dos2unix "$tmp_rag_models_dir"
 
 ### STEP
-next_step "Sanitizing coords and rots" && \
+next_step "Sanitizing coords, rots and part references" && \
     ldraw_sanitize.py --coords "$tmp_rag_models_dir" && \
-    ldraw_sanitize.py --rots "$tmp_rag_models_dir"
+    ldraw_sanitize.py --rots "$tmp_rag_models_dir" && \
+    ldraw_sanitize.py --part-references "$tmp_rag_models_dir"
 
 ### STEP
 next_step "Annotate models for RAG" && \

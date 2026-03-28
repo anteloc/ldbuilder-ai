@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source "$(dirname "$0")/../../include/env.inc.sh"
 source "$(dirname "$0")/common.sh"
 
 output_basename="MODELS.tsv"

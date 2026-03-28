@@ -141,9 +141,9 @@ class LDrawAnnotator:
 
         cur = self.conn.execute("""
                                     SELECT *
-                                    FROM PART_BBOXES
-                                    WHERE alias = ?
-                                """, (sanitized_alias,))
+                                    FROM PART_BBOXES PB
+                                    WHERE UPPER(PB.alias) IN (UPPER(?), UPPER(?), UPPER(?), UPPER(?))
+                                """, (unix_alias, sanitized_alias, win_alias_1, win_alias_2))
         
         p_bbox = cur.fetchone()
         cur.close()
