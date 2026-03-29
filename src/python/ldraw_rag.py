@@ -1,18 +1,24 @@
 """
-RAG (Retrieval-Augmented Generation) for song similarity search — LlamaIndex + ChromaDB
+RAG (Retrieval-Augmented Generation) for LDraw parts and models — LlamaIndex + ChromaDB
 
 Install dependencies:
     pip install llama-index llama-index-vector-stores-chroma chromadb openai tiktoken tqdm
 
-Set your API key:
+For Ollama backend (local embeddings, no API key needed):
+    pip install llama-index-embeddings-ollama
+
+Set your OpenAI API key (only needed for --backend openai):
     export OPENAI_API_KEY="your-key-here"
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 USAGE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  # Index from a directory
+  # Index from a directory (OpenAI embeddings, default)
   python ldraw_rag.py index <index_name> --dir ./chunks-models/
+
+  # Index using local Ollama embeddings
+  python ldraw_rag.py index <index_name> --dir ./chunks-models/ --backend nomic-embed-text:v1.5
 
   # Index using a custom database path
   python ldraw_rag.py index <index_name> --dir ./chunks-models/ --db ./my_db
@@ -22,6 +28,8 @@ USAGE
 
   # Estimate token counts for a directory
   python ldraw_rag.py estimate --dir ./chunks-models/
+
+NOTE: the --backend used at index time must match the one used at retrieve/query time.
 """
 
 import argparse
@@ -44,7 +52,33 @@ from llama_index.core import StorageContext
 Settings.chunk_size = 10_240
 
 
-# ── 1. Index setup ────────────────────────────────────────────────────────────
+# ── 1. Embed model configuration ─────────────────────────────────────────────
+
+def _configure_embed_model(backend: str) -> None:
+    """
+    Set the LlamaIndex global embed model based on --backend value.
+
+    "openai"                  → default OpenAI ada-002 (requires OPENAI_API_KEY)
+    "nomic-embed-text:vX.Y"   → Ollama local model (requires ollama running locally)
+
+    Must be called before _make_index() so the embedding model is set
+    before any index or retriever is created.
+    """
+    if backend == "openai":
+        # Leave Settings.embed_model at its default (OpenAI ada-002)
+        return
+
+    # Any other value is treated as an Ollama model tag, e.g. "nomic-embed-text:v1.5"
+    try:
+        from llama_index.embeddings.ollama import OllamaEmbedding
+    except ImportError:
+        raise SystemExit(
+            "Ollama embedding backend requires: pip install llama-index-embeddings-ollama"
+        )
+    Settings.embed_model = OllamaEmbedding(model_name=backend)
+
+
+# ── 2. Index setup ────────────────────────────────────────────────────────────
 
 def _make_index(collection_name: str, db_path: str) -> VectorStoreIndex:
     """Create (or reconnect to) one named ChromaDB-backed vector index."""
@@ -198,6 +232,8 @@ def main() -> None:
     p_index.add_argument("--dir",     metavar="DIR",     help="Directory containing .chunks.md files")
     p_index.add_argument("--db",      metavar="DB",      default="./ldraw_rag_db",
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
+    p_index.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+                         help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     # retrieve
     p_retrieve = sub.add_parser(
@@ -220,6 +256,8 @@ def main() -> None:
                              help="Show scores for chunks")
     p_retrieve.add_argument("--db",      metavar="DB",      default="./ldraw_rag_db",
                              help="ChromaDB storage path (default: ./ldraw_rag_db)")
+    p_retrieve.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+                             help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     # query
     p_query = sub.add_parser(
@@ -237,6 +275,8 @@ def main() -> None:
     p_query.add_argument("--top-k", type=int, default=5, metavar="K")
     p_query.add_argument("--db", metavar="DB", default="./ldraw_rag_db",
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
+    p_query.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+                         help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     # estimate
     p_estimate = sub.add_parser("estimate", help="Estimate token counts for files in a directory.",
@@ -251,6 +291,7 @@ def main() -> None:
         estimate_directory(Path(args.dir))
         return
 
+    _configure_embed_model(args.backend)
     rag_index = _make_index(args.index_name, args.db)
 
     # ── index ─────────────────────────────────────────────────────────────
