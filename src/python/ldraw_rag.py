@@ -42,6 +42,7 @@ import tiktoken
 from tqdm import tqdm
 
 from llama_index.core import VectorStoreIndex, Document, Settings
+from llama_index.core.schema import TextNode
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
 
@@ -83,45 +84,84 @@ def _configure_embed_model(backend: str) -> None:
 
 # ── 2. Index setup ────────────────────────────────────────────────────────────
 
-def _make_index(collection_name: str, db_path: str) -> VectorStoreIndex:
-    """Create (or reconnect to) one named ChromaDB-backed vector index."""
+def _make_index(collection_name: str, db_path: str) -> tuple[VectorStoreIndex, chromadb.Collection]:
+    """Create (or reconnect to) one named ChromaDB-backed vector index.
+    Returns both the index and the raw collection so callers can inspect existing IDs."""
     chroma_client = chromadb.PersistentClient(path=db_path)
     collection    = chroma_client.get_or_create_collection(collection_name)
     vector_store  = ChromaVectorStore(chroma_collection=collection)
     storage_ctx   = StorageContext.from_defaults(vector_store=vector_store)
-    return VectorStoreIndex([], storage_context=storage_ctx)
+    return VectorStoreIndex([], storage_context=storage_ctx), collection
 
 # ── 2. Indexing ───────────────────────────────────────────────────────────────
 
 def index_directory(
-    index: VectorStoreIndex,
-    chunks_dir:  Path | None,
+    index:      VectorStoreIndex,
+    collection: chromadb.Collection,
+    chunks_dir: Path | None,
+    batch_size: int = 64,
 ) -> None:
     """
     Populate the chunks index from the specified directory.
 
-    chunks_dir — directory containing .chunks.md files  (chunked descriptors)
+    chunks_dir — directory containing .chunks.md files
 
-    Files that don't match pattern are silently skipped.
+    Already-indexed documents are skipped (resumable).
+    Documents are embedded and inserted in batches for efficiency.
+    Files that don't match the pattern are silently skipped.
     """
+    if not chunks_dir:
+        return
 
-    if chunks_dir:
-        chunks_paths = sorted(p for p in chunks_dir.iterdir() if p.is_file() and p.name.endswith(".chunks.md"))
-        chunks_docs  = []
-        for path in chunks_paths:
-            prose = path.read_text(encoding="utf-8", errors="ignore").strip()
-            if prose:
-                meta = {"file_path": str(path), "file_name": path.name}
-                chunks_docs.append(Document(
-                    text=prose,
-                    id_=str(path),
-                    metadata=meta,
-                    excluded_embed_metadata_keys=list(meta.keys()),
-                ))
-        for doc in tqdm(chunks_docs, desc="Indexing chunks  ", unit="doc"):
-            index.insert(doc)
+    chunks_paths = sorted(
+        p for p in chunks_dir.iterdir()
+        if p.is_file() and p.name.endswith(".chunks.md")
+    )
 
-        print(f"Indexed {len(chunks_docs)} chunk document(s) from '{chunks_dir}'")
+    # Fetch all IDs already present in ChromaDB to skip re-indexing
+    existing_ids = set(collection.get(include=[])["ids"])
+
+    # Build documents for paths not yet indexed
+    docs = []
+    for path in chunks_paths:
+        if str(path) in existing_ids:
+            continue
+        prose = path.read_text(encoding="utf-8", errors="ignore").strip()
+        if not prose:
+            continue
+        meta = {"file_path": str(path), "file_name": path.name}
+        docs.append(Document(
+            text=prose,
+            id_=str(path),
+            metadata=meta,
+            excluded_embed_metadata_keys=list(meta.keys()),
+        ))
+
+    skipped = len(chunks_paths) - len(docs)
+    if skipped:
+        print(f"Skipping {skipped} already-indexed document(s).")
+
+    if not docs:
+        print("Nothing new to index.")
+        return
+
+    # Insert in batches — each batch is a single embed call to the model
+    batches = [docs[i:i + batch_size] for i in range(0, len(docs), batch_size)]
+    with tqdm(total=len(docs), desc="Indexing chunks", unit="doc") as bar:
+        for batch in batches:
+            nodes = [
+                TextNode(
+                    text=doc.text,
+                    id_=doc.id_,
+                    metadata=doc.metadata,
+                    excluded_embed_metadata_keys=list(doc.metadata.keys()),
+                )
+                for doc in batch
+            ]
+            index.insert_nodes(nodes)
+            bar.update(len(batch))
+
+    print(f"Indexed {len(docs)} new document(s) from '{chunks_dir}'.")
 
 
 # ── 5. Drop index ─────────────────────────────────────────────────────────────
@@ -213,7 +253,9 @@ def main() -> None:
     p_index.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
     p_index.add_argument("--chunk-size", type=int, default=None, metavar="N",
-                         help="Override the embedding chunk size (default: 10240 for openai, 8000 for Ollama)")
+                         help="Override the embedding chunk size (default: 10240 for openai, 4096 for Ollama)")
+    p_index.add_argument("--batch-size", type=int, default=64, metavar="N",
+                         help="Number of documents per embedding batch (default: 64)")
 
     # retrieve
     p_retrieve = sub.add_parser(
@@ -294,13 +336,12 @@ def main() -> None:
     _configure_embed_model(args.backend)
     if getattr(args, "chunk_size", None) is not None:
         Settings.chunk_size = args.chunk_size
-    rag_index = _make_index(args.index_name, args.db)
+    rag_index, collection = _make_index(args.index_name, args.db)
 
     # ── index ─────────────────────────────────────────────────────────────
     if args.cmd == "index":
         if args.dir:
-            d = Path(args.dir)
-            index_directory(rag_index, chunks_dir=d)
+            index_directory(rag_index, collection, Path(args.dir), batch_size=args.batch_size)
         return
 
     # ── retrieve ──────────────────────────────────────────────────────────
