@@ -34,7 +34,6 @@ NOTE: the --backend used at index time must match the one used at retrieve/query
 
 import argparse
 import json
-import re
 
 from pathlib import Path
 
@@ -76,6 +75,10 @@ def _configure_embed_model(backend: str) -> None:
             "Ollama embedding backend requires: pip install llama-index-embeddings-ollama"
         )
     Settings.embed_model = OllamaEmbedding(model_name=backend)
+    # nomic-embed-text and most local Ollama models have an 8192-token context limit.
+    # Settings.chunk_size is measured in cl100k tokens, which diverge from nomic's tokenizer,
+    # so we use 4096 (half the limit) as a safe cross-tokenizer headroom.
+    Settings.chunk_size = 4_096
 
 
 # ── 2. Index setup ────────────────────────────────────────────────────────────
@@ -88,41 +91,7 @@ def _make_index(collection_name: str, db_path: str) -> VectorStoreIndex:
     storage_ctx   = StorageContext.from_defaults(vector_store=vector_store)
     return VectorStoreIndex([], storage_context=storage_ctx)
 
-# ── 2. Parsing helpers ────────────────────────────────────────────────────────
-
-# Stop-words filtered from chunks text so grammatical glue words don't inflate similarity
-_STOPWORDS = {
-    "the", "a", "an", "i", "you", "we", "they", "he", "she", "it",
-    "and", "or", "but", "in", "on", "at", "to", "of", "for", "with",
-    "is", "was", "are", "be", "been", "have", "had", "has", "do", "did",
-    "not", "so", "if", "when", "all", "just", "that", "this", "what",
-    "my", "your", "our", "their", "me", "him", "her", "us", "up", "out",
-    "no", "oh", "yeah", "ooh", "ahh", "it's", "i'm", "you're", "we're",
-    "don't", "can't", "won't", "gonna", "gotta", "wanna", "ain't",
-}
-
-
-def _clean_line(line: str) -> str:
-    """
-    Return a text line with stop-words removed, lowercased, keeping only
-    alphabetic tokens.  Returns empty string if nothing meaningful remains.
-    """
-    words = re.findall(r"[a-z']+", line.lower())
-    meaningful = [w for w in words if re.sub(r"[^a-z]", "", w) not in _STOPWORDS]
-    return " ".join(meaningful)
-
-# ── 3b. Chunks text ───────────────────────────────────────────────────────────
-
-def clean_chunks_text(chunks_text: str) -> str:
-    """
-    Convert a .chunks.md file contents to a cleaned up version with stop-word filtering.
-    """
-    cleaned = [_clean_line(line) for line in chunks_text.splitlines()]
-
-    return "\n".join(cleaned)
-
-
-# ── 4. Indexing ───────────────────────────────────────────────────────────────
+# ── 2. Indexing ───────────────────────────────────────────────────────────────
 
 def index_directory(
     index: VectorStoreIndex,
@@ -140,7 +109,7 @@ def index_directory(
         chunks_paths = sorted(p for p in chunks_dir.iterdir() if p.is_file() and p.name.endswith(".chunks.md"))
         chunks_docs  = []
         for path in chunks_paths:
-            prose = clean_chunks_text(path.read_text(encoding="utf-8", errors="ignore"))
+            prose = path.read_text(encoding="utf-8", errors="ignore").strip()
             if prose:
                 meta = {"file_path": str(path), "file_name": path.name}
                 chunks_docs.append(Document(
@@ -155,7 +124,16 @@ def index_directory(
         print(f"Indexed {len(chunks_docs)} chunk document(s) from '{chunks_dir}'")
 
 
-# ── 5. Retrieval & merging ────────────────────────────────────────────────────
+# ── 5. Drop index ─────────────────────────────────────────────────────────────
+
+def drop_index(collection_name: str, db_path: str) -> None:
+    """Delete a named ChromaDB collection and all its vectors. Irreversible."""
+    chroma_client = chromadb.PersistentClient(path=db_path)
+    chroma_client.delete_collection(collection_name)
+    print(f"Dropped index '{collection_name}' from '{db_path}'.")
+
+
+# ── 6. Retrieval ──────────────────────────────────────────────────────────────
 
 def _retrieve_with_scores(
     index: VectorStoreIndex,
@@ -234,6 +212,8 @@ def main() -> None:
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
     p_index.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
+    p_index.add_argument("--chunk-size", type=int, default=None, metavar="N",
+                         help="Override the embedding chunk size (default: 10240 for openai, 8000 for Ollama)")
 
     # retrieve
     p_retrieve = sub.add_parser(
@@ -278,6 +258,17 @@ def main() -> None:
     p_query.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
+    # drop
+    p_drop = sub.add_parser(
+        "drop",
+        help="Delete an index and all its data (irreversible).",
+        formatter_class=fmt,
+        epilog="example:\n  python ldraw_rag.py drop models --db ./ldraw_rag_db",
+    )
+    p_drop.add_argument("index_name")
+    p_drop.add_argument("--db", metavar="DB", default="./ldraw_rag_db",
+                        help="ChromaDB storage path (default: ./ldraw_rag_db)")
+
     # estimate
     p_estimate = sub.add_parser("estimate", help="Estimate token counts for files in a directory.",
                                  formatter_class=fmt,
@@ -291,7 +282,18 @@ def main() -> None:
         estimate_directory(Path(args.dir))
         return
 
+    # ── drop (no index object needed) ────────────────────────────────────
+    if args.cmd == "drop":
+        confirm = input(f"Drop index '{args.index_name}' from '{args.db}'? This cannot be undone. [y/N] ")
+        if confirm.strip().lower() == "y":
+            drop_index(args.index_name, args.db)
+        else:
+            print("Aborted.")
+        return
+
     _configure_embed_model(args.backend)
+    if getattr(args, "chunk_size", None) is not None:
+        Settings.chunk_size = args.chunk_size
     rag_index = _make_index(args.index_name, args.db)
 
     # ── index ─────────────────────────────────────────────────────────────
