@@ -57,13 +57,15 @@ def sanitize_line_ref(line: str, ref_start_idx: int) -> str:
     ref = " ".join(tokens[ref_start_idx:])
     return " ".join(tokens[:ref_start_idx] + [sanitize_filepath(ref)])
 
-def apply_to_ref(line: str, ref_start_idx: int, func) -> str:
+def apply_to_ref(line: str, ref_start_idx: int, func, cond) -> str:
     tokens = line.split()
     if len(tokens) <= ref_start_idx:
         return line  # unexpected format; keep as-is
 
     ref = " ".join(tokens[ref_start_idx:])
-    return " ".join(tokens[:ref_start_idx] + [func(ref)])
+    if cond(ref):
+        ref = func(ref)
+    return " ".join(tokens[:ref_start_idx] + [ref])
 
 
 # Global variable to avoid issues with lru_cache trying to cache defaultdict (unhashable) if we put it as an instance variable. 
@@ -261,7 +263,10 @@ class LDrawSanitizer:
         for line in lines:
             line = line.strip()
             if line.startswith("1 "):
-                out.append(apply_to_ref(line, 14, lambda ref: ref.lower()))
+                out.append(apply_to_ref(line, 
+                                        14, 
+                                        lambda ref: ref.lower(), 
+                                        lambda ref: ref.lower().endswith(".dat")))
             else:
                 out.append(line)
 

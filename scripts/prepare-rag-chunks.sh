@@ -38,7 +38,8 @@ print(tabulate(data, headers=headers, tablefmt="github"))
 function bom() {
     local model_filename="$1"
     local annotated_model="$annotated_models_dir/$model_filename"
-    
+
+    # output a BOM table, with fields (including headers) separated by "|", in order to be tabulated and nicely formatted later by tabulate()
     echo "| Qty | Description | Color | Name |"
 
     cat "$annotated_model" \
@@ -107,24 +108,24 @@ part_chunk_tmpl="Name: %s
 Description: %s
 Dimensions: %s LDU
 "
+
 sqlite-utils query "$prepare_rag_db" "select name, description, dim_x, dim_y, dim_z from VW_PART_INFOS_BBOXES ;" --tsv --no-headers \
     | grep -v '^s\\' \
     | tr -d '\r' \
     | while IFS=$'\t' read -r p_name p_des dim_x dim_y dim_z; do
+        echo "Processing part: $p_name" >&2
         dims="$(printf "%.01f x %.01f x %.01f" "$dim_x" "$dim_y" "$dim_z" | sed -E 's/\.0[ ]?/ /g')"
         chunk_content="$(printf "$part_chunk_tmpl" "$p_name" "$p_des" "$dims")"
         echo "$chunk_content" > "$parts_chunks_dir/${p_name}.chunks.md"
     done
 
 ### Models chunks
-# alias   category        description     keywords        num_parts       difficulty      size_kb
-
 model_chunk_tmpl="Name: %s
 Category: %s
-Description: %s
 Keywords: %s
-Number of parts: %d
+Description: %s
 Difficulty: %s
+Number of parts: %d
 
 **Parts BOM:**
 
@@ -134,9 +135,8 @@ Difficulty: %s
 sqlite-utils query "$prepare_rag_db" "select alias as name, category, description, keywords, num_parts, difficulty from VW_MODEL_INFOS ;" --tsv --no-headers \
     | tr -d '\r' \
     | while IFS=$'\t' read -r p_name p_category p_des p_keywords p_num_parts p_difficulty ; do
+        echo "Processing model: $p_name" >&2
         parts_bom="$(bom "$p_name" | tabulate)"
-        chunk_content="$(printf "$model_chunk_tmpl" "$p_name" "$p_category" "$p_des" "$p_keywords" "$p_num_parts" "$p_difficulty" "$parts_bom")"
+        chunk_content="$(printf "$model_chunk_tmpl" "$p_name" "$p_category" "$p_keywords" "$p_des" "$p_difficulty" "$p_num_parts" "$parts_bom")"
         echo "$chunk_content" > "$models_chunks_dir/${p_name}.chunks.md"
     done
-
-# cat rag-models/10022-1_Dining-Car.mpd | grep -v '0 !TOUCHES' | grep -A 1 '0 !P' | cut -d "'" -f2,4 | sed "s|'|, |" | sed '/--/d' | awk 'NR % 2 == 0 {for(i=15; i<=NF; i++) printf "%s ", $i; printf "\n"; next}; { printf "of: %s, ", $0 }' | sort | uniq -c
