@@ -50,7 +50,10 @@ import argparse
 import json
 from functools import lru_cache
 from pathlib import Path
-from typing import NamedTuple
+from typing import TYPE_CHECKING, Any, NamedTuple
+
+if TYPE_CHECKING:
+    from llama_index.core import VectorStoreIndex
 
 import chromadb
 
@@ -91,7 +94,7 @@ class Result(NamedTuple):
     """A single retrieval hit returned by _retrieve_direct()."""
     file_name: str   # basename of the source .chunks.md file
     score:     float # similarity score: cosine → [0,1], L2 → (0,1]
-    metadata:  dict  # ChromaDB metadata dict (file_path, file_name, …)
+    metadata:  Any   # ChromaDB metadata (Mapping[str, str|int|float|bool|…]); opaque to us
     text:      str   # full document text stored in the vector DB
 
 
@@ -171,7 +174,7 @@ def _configure_embed_model(backend: str) -> None:
     Settings.chunk_size  = 4_096
 
 
-def _make_index(collection_name: str, db_path: str) -> tuple:
+def _make_index(collection_name: str, db_path: str) -> tuple["VectorStoreIndex", chromadb.Collection]:
     """
     Wire up a ChromaDB-backed VectorStoreIndex for *indexing only*.
     Returns (VectorStoreIndex, chromadb.Collection).
@@ -193,7 +196,7 @@ def _make_index(collection_name: str, db_path: str) -> tuple:
 
 # ── 4. Indexing ───────────────────────────────────────────────────────────────
 
-def index_directory(index, collection: chromadb.Collection, chunks_dir: Path, batch_size: int = 64) -> None:
+def index_directory(index: "VectorStoreIndex", collection: chromadb.Collection, chunks_dir: Path, batch_size: int = 64) -> None:
     """
     Populate the vector index from _CHUNKS_SUFFIX files in chunks_dir.
 
@@ -225,7 +228,7 @@ def index_directory(index, collection: chromadb.Collection, chunks_dir: Path, ba
             text=prose,
             id_=str(path),
             metadata=meta,
-            excluded_embed_metadata_keys=list(meta.keys()),
+            excluded_embed_metadata_keys=list(meta),
         ))
 
     skipped = len(chunks_paths) - len(docs)
@@ -294,16 +297,16 @@ def _retrieve_direct(
         results["metadatas"][0],
         results["distances"][0],
     ):
+        m     = meta or {}
         score = (1.0 - dist) if space == "cosine" else (1.0 / (1.0 + dist))
-        fname = (meta or {}).get("file_name", "unknown")
-        out.append(Result(file_name=fname, score=score, metadata=meta or {}, text=doc or ""))
+        out.append(Result(file_name=str(m.get("file_name", "unknown")), score=score, metadata=m, text=doc or ""))
     return out
 
 
 # ── 7. Estimation ─────────────────────────────────────────────────────────────
 
 def estimate_directory(directory: Path) -> None:
-    """Print per-file and total token counts using the _TIKTOKEN_ENC tokeniser."""
+    """Print per-file and total token counts using the cl100k_base tokeniser."""
     import tiktoken  # lazy — only needed for this command
     encoder = tiktoken.get_encoding(_TIKTOKEN_ENC)
 
