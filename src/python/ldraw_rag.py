@@ -135,6 +135,7 @@ def _configure_embed_model(backend: str) -> None:
 
     if backend == "openai":
         # Leave Settings.embed_model at its default (OpenAI ada-002)
+        Settings.chunk_size = 10_240
         return
 
     # Any other value is treated as an Ollama model tag, e.g. "nomic-embed-text:v1.5"
@@ -158,12 +159,8 @@ def _make_index(collection_name: str, db_path: str) -> tuple:
     LlamaIndex is needed here for insert_nodes() + batch embedding during
     index time. The query path bypasses LlamaIndex entirely (_retrieve_direct).
     """
-    from llama_index.core import VectorStoreIndex, Settings, StorageContext
+    from llama_index.core import VectorStoreIndex, StorageContext
     from llama_index.vector_stores.chroma import ChromaVectorStore
-
-    # Prevent LlamaIndex from re-splitting already-chunked documents.
-    # Each .chunks.md file should be stored as a single vector.
-    Settings.chunk_size = 10_240
 
     client     = _chroma_client(db_path)
     collection = client.get_or_create_collection(collection_name, metadata=_HNSW_SETTINGS)
@@ -512,10 +509,11 @@ def main() -> None:
     # ── index (only command that needs LlamaIndex) ────────────────────────────
     if args.cmd == "index":
         _configure_embed_model(args.backend)
+        rag_index, collection = _make_index(args.index_name, args.db)
+        # CLI override is applied last so it wins over all defaults
         if getattr(args, "chunk_size", None) is not None:
             from llama_index.core import Settings
             Settings.chunk_size = args.chunk_size
-        rag_index, collection = _make_index(args.index_name, args.db)
         if args.dir:
             index_directory(rag_index, collection, Path(args.dir), batch_size=args.batch_size)
         return
