@@ -1,8 +1,8 @@
 """
-RAG (Retrieval-Augmented Generation) for LDraw parts and models — LlamaIndex + ChromaDB
+RAG (Retrieval-Augmented Generation) for LDraw parts and models — ChromaDB
 
 Install dependencies:
-    pip install llama-index llama-index-vector-stores-chroma chromadb openai tiktoken tqdm
+    pip install chromadb openai tiktoken tqdm
 
 For Ollama backend (local embeddings, no API key needed):
     pip install llama-index-embeddings-ollama
@@ -40,6 +40,11 @@ USAGE
 
 NOTE: the --backend used at index time must match the one used at retrieve/query/serve time.
 
+NOTE: each .chunks.md file is indexed as a single unit — one embedding per file.
+      The full file content is stored in ChromaDB and returned verbatim on retrieval.
+      Text exceeding the model's token limit is truncated for the embedding only;
+      the stored (and returned) content is always the complete file.
+
 NOTE: existing collections were created without cosine-space HNSW settings and must be
       dropped and re-indexed to benefit from the hnsw:space=cosine correctness fix:
         python ldraw_rag.py drop <index_name>
@@ -50,10 +55,7 @@ import argparse
 import json
 from functools import lru_cache
 from pathlib import Path
-from typing import TYPE_CHECKING, Any, NamedTuple
-
-if TYPE_CHECKING:
-    from llama_index.core import VectorStoreIndex
+from typing import Any, NamedTuple
 
 import chromadb
 
@@ -62,8 +64,17 @@ import chromadb
 _BACKEND_OPENAI   = "openai"                            # sentinel for the OpenAI embedding path
 _CHUNKS_SUFFIX    = ".chunks.md"                        # file extension produced by the chunker
 _FILE_ENCODING    = "utf-8"                             # encoding for all chunk files
-_TIKTOKEN_ENC     = "cl100k_base"                       # tokeniser used for token-count estimation
+_TIKTOKEN_ENC     = "cl100k_base"                       # tokeniser used for token-count estimation (estimate cmd)
 _OLLAMA_EMBED_URL = "http://localhost:11434/api/embed"  # Ollama local embedding endpoint
+
+# Characters fed to the embedding model at index time.
+# 8 000 chars is a safe universal cap for all backends:
+#   - both ada-002 and nomic-embed-text limit at ~8 192 tokens
+#   - at the absolute worst case of 1 char = 1 token (e.g. pipe-heavy markdown tables),
+#     8 000 chars produce at most 8 000 tokens — safely under either model's hard cap
+#   - the full file content is always stored verbatim in ChromaDB for retrieval;
+#     only the embedding input is capped — the returned chunk is never truncated
+_EMBED_CHAR_LIMIT = 8_000
 
 # ── HNSW collection settings ──────────────────────────────────────────────────
 # Applied at collection creation time only. Drop + re-index existing collections
@@ -98,115 +109,106 @@ class Result(NamedTuple):
     text:      str   # full document text stored in the vector DB
 
 
-# ── 1. Direct embedding ───────────────────────────────────────────────────────
+# ── 1. Embedding ──────────────────────────────────────────────────────────────
 
-@lru_cache(maxsize=512)
-def _embed_query(query: str, backend: str) -> tuple[float, ...]:
+def _call_embed_api(text: str, backend: str) -> tuple[float, ...]:
     """
-    Embed a query string and return a float tuple.
+    Call the embedding API and return the vector as a float tuple.
 
-    Calls the embedding API directly — not through the LlamaIndex wrapper —
-    to cut per-query overhead. Results are cached in-process (lru_cache):
-    repeated identical queries skip the embedding call entirely, which is the
-    dominant per-query cost (~100–500 ms for Ollama, ~100 ms for OpenAI).
-
-    The tuple return type is required for lru_cache key hashability.
-
+    This is the raw API call, shared by _embed_query (cached) and
+    _embed_document (uncached). Handles both backends:
       Ollama  → HTTP POST _OLLAMA_EMBED_URL
       OpenAI  → openai.Embeddings.create
     """
     if backend == _BACKEND_OPENAI:
         from openai import OpenAI  # transitive dep via llama-index-llms-openai
-        resp = OpenAI().embeddings.create(input=query, model="text-embedding-ada-002")
+        resp = OpenAI().embeddings.create(input=text, model="text-embedding-ada-002")
         return tuple(resp.data[0].embedding)
 
     # Ollama: POST {"model": "<tag>", "input": "<text>"} → {"embeddings": [[…]]}
     import urllib.request
-    payload = json.dumps({"model": backend, "input": query}).encode()
+    import urllib.error
+    payload = json.dumps({"model": backend, "input": text}).encode()
     req = urllib.request.Request(
         _OLLAMA_EMBED_URL,
         data=payload,
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return tuple(json.loads(resp.read())["embeddings"][0])
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            return tuple(json.loads(resp.read())["embeddings"][0])
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode(errors="replace")
+        raise RuntimeError(f"Ollama embed API {exc.code}: {body}") from exc
 
 
-# ── 2. ChromaDB helpers ───────────────────────────────────────────────────────
+@lru_cache(maxsize=512)
+def _embed_query(query: str, backend: str) -> tuple[float, ...]:
+    """
+    Embed a query string, with LRU cache for repeated identical queries.
+
+    Caching is valuable here because the same query may be issued many times
+    in a serve session (~100–500 ms per call for Ollama, ~100 ms for OpenAI).
+    The tuple return type satisfies lru_cache's hashability requirement.
+    """
+    return _call_embed_api(query, backend)
+
+
+def _embed_document(text: str, backend: str) -> tuple[float, ...]:
+    """
+    Embed a document string — no cache (documents are indexed once, not repeated).
+    Caller is responsible for truncating text to the model's token limit beforehand.
+    """
+    return _call_embed_api(text, backend)
+
+
+# ── 2. Embedding truncation ───────────────────────────────────────────────────
+
+def _truncate_for_embed(text: str) -> str:
+    """
+    Truncate text to _EMBED_CHAR_LIMIT before embedding.
+
+    The chunk file header (name, category, keywords, description) always
+    appears first and fits well within 8 000 chars — which is the semantically
+    richest part for retrieval. The full content is stored separately in
+    ChromaDB and returned verbatim on retrieval; only the embedding input
+    is capped here.
+    """
+    return text[:_EMBED_CHAR_LIMIT]
+
+
+# ── 3. ChromaDB helpers ───────────────────────────────────────────────────────
 
 def _get_collection(collection_name: str, db_path: str) -> chromadb.Collection:
     """Return the raw ChromaDB collection — lightweight, no LlamaIndex overhead."""
     return chromadb.PersistentClient(path=db_path).get_collection(collection_name)
 
 
-# ── 3. Index setup (LlamaIndex — used by 'index' command only) ────────────────
-
-def _configure_embed_model(backend: str) -> None:
-    """
-    Configure the LlamaIndex global embed model and default chunk size.
-
-    Called once at the start of the 'index' command. Not called during
-    retrieve/query/serve — those embed queries directly via _embed_query()
-    to avoid LlamaIndex startup and transport overhead.
-
-    chunk_size defaults (cl100k tokens, set here as the baseline):
-      openai → 10 240  (well within ada-002's context; cl100k ≈ model tokens)
-      ollama → 4 096   (half of nomic-embed-text's 8192-token limit, used as a
-                         cross-tokenizer safety margin: cl100k ≠ nomic tokens)
-
-    The CLI --chunk-size flag overrides these after _make_index() returns.
-    """
-    from llama_index.core import Settings
-
-    if backend == _BACKEND_OPENAI:
-        Settings.chunk_size = 10_240
-        return
-
-    # Any other value is treated as an Ollama model tag, e.g. "nomic-embed-text:v1.5"
-    try:
-        from llama_index.embeddings.ollama import OllamaEmbedding
-    except ImportError:
-        raise SystemExit(
-            "Ollama embedding backend requires: pip install llama-index-embeddings-ollama"
-        )
-    Settings.embed_model = OllamaEmbedding(model_name=backend)
-    Settings.chunk_size  = 4_096
-
-
-def _make_index(collection_name: str, db_path: str) -> tuple["VectorStoreIndex", chromadb.Collection]:
-    """
-    Wire up a ChromaDB-backed VectorStoreIndex for *indexing only*.
-    Returns (VectorStoreIndex, chromadb.Collection).
-
-    LlamaIndex is used here solely for insert_nodes() + batch embedding.
-    The query path bypasses LlamaIndex entirely (see _retrieve_direct).
-    chunk_size must be configured before this call via _configure_embed_model().
-    """
-    from llama_index.core import VectorStoreIndex, StorageContext
-    from llama_index.vector_stores.chroma import ChromaVectorStore
-
-    collection = chromadb.PersistentClient(path=db_path).get_or_create_collection(
-        collection_name, metadata=_HNSW_SETTINGS
-    )
-    vec_store = ChromaVectorStore(chroma_collection=collection)
-    storage   = StorageContext.from_defaults(vector_store=vec_store)
-    return VectorStoreIndex([], storage_context=storage), collection
-
-
 # ── 4. Indexing ───────────────────────────────────────────────────────────────
 
-def index_directory(index: "VectorStoreIndex", collection: chromadb.Collection, chunks_dir: Path, batch_size: int = 64) -> None:
+def index_directory(
+    collection: chromadb.Collection,
+    chunks_dir: Path,
+    backend:    str,
+    batch_size: int = 64,
+) -> None:
     """
     Populate the vector index from _CHUNKS_SUFFIX files in chunks_dir.
 
+    Each .chunks.md file is stored as a single vector — one embedding per file.
+    The full file content is stored verbatim in ChromaDB so retrieval always
+    returns the complete file, regardless of its size.
+
+    For files whose text exceeds the model's token limit, the embedding is
+    computed on a truncated prefix; only the retrieval payload is affected
+    by the full size.
+
     Already-indexed documents are skipped (resumable run).
-    Documents are embedded and inserted in batches for efficiency.
+    Embeddings are computed and upserted in batches for efficiency.
     Files that do not end with _CHUNKS_SUFFIX are silently skipped.
     """
     from tqdm import tqdm
-    from llama_index.core import Document, Settings
-    from llama_index.core.node_parser import SentenceSplitter
 
     chunks_paths = sorted(
         p for p in chunks_dir.iterdir()
@@ -215,42 +217,39 @@ def index_directory(index: "VectorStoreIndex", collection: chromadb.Collection, 
 
     # Fetch all IDs already present in ChromaDB to skip re-indexing
     existing_ids = set(collection.get(include=[])["ids"])
+    new_paths    = [p for p in chunks_paths if str(p) not in existing_ids]
 
-    docs = []
-    for path in chunks_paths:
-        if str(path) in existing_ids:
-            continue
-        prose = path.read_text(encoding=_FILE_ENCODING, errors="ignore").strip()
-        if not prose:
-            continue
-        meta = {"file_path": str(path), "file_name": path.name}
-        docs.append(Document(
-            text=prose,
-            id_=str(path),
-            metadata=meta,
-            excluded_embed_metadata_keys=list(meta),
-        ))
-
-    skipped = len(chunks_paths) - len(docs)
+    skipped = len(chunks_paths) - len(new_paths)
     if skipped:
         print(f"Skipping {skipped} already-indexed document(s).")
-
-    if not docs:
+    if not new_paths:
         print("Nothing new to index.")
         return
 
-    # Split documents into chunk-sized nodes, then embed and insert in batches.
-    # SentenceSplitter respects Settings.chunk_size set by _configure_embed_model().
-    splitter = SentenceSplitter(chunk_size=Settings.chunk_size)
-    nodes    = splitter.get_nodes_from_documents(docs)
+    batches = [new_paths[i:i + batch_size] for i in range(0, len(new_paths), batch_size)]
+    indexed = 0
 
-    batches = [nodes[i:i + batch_size] for i in range(0, len(nodes), batch_size)]
-    with tqdm(total=len(nodes), desc="Indexing chunks", unit="node") as bar:
+    with tqdm(total=len(new_paths), desc="Indexing files", unit="file") as bar:
         for batch in batches:
-            index.insert_nodes(batch)
+            ids, embeddings, documents, metadatas = [], [], [], []
+            for path in batch:
+                text = path.read_text(encoding=_FILE_ENCODING, errors="ignore").strip()
+                if not text:
+                    bar.update(1)
+                    continue
+                # Truncate for embedding but keep full content for storage/retrieval
+                embed_text = _truncate_for_embed(text)
+                vec        = list(_embed_document(embed_text, backend))
+                ids.append(str(path))
+                embeddings.append(vec)
+                documents.append(text)                                       # full content
+                metadatas.append({"file_path": str(path), "file_name": path.name})
+            if ids:
+                collection.upsert(ids=ids, embeddings=embeddings, documents=documents, metadatas=metadatas)
+                indexed += len(ids)
             bar.update(len(batch))
 
-    print(f"Indexed {len(docs)} new document(s) from '{chunks_dir}'.")
+    print(f"Indexed {indexed} new document(s) from '{chunks_dir}'.")
 
 
 # ── 5. Drop index ─────────────────────────────────────────────────────────────
@@ -261,7 +260,7 @@ def drop_index(collection_name: str, db_path: str) -> None:
     print(f"Dropped index '{collection_name}' from '{db_path}'.")
 
 
-# ── 6. Direct retrieval (bypasses LlamaIndex) ─────────────────────────────────
+# ── 6. Direct retrieval ───────────────────────────────────────────────────────
 
 def _retrieve_direct(
     collection: chromadb.Collection,
@@ -270,10 +269,10 @@ def _retrieve_direct(
     top_k:      int,
 ) -> list[Result]:
     """
-    Embed the query and search ChromaDB directly — no LlamaIndex in the hot path.
+    Embed the query and search ChromaDB directly.
 
-    Replaces the old index.as_retriever() → retriever.retrieve() flow, cutting
-    several abstraction layers from every query call.
+    Returns Result objects whose .text field contains the full .chunks.md file
+    content stored at index time.
 
     Score conversion depends on the collection's hnsw:space:
       cosine → distance = 1 − cosine_sim, so score = 1 − distance  (range ≈ [0,1])
@@ -289,6 +288,10 @@ def _retrieve_direct(
         n_results=n,
         include=["documents", "metadatas", "distances"],
     )
+
+    assert results["documents"] is not None
+    assert results["metadatas"] is not None
+    assert results["distances"] is not None
 
     space = (collection.metadata or {}).get("hnsw:space", "l2")
     out   = []
@@ -344,9 +347,11 @@ def serve(db_path: str, backend: str, host: str, port: int) -> None:
     Endpoints:
       GET /retrieve/{index_name}?question=<text>[&top_k=10]
           Returns [{file_name, score, metadata, text}, …]
+          text = full .chunks.md file content
 
       GET /query/{index_name}?question=<text>[&top_k=5]
           Returns [{file_name, score, text}, …]
+          text = full .chunks.md file content
     """
     try:
         from fastapi import FastAPI, HTTPException
@@ -415,15 +420,13 @@ def main() -> None:
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
     p_index.add_argument("--backend", "-b", metavar="BACKEND", default=_BACKEND_OPENAI,
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
-    p_index.add_argument("--chunk-size", type=int, default=None, metavar="N",
-                         help="Override the embedding chunk size (default: 10240 for openai, 4096 for Ollama)")
     p_index.add_argument("--batch-size", type=int, default=64, metavar="N",
                          help="Number of documents per embedding batch (default: 64)")
 
     # retrieve
     p_retrieve = sub.add_parser(
         "retrieve",
-        help="Return top-k matching chunks.",
+        help="Return top-k matching chunk files.",
         formatter_class=fmt,
         epilog=(
             "examples:\n"
@@ -519,25 +522,21 @@ def main() -> None:
             print("Aborted.")
         return
 
-    # ── serve (persistent server — no LlamaIndex needed) ──────────────────────
+    # ── serve (persistent server) ─────────────────────────────────────────────
     if args.cmd == "serve":
         serve(args.db, args.backend, args.host, args.port)
         return
 
-    # ── index (only command that needs LlamaIndex) ────────────────────────────
+    # ── index ─────────────────────────────────────────────────────────────────
     if args.cmd == "index":
-        _configure_embed_model(args.backend)
-        rag_index, collection = _make_index(args.index_name, args.db)
-        # CLI --chunk-size is applied last so it wins over all backend defaults
-        if args.chunk_size is not None:
-            from llama_index.core import Settings
-            Settings.chunk_size = args.chunk_size
+        collection = chromadb.PersistentClient(path=args.db).get_or_create_collection(
+            args.index_name, metadata=_HNSW_SETTINGS
+        )
         if args.dir:
-            index_directory(rag_index, collection, Path(args.dir), batch_size=args.batch_size)
+            index_directory(collection, Path(args.dir), args.backend, batch_size=args.batch_size)
         return
 
-    # ── retrieve / query — direct ChromaDB path, no LlamaIndex ───────────────
-    # Both commands share the collection lookup; dispatch on cmd below.
+    # ── retrieve / query — direct ChromaDB path ───────────────────────────────
     collection = _get_collection(args.index_name, args.db)
 
     if args.cmd == "retrieve":
