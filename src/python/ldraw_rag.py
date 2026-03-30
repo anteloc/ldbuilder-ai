@@ -42,7 +42,7 @@ import tiktoken
 from tqdm import tqdm
 
 from llama_index.core import VectorStoreIndex, Document, Settings
-from llama_index.core.schema import TextNode
+from llama_index.core.node_parser import SentenceSplitter
 from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.core import StorageContext
 
@@ -145,20 +145,15 @@ def index_directory(
         print("Nothing new to index.")
         return
 
+    # Split documents into chunk-sized nodes, respecting Settings.chunk_size
+    splitter = SentenceSplitter(chunk_size=Settings.chunk_size)
+    nodes = splitter.get_nodes_from_documents(docs)
+
     # Insert in batches — each batch is a single embed call to the model
-    batches = [docs[i:i + batch_size] for i in range(0, len(docs), batch_size)]
-    with tqdm(total=len(docs), desc="Indexing chunks", unit="doc") as bar:
+    batches = [nodes[i:i + batch_size] for i in range(0, len(nodes), batch_size)]
+    with tqdm(total=len(nodes), desc="Indexing chunks", unit="node") as bar:
         for batch in batches:
-            nodes = [
-                TextNode(
-                    text=doc.text,
-                    id_=doc.id_,
-                    metadata=doc.metadata,
-                    excluded_embed_metadata_keys=list(doc.metadata.keys()),
-                )
-                for doc in batch
-            ]
-            index.insert_nodes(nodes)
+            index.insert_nodes(batch)
             bar.update(len(batch))
 
     print(f"Indexed {len(docs)} new document(s) from '{chunks_dir}'.")
