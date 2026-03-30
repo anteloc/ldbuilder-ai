@@ -50,8 +50,17 @@ import argparse
 import json
 from functools import lru_cache
 from pathlib import Path
+from typing import NamedTuple
 
 import chromadb
+
+# ── Constants ─────────────────────────────────────────────────────────────────
+
+_BACKEND_OPENAI   = "openai"                            # sentinel for the OpenAI embedding path
+_CHUNKS_SUFFIX    = ".chunks.md"                        # file extension produced by the chunker
+_FILE_ENCODING    = "utf-8"                             # encoding for all chunk files
+_TIKTOKEN_ENC     = "cl100k_base"                       # tokeniser used for token-count estimation
+_OLLAMA_EMBED_URL = "http://localhost:11434/api/embed"  # Ollama local embedding endpoint
 
 # ── HNSW collection settings ──────────────────────────────────────────────────
 # Applied at collection creation time only. Drop + re-index existing collections
@@ -76,6 +85,16 @@ _HNSW_SETTINGS: dict = {
 }
 
 
+# ── Result type ───────────────────────────────────────────────────────────────
+
+class Result(NamedTuple):
+    """A single retrieval hit returned by _retrieve_direct()."""
+    file_name: str   # basename of the source .chunks.md file
+    score:     float # similarity score: cosine → [0,1], L2 → (0,1]
+    metadata:  dict  # ChromaDB metadata dict (file_path, file_name, …)
+    text:      str   # full document text stored in the vector DB
+
+
 # ── 1. Direct embedding ───────────────────────────────────────────────────────
 
 @lru_cache(maxsize=512)
@@ -90,10 +109,10 @@ def _embed_query(query: str, backend: str) -> tuple[float, ...]:
 
     The tuple return type is required for lru_cache key hashability.
 
-      Ollama  → HTTP POST localhost:11434/api/embed
+      Ollama  → HTTP POST _OLLAMA_EMBED_URL
       OpenAI  → openai.Embeddings.create
     """
-    if backend == "openai":
+    if backend == _BACKEND_OPENAI:
         from openai import OpenAI  # transitive dep via llama-index-llms-openai
         resp = OpenAI().embeddings.create(input=query, model="text-embedding-ada-002")
         return tuple(resp.data[0].embedding)
@@ -102,7 +121,7 @@ def _embed_query(query: str, backend: str) -> tuple[float, ...]:
     import urllib.request
     payload = json.dumps({"model": backend, "input": query}).encode()
     req = urllib.request.Request(
-        "http://localhost:11434/api/embed",
+        _OLLAMA_EMBED_URL,
         data=payload,
         headers={"Content-Type": "application/json"},
         method="POST",
@@ -113,28 +132,31 @@ def _embed_query(query: str, backend: str) -> tuple[float, ...]:
 
 # ── 2. ChromaDB helpers ───────────────────────────────────────────────────────
 
-def _chroma_client(db_path: str) -> chromadb.PersistentClient:
-    return chromadb.PersistentClient(path=db_path)
-
-
 def _get_collection(collection_name: str, db_path: str) -> chromadb.Collection:
     """Return the raw ChromaDB collection — lightweight, no LlamaIndex overhead."""
-    return _chroma_client(db_path).get_collection(collection_name)
+    return chromadb.PersistentClient(path=db_path).get_collection(collection_name)
 
 
 # ── 3. Index setup (LlamaIndex — used by 'index' command only) ────────────────
 
 def _configure_embed_model(backend: str) -> None:
     """
-    Configure the LlamaIndex global embed model for the indexing path.
+    Configure the LlamaIndex global embed model and default chunk size.
 
-    Not called during retrieve/query/serve — those embed queries directly
-    via _embed_query() to avoid LlamaIndex startup and transport overhead.
+    Called once at the start of the 'index' command. Not called during
+    retrieve/query/serve — those embed queries directly via _embed_query()
+    to avoid LlamaIndex startup and transport overhead.
+
+    chunk_size defaults (cl100k tokens, set here as the baseline):
+      openai → 10 240  (well within ada-002's context; cl100k ≈ model tokens)
+      ollama → 4 096   (half of nomic-embed-text's 8192-token limit, used as a
+                         cross-tokenizer safety margin: cl100k ≠ nomic tokens)
+
+    The CLI --chunk-size flag overrides these after _make_index() returns.
     """
     from llama_index.core import Settings
 
-    if backend == "openai":
-        # Leave Settings.embed_model at its default (OpenAI ada-002)
+    if backend == _BACKEND_OPENAI:
         Settings.chunk_size = 10_240
         return
 
@@ -146,51 +168,46 @@ def _configure_embed_model(backend: str) -> None:
             "Ollama embedding backend requires: pip install llama-index-embeddings-ollama"
         )
     Settings.embed_model = OllamaEmbedding(model_name=backend)
-    # nomic-embed-text context limit is 8192 tokens; use half as a cross-tokenizer
-    # safety margin (Settings.chunk_size is measured in cl100k tokens, not nomic tokens).
-    Settings.chunk_size = 4_096
+    Settings.chunk_size  = 4_096
 
 
 def _make_index(collection_name: str, db_path: str) -> tuple:
     """
-    Create (or reconnect to) a ChromaDB-backed LlamaIndex for *indexing only*.
+    Wire up a ChromaDB-backed VectorStoreIndex for *indexing only*.
     Returns (VectorStoreIndex, chromadb.Collection).
 
-    LlamaIndex is needed here for insert_nodes() + batch embedding during
-    index time. The query path bypasses LlamaIndex entirely (_retrieve_direct).
+    LlamaIndex is used here solely for insert_nodes() + batch embedding.
+    The query path bypasses LlamaIndex entirely (see _retrieve_direct).
+    chunk_size must be configured before this call via _configure_embed_model().
     """
     from llama_index.core import VectorStoreIndex, StorageContext
     from llama_index.vector_stores.chroma import ChromaVectorStore
 
-    client     = _chroma_client(db_path)
-    collection = client.get_or_create_collection(collection_name, metadata=_HNSW_SETTINGS)
-    vec_store  = ChromaVectorStore(chroma_collection=collection)
-    storage    = StorageContext.from_defaults(vector_store=vec_store)
+    collection = chromadb.PersistentClient(path=db_path).get_or_create_collection(
+        collection_name, metadata=_HNSW_SETTINGS
+    )
+    vec_store = ChromaVectorStore(chroma_collection=collection)
+    storage   = StorageContext.from_defaults(vector_store=vec_store)
     return VectorStoreIndex([], storage_context=storage), collection
 
 
 # ── 4. Indexing ───────────────────────────────────────────────────────────────
 
-def index_directory(index, collection: chromadb.Collection, chunks_dir: Path | None, batch_size: int = 64) -> None:
+def index_directory(index, collection: chromadb.Collection, chunks_dir: Path, batch_size: int = 64) -> None:
     """
-    Populate the chunks index from the specified directory.
+    Populate the vector index from _CHUNKS_SUFFIX files in chunks_dir.
 
-    chunks_dir  — directory containing .chunks.md files.
-
-    Already-indexed documents are skipped (resumable).
+    Already-indexed documents are skipped (resumable run).
     Documents are embedded and inserted in batches for efficiency.
-    Files that do not match the pattern are silently skipped.
+    Files that do not end with _CHUNKS_SUFFIX are silently skipped.
     """
-    if not chunks_dir:
-        return
-
     from tqdm import tqdm
     from llama_index.core import Document, Settings
     from llama_index.core.node_parser import SentenceSplitter
 
     chunks_paths = sorted(
         p for p in chunks_dir.iterdir()
-        if p.is_file() and p.name.endswith(".chunks.md")
+        if p.is_file() and p.name.endswith(_CHUNKS_SUFFIX)
     )
 
     # Fetch all IDs already present in ChromaDB to skip re-indexing
@@ -200,7 +217,7 @@ def index_directory(index, collection: chromadb.Collection, chunks_dir: Path | N
     for path in chunks_paths:
         if str(path) in existing_ids:
             continue
-        prose = path.read_text(encoding="utf-8", errors="ignore").strip()
+        prose = path.read_text(encoding=_FILE_ENCODING, errors="ignore").strip()
         if not prose:
             continue
         meta = {"file_path": str(path), "file_name": path.name}
@@ -219,11 +236,11 @@ def index_directory(index, collection: chromadb.Collection, chunks_dir: Path | N
         print("Nothing new to index.")
         return
 
-    # Split documents into chunk-sized nodes, respecting Settings.chunk_size
+    # Split documents into chunk-sized nodes, then embed and insert in batches.
+    # SentenceSplitter respects Settings.chunk_size set by _configure_embed_model().
     splitter = SentenceSplitter(chunk_size=Settings.chunk_size)
     nodes    = splitter.get_nodes_from_documents(docs)
 
-    # Insert in batches — each batch is a single embed call to the model
     batches = [nodes[i:i + batch_size] for i in range(0, len(nodes), batch_size)]
     with tqdm(total=len(nodes), desc="Indexing chunks", unit="node") as bar:
         for batch in batches:
@@ -237,7 +254,7 @@ def index_directory(index, collection: chromadb.Collection, chunks_dir: Path | N
 
 def drop_index(collection_name: str, db_path: str) -> None:
     """Delete a named ChromaDB collection and all its vectors. Irreversible."""
-    _chroma_client(db_path).delete_collection(collection_name)
+    chromadb.PersistentClient(path=db_path).delete_collection(collection_name)
     print(f"Dropped index '{collection_name}' from '{db_path}'.")
 
 
@@ -248,7 +265,7 @@ def _retrieve_direct(
     query:      str,
     backend:    str,
     top_k:      int,
-) -> list[tuple[str, float, dict, str]]:
+) -> list[Result]:
     """
     Embed the query and search ChromaDB directly — no LlamaIndex in the hot path.
 
@@ -279,21 +296,22 @@ def _retrieve_direct(
     ):
         score = (1.0 - dist) if space == "cosine" else (1.0 / (1.0 + dist))
         fname = (meta or {}).get("file_name", "unknown")
-        out.append((fname, score, meta or {}, doc or ""))
+        out.append(Result(file_name=fname, score=score, metadata=meta or {}, text=doc or ""))
     return out
 
 
 # ── 7. Estimation ─────────────────────────────────────────────────────────────
 
 def estimate_directory(directory: Path) -> None:
+    """Print per-file and total token counts using the _TIKTOKEN_ENC tokeniser."""
     import tiktoken  # lazy — only needed for this command
-    encoder = tiktoken.get_encoding("cl100k_base")
+    encoder = tiktoken.get_encoding(_TIKTOKEN_ENC)
 
     rows = []
     for path in sorted(directory.iterdir()):
         if not path.is_file():
             continue
-        n = len(encoder.encode(path.read_text(encoding="utf-8", errors="ignore")))
+        n = len(encoder.encode(path.read_text(encoding=_FILE_ENCODING, errors="ignore")))
         rows.append((path.name, n))
 
     if not rows:
@@ -331,9 +349,7 @@ def serve(db_path: str, backend: str, host: str, port: int) -> None:
         from fastapi import FastAPI, HTTPException
         import uvicorn
     except ImportError:
-        raise SystemExit(
-            "serve command requires: pip install fastapi uvicorn"
-        )
+        raise SystemExit("serve command requires: pip install fastapi uvicorn")
 
     app         = FastAPI(title="LDraw RAG Server")
     _col_cache: dict[str, chromadb.Collection] = {}
@@ -350,14 +366,14 @@ def serve(db_path: str, backend: str, host: str, port: int) -> None:
     def retrieve(index_name: str, question: str, top_k: int = 10):
         results = _retrieve_direct(_collection(index_name), question, backend, top_k)
         return [
-            {"file_name": r[0], "score": r[1], "metadata": r[2], "text": r[3]}
+            {"file_name": r.file_name, "score": r.score, "metadata": r.metadata, "text": r.text}
             for r in results
         ]
 
     @app.get("/query/{index_name}")
     def query(index_name: str, question: str, top_k: int = 5):
         results = _retrieve_direct(_collection(index_name), question, backend, top_k)
-        return [{"file_name": r[0], "score": r[1], "text": r[3]} for r in results]
+        return [{"file_name": r.file_name, "score": r.score, "text": r.text} for r in results]
 
     print(f"LDraw RAG server on http://{host}:{port}")
     print(f"  backend : {backend}")
@@ -394,7 +410,7 @@ def main() -> None:
     p_index.add_argument("--dir",        metavar="DIR", help="Directory containing .chunks.md files")
     p_index.add_argument("--db",         metavar="DB",  default="./ldraw_rag_db",
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
-    p_index.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+    p_index.add_argument("--backend", "-b", metavar="BACKEND", default=_BACKEND_OPENAI,
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
     p_index.add_argument("--chunk-size", type=int, default=None, metavar="N",
                          help="Override the embedding chunk size (default: 10240 for openai, 4096 for Ollama)")
@@ -413,16 +429,15 @@ def main() -> None:
         ),
     )
     p_retrieve.add_argument("index_name")
-    p_retrieve.add_argument("question", nargs="?", default=None,
-                             help="Free-text query")
-    p_retrieve.add_argument("--top-k",   type=int, default=10, metavar="K")
+    p_retrieve.add_argument("question", nargs="?", default=None, help="Free-text query")
+    p_retrieve.add_argument("--top-k",    type=int, default=10, metavar="K")
     p_retrieve.add_argument("--metadata", "-m", action="store_true",
                              help="Output metadata JSON instead of score table")
     p_retrieve.add_argument("--scores",   "-s", action="store_true",
                              help="Show scores for chunks")
     p_retrieve.add_argument("--db",      metavar="DB", default="./ldraw_rag_db",
                              help="ChromaDB storage path (default: ./ldraw_rag_db)")
-    p_retrieve.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+    p_retrieve.add_argument("--backend", "-b", metavar="BACKEND", default=_BACKEND_OPENAI,
                              help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     # query
@@ -438,10 +453,10 @@ def main() -> None:
     )
     p_query.add_argument("index_name")
     p_query.add_argument("question")
-    p_query.add_argument("--top-k", type=int, default=5, metavar="K")
-    p_query.add_argument("--db",     metavar="DB", default="./ldraw_rag_db",
+    p_query.add_argument("--top-k",    type=int, default=5, metavar="K")
+    p_query.add_argument("--db",       metavar="DB", default="./ldraw_rag_db",
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
-    p_query.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+    p_query.add_argument("--backend",  "-b", metavar="BACKEND", default=_BACKEND_OPENAI,
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     # drop
@@ -482,7 +497,7 @@ def main() -> None:
     p_serve.add_argument("--port",    type=int, default=8000, help="Bind port (default: 8000)")
     p_serve.add_argument("--db",      metavar="DB", default="./ldraw_rag_db",
                          help="ChromaDB storage path (default: ./ldraw_rag_db)")
-    p_serve.add_argument("--backend", "-b", metavar="BACKEND", default="openai",
+    p_serve.add_argument("--backend", "-b", metavar="BACKEND", default=_BACKEND_OPENAI,
                          help="Embedding backend: 'openai' (default) or an Ollama model tag e.g. 'nomic-embed-text:v1.5'")
 
     args = parser.parse_args()
@@ -492,7 +507,7 @@ def main() -> None:
         estimate_directory(Path(args.dir))
         return
 
-    # ── drop (no index object needed) ─────────────────────────────────────────
+    # ── drop ──────────────────────────────────────────────────────────────────
     if args.cmd == "drop":
         confirm = input(f"Drop index '{args.index_name}' from '{args.db}'? This cannot be undone. [y/N] ")
         if confirm.strip().lower() == "y":
@@ -510,8 +525,8 @@ def main() -> None:
     if args.cmd == "index":
         _configure_embed_model(args.backend)
         rag_index, collection = _make_index(args.index_name, args.db)
-        # CLI override is applied last so it wins over all defaults
-        if getattr(args, "chunk_size", None) is not None:
+        # CLI --chunk-size is applied last so it wins over all backend defaults
+        if args.chunk_size is not None:
             from llama_index.core import Settings
             Settings.chunk_size = args.chunk_size
         if args.dir:
@@ -519,33 +534,32 @@ def main() -> None:
         return
 
     # ── retrieve / query — direct ChromaDB path, no LlamaIndex ───────────────
+    # Both commands share the collection lookup; dispatch on cmd below.
     collection = _get_collection(args.index_name, args.db)
 
     if args.cmd == "retrieve":
         if not args.question:
             p_retrieve.error("provide a question")
-
         results = _retrieve_direct(collection, args.question, args.backend, args.top_k)
-
         if args.metadata:
-            print(json.dumps([r[2] for r in results], indent=2))
+            print(json.dumps([r.metadata for r in results], indent=2))
         elif args.scores:
             print("-" * 60)
             for i, r in enumerate(results, 1):
-                print(f"[{i}] {r[1]:.4f}  {r[0]}")
+                print(f"[{i}] {r.score:.4f}  {r.file_name}")
         else:
             for i, r in enumerate(results, 1):
-                print(f"[{i}] {r[0]}")
+                print(f"[{i}] {r.file_name}")
 
-    if args.cmd == "query":
+    elif args.cmd == "query":
         results = _retrieve_direct(collection, args.question, args.backend, args.top_k)
         sep = "═" * 60
         div = "─" * 60
         for i, r in enumerate(results, 1):
             print(sep)
-            print(f"[{i}] {r[0]}  (score: {r[1]:.4f})")
+            print(f"[{i}] {r.file_name}  (score: {r.score:.4f})")
             print(div)
-            print(r[3])
+            print(r.text)
         print(sep)
 
 
