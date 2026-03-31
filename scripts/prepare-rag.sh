@@ -177,6 +177,17 @@ function annotate_models_for_rag() {
     cd - > /dev/null || exit 1
 }
 
+function intent_models_for_rag() {
+    local input_dir="$1"
+    local output_dir="$2"
+
+    ldraw_intent.py --annotate -d "$LDRAW_INFO_DB" -g "$specs_dir/ldraw.lark" -f "$input_dir" -o "$output_dir"
+
+    cd $output_dir || exit 1
+
+    cd - > /dev/null || exit 1
+}
+
 function build_db() {
     local sel_models_dir="$1"
     local tmp_work_dir="$2"
@@ -255,12 +266,14 @@ S06_OUT="06-VALIDATED_MODELS.jsonl"
 PREPARE_RAG_DB="prepare_rag.db"
 
 rag_models_dir="rag-models"
+intent_models_dir="intent-models"
 tmp_models_dir="tmp-models"
 tmp_rag_models_dir="tmp-rag-models"
 tmp_db_dir="tmp-rag-db"
 
 # Create one or both dirs if they do not exist
 mkdir -p "$output_dir/$rag_models_dir"
+mkdir -p "$output_dir/$intent_models_dir"
 mkdir -p "$output_dir/$tmp_models_dir"
 mkdir -p "$output_dir/$tmp_rag_models_dir"
 mkdir -p "$output_dir/$tmp_db_dir"
@@ -327,6 +340,10 @@ next_step "Annotate models for RAG" && \
     annotate_models_for_rag "$tmp_rag_models_dir" "$rag_models_dir"
 # next_step "Annotate models for RAG" && \
 #     ldraw_annotate_models.py -d "$LDRAW_INFO_DB" -f "$tmp_rag_models_dir" -o "$rag_models_dir"
+
+### STEP
+next_step "Annotate intent models for RAG" && \
+    intent_models_for_rag "$tmp_rag_models_dir" "$intent_models_dir"
 
 ### STEP
 next_step "Building database" && \

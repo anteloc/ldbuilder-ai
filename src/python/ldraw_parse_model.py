@@ -317,6 +317,29 @@ class PartTouchesMeta(BangMeta):
 
         return f"{self.lineType} !TOUCHES {pids_str}"
 
+class PartIntentMeta(BangMeta):
+    # example: 0 !I P3 ↑P1 →P2
+    # Each relation is (arrow, pid): arrow is one unicode char, pid is e.g. "P1"
+    # Supported arrows: ↑ ↓ → ← ↗ ↙
+    pid: str
+    relations: list[tuple[str, str]]
+
+    def __init__(self, contents: str | None = None, **kwargs):
+        if contents is not None:
+            super().__init__(contents=contents)
+            tokens = self.contents.split()
+            self.pid = tokens[0] if tokens else "(unknown)"
+            # each subsequent token is {arrow}{Pk}, e.g. "↑P1" — arrow is always one unicode char
+            self.relations = [(t[0], t[1:]) for t in tokens[1:] if len(t) > 1]
+        else:
+            super().__init__(contents="")
+            self.pid = kwargs.get("pid", "(unknown)")
+            self.relations = kwargs.get("relations", [])
+
+    def __str__(self):
+        refs = (" " + " ".join(f"{arrow}{pk}" for arrow, pk in self.relations)) if self.relations else ""
+        return f"\n{self.lineType} !I {self.pid}{refs}"
+
 class FileRef(SubFileLine):
     lineType: LineType = LineType.FILE_REF
     globalOrdinal: int
@@ -427,6 +450,7 @@ class PartRef:
     fileRef: FileRef
     partInfoMeta: PartInfoMeta
     partTouchesMeta: PartTouchesMeta
+    partIntentMeta: PartIntentMeta
     orientation: list[str]
     internal: bool = False  # whether the partRef is a reference to an embedded submodel/subfile (True) or external submodel or part (False)
 
@@ -481,6 +505,8 @@ class SubFile(SubFileLinesGroup):
             return PartInfoMeta(contents=metaContents)
         elif metaContents.startswith("!TOUCHES "):
             return PartTouchesMeta(contents=metaContents)
+        elif metaContents.startswith("!I "):
+            return PartIntentMeta(contents=metaContents)
         else:
             return Meta(contents=metaContents)
         
@@ -510,8 +536,8 @@ class SubModel:
                 fr: FileRef = sfl
                 pr = PartRef(fileRef=fr)
 
-                # if present, previous line(s) maybe a PartInfoMeta, a PartTouchesMeta or both related to this partRef
-                prev_idxs = [i - 1, i - 2]
+                # if present, previous line(s) may be PartInfoMeta, PartTouchesMeta, PartIntentMeta or any combination
+                prev_idxs = [i - 1, i - 2, i - 3]
                 prevs = [subFile.subFileLines[idx] for idx in prev_idxs if idx >= 0]
 
                 for prev in prevs:
@@ -519,6 +545,8 @@ class SubModel:
                         pr.partInfoMeta = prev
                     if isinstance(prev, PartTouchesMeta):
                         pr.partTouchesMeta = prev
+                    if isinstance(prev, PartIntentMeta):
+                        pr.partIntentMeta = prev
 
                 self.partRefs.append(pr)
 
@@ -605,7 +633,19 @@ class MPDModel:
         # Update the partRef to include the new partTouchesMeta
         partRef.partTouchesMeta = partTouchesMeta
 
-        
+    def setPartIntentMeta(self, partRef: PartRef, partIntentMeta: PartIntentMeta, subModel: SubModel):
+        # We need to update the fileLines to include it
+        fileRef = partRef.fileRef
+        subFileLines = subModel.subFile.subFileLines
+
+        fileRefIdx = subFileLines.index(fileRef)
+
+        # Insert the partIntentMeta right before the fileRef in the subFileLines
+        subFileLines.insert(fileRefIdx, partIntentMeta)
+
+        # Update the partRef to include the new partIntentMeta
+        partRef.partIntentMeta = partIntentMeta
+
     def __str__(self):
         return "\n\n".join(str(sm) for sm in self.subModels)
 
