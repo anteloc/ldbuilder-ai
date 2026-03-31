@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-"""ldraw_intent.py — Annotate or correct INTENT (0 !I) lines in LDraw MPD models.
+"""ldraw_intent.py — Annotate, correct, or interpret INTENT (0 !I) lines in LDraw MPD models.
 
 --annotate (-a): Detect spatial relationships between parts using contact data
                  and write '0 !I Pn [arrow+Pk]*' lines before each type-1 line.
 
 --correct  (-c): Read existing '0 !I' lines and adjust part positions (translation
                  only) so that each declared relationship is geometrically satisfied.
+
+--interpret (-i): Read existing '0 !I' lines and print a human-friendly description
+                  of each part's spatial relationships to stdout.
 
 Arrow spec (how Pn is positioned relative to Pk):
   ↑ Pk  Pn is above    Pk  (Pn.y < Pk.y  in LDraw coords, i.e. Y is down)
@@ -82,6 +85,16 @@ def _classify_direction(vec: dict[str, float]) -> str:
     else:
         return "↗" if z > 0 else "↙"
 
+
+# Human-readable text for each arrow, used by --interpret.
+ARROW_TEXT: dict[str, str] = {
+    "↑": "on top of",
+    "↓": "below",
+    "→": "to the right of",
+    "←": "to the left of",
+    "↗": "in front of",
+    "↙": "behind",
+}
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Bounding-box geometry (used by --correct)
@@ -262,6 +275,41 @@ class LDrawIntentCorrector:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Interpret mode
+# ─────────────────────────────────────────────────────────────────────────────
+
+class LDrawIntentInterpreter:
+    def __init__(self, grammar_contents: str):
+        self.grammar_contents = grammar_contents
+
+    def process(self, model: Path) -> str:
+        model_contents = model.read_text(encoding="utf-8")
+        sem_tree = parse_model_semantic(model_contents, self.grammar_contents)
+        mpdModel = lpm.MPDModel(sem_tree)
+
+        lines: list[str] = [f"=== {model.name} ==="]
+
+        for sm in mpdModel.subModels:
+            if len(mpdModel.subModels) > 1:
+                lines.append(f"\n--- Submodel: {sm.subFile.header.file.name} ---")
+
+            for pr in sm.partRefs:
+                pid = f"P{pr.fileRef.globalOrdinal}"
+
+                if not hasattr(pr, "partIntentMeta") or not pr.partIntentMeta.relations:
+                    lines.append(f"{pid} ({pr.fileRef.ref}): no declared relations")
+                    continue
+
+                rel_phrases = [
+                    f"{ARROW_TEXT.get(arrow, arrow)} {pk}"
+                    for arrow, pk in pr.partIntentMeta.relations
+                ]
+                lines.append(f"{pid} ({pr.fileRef.ref}): is {', '.join(rel_phrases)}")
+
+        return "\n".join(lines)
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # CLI
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -275,8 +323,8 @@ class LDrawIntentCorrector:
 @click.option(
     "-o", "--output",
     type=click.Path(file_okay=False, dir_okay=True, writable=True, resolve_path=True),
-    required=True,
-    help="Output directory. Files are written with the same name as the originals.",
+    default=None,
+    help="Output directory. Files are written with the same name as the originals. Required for -a and -c.",
 )
 @click.option(
     "-g", "--grammar",
@@ -288,8 +336,8 @@ class LDrawIntentCorrector:
 @click.option(
     "-d", "--db",
     type=click.Path(file_okay=True, dir_okay=False, readable=True, exists=True, resolve_path=True),
-    required=True,
-    help="SQLite DB file containing PART_BBOXES table.",
+    default=None,
+    help="SQLite DB file containing PART_BBOXES table. Required for -a and -c.",
 )
 @click.option("-a", "--annotate", "mode", flag_value="annotate",
     help="Detect spatial relationships and write 0 !I annotations.",
@@ -297,13 +345,16 @@ class LDrawIntentCorrector:
 @click.option("-c", "--correct", "mode", flag_value="correct",
     help="Read existing 0 !I annotations and adjust part positions to satisfy them.",
 )
+@click.option("-i", "--interpret", "mode", flag_value="interpret",
+    help="Read existing 0 !I annotations and print a human-friendly description to stdout.",
+)
 @click.option(
     "--verbose/--quiet", default=False, show_default=True,
     help="Print per-file progress messages.",
 )
-def main(filepath: str, output: str, grammar: str, db: str,
+def main(filepath: str, output: str | None, grammar: str, db: str | None,
          mode: str | None, verbose: bool) -> None:
-    """Annotate or correct INTENT (0 !I) lines in LDraw MPD models.
+    """Annotate, correct, or interpret INTENT (0 !I) lines in LDraw MPD models.
 
     \b
     Examples:
@@ -313,15 +364,36 @@ def main(filepath: str, output: str, grammar: str, db: str,
     \b
       # Correct positions in an annotated model
       python ldraw_intent.py -c -f annotated/ -o corrected/ -g ldraw.lark -d ldraw-info.db
+
+    \b
+      # Print human-friendly interpretation (no --output or --db needed)
+      python ldraw_intent.py -i -f annotated/model.mpd -g ldraw.lark
     """
     if mode is None:
-        raise click.UsageError("Specify either --annotate (-a) or --correct (-c).")
+        raise click.UsageError("Specify one of --annotate (-a), --correct (-c), or --interpret (-i).")
 
-    p_output = Path(output)
-    p_output.mkdir(parents=True, exist_ok=True)
+    if mode in ("annotate", "correct"):
+        if output is None:
+            raise click.UsageError("--output / -o is required for --annotate and --correct.")
+        if db is None:
+            raise click.UsageError("--db / -d is required for --annotate and --correct.")
 
     grammar_contents = Path(grammar).read_text(encoding="utf-8")
     files = list(iter_ldraw_files([filepath]))
+
+    if mode == "interpret":
+        interpreter = LDrawIntentInterpreter(grammar_contents)
+        for model_path in files:
+            try:
+                click.echo(interpreter.process(model_path))
+            except Exception as e:
+                click.echo(f"Error processing '{model_path.name}': {e}", err=True)
+        return
+
+    assert output is not None and db is not None  # guaranteed by earlier UsageError checks
+
+    p_output = Path(output)
+    p_output.mkdir(parents=True, exist_ok=True)
 
     with sqlite3.connect(db) as conn:
         configure_sqlite(conn)
