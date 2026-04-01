@@ -142,20 +142,34 @@ class LDrawIntentAnnotator:
         mpdModel = lpm.MPDModel(sem_tree)
 
         for subModel in mpdModel.subModels:
+            # Only .dat parts matter; relations are restricted to the same submodel.
+            dat_pids: set[int] = {
+                pr.fileRef.globalOrdinal
+                for pr in subModel.partRefs
+                if pr.fileRef.ref.endswith(".dat")
+            }
             for partRef in subModel.partRefs:
-                self._annotate_part(partRef, subModel, mpdModel, contacts_idx)
+                self._annotate_part(partRef, subModel, mpdModel, contacts_idx, dat_pids)
 
         return str(mpdModel)
 
     def _annotate_part(self, partRef: lpm.PartRef, subModel: lpm.SubModel,
-                       mpdModel: lpm.MPDModel, contacts_idx: dict) -> None:
+                       mpdModel: lpm.MPDModel, contacts_idx: dict,
+                       dat_pids: set[int]) -> None:
         fr = partRef.fileRef
+
+        # Skip submodel refs — only annotate physical .dat parts.
+        if not fr.ref.endswith(".dat"):
+            return
+
         pid = f"P{fr.globalOrdinal}"
         part_contacts = contacts_idx.get(fr.globalOrdinal, [])
 
+        # Only emit relations to other .dat parts in the same submodel.
         relations = [
             (_classify_direction(c["vector"]), f"P{c['pid']}")
             for c in part_contacts
+            if c["pid"] in dat_pids
         ]
 
         mpdModel.setPartIntentMeta(partRef, lpm.PartIntentMeta(pid=pid, relations=relations), subModel)
@@ -164,6 +178,11 @@ class LDrawIntentAnnotator:
 # ─────────────────────────────────────────────────────────────────────────────
 # Correct mode
 # ─────────────────────────────────────────────────────────────────────────────
+
+# Maps each arrow to its affected world axis index (0=X, 1=Y, 2=Z).
+_ARROW_AXIS: dict[str, int] = {"↑": 1, "↓": 1, "→": 0, "←": 0, "↗": 2, "↙": 2}
+
+
 
 class LDrawIntentCorrector:
     def __init__(self, grammar_contents: str, conn: sqlite3.Connection):
@@ -202,23 +221,34 @@ class LDrawIntentCorrector:
         sem_tree = parse_model_semantic(model_contents, self.grammar_contents)
         mpdModel = lpm.MPDModel(sem_tree)
 
-        # "P3" → PartRef for resolving intent references across all submodels
-        pid_lookup: dict[str, lpm.PartRef] = {
-            f"P{pr.fileRef.globalOrdinal}": pr
-            for sm in mpdModel.subModels
-            for pr in sm.partRefs
-        }
-
         for sm in mpdModel.subModels:
+            # Restrict lookups to .dat parts within this submodel only.
+            sm_pid_lookup: dict[str, lpm.PartRef] = {
+                f"P{pr.fileRef.globalOrdinal}": pr
+                for pr in sm.partRefs
+                if pr.fileRef.ref.endswith(".dat")
+            }
+            # Snapshot local positions so corrections don't cascade.
+            snapshot: dict[str, list[float]] = {
+                pid: list(pr.fileRef.position)
+                for pid, pr in sm_pid_lookup.items()
+            }
+
             for pr in sm.partRefs:
-                if not hasattr(pr, "partIntentMeta"):
+                if not pr.fileRef.ref.endswith(".dat"):
                     continue
-                self._correct_part(pr, pid_lookup)
+                if not hasattr(pr, "partIntentMeta") or not pr.partIntentMeta.relations:
+                    continue
+                self._correct_part(pr, sm_pid_lookup, snapshot)
 
         return str(mpdModel)
 
-    def _correct_part(self, partRef: lpm.PartRef,
-                      pid_lookup: dict[str, lpm.PartRef]) -> None:
+    def _correct_part(
+        self,
+        partRef: lpm.PartRef,
+        sm_pid_lookup: dict[str, lpm.PartRef],
+        snapshot: dict[str, list[float]],
+    ) -> None:
         intent = partRef.partIntentMeta
         fr = partRef.fileRef
 
@@ -227,51 +257,47 @@ class LDrawIntentCorrector:
             click.echo(f"Warning: no bbox for '{fr.ref}', skipping", err=True)
             return
 
-        pn_rot = np.array(fr.matrix)
-        # Rotation-only corners (at origin). Adding pos gives the world corners.
-        # This is computed once; each arrow modifies only one axis of pos.
-        pn_corners = _rotated_corners(pn_rot, pn_bbox)  # (8, 3)
+        # Rotation-only corners at the local origin.
+        pn_rot_corners = _rotated_corners(np.array(fr.matrix), pn_bbox)  # (8, 3)
 
-        pos = list(fr.position)  # mutable copy — we solve for the translation
+        pos = list(fr.position)  # mutable; we update it axis by axis
+
+        # First-relation-wins per axis: skip redundant arrows on the same axis.
+        resolved_axes: set[int] = set()
 
         for arrow, pk_pid in intent.relations:
-            pk_ref = pid_lookup.get(pk_pid)
+            axis = _ARROW_AXIS.get(arrow)
+            if axis is None or axis in resolved_axes:
+                continue
+
+            pk_ref = sm_pid_lookup.get(pk_pid)
             if pk_ref is None:
-                click.echo(f"Warning: '{pk_pid}' not found, skipping relation", err=True)
-                continue
+                continue  # cross-submodel or unknown — skip silently
 
-            pk_fr = pk_ref.fileRef
-            pk_bbox = self._bbox_for(pk_fr.ref)
+            pk_bbox = self._bbox_for(pk_ref.fileRef.ref)
             if pk_bbox is None:
-                click.echo(f"Warning: no bbox for '{pk_fr.ref}', skipping relation", err=True)
                 continue
 
-            pk_wabb = _world_aabb(pk_fr.position, np.array(pk_fr.matrix), pk_bbox)
+            # Use the snapshotted (pre-correction) position for Pk.
+            pk_pos = snapshot[pk_pid]
+            pk_wabb = _world_aabb(pk_pos, np.array(pk_ref.fileRef.matrix), pk_bbox)
 
-            # For each arrow: find the axis to adjust and the touching-face formula.
-            # pn_corners are in rotated-local frame at origin, so:
-            #   world_corner.axis = pn_corners[:, axis] + pos[axis]
-            # Solve for pos[axis] so that Pn's face exactly meets Pk's opposite face.
-            if arrow == "↑":
-                # Pn above Pk: Pn's bottom (+Y) face touches Pk's top (−Y) face
-                pos[1] = float(pk_wabb["min"][1]) - float(pn_corners[:, 1].max())
-            elif arrow == "↓":
-                # Pn below Pk: Pn's top (−Y) face touches Pk's bottom (+Y) face
-                pos[1] = float(pk_wabb["max"][1]) - float(pn_corners[:, 1].min())
-            elif arrow == "→":
-                # Pn right of Pk: Pn's left (−X) face touches Pk's right (+X) face
-                pos[0] = float(pk_wabb["max"][0]) - float(pn_corners[:, 0].min())
-            elif arrow == "←":
-                # Pn left of Pk: Pn's right (+X) face touches Pk's left (−X) face
-                pos[0] = float(pk_wabb["min"][0]) - float(pn_corners[:, 0].max())
-            elif arrow == "↗":
-                # Pn in front of Pk: Pn's back (+Z) face touches Pk's front (−Z) face
-                pos[2] = float(pk_wabb["min"][2]) - float(pn_corners[:, 2].max())
-            elif arrow == "↙":
-                # Pn behind Pk: Pn's front (−Z) face touches Pk's back (+Z) face
-                pos[2] = float(pk_wabb["max"][2]) - float(pn_corners[:, 2].min())
+            if arrow == "↑":    # Pn above Pk: Pn's bottom (+Y) meets Pk's top (−Y)
+                pos[1] = float(pk_wabb["min"][1]) - float(pn_rot_corners[:, 1].max())
+            elif arrow == "↓":  # Pn below Pk: Pn's top (−Y) meets Pk's bottom (+Y)
+                pos[1] = float(pk_wabb["max"][1]) - float(pn_rot_corners[:, 1].min())
+            elif arrow == "→":  # Pn right of Pk: Pn's left (−X) meets Pk's right (+X)
+                pos[0] = float(pk_wabb["max"][0]) - float(pn_rot_corners[:, 0].min())
+            elif arrow == "←":  # Pn left of Pk: Pn's right (+X) meets Pk's left (−X)
+                pos[0] = float(pk_wabb["min"][0]) - float(pn_rot_corners[:, 0].max())
+            elif arrow == "↗":  # Pn in front: Pn's back (+Z) meets Pk's front (−Z)
+                pos[2] = float(pk_wabb["min"][2]) - float(pn_rot_corners[:, 2].max())
+            elif arrow == "↙":  # Pn behind: Pn's front (−Z) meets Pk's back (+Z)
+                pos[2] = float(pk_wabb["max"][2]) - float(pn_rot_corners[:, 2].min())
 
-        fr.position = [round(v) for v in pos]
+            resolved_axes.add(axis)
+
+        fr.position = [round(float(v)) for v in pos]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
