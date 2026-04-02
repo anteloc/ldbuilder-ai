@@ -1,0 +1,2944 @@
+0 FILE corner_dome_building.ldr
+0 corner_dome_building
+0 Name: corner_dome_building.ldr
+0 Author: lego_builder.py
+0 !LDRAW_ORG Unofficial_Model
+
+0 // corner_building > level_0 > floor_0 > floor_0_south row_0
+1 19 0.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_0
+1 19 0.0 0.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south Door Frame 1x4x6
+1 72 100.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 60596.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_0
+1 19 200.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_0
+1 19 280.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_0
+1 19 360.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_0
+1 19 440.0 0.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_0
+1 19 480.0 0.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_0
+1 19 480.0 0.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west Door Frame 1x4x6
+1 72 0.0 0.0 100.0 0 0 1 0 1 0 -1 0 0 60596.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_0
+1 19 480.0 0.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_0
+1 19 0.0 0.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_0
+1 19 480.0 0.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_0
+1 19 0.0 0.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east Door Frame 1x4x6
+1 72 480.0 0.0 300.0 0 0 -1 0 1 0 1 0 0 60596.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_0
+1 19 0.0 0.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_0
+1 19 480.0 0.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_0
+1 19 0.0 0.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_0
+1 19 0.0 0.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_0
+1 19 40.0 0.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_0
+1 19 120.0 0.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_0
+1 19 200.0 0.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north Door Frame 1x4x6
+1 72 300.0 0.0 480.0 1 0 0 0 1 0 0 0 1 60596.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_0
+1 19 400.0 0.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 0.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 40.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 200.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 280.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 360.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_1
+1 19 440.0 -24.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 40.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 400.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_1
+1 19 0.0 -24.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_1
+1 19 480.0 -24.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 0.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 40.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 120.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 200.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 400.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_1
+1 19 440.0 -24.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_0 > floor_0 > floor_0_south row_2
+1 19 0.0 -48.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_2
+1 19 0.0 -48.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_2
+1 19 200.0 -48.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_2
+1 19 280.0 -48.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_2
+1 19 360.0 -48.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_2
+1 19 440.0 -48.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_2
+1 19 480.0 -48.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_2
+1 19 480.0 -48.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_2
+1 19 480.0 -48.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_2
+1 19 0.0 -48.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_2
+1 19 480.0 -48.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_2
+1 19 0.0 -48.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_2
+1 19 0.0 -48.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_2
+1 19 480.0 -48.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_2
+1 19 0.0 -48.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_2
+1 19 0.0 -48.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_2
+1 19 40.0 -48.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_2
+1 19 120.0 -48.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_2
+1 19 200.0 -48.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_2
+1 19 400.0 -48.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 0.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 40.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 120.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 200.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 280.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 360.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_3
+1 19 440.0 -72.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_3
+1 19 0.0 -72.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_3
+1 19 480.0 -72.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 0.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 40.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 120.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 200.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 280.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 360.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_3
+1 19 440.0 -72.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 0.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 80.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 160.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 240.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 320.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_south row_4
+1 19 400.0 -96.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_west row_4
+1 19 0.0 -96.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_east row_4
+1 19 480.0 -96.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 0.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 80.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 160.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 240.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 320.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_0 > floor_0 > floor_0_north row_4
+1 19 400.0 -96.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 0.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 80.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 160.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 240.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 320.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_0 > slab_0
+1 72 400.0 -120.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 0.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 80.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 160.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 240.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 320.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_0
+1 71 400.0 -128.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_0
+1 71 0.0 -128.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_0
+1 71 480.0 -128.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 0.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 80.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 160.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 240.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 320.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_0
+1 71 400.0 -128.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 0.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south Window 1x2x3
+1 47 40.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 80.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south Window 1x2x3
+1 47 140.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 180.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south Window 1x2x3
+1 47 220.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 260.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south Window 1x2x3
+1 47 300.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 340.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south Window 1x2x3
+1 47 400.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_1
+1 71 440.0 -152.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west Window 1x2x3
+1 47 0.0 -152.0 40.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east Window 1x2x3
+1 47 480.0 -152.0 40.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west Window 1x2x3
+1 47 0.0 -152.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east Window 1x2x3
+1 47 480.0 -152.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west Window 1x2x3
+1 47 0.0 -152.0 220.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east Window 1x2x3
+1 47 480.0 -152.0 220.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west Window 1x2x3
+1 47 0.0 -152.0 300.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east Window 1x2x3
+1 47 480.0 -152.0 300.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west Window 1x2x3
+1 47 0.0 -152.0 400.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east Window 1x2x3
+1 47 480.0 -152.0 400.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_1
+1 71 0.0 -152.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_1
+1 71 480.0 -152.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 0.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north Window 1x2x3
+1 47 40.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 80.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north Window 1x2x3
+1 47 140.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 180.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north Window 1x2x3
+1 47 220.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 260.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north Window 1x2x3
+1 47 300.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 340.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north Window 1x2x3
+1 47 400.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_1
+1 71 440.0 -152.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 0.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 80.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 180.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 260.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 340.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_2
+1 71 440.0 -176.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_2
+1 71 0.0 -176.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_2
+1 71 480.0 -176.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 0.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 80.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 180.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 260.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 340.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_2
+1 71 440.0 -176.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 0.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 80.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 180.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 260.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 340.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_3
+1 71 440.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_3
+1 71 0.0 -200.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_3
+1 71 480.0 -200.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 0.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 80.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 180.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 260.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 340.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_3
+1 71 440.0 -200.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 0.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 80.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 160.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 240.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 320.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south ledge
+1 71 400.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 0.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 80.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 160.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 240.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 320.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_south row_4
+1 71 400.0 -224.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 160.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 240.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 320.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west ledge
+1 71 -20.0 -224.0 400.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_west row_4
+1 71 0.0 -224.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east ledge
+1 71 460.0 -224.0 400.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_east row_4
+1 71 480.0 -224.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 0.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 80.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 160.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 240.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 320.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north ledge
+1 71 400.0 -224.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 0.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 80.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 160.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 240.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 320.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_1 > floor_1 > floor_1_north row_4
+1 71 400.0 -224.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 0.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 80.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 160.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 240.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 320.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_1 > slab_1
+1 72 400.0 -248.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 0.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 80.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 160.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 240.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 320.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_0
+1 71 400.0 -256.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_0
+1 71 0.0 -256.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_0
+1 71 480.0 -256.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 0.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 80.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 160.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 240.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 320.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_0
+1 71 400.0 -256.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 0.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south Window 1x2x3
+1 47 40.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 80.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south Window 1x2x3
+1 47 140.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 180.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south Window 1x2x3
+1 47 220.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 260.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south Window 1x2x3
+1 47 300.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 340.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south Window 1x2x3
+1 47 400.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_1
+1 71 440.0 -280.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west Window 1x2x3
+1 47 0.0 -280.0 40.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east Window 1x2x3
+1 47 480.0 -280.0 40.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west Window 1x2x3
+1 47 0.0 -280.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east Window 1x2x3
+1 47 480.0 -280.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west Window 1x2x3
+1 47 0.0 -280.0 220.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east Window 1x2x3
+1 47 480.0 -280.0 220.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west Window 1x2x3
+1 47 0.0 -280.0 300.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east Window 1x2x3
+1 47 480.0 -280.0 300.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west Window 1x2x3
+1 47 0.0 -280.0 400.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east Window 1x2x3
+1 47 480.0 -280.0 400.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_1
+1 71 0.0 -280.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_1
+1 71 480.0 -280.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 0.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north Window 1x2x3
+1 47 40.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 80.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north Window 1x2x3
+1 47 140.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 180.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north Window 1x2x3
+1 47 220.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 260.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north Window 1x2x3
+1 47 300.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 340.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north Window 1x2x3
+1 47 400.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_1
+1 71 440.0 -280.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 0.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 80.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 180.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 260.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 340.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_2
+1 71 440.0 -304.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_2
+1 71 0.0 -304.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_2
+1 71 480.0 -304.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 0.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 80.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 180.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 260.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 340.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_2
+1 71 440.0 -304.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 0.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 80.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 180.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 260.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 340.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_3
+1 71 440.0 -328.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_3
+1 71 0.0 -328.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_3
+1 71 480.0 -328.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 0.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 80.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 180.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 260.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 340.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_3
+1 71 440.0 -328.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 0.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 80.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 160.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 240.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 320.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south ledge
+1 71 400.0 -352.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 0.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 80.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 160.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 240.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 320.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_south row_4
+1 71 400.0 -352.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 160.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 240.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 320.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west ledge
+1 71 -20.0 -352.0 400.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_west row_4
+1 71 0.0 -352.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east ledge
+1 71 460.0 -352.0 400.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_east row_4
+1 71 480.0 -352.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 0.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 80.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 160.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 240.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 320.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north ledge
+1 71 400.0 -352.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 0.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 80.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 160.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 240.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 320.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_2 > floor_2 > floor_2_north row_4
+1 71 400.0 -352.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 0.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 80.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 160.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 240.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 320.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_2 > slab_2
+1 72 400.0 -376.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 0.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 80.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 160.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 240.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 320.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_0
+1 71 400.0 -384.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_0
+1 71 0.0 -384.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_0
+1 71 480.0 -384.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 0.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 80.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 160.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 240.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 320.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_0
+1 71 400.0 -384.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 0.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south Window 1x2x3
+1 47 40.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 80.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south Window 1x2x3
+1 47 140.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 180.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south Window 1x2x3
+1 47 220.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 260.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south Window 1x2x3
+1 47 300.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 340.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south Window 1x2x3
+1 47 400.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_1
+1 71 440.0 -408.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west Window 1x2x3
+1 47 0.0 -408.0 40.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east Window 1x2x3
+1 47 480.0 -408.0 40.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west Window 1x2x3
+1 47 0.0 -408.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east Window 1x2x3
+1 47 480.0 -408.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west Window 1x2x3
+1 47 0.0 -408.0 220.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east Window 1x2x3
+1 47 480.0 -408.0 220.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west Window 1x2x3
+1 47 0.0 -408.0 300.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east Window 1x2x3
+1 47 480.0 -408.0 300.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west Window 1x2x3
+1 47 0.0 -408.0 400.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east Window 1x2x3
+1 47 480.0 -408.0 400.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_1
+1 71 0.0 -408.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_1
+1 71 480.0 -408.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 0.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north Window 1x2x3
+1 47 40.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 80.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north Window 1x2x3
+1 47 140.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 180.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north Window 1x2x3
+1 47 220.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 260.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north Window 1x2x3
+1 47 300.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 340.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north Window 1x2x3
+1 47 400.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_1
+1 71 440.0 -408.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 0.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 80.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 180.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 260.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 340.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_2
+1 71 440.0 -432.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_2
+1 71 0.0 -432.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_2
+1 71 480.0 -432.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 0.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 80.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 180.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 260.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 340.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_2
+1 71 440.0 -432.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 0.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 80.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 180.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 260.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 340.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_3
+1 71 440.0 -456.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_3
+1 71 0.0 -456.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_3
+1 71 480.0 -456.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 0.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 80.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 180.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 260.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 340.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_3
+1 71 440.0 -456.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 0.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 80.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 160.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 240.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 320.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south ledge
+1 71 400.0 -480.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 0.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 80.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 160.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 240.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 320.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_south row_4
+1 71 400.0 -480.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 160.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 240.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 320.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west ledge
+1 71 -20.0 -480.0 400.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_west row_4
+1 71 0.0 -480.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east ledge
+1 71 460.0 -480.0 400.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_east row_4
+1 71 480.0 -480.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 0.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 80.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 160.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 240.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 320.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north ledge
+1 71 400.0 -480.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 0.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 80.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 160.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 240.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 320.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_3 > floor_3 > floor_3_north row_4
+1 71 400.0 -480.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 0.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 80.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 160.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 240.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 320.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_3 > slab_3
+1 72 400.0 -504.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 0.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 80.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 160.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 240.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 320.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_0
+1 71 400.0 -512.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_0
+1 71 0.0 -512.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_0
+1 71 480.0 -512.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 0.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 80.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 160.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 240.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 320.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_0
+1 71 400.0 -512.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 0.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south Window 1x2x3
+1 47 40.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 80.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south Window 1x2x3
+1 47 140.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 180.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south Window 1x2x3
+1 47 220.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 260.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south Window 1x2x3
+1 47 300.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 340.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south Window 1x2x3
+1 47 400.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_1
+1 71 440.0 -536.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west Window 1x2x3
+1 47 0.0 -536.0 40.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east Window 1x2x3
+1 47 480.0 -536.0 40.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west Window 1x2x3
+1 47 0.0 -536.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east Window 1x2x3
+1 47 480.0 -536.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west Window 1x2x3
+1 47 0.0 -536.0 220.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east Window 1x2x3
+1 47 480.0 -536.0 220.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west Window 1x2x3
+1 47 0.0 -536.0 300.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east Window 1x2x3
+1 47 480.0 -536.0 300.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west Window 1x2x3
+1 47 0.0 -536.0 400.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east Window 1x2x3
+1 47 480.0 -536.0 400.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_1
+1 71 0.0 -536.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_1
+1 71 480.0 -536.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 0.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north Window 1x2x3
+1 47 40.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 80.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north Window 1x2x3
+1 47 140.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 180.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north Window 1x2x3
+1 47 220.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 260.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north Window 1x2x3
+1 47 300.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 340.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north Window 1x2x3
+1 47 400.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_1
+1 71 440.0 -536.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 0.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 80.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 180.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 260.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 340.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_2
+1 71 440.0 -560.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_2
+1 71 0.0 -560.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_2
+1 71 480.0 -560.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 0.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 80.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 180.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 260.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 340.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_2
+1 71 440.0 -560.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 0.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 80.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 180.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 260.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 340.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_3
+1 71 440.0 -584.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_3
+1 71 0.0 -584.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_3
+1 71 480.0 -584.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 0.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 80.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 180.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 260.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 340.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_3
+1 71 440.0 -584.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 0.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 80.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 160.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 240.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 320.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south ledge
+1 71 400.0 -608.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 0.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 80.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 160.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 240.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 320.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_south row_4
+1 71 400.0 -608.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 160.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 240.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 320.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west ledge
+1 71 -20.0 -608.0 400.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_west row_4
+1 71 0.0 -608.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east ledge
+1 71 460.0 -608.0 400.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_east row_4
+1 71 480.0 -608.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 0.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 80.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 160.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 240.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 320.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north ledge
+1 71 400.0 -608.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 0.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 80.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 160.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 240.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 320.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_4 > floor_4 > floor_4_north row_4
+1 71 400.0 -608.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 0.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 80.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 160.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 240.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 320.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_4 > slab_4
+1 72 400.0 -632.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 0.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 80.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 160.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 240.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 320.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_0
+1 71 400.0 -640.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_0
+1 71 0.0 -640.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_0
+1 71 480.0 -640.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 0.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 80.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 160.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 240.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 320.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_0
+1 71 400.0 -640.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 0.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south Window 1x2x3
+1 47 40.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 80.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south Window 1x2x3
+1 47 140.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 180.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south Window 1x2x3
+1 47 220.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 260.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south Window 1x2x3
+1 47 300.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 340.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south Window 1x2x3
+1 47 400.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_1
+1 71 440.0 -664.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west Window 1x2x3
+1 47 0.0 -664.0 40.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east Window 1x2x3
+1 47 480.0 -664.0 40.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west Window 1x2x3
+1 47 0.0 -664.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east Window 1x2x3
+1 47 480.0 -664.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west Window 1x2x3
+1 47 0.0 -664.0 220.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east Window 1x2x3
+1 47 480.0 -664.0 220.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west Window 1x2x3
+1 47 0.0 -664.0 300.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east Window 1x2x3
+1 47 480.0 -664.0 300.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west Window 1x2x3
+1 47 0.0 -664.0 400.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east Window 1x2x3
+1 47 480.0 -664.0 400.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_1
+1 71 0.0 -664.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_1
+1 71 480.0 -664.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 0.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north Window 1x2x3
+1 47 40.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 80.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north Window 1x2x3
+1 47 140.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 180.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north Window 1x2x3
+1 47 220.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 260.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north Window 1x2x3
+1 47 300.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 340.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north Window 1x2x3
+1 47 400.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 60593c01.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_1
+1 71 440.0 -664.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 0.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 80.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 180.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 260.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 340.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_2
+1 71 440.0 -688.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_2
+1 71 0.0 -688.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_2
+1 71 480.0 -688.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 0.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 80.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 180.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 260.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 340.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_2
+1 71 440.0 -688.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 0.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 0.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 80.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 180.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 260.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 340.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_3
+1 71 440.0 -712.0 0.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 0.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 80.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 80.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 180.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 260.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 340.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 340.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_3
+1 71 0.0 -712.0 440.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_3
+1 71 480.0 -712.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 0.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 80.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 180.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 260.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 340.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_3
+1 71 440.0 -712.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 0.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 80.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 160.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 240.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 320.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south ledge
+1 71 400.0 -736.0 -20.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 0.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 80.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 160.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 240.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 320.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_south row_4
+1 71 400.0 -736.0 0.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 160.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 240.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 320.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west ledge
+1 71 -20.0 -736.0 400.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_west row_4
+1 71 0.0 -736.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east ledge
+1 71 460.0 -736.0 400.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_east row_4
+1 71 480.0 -736.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 0.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 80.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 160.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 240.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 320.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north ledge
+1 71 400.0 -736.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 0.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 80.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 160.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 240.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 320.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > level_5 > floor_5 > floor_5_north row_4
+1 71 400.0 -736.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 0.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 40.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 80.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 160.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 200.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 240.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 280.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 320.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 360.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 400.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 0.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 80.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 160.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 240.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 320.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // corner_building > level_5 > slab_5
+1 72 400.0 -760.0 440.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // corner_building > mansard_top > mansard_top_south row_0
+1 72 40.0 -768.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_0
+1 72 40.0 -768.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_south row_0
+1 72 120.0 -768.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_south row_0
+1 72 200.0 -768.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_south row_0
+1 72 280.0 -768.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_south row_0
+1 72 360.0 -768.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_0
+1 72 440.0 -768.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_0
+1 72 40.0 -768.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_0
+1 72 440.0 -768.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_0
+1 72 40.0 -768.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_0
+1 72 440.0 -768.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_0
+1 72 40.0 -768.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_0
+1 72 440.0 -768.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_0
+1 72 40.0 -768.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_0
+1 72 440.0 -768.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_0
+1 72 40.0 -768.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_0
+1 72 120.0 -768.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_0
+1 72 200.0 -768.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_0
+1 72 280.0 -768.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_0
+1 72 360.0 -768.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > mansard_top > mansard_top_south row_1
+1 72 40.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > mansard_top > mansard_top_west row_1
+1 72 40.0 -792.0 40.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > mansard_top > mansard_top_south row_1
+1 72 80.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // corner_building > mansard_top > mansard_top_south Window 1x2x2
+1 47 120.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_south row_1
+1 72 160.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > mansard_top > mansard_top_south Window 1x2x2
+1 47 220.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_south row_1
+1 72 260.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > mansard_top > mansard_top_south Window 1x2x2
+1 47 320.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_south row_1
+1 72 360.0 -792.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_1
+1 72 440.0 -792.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_1
+1 72 40.0 -792.0 80.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // corner_building > mansard_top > mansard_top_west Window 1x2x2
+1 47 40.0 -792.0 120.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_east Window 1x2x2
+1 47 440.0 -792.0 120.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_west row_1
+1 72 40.0 -792.0 160.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_east row_1
+1 72 440.0 -792.0 160.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_west Window 1x2x2
+1 47 40.0 -792.0 220.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_east Window 1x2x2
+1 47 440.0 -792.0 220.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_west row_1
+1 72 40.0 -792.0 260.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_east row_1
+1 72 440.0 -792.0 260.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_west Window 1x2x2
+1 47 40.0 -792.0 320.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_east Window 1x2x2
+1 47 440.0 -792.0 320.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_west row_1
+1 72 40.0 -792.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_1
+1 72 440.0 -792.0 360.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > mansard_top > mansard_top_east row_1
+1 72 440.0 -792.0 400.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // corner_building > mansard_top > mansard_top_north row_1
+1 72 40.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north Window 1x2x2
+1 47 120.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_north row_1
+1 72 160.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > mansard_top > mansard_top_north Window 1x2x2
+1 47 220.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_north row_1
+1 72 260.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > mansard_top > mansard_top_north Window 1x2x2
+1 47 320.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 60592c01.dat
+0 // corner_building > mansard_top > mansard_top_north row_1
+1 72 360.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // corner_building > mansard_top > mansard_top_north row_1
+1 72 400.0 -792.0 440.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // corner_building > mansard_top > mansard_top_south row_2
+1 72 40.0 -816.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_2
+1 72 40.0 -816.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_south row_2
+1 72 160.0 -816.0 40.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > mansard_top > mansard_top_south row_2
+1 72 260.0 -816.0 40.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // corner_building > mansard_top > mansard_top_south row_2
+1 72 360.0 -816.0 40.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_2
+1 72 440.0 -816.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_west row_2
+1 72 40.0 -816.0 160.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_east row_2
+1 72 440.0 -816.0 160.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_west row_2
+1 72 40.0 -816.0 260.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_east row_2
+1 72 440.0 -816.0 260.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // corner_building > mansard_top > mansard_top_west row_2
+1 72 40.0 -816.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_east row_2
+1 72 440.0 -816.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_2
+1 72 40.0 -816.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // corner_building > mansard_top > mansard_top_north row_2
+1 72 160.0 -816.0 440.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > mansard_top > mansard_top_north row_2
+1 72 260.0 -816.0 440.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // corner_building > mansard_top > mansard_top_north row_2
+1 72 360.0 -816.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // corner_building > dome_core row_0
+1 72 240.0 -840.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // corner_building > dome_core row_1
+1 72 240.0 -864.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // corner_building > dome_core row_2
+1 72 240.0 -888.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // corner_building > dome_core row_3
+1 72 240.0 -912.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // corner_building > dome_core row_4
+1 72 240.0 -936.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 // corner_building > dome_core row_5
+1 72 240.0 -960.0 240.0 1 0 0 0 1 0 0 0 1 3005.dat
+
+0 NOFILE

@@ -629,7 +629,18 @@ class Wall:
                         continue
 
                     # Check all studs this brick would cover are solid
-                    if all(self.grid[cx][y_plate] for cx in range(x, x + bw)):
+                    brick_height = brick.height_plates
+
+                    # Ensure the brick fits vertically within wall bounds
+                    if y_plate + brick_height > self.height_plates:
+                        continue
+                    
+                    # Check full brick volume (width × height), not just 1 plate row
+                    if all(
+                        self.grid[cx][cy]
+                        for cx in range(x, x + bw)
+                        for cy in range(y_plate, y_plate + brick_height)
+                    ):
                         comment = f"{comment_prefix}{self.name} row_{brick_row}"
                         placements.append(BrickPlacement(
                             part=brick,
@@ -832,7 +843,7 @@ class Box:
         for p in self.north.to_placements(prefix):
             result.append(BrickPlacement(
                 part=p.part,
-                x=self.width - p.x,            # mirror along X
+                x=self.width - p.x - p.part.width_studs,            # mirror along X
                 y=p.y,
                 z=self.depth + p.z,             # at far edge + any ledge offset
                 rotation=FACING_TO_ROTATION["north"],
@@ -860,7 +871,7 @@ class Box:
                 part=p.part,
                 x=self.width + p.z,             # at right edge + ledge offset
                 y=p.y,
-                z=self.depth - p.x,             # mirror along Z
+                z=self.depth - p.x - p.part.width_studs,            # mirror along Z
                 rotation=FACING_TO_ROTATION["east"],
                 color=p.color,
                 comment=p.comment,
