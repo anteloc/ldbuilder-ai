@@ -42,16 +42,6 @@ def to_ldraw_coords(x_studs: float, y_plates: float, z_studs: float) -> tuple[fl
     LDraw Y axis is inverted: negative = up. Our y_plates is positive-up,
     so we negate when converting.
     """
-    # TODO BUG: This function converts corner-based internal coordinates
-    # (where x,z refer to the brick's minimum corner) straight to LDU, but
-    # LDraw parts have their origin at the CENTER of the part (on X and Z).
-    # This means the LDraw position should be offset by +half the part's
-    # width in X and +half the part's depth in Z (in stud units, then
-    # multiplied by LDU_PER_STUD).  Without this correction every brick is
-    # placed half-a-brick off from where it should be.
-    # Because the shift depends on the part's dimensions AND its rotation,
-    # this fix belongs in to_ldraw_line() (which knows the part and rotation),
-    # not here.  See the companion TODO in BrickPlacement.to_ldraw_line().
     lx = x_studs * LDU_PER_STUD
     ly = -y_plates * LDU_PER_PLATE  # flip Y: our up is LDraw's negative
     lz = z_studs * LDU_PER_STUD
@@ -347,21 +337,26 @@ class BrickPlacement:
             0 // wall_north row_3
             1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3001.dat
         """
+        part = self.part
         rotation = self.rotation % 360
         if rotation in (90, 270):
-            adjusted_x = self.x + self.part.depth_studs / 2
-            adjusted_z = self.z + self.part.width_studs / 2
+            rotated_width_studs = part.depth_studs
+            rotated_depth_studs = part.width_studs
         else:
-            adjusted_x = self.x + self.part.width_studs / 2
-            adjusted_z = self.z + self.part.depth_studs / 2
+            rotated_width_studs = part.width_studs
+            rotated_depth_studs = part.depth_studs
 
-        lx, ly, lz = to_ldraw_coords(adjusted_x, self.y, adjusted_z)
+        lx, ly, lz = to_ldraw_coords(
+            self.x + rotated_width_studs * 0.5,
+            self.y,
+            self.z + rotated_depth_studs * 0.5,
+        )
         matrix = ROTATION_MATRICES.get(rotation, ROTATION_MATRICES[0])
 
         lines = []
         if self.comment:
             lines.append(f"0 // {self.comment}")
-        lines.append(f"1 {self.color} {lx:.1f} {ly:.1f} {lz:.1f} {matrix} {self.part.filename}")
+        lines.append(f"1 {self.color} {lx:.1f} {ly:.1f} {lz:.1f} {matrix} {part.filename}")
         return "\n".join(lines)
 
 
