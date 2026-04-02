@@ -141,9 +141,9 @@ class LDrawAnnotator:
 
         cur = self.conn.execute("""
                                     SELECT *
-                                    FROM PART_BBOXES
-                                    WHERE alias = ?
-                                """, (sanitized_alias,))
+                                    FROM PART_BBOXES PB
+                                    WHERE UPPER(PB.alias) IN (UPPER(?), UPPER(?), UPPER(?), UPPER(?))
+                                """, (unix_alias, sanitized_alias, win_alias_1, win_alias_2))
         
         p_bbox = cur.fetchone()
         cur.close()
@@ -176,7 +176,7 @@ class LDrawAnnotator:
         # search for the information on the DB for references to external parts
         if not partRef.internal:
             p_info, p_bbox = self.part_info_bbox(fileRef.ref)
-            description = p_info.get("description", "(missing description)")
+            description = p_info.get("description", "submodel reference")
             dimensions = dimensions_str(p_bbox) if p_bbox else "(missing dimensions)"
         else:
             description = fileRef.ref # set for internal references, better than duplicating description from the referenced subModel
