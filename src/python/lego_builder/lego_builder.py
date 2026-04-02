@@ -347,27 +347,16 @@ class BrickPlacement:
             0 // wall_north row_3
             1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3001.dat
         """
-        # TODO BUG: Internal coords are corner-based (x,z = min corner of the
-        # brick in world space) but LDraw expects the part's origin, which for
-        # standard bricks/plates is at the CENTER of the top face.
-        #
-        # Before calling to_ldraw_coords, we should add half the part's world-
-        # space extent so the LDraw coordinate points to the part center:
-        #
-        #   For rotation 0 or 180 (width along X, depth along Z):
-        #     adjusted_x = self.x + self.part.width_studs / 2
-        #     adjusted_z = self.z + self.part.depth_studs / 2
-        #
-        #   For rotation 90 or 270 (width along Z, depth along X):
-        #     adjusted_x = self.x + self.part.depth_studs / 2
-        #     adjusted_z = self.z + self.part.width_studs / 2
-        #
-        # Without this, every brick is placed half-a-brick off its intended
-        # position.  This is the ROOT CAUSE of the one-stud-off defects on
-        # walls, because the error compounds differently for each facing
-        # direction (some cancel out by luck, others stack).
-        lx, ly, lz = to_ldraw_coords(self.x, self.y, self.z)
-        matrix = ROTATION_MATRICES.get(self.rotation % 360, ROTATION_MATRICES[0])
+        rotation = self.rotation % 360
+        if rotation in (90, 270):
+            adjusted_x = self.x + self.part.depth_studs / 2
+            adjusted_z = self.z + self.part.width_studs / 2
+        else:
+            adjusted_x = self.x + self.part.width_studs / 2
+            adjusted_z = self.z + self.part.depth_studs / 2
+
+        lx, ly, lz = to_ldraw_coords(adjusted_x, self.y, adjusted_z)
+        matrix = ROTATION_MATRICES.get(rotation, ROTATION_MATRICES[0])
 
         lines = []
         if self.comment:

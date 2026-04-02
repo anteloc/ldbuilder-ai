@@ -7,7 +7,7 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_0
 1 71 40.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_0
-1 71 20.0 0.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 0.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south Door Frame 1x4x6
 1 72 120.0 0.0 10.0 -1 0 0 0 1 0 0 0 -1 60596.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_0
@@ -23,27 +23,27 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_0
 1 71 500.0 0.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_0
-1 71 500.0 0.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 0.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west Door Frame 1x4x6
-1 72 10.0 0.0 120.0 0 0 1 0 1 0 -1 0 0 60596.dat
+1 72 40.0 0.0 90.0 0 0 1 0 1 0 -1 0 0 60596.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_0
-1 71 500.0 0.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 0.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_0
 1 71 20.0 0.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west Door Frame 1x4x6
-1 72 10.0 0.0 240.0 0 0 1 0 1 0 -1 0 0 60596.dat
+1 72 40.0 0.0 210.0 0 0 1 0 1 0 -1 0 0 60596.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east Door Frame 1x4x6
-1 72 490.0 0.0 240.0 0 0 -1 0 1 0 1 0 0 60596.dat
+1 72 520.0 0.0 210.0 0 0 -1 0 1 0 1 0 0 60596.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_0
-1 71 20.0 0.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 0.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_0
 1 71 500.0 0.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east Door Frame 1x4x6
-1 72 490.0 0.0 360.0 0 0 -1 0 1 0 1 0 0 60596.dat
+1 72 520.0 0.0 330.0 0 0 -1 0 1 0 1 0 0 60596.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_0
-1 71 20.0 0.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 0.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_0
-1 71 500.0 0.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 0.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_0
 1 71 20.0 0.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_north row_0
@@ -80,17 +80,17 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_1
 1 71 20.0 -24.0 60.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_1
-1 71 500.0 -24.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -24.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_1
-1 71 500.0 -24.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -24.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_1
 1 71 20.0 -24.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_1
-1 71 20.0 -24.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -24.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_1
 1 71 500.0 -24.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_1
-1 71 20.0 -24.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -24.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_1
 1 71 500.0 -24.0 420.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_1
@@ -113,7 +113,7 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_2
 1 71 40.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_2
-1 71 20.0 -48.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -48.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_2
 1 71 180.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_2
@@ -125,19 +125,19 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_2
 1 71 500.0 -48.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_2
-1 71 500.0 -48.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -48.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_2
-1 71 500.0 -48.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -48.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_2
 1 71 20.0 -48.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_2
-1 71 20.0 -48.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -48.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_2
 1 71 500.0 -48.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_2
-1 71 20.0 -48.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -48.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_2
-1 71 500.0 -48.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -48.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_2
 1 71 20.0 -48.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_north row_2
@@ -170,17 +170,17 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_3
 1 71 20.0 -72.0 60.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_3
-1 71 500.0 -72.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -72.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_3
-1 71 500.0 -72.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -72.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_3
 1 71 20.0 -72.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_3
-1 71 20.0 -72.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -72.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_3
 1 71 500.0 -72.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_3
-1 71 20.0 -72.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -72.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_3
 1 71 500.0 -72.0 420.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_3
@@ -203,7 +203,7 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_4
 1 71 40.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_4
-1 71 20.0 -96.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -96.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_4
 1 71 180.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_4
@@ -215,19 +215,19 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_4
 1 71 500.0 -96.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_4
-1 71 500.0 -96.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -96.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_4
-1 71 500.0 -96.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -96.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_4
 1 71 20.0 -96.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_4
-1 71 20.0 -96.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -96.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_4
 1 71 500.0 -96.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_4
-1 71 20.0 -96.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -96.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_4
-1 71 500.0 -96.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -96.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_4
 1 71 20.0 -96.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_north row_4
@@ -254,7 +254,7 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south ledge
 1 15 440.0 -120.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_5
 1 71 20.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
@@ -270,43 +270,43 @@
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_south row_5
 1 71 460.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_5
 1 71 500.0 -120.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
 1 71 20.0 -120.0 60.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_5
-1 71 500.0 -120.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -120.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_5
-1 71 500.0 -120.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -120.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
 1 71 20.0 -120.0 180.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
-1 71 20.0 -120.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -120.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_5
 1 71 500.0 -120.0 300.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
-1 71 20.0 -120.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -120.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west ledge
-1 15 0.0 -120.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -120.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east ledge
-1 15 480.0 -120.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -120.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_east row_5
 1 71 500.0 -120.0 420.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_0 > floor_0 > floor_0_west row_5
@@ -486,7 +486,7 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_0
 1 71 40.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_0
 1 71 120.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_0
@@ -498,27 +498,27 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_0
 1 71 440.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_0
-1 71 20.0 -152.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -152.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_0
-1 71 500.0 -152.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -152.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_north row_0
 1 71 40.0 -152.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_north row_0
@@ -563,49 +563,49 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 500.0 -176.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 10.0 -176.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 490.0 -176.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 20.0 -176.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 500.0 -176.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 20.0 -176.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 500.0 -176.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 20.0 -176.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 500.0 -176.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 10.0 -176.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
 1 71 490.0 -176.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west Window 1x2x3
-1 47 10.0 -176.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -176.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east Window 1x2x3
-1 47 490.0 -176.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -176.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_1
 1 71 20.0 -176.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_1
@@ -754,7 +754,7 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_4
 1 71 40.0 -248.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_4
 1 71 120.0 -248.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_4
@@ -766,27 +766,27 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_4
 1 71 440.0 -248.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_4
-1 71 20.0 -248.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -248.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_4
-1 71 500.0 -248.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -248.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_north row_4
 1 71 40.0 -248.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_north row_4
@@ -813,7 +813,7 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south ledge
 1 15 440.0 -272.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_5
 1 71 20.0 -272.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
@@ -831,49 +831,49 @@
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_south row_5
 1 71 460.0 -272.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
 1 71 500.0 -272.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
-1 71 20.0 -272.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -272.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
-1 71 500.0 -272.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -272.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
-1 71 20.0 -272.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -272.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
-1 71 500.0 -272.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -272.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
-1 71 20.0 -272.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -272.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
-1 71 500.0 -272.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -272.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
-1 71 20.0 -272.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -272.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
-1 71 500.0 -272.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -272.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
-1 71 20.0 -272.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -272.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
-1 71 500.0 -272.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -272.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west ledge
-1 15 0.0 -272.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -272.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east ledge
-1 15 480.0 -272.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -272.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_west row_5
 1 71 20.0 -272.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_1 > floor_1 > floor_1_east row_5
@@ -1053,7 +1053,7 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_0
 1 71 40.0 -304.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_0
 1 71 120.0 -304.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_0
@@ -1065,27 +1065,27 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_0
 1 71 440.0 -304.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_0
-1 71 20.0 -304.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -304.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_0
-1 71 500.0 -304.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -304.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_north row_0
 1 71 40.0 -304.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_north row_0
@@ -1130,49 +1130,49 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 500.0 -328.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 10.0 -328.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 490.0 -328.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 20.0 -328.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 500.0 -328.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 20.0 -328.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 500.0 -328.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 20.0 -328.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 500.0 -328.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 10.0 -328.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
 1 71 490.0 -328.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west Window 1x2x3
-1 47 10.0 -328.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -328.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east Window 1x2x3
-1 47 490.0 -328.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -328.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_1
 1 71 20.0 -328.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_1
@@ -1321,7 +1321,7 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_4
 1 71 40.0 -400.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_4
 1 71 120.0 -400.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_4
@@ -1333,27 +1333,27 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_4
 1 71 440.0 -400.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_4
-1 71 20.0 -400.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -400.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_4
-1 71 500.0 -400.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -400.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_north row_4
 1 71 40.0 -400.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_north row_4
@@ -1380,7 +1380,7 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south ledge
 1 15 440.0 -424.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_5
 1 71 20.0 -424.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
@@ -1398,49 +1398,49 @@
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_south row_5
 1 71 460.0 -424.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
 1 71 500.0 -424.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
-1 71 20.0 -424.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -424.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
-1 71 500.0 -424.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -424.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
-1 71 20.0 -424.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -424.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
-1 71 500.0 -424.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -424.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
-1 71 20.0 -424.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -424.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
-1 71 500.0 -424.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -424.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
-1 71 20.0 -424.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -424.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
-1 71 500.0 -424.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -424.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
-1 71 20.0 -424.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -424.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
-1 71 500.0 -424.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -424.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west ledge
-1 15 0.0 -424.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -424.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east ledge
-1 15 480.0 -424.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -424.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_west row_5
 1 71 20.0 -424.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_2 > floor_2 > floor_2_east row_5
@@ -1620,7 +1620,7 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_0
 1 71 40.0 -456.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_0
 1 71 120.0 -456.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_0
@@ -1632,27 +1632,27 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_0
 1 71 440.0 -456.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_0
-1 71 20.0 -456.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -456.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_0
-1 71 500.0 -456.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -456.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_north row_0
 1 71 40.0 -456.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_north row_0
@@ -1697,49 +1697,49 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 500.0 -480.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 10.0 -480.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 490.0 -480.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 20.0 -480.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 500.0 -480.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 20.0 -480.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 500.0 -480.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 20.0 -480.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 500.0 -480.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 10.0 -480.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
 1 71 490.0 -480.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west Window 1x2x3
-1 47 10.0 -480.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -480.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east Window 1x2x3
-1 47 490.0 -480.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -480.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_1
 1 71 20.0 -480.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_1
@@ -1888,7 +1888,7 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_4
 1 71 40.0 -552.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_4
 1 71 120.0 -552.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_4
@@ -1900,27 +1900,27 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_4
 1 71 440.0 -552.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_4
-1 71 20.0 -552.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -552.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_4
-1 71 500.0 -552.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -552.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_north row_4
 1 71 40.0 -552.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_north row_4
@@ -1947,7 +1947,7 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south ledge
 1 15 440.0 -576.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_5
 1 71 20.0 -576.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
@@ -1965,49 +1965,49 @@
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_south row_5
 1 71 460.0 -576.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
 1 71 500.0 -576.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
-1 71 20.0 -576.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -576.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
-1 71 500.0 -576.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -576.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
-1 71 20.0 -576.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -576.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
-1 71 500.0 -576.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -576.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
-1 71 20.0 -576.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -576.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
-1 71 500.0 -576.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -576.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
-1 71 20.0 -576.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -576.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
-1 71 500.0 -576.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -576.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
-1 71 20.0 -576.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -576.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
-1 71 500.0 -576.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -576.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west ledge
-1 15 0.0 -576.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -576.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east ledge
-1 15 480.0 -576.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -576.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_west row_5
 1 71 20.0 -576.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_3 > floor_3 > floor_3_east row_5
@@ -2187,7 +2187,7 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_0
 1 71 40.0 -608.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_0
 1 71 120.0 -608.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_0
@@ -2199,27 +2199,27 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_0
 1 71 440.0 -608.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_0
-1 71 20.0 -608.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -608.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_0
-1 71 500.0 -608.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -608.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_north row_0
 1 71 40.0 -608.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_north row_0
@@ -2264,49 +2264,49 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 500.0 -632.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 10.0 -632.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 490.0 -632.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 20.0 -632.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 500.0 -632.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 20.0 -632.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 500.0 -632.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 20.0 -632.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 500.0 -632.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 10.0 -632.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
 1 71 490.0 -632.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west Window 1x2x3
-1 47 10.0 -632.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -632.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east Window 1x2x3
-1 47 490.0 -632.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -632.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_1
 1 71 20.0 -632.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_1
@@ -2455,7 +2455,7 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_4
 1 71 40.0 -704.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_4
 1 71 120.0 -704.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_4
@@ -2467,27 +2467,27 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_4
 1 71 440.0 -704.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_4
-1 71 20.0 -704.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -704.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_4
-1 71 500.0 -704.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -704.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_north row_4
 1 71 40.0 -704.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_north row_4
@@ -2514,7 +2514,7 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south ledge
 1 15 440.0 -728.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_5
 1 71 20.0 -728.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
@@ -2532,49 +2532,49 @@
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_south row_5
 1 71 460.0 -728.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
 1 71 500.0 -728.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
-1 71 20.0 -728.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -728.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
-1 71 500.0 -728.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -728.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
-1 71 20.0 -728.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -728.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
-1 71 500.0 -728.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -728.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
-1 71 20.0 -728.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -728.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
-1 71 500.0 -728.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -728.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
-1 71 20.0 -728.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -728.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
-1 71 500.0 -728.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -728.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
-1 71 20.0 -728.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -728.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
-1 71 500.0 -728.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -728.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west ledge
-1 15 0.0 -728.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -728.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east ledge
-1 15 480.0 -728.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -728.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_west row_5
 1 71 20.0 -728.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_4 > floor_4 > floor_4_east row_5
@@ -2754,7 +2754,7 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_0
 1 71 40.0 -760.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_0
 1 71 120.0 -760.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_0
@@ -2766,27 +2766,27 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_0
 1 71 440.0 -760.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_0
-1 71 20.0 -760.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -760.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_0
-1 71 500.0 -760.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -760.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_north row_0
 1 71 40.0 -760.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_north row_0
@@ -2831,49 +2831,49 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 500.0 -784.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 10.0 -784.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 490.0 -784.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 20.0 -784.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 500.0 -784.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 20.0 -784.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 500.0 -784.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 20.0 -784.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 500.0 -784.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 10.0 -784.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
 1 71 490.0 -784.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west Window 1x2x3
-1 47 10.0 -784.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -784.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east Window 1x2x3
-1 47 490.0 -784.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -784.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_1
 1 71 20.0 -784.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_1
@@ -3022,7 +3022,7 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_4
 1 71 40.0 -856.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_4
 1 71 120.0 -856.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_4
@@ -3034,27 +3034,27 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_4
 1 71 440.0 -856.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_4
-1 71 20.0 -856.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -856.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_4
-1 71 500.0 -856.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -856.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_north row_4
 1 71 40.0 -856.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_north row_4
@@ -3081,7 +3081,7 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south ledge
 1 15 440.0 -880.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_5
 1 71 20.0 -880.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
@@ -3099,49 +3099,49 @@
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_south row_5
 1 71 460.0 -880.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
 1 71 500.0 -880.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
-1 71 20.0 -880.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -880.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
-1 71 500.0 -880.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -880.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
-1 71 20.0 -880.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -880.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
-1 71 500.0 -880.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -880.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
-1 71 20.0 -880.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -880.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
-1 71 500.0 -880.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -880.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
-1 71 20.0 -880.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -880.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
-1 71 500.0 -880.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -880.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
-1 71 20.0 -880.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -880.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
-1 71 500.0 -880.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -880.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west ledge
-1 15 0.0 -880.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -880.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east ledge
-1 15 480.0 -880.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -880.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_west row_5
 1 71 20.0 -880.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_5 > floor_5 > floor_5_east row_5
@@ -3321,7 +3321,7 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_0
 1 71 40.0 -912.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_0
 1 71 120.0 -912.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_0
@@ -3333,27 +3333,27 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_0
 1 71 440.0 -912.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_0
-1 71 20.0 -912.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -912.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_0
-1 71 500.0 -912.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -912.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_north row_0
 1 71 40.0 -912.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_north row_0
@@ -3398,49 +3398,49 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 500.0 -936.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 10.0 -936.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 490.0 -936.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 20.0 -936.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 500.0 -936.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 20.0 -936.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 500.0 -936.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 20.0 -936.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 500.0 -936.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 10.0 -936.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
 1 71 490.0 -936.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west Window 1x2x3
-1 47 10.0 -936.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -936.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east Window 1x2x3
-1 47 490.0 -936.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -936.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_1
 1 71 20.0 -936.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_1
@@ -3589,7 +3589,7 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_4
 1 71 40.0 -1008.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_4
 1 71 120.0 -1008.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_4
@@ -3601,27 +3601,27 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_4
 1 71 440.0 -1008.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_4
-1 71 20.0 -1008.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1008.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_4
-1 71 500.0 -1008.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1008.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_north row_4
 1 71 40.0 -1008.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_north row_4
@@ -3648,7 +3648,7 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south ledge
 1 15 440.0 -1032.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_5
 1 71 20.0 -1032.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
@@ -3666,49 +3666,49 @@
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_south row_5
 1 71 460.0 -1032.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
 1 71 500.0 -1032.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
-1 71 20.0 -1032.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1032.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
-1 71 500.0 -1032.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1032.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
-1 71 20.0 -1032.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1032.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
-1 71 500.0 -1032.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1032.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
-1 71 20.0 -1032.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1032.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
-1 71 500.0 -1032.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1032.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
-1 71 20.0 -1032.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1032.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
-1 71 500.0 -1032.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1032.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
-1 71 20.0 -1032.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1032.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
-1 71 500.0 -1032.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1032.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west ledge
-1 15 0.0 -1032.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1032.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east ledge
-1 15 480.0 -1032.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1032.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_west row_5
 1 71 20.0 -1032.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_6 > floor_6 > floor_6_east row_5
@@ -3888,7 +3888,7 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_0
 1 71 40.0 -1064.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_0
 1 71 120.0 -1064.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_0
@@ -3900,27 +3900,27 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_0
 1 71 440.0 -1064.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_0
-1 71 20.0 -1064.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1064.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_0
-1 71 500.0 -1064.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1064.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_north row_0
 1 71 40.0 -1064.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_north row_0
@@ -3965,49 +3965,49 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 500.0 -1088.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 10.0 -1088.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 490.0 -1088.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 20.0 -1088.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 500.0 -1088.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 20.0 -1088.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 500.0 -1088.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 20.0 -1088.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 500.0 -1088.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 10.0 -1088.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
 1 71 490.0 -1088.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west Window 1x2x3
-1 47 10.0 -1088.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1088.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east Window 1x2x3
-1 47 490.0 -1088.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1088.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_1
 1 71 20.0 -1088.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_1
@@ -4156,7 +4156,7 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_4
 1 71 40.0 -1160.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_4
 1 71 120.0 -1160.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_4
@@ -4168,27 +4168,27 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_4
 1 71 440.0 -1160.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_4
-1 71 20.0 -1160.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1160.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_4
-1 71 500.0 -1160.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1160.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_north row_4
 1 71 40.0 -1160.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_north row_4
@@ -4215,7 +4215,7 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south ledge
 1 15 440.0 -1184.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_5
 1 71 20.0 -1184.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
@@ -4233,49 +4233,49 @@
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_south row_5
 1 71 460.0 -1184.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
 1 71 500.0 -1184.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
-1 71 20.0 -1184.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1184.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
-1 71 500.0 -1184.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1184.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
-1 71 20.0 -1184.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1184.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
-1 71 500.0 -1184.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1184.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
-1 71 20.0 -1184.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1184.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
-1 71 500.0 -1184.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1184.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
-1 71 20.0 -1184.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1184.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
-1 71 500.0 -1184.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1184.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
-1 71 20.0 -1184.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1184.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
-1 71 500.0 -1184.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1184.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west ledge
-1 15 0.0 -1184.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1184.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east ledge
-1 15 480.0 -1184.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1184.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_west row_5
 1 71 20.0 -1184.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_7 > floor_7 > floor_7_east row_5
@@ -4455,7 +4455,7 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_0
 1 71 40.0 -1216.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_0
 1 71 120.0 -1216.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_0
@@ -4467,27 +4467,27 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_0
 1 71 440.0 -1216.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_0
-1 71 20.0 -1216.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1216.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_0
-1 71 500.0 -1216.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1216.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_north row_0
 1 71 40.0 -1216.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_north row_0
@@ -4532,49 +4532,49 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 500.0 -1240.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 10.0 -1240.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 490.0 -1240.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 20.0 -1240.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 500.0 -1240.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 20.0 -1240.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 500.0 -1240.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 20.0 -1240.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 500.0 -1240.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 10.0 -1240.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
 1 71 490.0 -1240.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west Window 1x2x3
-1 47 10.0 -1240.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1240.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east Window 1x2x3
-1 47 490.0 -1240.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1240.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_1
 1 71 20.0 -1240.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_1
@@ -4723,7 +4723,7 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_4
 1 71 40.0 -1312.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_4
 1 71 120.0 -1312.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_4
@@ -4735,27 +4735,27 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_4
 1 71 440.0 -1312.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_4
-1 71 20.0 -1312.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1312.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_4
-1 71 500.0 -1312.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1312.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_north row_4
 1 71 40.0 -1312.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_north row_4
@@ -4782,7 +4782,7 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south ledge
 1 15 440.0 -1336.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_5
 1 71 20.0 -1336.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
@@ -4800,49 +4800,49 @@
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_south row_5
 1 71 460.0 -1336.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
 1 71 500.0 -1336.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
-1 71 20.0 -1336.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1336.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
-1 71 500.0 -1336.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1336.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
-1 71 20.0 -1336.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1336.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
-1 71 500.0 -1336.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1336.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
-1 71 20.0 -1336.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1336.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
-1 71 500.0 -1336.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1336.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
-1 71 20.0 -1336.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1336.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
-1 71 500.0 -1336.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1336.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
-1 71 20.0 -1336.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1336.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
-1 71 500.0 -1336.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1336.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west ledge
-1 15 0.0 -1336.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1336.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east ledge
-1 15 480.0 -1336.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1336.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_west row_5
 1 71 20.0 -1336.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_8 > floor_8 > floor_8_east row_5
@@ -5022,7 +5022,7 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_0
 1 71 40.0 -1368.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_0
 1 71 120.0 -1368.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_0
@@ -5034,27 +5034,27 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_0
 1 71 440.0 -1368.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_0
-1 71 20.0 -1368.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1368.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_0
-1 71 500.0 -1368.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1368.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_north row_0
 1 71 40.0 -1368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_north row_0
@@ -5099,49 +5099,49 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 500.0 -1392.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 10.0 -1392.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 490.0 -1392.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 20.0 -1392.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 500.0 -1392.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 20.0 -1392.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 500.0 -1392.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 20.0 -1392.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 500.0 -1392.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 10.0 -1392.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
 1 71 490.0 -1392.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west Window 1x2x3
-1 47 10.0 -1392.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1392.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east Window 1x2x3
-1 47 490.0 -1392.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1392.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_1
 1 71 20.0 -1392.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_1
@@ -5290,7 +5290,7 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_4
 1 71 40.0 -1464.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_4
 1 71 120.0 -1464.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_4
@@ -5302,27 +5302,27 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_4
 1 71 440.0 -1464.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_4
-1 71 20.0 -1464.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1464.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_4
-1 71 500.0 -1464.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1464.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_north row_4
 1 71 40.0 -1464.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_north row_4
@@ -5349,7 +5349,7 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south ledge
 1 15 440.0 -1488.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_5
 1 71 20.0 -1488.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
@@ -5367,49 +5367,49 @@
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_south row_5
 1 71 460.0 -1488.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
 1 71 500.0 -1488.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
-1 71 20.0 -1488.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1488.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
-1 71 500.0 -1488.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1488.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
-1 71 20.0 -1488.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1488.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
-1 71 500.0 -1488.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1488.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
-1 71 20.0 -1488.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1488.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
-1 71 500.0 -1488.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1488.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
-1 71 20.0 -1488.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1488.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
-1 71 500.0 -1488.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1488.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
-1 71 20.0 -1488.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1488.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
-1 71 500.0 -1488.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1488.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west ledge
-1 15 0.0 -1488.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1488.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east ledge
-1 15 480.0 -1488.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1488.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_west row_5
 1 71 20.0 -1488.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_9 > floor_9 > floor_9_east row_5
@@ -5589,7 +5589,7 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_0
 1 71 40.0 -1520.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_0
 1 71 120.0 -1520.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_0
@@ -5601,27 +5601,27 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_0
 1 71 440.0 -1520.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_0
-1 71 20.0 -1520.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1520.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_0
-1 71 500.0 -1520.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1520.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_north row_0
 1 71 40.0 -1520.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_north row_0
@@ -5666,49 +5666,49 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 500.0 -1544.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 10.0 -1544.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 490.0 -1544.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 20.0 -1544.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 500.0 -1544.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 20.0 -1544.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 500.0 -1544.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 20.0 -1544.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 500.0 -1544.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 10.0 -1544.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
 1 71 490.0 -1544.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west Window 1x2x3
-1 47 10.0 -1544.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1544.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east Window 1x2x3
-1 47 490.0 -1544.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1544.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_1
 1 71 20.0 -1544.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_1
@@ -5857,7 +5857,7 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_4
 1 71 40.0 -1616.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_4
 1 71 120.0 -1616.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_4
@@ -5869,27 +5869,27 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_4
 1 71 440.0 -1616.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_4
-1 71 20.0 -1616.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1616.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_4
-1 71 500.0 -1616.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1616.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_north row_4
 1 71 40.0 -1616.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_north row_4
@@ -5916,7 +5916,7 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south ledge
 1 15 440.0 -1640.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_5
 1 71 20.0 -1640.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
@@ -5934,49 +5934,49 @@
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_south row_5
 1 71 460.0 -1640.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
 1 71 500.0 -1640.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
-1 71 20.0 -1640.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1640.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
-1 71 500.0 -1640.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1640.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
-1 71 20.0 -1640.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1640.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
-1 71 500.0 -1640.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1640.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
-1 71 20.0 -1640.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1640.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
-1 71 500.0 -1640.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1640.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
-1 71 20.0 -1640.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1640.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
-1 71 500.0 -1640.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1640.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
-1 71 20.0 -1640.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1640.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
-1 71 500.0 -1640.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1640.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west ledge
-1 15 0.0 -1640.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1640.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east ledge
-1 15 480.0 -1640.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1640.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_west row_5
 1 71 20.0 -1640.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_10 > floor_10 > floor_10_east row_5
@@ -6156,7 +6156,7 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_0
 1 71 40.0 -1672.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_0
 1 71 120.0 -1672.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_0
@@ -6168,27 +6168,27 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_0
 1 71 440.0 -1672.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_0
-1 71 20.0 -1672.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1672.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_0
-1 71 500.0 -1672.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1672.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_north row_0
 1 71 40.0 -1672.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_north row_0
@@ -6233,49 +6233,49 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 500.0 -1696.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 60.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 50.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 60.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 50.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 10.0 -1696.0 90.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 490.0 -1696.0 90.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 120.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 110.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 120.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 110.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 20.0 -1696.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 500.0 -1696.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 200.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 190.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 200.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 190.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 20.0 -1696.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 500.0 -1696.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 280.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 270.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 280.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 270.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 20.0 -1696.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 500.0 -1696.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 360.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 350.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 360.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 350.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 10.0 -1696.0 390.0 0 0 1 0 1 0 -1 0 0 3005.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
 1 71 490.0 -1696.0 390.0 0 0 -1 0 1 0 1 0 0 3005.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west Window 1x2x3
-1 47 10.0 -1696.0 420.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+1 47 20.0 -1696.0 410.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east Window 1x2x3
-1 47 490.0 -1696.0 420.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+1 47 500.0 -1696.0 410.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_1
 1 71 20.0 -1696.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_1
@@ -6424,7 +6424,7 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_4
 1 71 40.0 -1768.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 20.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_4
 1 71 120.0 -1768.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_4
@@ -6436,27 +6436,27 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_4
 1 71 440.0 -1768.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_4
-1 71 20.0 -1768.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1768.0 420.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_4
-1 71 500.0 -1768.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1768.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_north row_4
 1 71 40.0 -1768.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_north row_4
@@ -6483,7 +6483,7 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south ledge
 1 15 440.0 -1792.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 20.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_5
 1 71 20.0 -1792.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
@@ -6501,49 +6501,49 @@
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_south row_5
 1 71 460.0 -1792.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 20.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
 1 71 500.0 -1792.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
-1 71 20.0 -1792.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1792.0 60.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
-1 71 500.0 -1792.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1792.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 100.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
-1 71 20.0 -1792.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1792.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
-1 71 500.0 -1792.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1792.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 180.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
-1 71 20.0 -1792.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1792.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
-1 71 500.0 -1792.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1792.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 260.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
-1 71 20.0 -1792.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1792.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
-1 71 500.0 -1792.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1792.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 340.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
-1 71 20.0 -1792.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 71 40.0 -1792.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
-1 71 500.0 -1792.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 71 520.0 -1792.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west ledge
-1 15 0.0 -1792.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 15 20.0 -1792.0 420.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east ledge
-1 15 480.0 -1792.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 15 500.0 -1792.0 420.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_west row_5
 1 71 20.0 -1792.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > level_11 > floor_11 > floor_11_east row_5
@@ -6723,7 +6723,7 @@
 0 // updated_skyscraper > crown > crown_south row_0
 1 15 100.0 -1824.0 80.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > crown > crown_west row_0
-1 15 80.0 -1824.0 100.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1824.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_south row_0
 1 15 180.0 -1824.0 80.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > crown > crown_south row_0
@@ -6735,19 +6735,19 @@
 0 // updated_skyscraper > crown > crown_east row_0
 1 15 440.0 -1824.0 80.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_east row_0
-1 15 440.0 -1824.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1824.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_0
-1 15 80.0 -1824.0 180.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1824.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east row_0
-1 15 440.0 -1824.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1824.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_0
-1 15 80.0 -1824.0 260.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1824.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east row_0
-1 15 440.0 -1824.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1824.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_0
-1 15 80.0 -1824.0 340.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1824.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east row_0
-1 15 440.0 -1824.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1824.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_0
 1 15 80.0 -1824.0 400.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_north row_0
@@ -6784,33 +6784,33 @@
 0 // updated_skyscraper > crown > crown_east row_1
 1 15 440.0 -1848.0 80.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_west Window 1x2x2
-1 47 70.0 -1848.0 120.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+1 47 80.0 -1848.0 110.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_east Window 1x2x2
-1 47 430.0 -1848.0 120.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+1 47 440.0 -1848.0 110.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_west row_1
 1 15 80.0 -1848.0 160.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_east row_1
 1 15 440.0 -1848.0 160.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_west Window 1x2x2
-1 47 70.0 -1848.0 200.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+1 47 80.0 -1848.0 190.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_east Window 1x2x2
-1 47 430.0 -1848.0 200.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+1 47 440.0 -1848.0 190.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_west row_1
 1 15 80.0 -1848.0 240.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_east row_1
 1 15 440.0 -1848.0 240.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_west Window 1x2x2
-1 47 70.0 -1848.0 280.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+1 47 80.0 -1848.0 270.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_east Window 1x2x2
-1 47 430.0 -1848.0 280.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+1 47 440.0 -1848.0 270.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_west row_1
 1 15 80.0 -1848.0 320.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_east row_1
 1 15 440.0 -1848.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_west Window 1x2x2
-1 47 70.0 -1848.0 360.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+1 47 80.0 -1848.0 350.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_east Window 1x2x2
-1 47 430.0 -1848.0 360.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+1 47 440.0 -1848.0 350.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
 0 // updated_skyscraper > crown > crown_west row_1
 1 15 80.0 -1848.0 400.0 0 0 1 0 1 0 -1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_east row_1
@@ -6884,7 +6884,7 @@
 0 // updated_skyscraper > crown > crown_south ledge
 1 71 340.0 -1896.0 60.0 -1 0 0 0 1 0 0 0 -1 3020.dat
 0 // updated_skyscraper > crown > crown_west ledge
-1 71 60.0 -1896.0 100.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 71 80.0 -1896.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_south row_3
 1 15 80.0 -1896.0 80.0 -1 0 0 0 1 0 0 0 -1 3003.dat
 0 // updated_skyscraper > crown > crown_west row_3
@@ -6898,35 +6898,35 @@
 0 // updated_skyscraper > crown > crown_south row_3
 1 15 380.0 -1896.0 80.0 -1 0 0 0 1 0 0 0 -1 3001.dat
 0 // updated_skyscraper > crown > crown_east row_3
-1 15 440.0 -1896.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1896.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_3
-1 15 80.0 -1896.0 140.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1896.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east ledge
-1 71 420.0 -1896.0 140.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 71 440.0 -1896.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_west ledge
-1 71 60.0 -1896.0 180.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 71 80.0 -1896.0 160.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_east row_3
-1 15 440.0 -1896.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1896.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_3
-1 15 80.0 -1896.0 220.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1896.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east ledge
-1 71 420.0 -1896.0 220.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 71 440.0 -1896.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_west ledge
-1 71 60.0 -1896.0 260.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 71 80.0 -1896.0 240.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_east row_3
-1 15 440.0 -1896.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1896.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_3
-1 15 80.0 -1896.0 300.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1896.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east ledge
-1 71 420.0 -1896.0 300.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 71 440.0 -1896.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_west ledge
-1 71 60.0 -1896.0 340.0 0 0 1 0 1 0 -1 0 0 3020.dat
+1 71 80.0 -1896.0 320.0 0 0 1 0 1 0 -1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_east row_3
-1 15 440.0 -1896.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 15 460.0 -1896.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_west row_3
-1 15 80.0 -1896.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+1 15 100.0 -1896.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
 0 // updated_skyscraper > crown > crown_east ledge
-1 71 420.0 -1896.0 380.0 0 0 -1 0 1 0 1 0 0 3020.dat
+1 71 440.0 -1896.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
 0 // updated_skyscraper > crown > crown_east row_3
 1 15 440.0 -1896.0 400.0 0 0 -1 0 1 0 1 0 0 3003.dat
 0 // updated_skyscraper > crown > crown_north ledge
