@@ -901,61 +901,15 @@ class Box:
         # West:  swap axes (face→Z, depth→X)
         # East:  swap + mirror Z, shift X to right edge
         wall_configs = [
-            # TODO: South wall transform looks correct for corner-based coords
-            # only if we DON'T apply center-origin correction.  If a center-
-            # origin fix is added in to_ldraw_line(), this will remain correct.
-            # But if the fix is applied here instead, south also needs adjustment.
             (self.south, "south",
              lambda p: p.x,
              lambda p: p.z),
-            # TODO BUG: North wall x-transform subtracts p.part.width_studs to
-            # mirror the brick's position, but this assumes the brick's anchor
-            # point is at its left edge in world space after rotation.  With
-            # rotation=180 the LDraw part origin (center) is already mirrored,
-            # so subtracting width_studs is a double-correction and shifts
-            # every brick one-brick-width off in X.
-            # Possible fix: account for the fact that the 180° rotation matrix
-            # already mirrors the part around its origin.  The correct offset
-            # depends on whether internal coords are corner-based or center-based.
-            # If corner-based, the formula should be:
-            #   width - p.x - 1   (map last stud, not last stud + width)
-            # or needs a half-width correction added at LDraw export time.
             (self.north, "north",
              lambda p: self.width - p.x - p.part.width_studs,
-             # TODO VERIFY: z = self.depth + p.z places the wall's z=0 row
-             # at z=depth in box space.  But with rotation=180 the brick's
-             # depth (2 studs) extends in the -Z direction (back toward the
-             # box interior).  This means the wall's OUTER face sits at
-             # z=depth and its inner face at z=depth-2.  If the intent is
-             # for the wall to sit with its outer face at z=depth, this is
-             # correct.  But if the south wall's outer face is at z=0 and
-             # inner face at z=2, then the box interior is 2 studs smaller
-             # than (width × depth) on each axis — verify this matches the
-             # LLM's mental model of box dimensions.
              lambda p: self.depth + p.z),
-            # TODO BUG: West wall swaps axes (face→Z, depth→X) but does not
-            # account for the brick width along the new axis.  After rotation
-            # 270°, the part's local width runs along world-Z.  Mapping p.x
-            # (wall-face position) directly to box-Z without subtracting or
-            # adjusting for brick width means the brick's far edge may overshoot
-            # the box boundary by width_studs - 1 studs.
-            # This may appear correct for 1x1 bricks but shifts wider bricks.
             (self.west, "west",
              lambda p: p.z,
              lambda p: p.x),
-            # TODO BUG: East wall z-transform subtracts p.part.width_studs, but
-            # after 90° rotation the brick's local width_studs axis maps to the
-            # world Z axis.  The subtraction is meant to flip the wall-face
-            # coordinate, but it uses the *unrotated* part width.  For bricks
-            # placed at rotation=0 in wall-local space and then globally
-            # rotated to 90°, the extent along world-Z is still width_studs,
-            # but the part's LDraw origin (center) already sits at the middle.
-            # This causes an off-by-width_studs error in Z for every brick on
-            # the east wall.
-            # Possible fix: same center-vs-corner issue as north wall.  Either
-            # adjust to  self.depth - p.x - 1  or add half-width corrections
-            # at export time to reconcile corner-based internal coords with
-            # center-based LDraw origins.
             (self.east, "east",
              lambda p: self.width + p.z,
              lambda p: self.depth - p.x - p.part.width_studs),

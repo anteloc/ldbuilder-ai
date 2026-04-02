@@ -1,0 +1,2713 @@
+0 FILE Red_Church.ldr
+0 Red Church
+0 Name: Red_Church.ldr
+0 Author: lego_builder.py
+0 !LDRAW_ORG Unofficial_Model
+
+0 // foundation
+1 19 40.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 40.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 120.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 180.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south Door Frame 1x4x6
+1 70 240.0 0.0 10.0 -1 0 0 0 1 0 0 0 -1 60596.dat
+0 // foundation
+1 19 280.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 320.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation
+1 19 360.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 400.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation
+1 19 440.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_south row_0
+1 4 460.0 0.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 540.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 40.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_west row_0
+1 4 20.0 0.0 600.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 580.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_east row_0
+1 4 500.0 0.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation
+1 19 40.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 40.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 120.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 120.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 200.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 200.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 280.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 280.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 360.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 360.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation
+1 19 440.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > foundation
+1 19 440.0 0.0 620.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north row_0
+1 4 40.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_0
+1 4 120.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_0
+1 4 200.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_0
+1 4 280.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_0
+1 4 360.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_0
+1 4 440.0 0.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_0
+1 4 0.0 -8.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_0
+1 4 -20.0 -8.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_0
+1 4 80.0 -8.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_0
+1 4 140.0 -8.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 40.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 120.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 180.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_south Door Frame 1x4x6
+1 70 240.0 -8.0 10.0 -1 0 0 0 1 0 0 0 -1 60596.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 320.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 400.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_0
+1 4 460.0 -8.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_0
+1 4 -20.0 -8.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_0
+1 4 140.0 -8.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_0
+1 4 0.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_0
+1 4 80.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_0
+1 4 20.0 -8.0 600.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_0
+1 4 500.0 -8.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 40.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 120.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 200.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 280.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 360.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_0
+1 4 440.0 -8.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // nave > nave_south row_1
+1 4 20.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_south row_1
+1 4 80.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_1
+1 4 160.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_1
+1 4 320.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_1
+1 4 400.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_1
+1 4 460.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_1
+1 4 20.0 -24.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_east row_1
+1 4 500.0 -24.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_north row_1
+1 4 20.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_1
+1 4 80.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_1
+1 4 160.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_1
+1 4 240.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_1
+1 4 320.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_1
+1 4 400.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_1
+1 4 460.0 -24.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_1
+1 4 -20.0 -32.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_1
+1 4 -20.0 -32.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_1
+1 4 40.0 -32.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_1
+1 4 100.0 -32.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_1
+1 4 140.0 -32.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_1
+1 4 -20.0 -32.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 20.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 80.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 160.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_1
+1 4 140.0 -32.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 320.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 400.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_1
+1 4 460.0 -32.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_1
+1 4 -20.0 -32.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_1
+1 4 140.0 -32.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_1
+1 4 -20.0 -32.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_1
+1 4 40.0 -32.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_1
+1 4 100.0 -32.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_1
+1 4 20.0 -32.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_1
+1 4 500.0 -32.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 20.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 80.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 160.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 240.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 320.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 400.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_1
+1 4 460.0 -32.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // nave > nave_south row_2
+1 4 30.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_south Window 1x2x2
+1 43 80.0 -48.0 10.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // nave > nave_south row_2
+1 4 140.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_2
+1 4 190.0 -48.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // nave > nave_south row_2
+1 4 320.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_2
+1 4 370.0 -48.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // nave > nave_south Window 1x2x2
+1 43 400.0 -48.0 10.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // nave > nave_south row_2
+1 4 450.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_west Window 1x2x3
+1 43 10.0 -48.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // nave > nave_east Window 1x2x3
+1 43 490.0 -48.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west Window 1x2x3
+1 43 10.0 -48.0 320.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // nave > nave_east Window 1x2x3
+1 43 490.0 -48.0 320.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west Window 1x2x3
+1 43 10.0 -48.0 500.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // nave > nave_east Window 1x2x3
+1 43 490.0 -48.0 500.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_east row_2
+1 4 500.0 -48.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_2
+1 4 20.0 -48.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_north row_2
+1 4 40.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_2
+1 4 120.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_2
+1 4 200.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_2
+1 4 280.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_2
+1 4 360.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_2
+1 4 440.0 -48.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_2
+1 4 0.0 -56.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_2
+1 4 -20.0 -56.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_2
+1 4 80.0 -56.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_2
+1 4 140.0 -56.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 30.0 -56.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south Window 1x2x2
+1 43 80.0 -56.0 10.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 140.0 -56.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 190.0 -56.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 320.0 -56.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 370.0 -56.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > nave > nave_south Window 1x2x2
+1 43 400.0 -56.0 10.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // foundation+nave > nave > nave_south row_2
+1 4 450.0 -56.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_2
+1 4 -20.0 -56.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_2
+1 4 140.0 -56.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_2
+1 4 0.0 -56.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_west Window 1x2x3
+1 43 10.0 -56.0 140.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_2
+1 4 80.0 -56.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_east Window 1x2x3
+1 43 490.0 -56.0 140.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west Window 1x2x3
+1 43 10.0 -56.0 320.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // foundation+nave > nave > nave_east Window 1x2x3
+1 43 490.0 -56.0 320.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west Window 1x2x3
+1 43 10.0 -56.0 500.0 0 0 1 0 1 0 -1 0 0 60593c01.dat
+0 // foundation+nave > nave > nave_east Window 1x2x3
+1 43 490.0 -56.0 500.0 0 0 -1 0 1 0 1 0 0 60593c01.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_2
+1 4 500.0 -56.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_2
+1 4 20.0 -56.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 40.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 120.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 200.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 280.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 360.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_2
+1 4 440.0 -56.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // nave > nave_south row_3
+1 4 20.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_south row_3
+1 4 50.0 -72.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // nave > nave_south row_3
+1 4 140.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_3
+1 4 190.0 -72.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // nave > nave_south row_3
+1 4 320.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_3
+1 4 370.0 -72.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // nave > nave_south row_3
+1 4 450.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_3
+1 4 20.0 -72.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_east row_3
+1 4 500.0 -72.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_north row_3
+1 4 20.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_3
+1 4 80.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_3
+1 4 160.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north Window 1x4x3
+1 43 240.0 -72.0 650.0 1 0 0 0 1 0 0 0 1 60594.dat
+0 // nave > nave_north row_3
+1 4 320.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_3
+1 4 400.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_3
+1 4 460.0 -72.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_3
+1 4 -20.0 -80.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_3
+1 4 -20.0 -80.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_3
+1 4 40.0 -80.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_3
+1 4 100.0 -80.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_3
+1 4 140.0 -80.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_3
+1 4 -20.0 -80.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 20.0 -80.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 50.0 -80.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 140.0 -80.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_3
+1 4 140.0 -80.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 190.0 -80.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 320.0 -80.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 370.0 -80.0 10.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > nave > nave_south row_3
+1 4 450.0 -80.0 20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_3
+1 4 -20.0 -80.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_3
+1 4 140.0 -80.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_3
+1 4 -20.0 -80.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_3
+1 4 40.0 -80.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_3
+1 4 100.0 -80.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_3
+1 4 20.0 -80.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_3
+1 4 500.0 -80.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 20.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 80.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 160.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north Window 1x4x3
+1 43 240.0 -80.0 650.0 1 0 0 0 1 0 0 0 1 60594.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 320.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 400.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_3
+1 4 460.0 -80.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // nave > nave_south row_4
+1 4 40.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_south row_4
+1 4 120.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_4
+1 4 180.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_south row_4
+1 4 320.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_4
+1 4 400.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_4
+1 4 460.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_east row_4
+1 4 500.0 -96.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_4
+1 4 20.0 -96.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_north row_4
+1 4 20.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_4
+1 4 80.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_4
+1 4 160.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_4
+1 4 300.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_4
+1 4 360.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_4
+1 4 440.0 -96.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_4
+1 4 0.0 -104.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_4
+1 4 -20.0 -104.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_4
+1 4 80.0 -104.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_4
+1 4 140.0 -104.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 40.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 120.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 180.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 320.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 400.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_4
+1 4 460.0 -104.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_4
+1 4 -20.0 -104.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_4
+1 4 140.0 -104.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_4
+1 4 0.0 -104.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_4
+1 4 80.0 -104.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 190.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 270.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 380.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 370.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 450.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_4
+1 4 500.0 -104.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_4
+1 4 20.0 -104.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 20.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 80.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 160.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 300.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 360.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_4
+1 4 440.0 -104.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // nave > nave_south row_5
+1 4 20.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_south row_5
+1 4 80.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_5
+1 4 160.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_5
+1 4 320.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_5
+1 4 400.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_5
+1 4 460.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_5
+1 4 20.0 -120.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_east row_5
+1 4 500.0 -120.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_north row_5
+1 4 20.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_5
+1 4 80.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_5
+1 4 160.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_5
+1 4 320.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_5
+1 4 400.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_5
+1 4 460.0 -120.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_5
+1 4 -20.0 -128.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_5
+1 4 -20.0 -128.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_5
+1 4 40.0 -128.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_5
+1 4 100.0 -128.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_5
+1 4 140.0 -128.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_5
+1 4 -20.0 -128.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 20.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 80.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 160.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_5
+1 4 140.0 -128.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 320.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 400.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_5
+1 4 460.0 -128.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_5
+1 4 -20.0 -128.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_5
+1 4 140.0 -128.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_5
+1 4 -20.0 -128.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_5
+1 4 40.0 -128.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_5
+1 4 100.0 -128.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_5
+1 4 20.0 -128.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_5
+1 4 500.0 -128.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 20.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 80.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 160.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 320.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 400.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_5
+1 4 460.0 -128.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // nave > nave_south row_6
+1 4 40.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_south row_6
+1 4 120.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_6
+1 4 200.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_6
+1 4 280.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_6
+1 4 360.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_6
+1 4 440.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_6
+1 4 20.0 -144.0 600.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_6
+1 4 500.0 -144.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_north row_6
+1 4 40.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_6
+1 4 120.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_6
+1 4 200.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_6
+1 4 280.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_6
+1 4 360.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_6
+1 4 440.0 -144.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_6
+1 4 0.0 -152.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_6
+1 4 -20.0 -152.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_6
+1 4 80.0 -152.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_6
+1 4 140.0 -152.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 40.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 120.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 200.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 280.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 360.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_6
+1 4 440.0 -152.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_6
+1 4 -20.0 -152.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_6
+1 4 140.0 -152.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_6
+1 4 0.0 -152.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_6
+1 4 80.0 -152.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_6
+1 4 20.0 -152.0 600.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_6
+1 4 500.0 -152.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 40.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 120.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 200.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 280.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 360.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_6
+1 4 440.0 -152.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // nave > nave_south row_7
+1 4 20.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_south row_7
+1 4 80.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_7
+1 4 160.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_7
+1 4 240.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_7
+1 4 320.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_7
+1 4 400.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // nave > nave_south row_7
+1 4 460.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // nave > nave_west row_7
+1 4 20.0 -168.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // nave > nave_east row_7
+1 4 500.0 -168.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // nave > nave_north row_7
+1 4 20.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // nave > nave_north row_7
+1 4 80.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_7
+1 4 160.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_7
+1 4 240.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_7
+1 4 320.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_7
+1 4 400.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // nave > nave_north row_7
+1 4 460.0 -168.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_7
+1 4 -20.0 -176.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_7
+1 4 -20.0 -176.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_7
+1 4 40.0 -176.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_7
+1 4 100.0 -176.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_7
+1 4 140.0 -176.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_7
+1 4 -20.0 -176.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 20.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 80.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 160.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_7
+1 4 140.0 -176.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 240.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 320.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 400.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > nave > nave_south row_7
+1 4 460.0 -176.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_7
+1 4 -20.0 -176.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_7
+1 4 140.0 -176.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_7
+1 4 -20.0 -176.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_7
+1 4 40.0 -176.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_7
+1 4 100.0 -176.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 560.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west row_7
+1 4 20.0 -176.0 620.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > nave > nave_east row_7
+1 4 500.0 -176.0 620.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 20.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 80.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 160.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 240.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 320.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 400.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north row_7
+1 4 460.0 -176.0 660.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // nave > nave_south ledge
+1 320 40.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_south ledge
+1 320 120.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_south ledge
+1 320 200.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_south ledge
+1 320 280.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_south ledge
+1 320 360.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_south ledge
+1 320 440.0 -192.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 520.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 520.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_west ledge
+1 320 0.0 -192.0 600.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // nave > nave_east ledge
+1 320 480.0 -192.0 600.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // nave > nave_north ledge
+1 320 40.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north ledge
+1 320 120.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north ledge
+1 320 200.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north ledge
+1 320 280.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north ledge
+1 320 360.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // nave > nave_north ledge
+1 320 440.0 -192.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_8
+1 4 -10.0 -200.0 -20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_8
+1 4 -20.0 -200.0 -10.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south Window 1x2x2
+1 43 40.0 -200.0 -30.0 -1 0 0 0 1 0 0 0 -1 60592c01.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_8
+1 4 90.0 -200.0 -20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_8
+1 4 140.0 -200.0 -10.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 20.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 40.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 100.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 120.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 180.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 200.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 260.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 280.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 340.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 360.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 420.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_south ledge
+1 320 440.0 -200.0 0.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > church_roof south_slope step_0
+1 72 480.0 -200.0 0.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 40.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 40.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west Window 1x2x2
+1 43 -30.0 -200.0 40.0 0 0 1 0 1 0 -1 0 0 60592c01.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east Window 1x2x2
+1 43 130.0 -200.0 40.0 0 0 -1 0 1 0 1 0 0 60592c01.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_8
+1 4 -20.0 -200.0 90.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_8
+1 4 140.0 -200.0 90.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 120.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 120.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_8
+1 4 -10.0 -200.0 140.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north Window 1x2x2
+1 43 40.0 -200.0 130.0 1 0 0 0 1 0 0 0 1 60592c01.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_8
+1 4 90.0 -200.0 140.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 200.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 200.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 280.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 280.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 360.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 360.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 440.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 440.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 500.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 500.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 520.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 520.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 580.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 580.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > nave > nave_west ledge
+1 320 0.0 -200.0 600.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > nave > nave_east ledge
+1 320 480.0 -200.0 600.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 20.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_0
+1 72 0.0 -200.0 640.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 40.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 100.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 120.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 180.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 200.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 260.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 280.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 340.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 360.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 420.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > nave > nave_north ledge
+1 320 440.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof north_slope step_0
+1 72 480.0 -200.0 640.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_0
+1 72 520.0 -200.0 640.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_9
+1 4 -20.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_9
+1 4 -20.0 -224.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_9
+1 4 10.0 -224.0 -30.0 -1 0 0 0 1 0 0 0 -1 3005.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_9
+1 4 90.0 -224.0 -20.0 -1 0 0 0 1 0 0 0 -1 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_9
+1 4 140.0 -224.0 -10.0 0 0 -1 0 1 0 1 0 0 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_9
+1 4 -30.0 -224.0 10.0 0 0 1 0 1 0 -1 0 0 3005.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 20.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 100.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 180.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 260.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 340.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 420.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_1
+1 72 480.0 -224.0 20.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_9
+1 4 -20.0 -224.0 90.0 0 0 1 0 1 0 -1 0 0 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_9
+1 4 130.0 -224.0 70.0 0 0 -1 0 1 0 1 0 0 3005.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_9
+1 4 140.0 -224.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_9
+1 4 -10.0 -224.0 140.0 1 0 0 0 1 0 0 0 1 3002.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_9
+1 4 70.0 -224.0 130.0 1 0 0 0 1 0 0 0 1 3005.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_9
+1 4 100.0 -224.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_1
+1 72 0.0 -224.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_1
+1 72 520.0 -224.0 600.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 20.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 100.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 180.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 260.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 340.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 420.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_1
+1 72 480.0 -224.0 620.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_10
+1 4 0.0 -248.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_10
+1 4 -20.0 -248.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_10
+1 4 80.0 -248.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_10
+1 4 140.0 -248.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 20.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 100.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 180.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 260.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 340.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 420.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_2
+1 72 480.0 -248.0 40.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_10
+1 4 -20.0 -248.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_10
+1 4 140.0 -248.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_10
+1 4 0.0 -248.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_10
+1 4 80.0 -248.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 460.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 460.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 540.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 540.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 20.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_2
+1 72 0.0 -248.0 600.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 100.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 180.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 260.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 340.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 420.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_2
+1 72 480.0 -248.0 600.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_2
+1 72 520.0 -248.0 600.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_11
+1 4 -20.0 -272.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_11
+1 4 -20.0 -272.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_11
+1 4 40.0 -272.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_11
+1 4 100.0 -272.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_11
+1 4 140.0 -272.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_11
+1 4 -20.0 -272.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_11
+1 4 140.0 -272.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 20.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 100.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 180.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 260.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 340.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 420.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_3
+1 72 480.0 -272.0 60.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_11
+1 4 -20.0 -272.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_11
+1 4 140.0 -272.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_11
+1 4 -20.0 -272.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_11
+1 4 40.0 -272.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_11
+1 4 100.0 -272.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_3
+1 72 0.0 -272.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_3
+1 72 520.0 -272.0 560.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 20.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 100.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 180.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 260.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 340.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 420.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_3
+1 72 480.0 -272.0 580.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_12
+1 4 0.0 -296.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_12
+1 4 -20.0 -296.0 0.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_12
+1 4 80.0 -296.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_12
+1 4 140.0 -296.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_12
+1 4 -20.0 -296.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_12
+1 4 140.0 -296.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 20.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 100.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 180.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 260.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 340.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 420.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_4
+1 72 480.0 -296.0 80.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 100.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_12
+1 4 0.0 -296.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_12
+1 4 80.0 -296.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 500.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 500.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 20.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_4
+1 72 0.0 -296.0 560.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 100.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 180.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 260.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 340.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 420.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_4
+1 72 480.0 -296.0 560.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_4
+1 72 520.0 -296.0 560.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_13
+1 4 -20.0 -320.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_13
+1 4 -20.0 -320.0 -20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_13
+1 4 40.0 -320.0 -20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south row_13
+1 4 100.0 -320.0 -20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_13
+1 4 140.0 -320.0 -20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_13
+1 4 -20.0 -320.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_13
+1 4 140.0 -320.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west row_13
+1 4 -20.0 -320.0 100.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 20.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 100.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east row_13
+1 4 140.0 -320.0 100.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 180.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 260.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 340.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 420.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_5
+1 72 480.0 -320.0 100.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_13
+1 4 -20.0 -320.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_13
+1 4 40.0 -320.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north row_13
+1 4 100.0 -320.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_5
+1 72 0.0 -320.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_5
+1 72 520.0 -320.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 20.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 100.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 180.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 260.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 340.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 420.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_5
+1 72 480.0 -320.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_0
+1 72 -20.0 -344.0 -40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_0
+1 72 -40.0 -344.0 -20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south ledge
+1 320 0.0 -344.0 -40.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_0
+1 72 60.0 -344.0 -40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_south ledge
+1 320 80.0 -344.0 -40.0 -1 0 0 0 1 0 0 0 -1 3020.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_0
+1 72 120.0 -344.0 -40.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_0
+1 72 160.0 -344.0 -20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west ledge
+1 320 -40.0 -344.0 0.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east ledge
+1 320 120.0 -344.0 0.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_0
+1 72 -40.0 -344.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_0
+1 72 160.0 -344.0 60.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_west ledge
+1 320 -40.0 -344.0 80.0 0 0 1 0 1 0 -1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_east ledge
+1 320 120.0 -344.0 80.0 0 0 -1 0 1 0 1 0 0 3020.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_0
+1 72 -20.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_0
+1 72 -40.0 -344.0 120.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north ledge
+1 320 0.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 20.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_0
+1 72 60.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower > tower_north ledge
+1 320 80.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 100.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_0
+1 72 120.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 180.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_0
+1 72 160.0 -344.0 120.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 260.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 340.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 420.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_6
+1 72 480.0 -344.0 120.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 140.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 460.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 460.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 20.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_6
+1 72 0.0 -344.0 520.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 100.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 180.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 260.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 340.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 420.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_6
+1 72 480.0 -344.0 520.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_6
+1 72 520.0 -344.0 520.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_1
+1 72 -20.0 -368.0 -20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_1
+1 72 -40.0 -368.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_1
+1 72 60.0 -368.0 -20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_1
+1 72 120.0 -368.0 -20.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_1
+1 72 160.0 -368.0 0.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_1
+1 72 -40.0 -368.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_1
+1 72 160.0 -368.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_1
+1 72 -20.0 -368.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_1
+1 72 60.0 -368.0 100.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_1
+1 72 120.0 -368.0 100.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 20.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_7
+1 72 0.0 -368.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 100.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 180.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 260.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 340.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 420.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_7
+1 72 480.0 -368.0 140.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_7
+1 72 520.0 -368.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_7
+1 72 0.0 -368.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_7
+1 72 520.0 -368.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_7
+1 72 0.0 -368.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_7
+1 72 520.0 -368.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_7
+1 72 0.0 -368.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_7
+1 72 520.0 -368.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_7
+1 72 0.0 -368.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_7
+1 72 520.0 -368.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 20.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 100.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 180.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 260.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 340.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 420.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_7
+1 72 480.0 -368.0 500.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_2
+1 72 -20.0 -392.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_2
+1 72 -40.0 -392.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_2
+1 72 60.0 -392.0 0.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_2
+1 72 120.0 -392.0 0.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_2
+1 72 160.0 -392.0 20.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_2
+1 72 -20.0 -392.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_2
+1 72 -40.0 -392.0 80.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_2
+1 72 60.0 -392.0 80.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_2
+1 72 120.0 -392.0 80.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_2
+1 72 160.0 -392.0 80.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 20.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_8
+1 72 0.0 -392.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 100.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 180.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 260.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 340.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 420.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_8
+1 72 480.0 -392.0 160.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_8
+1 72 520.0 -392.0 180.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_8
+1 72 0.0 -392.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_8
+1 72 520.0 -392.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_8
+1 72 0.0 -392.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_8
+1 72 520.0 -392.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_8
+1 72 0.0 -392.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_8
+1 72 520.0 -392.0 420.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 20.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_8
+1 72 0.0 -392.0 480.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 100.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 180.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 260.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 340.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 420.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_8
+1 72 480.0 -392.0 480.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_8
+1 72 520.0 -392.0 480.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_3
+1 72 -20.0 -416.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_3
+1 72 -40.0 -416.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_3
+1 72 60.0 -416.0 20.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_3
+1 72 120.0 -416.0 20.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_3
+1 72 160.0 -416.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_3
+1 72 -20.0 -416.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_3
+1 72 60.0 -416.0 60.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_3
+1 72 120.0 -416.0 60.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 20.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_9
+1 72 0.0 -416.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 100.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 180.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 260.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 340.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 420.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_9
+1 72 480.0 -416.0 180.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_9
+1 72 520.0 -416.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_9
+1 72 0.0 -416.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_9
+1 72 520.0 -416.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_9
+1 72 0.0 -416.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_9
+1 72 520.0 -416.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_9
+1 72 0.0 -416.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_9
+1 72 520.0 -416.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 20.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 100.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 180.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 260.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 340.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 420.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_9
+1 72 480.0 -416.0 460.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_4
+1 72 -20.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_4
+1 72 -20.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof west_gable step_4
+1 72 -40.0 -440.0 40.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_4
+1 72 60.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_4
+1 72 60.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > tower+tower_roof > tower_roof south_slope step_4
+1 72 120.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof north_slope step_4
+1 72 120.0 -440.0 40.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > tower+tower_roof > tower_roof east_gable step_4
+1 72 160.0 -440.0 40.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 20.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_10
+1 72 0.0 -440.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 100.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 180.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 260.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 340.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 420.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_10
+1 72 480.0 -440.0 200.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_10
+1 72 520.0 -440.0 220.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_10
+1 72 0.0 -440.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_10
+1 72 520.0 -440.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_10
+1 72 0.0 -440.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_10
+1 72 520.0 -440.0 380.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 20.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_10
+1 72 0.0 -440.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 100.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 180.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 260.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 340.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 420.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_10
+1 72 480.0 -440.0 440.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_10
+1 72 520.0 -440.0 440.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_11
+1 72 20.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_11
+1 72 0.0 -464.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 100.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 180.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 260.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 340.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 420.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_11
+1 72 480.0 -464.0 220.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_11
+1 72 520.0 -464.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_11
+1 72 0.0 -464.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_11
+1 72 520.0 -464.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_11
+1 72 0.0 -464.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_11
+1 72 520.0 -464.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 20.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 100.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 180.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 260.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 340.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 420.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_11
+1 72 480.0 -464.0 420.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_12
+1 72 20.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_12
+1 72 0.0 -488.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 100.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 180.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 260.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 340.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 420.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_12
+1 72 480.0 -488.0 240.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_12
+1 72 520.0 -488.0 260.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_12
+1 72 0.0 -488.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_12
+1 72 520.0 -488.0 340.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 20.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_12
+1 72 0.0 -488.0 400.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 100.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 180.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 260.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 340.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 420.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_12
+1 72 480.0 -488.0 400.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_12
+1 72 520.0 -488.0 400.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_13
+1 72 20.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_13
+1 72 0.0 -512.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 100.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 180.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 260.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 340.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 420.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_13
+1 72 480.0 -512.0 260.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_13
+1 72 520.0 -512.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof west_gable step_13
+1 72 0.0 -512.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof east_gable step_13
+1 72 520.0 -512.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 20.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 100.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 180.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 260.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 340.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 420.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_13
+1 72 480.0 -512.0 380.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_14
+1 72 20.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_14
+1 72 0.0 -536.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 100.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 180.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 260.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 340.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 420.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_14
+1 72 480.0 -536.0 280.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_14
+1 72 520.0 -536.0 300.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 20.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_14
+1 72 0.0 -536.0 360.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 100.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 180.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 260.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 340.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 420.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_14
+1 72 480.0 -536.0 360.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_14
+1 72 520.0 -536.0 360.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_15
+1 72 20.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_15
+1 72 0.0 -560.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 100.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 180.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 260.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 340.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 420.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_15
+1 72 480.0 -560.0 300.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_15
+1 72 520.0 -560.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 20.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 100.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 180.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 260.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 340.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 420.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_15
+1 72 480.0 -560.0 340.0 1 0 0 0 1 0 0 0 1 3003.dat
+
+0 // foundation+nave > church_roof south_slope step_16
+1 72 20.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 20.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof west_gable step_16
+1 72 0.0 -584.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 100.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 100.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 180.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 180.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 260.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 260.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 340.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 340.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 420.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 420.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // foundation+nave > church_roof south_slope step_16
+1 72 480.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof north_slope step_16
+1 72 480.0 -584.0 320.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // foundation+nave > church_roof east_gable step_16
+1 72 520.0 -584.0 320.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 NOFILE
