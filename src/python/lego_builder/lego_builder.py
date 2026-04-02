@@ -42,6 +42,16 @@ def to_ldraw_coords(x_studs: float, y_plates: float, z_studs: float) -> tuple[fl
     LDraw Y axis is inverted: negative = up. Our y_plates is positive-up,
     so we negate when converting.
     """
+    # TODO BUG: This function converts corner-based internal coordinates
+    # (where x,z refer to the brick's minimum corner) straight to LDU, but
+    # LDraw parts have their origin at the CENTER of the part (on X and Z).
+    # This means the LDraw position should be offset by +half the part's
+    # width in X and +half the part's depth in Z (in stud units, then
+    # multiplied by LDU_PER_STUD).  Without this correction every brick is
+    # placed half-a-brick off from where it should be.
+    # Because the shift depends on the part's dimensions AND its rotation,
+    # this fix belongs in to_ldraw_line() (which knows the part and rotation),
+    # not here.  See the companion TODO in BrickPlacement.to_ldraw_line().
     lx = x_studs * LDU_PER_STUD
     ly = -y_plates * LDU_PER_PLATE  # flip Y: our up is LDraw's negative
     lz = z_studs * LDU_PER_STUD
@@ -65,6 +75,16 @@ def to_ldraw_coords(x_studs: float, y_plates: float, z_studs: float) -> tuple[fl
 
 ROTATION_MATRICES: dict[int, str] = {
     0:   "1 0 0 0 1 0 0 0 1",          # no rotation (facing north / -Z)
+    # TODO VERIFY: The 90° and 270° matrices need careful validation against
+    # actual LDraw convention.  LDraw's coordinate system is left-handed
+    # (Y points down), so a "clockwise" rotation when viewed from above
+    # (looking down -Y in LDraw = looking down +Y in our system) may have
+    # opposite sign conventions from what's expected.
+    # If these are wrong, east/west walls will have their bricks placed with
+    # the X and Z axes swapped or reflected in the wrong direction, producing
+    # one-stud-off shifts that depend on brick width.
+    # Cross-check: place a single 1x1 brick at a known corner with rotation
+    # 90 and 270 and verify its LDraw output lands at the expected coordinate.
     90:  "0 0 -1 0 1 0 1 0 0",         # 90° CW  (facing east / +X)
     180: "-1 0 0 0 1 0 0 0 -1",        # 180°    (facing south / +Z)
     270: "0 0 1 0 1 0 -1 0 0",         # 270° CW (facing west / -X)
@@ -100,6 +120,13 @@ class PartType(Enum):
       WINDOW_WxDxH  — window (complete), W wide, D deep, H high (in bricks)
       DOOR_WxDxH    — door frame, W wide, D deep, H high (in bricks)
       SLOPE_WxD     — 45° slope brick
+
+    # TODO VERIFY: The naming says "WxD" but BRICK_1X2 has width_studs=2,
+    # depth_studs=1 in the catalog — so the name actually reads as DxW.
+    # This is confusing and may lead the LLM to pick the wrong part size.
+    # The ACTUAL Part dimensions in the catalog are correct per LDraw, but
+    # the enum names are misleading.  Either rename enums to match WxD
+    # (BRICK_2X1) or document that the first number is depth, not width.
     """
     # --- Bricks (height = 3 plates = 1 brick) ---
     BRICK_1X1 = "brick_1x1"
@@ -320,6 +347,25 @@ class BrickPlacement:
             0 // wall_north row_3
             1 15 0 -24 0 1 0 0 0 1 0 0 0 1 3001.dat
         """
+        # TODO BUG: Internal coords are corner-based (x,z = min corner of the
+        # brick in world space) but LDraw expects the part's origin, which for
+        # standard bricks/plates is at the CENTER of the top face.
+        #
+        # Before calling to_ldraw_coords, we should add half the part's world-
+        # space extent so the LDraw coordinate points to the part center:
+        #
+        #   For rotation 0 or 180 (width along X, depth along Z):
+        #     adjusted_x = self.x + self.part.width_studs / 2
+        #     adjusted_z = self.z + self.part.depth_studs / 2
+        #
+        #   For rotation 90 or 270 (width along Z, depth along X):
+        #     adjusted_x = self.x + self.part.depth_studs / 2
+        #     adjusted_z = self.z + self.part.width_studs / 2
+        #
+        # Without this, every brick is placed half-a-brick off its intended
+        # position.  This is the ROOT CAUSE of the one-stud-off defects on
+        # walls, because the error compounds differently for each facing
+        # direction (some cancel out by luck, others stack).
         lx, ly, lz = to_ldraw_coords(self.x, self.y, self.z)
         matrix = ROTATION_MATRICES.get(self.rotation % 360, ROTATION_MATRICES[0])
 
@@ -871,15 +917,61 @@ class Box:
         # West:  swap axes (face→Z, depth→X)
         # East:  swap + mirror Z, shift X to right edge
         wall_configs = [
+            # TODO: South wall transform looks correct for corner-based coords
+            # only if we DON'T apply center-origin correction.  If a center-
+            # origin fix is added in to_ldraw_line(), this will remain correct.
+            # But if the fix is applied here instead, south also needs adjustment.
             (self.south, "south",
              lambda p: p.x,
              lambda p: p.z),
+            # TODO BUG: North wall x-transform subtracts p.part.width_studs to
+            # mirror the brick's position, but this assumes the brick's anchor
+            # point is at its left edge in world space after rotation.  With
+            # rotation=180 the LDraw part origin (center) is already mirrored,
+            # so subtracting width_studs is a double-correction and shifts
+            # every brick one-brick-width off in X.
+            # Possible fix: account for the fact that the 180° rotation matrix
+            # already mirrors the part around its origin.  The correct offset
+            # depends on whether internal coords are corner-based or center-based.
+            # If corner-based, the formula should be:
+            #   width - p.x - 1   (map last stud, not last stud + width)
+            # or needs a half-width correction added at LDraw export time.
             (self.north, "north",
              lambda p: self.width - p.x - p.part.width_studs,
+             # TODO VERIFY: z = self.depth + p.z places the wall's z=0 row
+             # at z=depth in box space.  But with rotation=180 the brick's
+             # depth (2 studs) extends in the -Z direction (back toward the
+             # box interior).  This means the wall's OUTER face sits at
+             # z=depth and its inner face at z=depth-2.  If the intent is
+             # for the wall to sit with its outer face at z=depth, this is
+             # correct.  But if the south wall's outer face is at z=0 and
+             # inner face at z=2, then the box interior is 2 studs smaller
+             # than (width × depth) on each axis — verify this matches the
+             # LLM's mental model of box dimensions.
              lambda p: self.depth + p.z),
+            # TODO BUG: West wall swaps axes (face→Z, depth→X) but does not
+            # account for the brick width along the new axis.  After rotation
+            # 270°, the part's local width runs along world-Z.  Mapping p.x
+            # (wall-face position) directly to box-Z without subtracting or
+            # adjusting for brick width means the brick's far edge may overshoot
+            # the box boundary by width_studs - 1 studs.
+            # This may appear correct for 1x1 bricks but shifts wider bricks.
             (self.west, "west",
              lambda p: p.z,
              lambda p: p.x),
+            # TODO BUG: East wall z-transform subtracts p.part.width_studs, but
+            # after 90° rotation the brick's local width_studs axis maps to the
+            # world Z axis.  The subtraction is meant to flip the wall-face
+            # coordinate, but it uses the *unrotated* part width.  For bricks
+            # placed at rotation=0 in wall-local space and then globally
+            # rotated to 90°, the extent along world-Z is still width_studs,
+            # but the part's LDraw origin (center) already sits at the middle.
+            # This causes an off-by-width_studs error in Z for every brick on
+            # the east wall.
+            # Possible fix: same center-vs-corner issue as north wall.  Either
+            # adjust to  self.depth - p.x - 1  or add half-width corrections
+            # at export time to reconcile corner-based internal coords with
+            # center-based LDraw origins.
             (self.east, "east",
              lambda p: self.width + p.z,
              lambda p: self.depth - p.x - p.part.width_studs),
@@ -889,6 +981,18 @@ class Box:
         for wall, facing, x_fn, z_fn in wall_configs:
             rotation = FACING_TO_ROTATION[facing]
             for p in wall.to_placements(prefix):
+                # TODO BUG: The x/z transforms above use p.part.width_studs
+                # (the LOCAL/unrotated width) to compute positions, but then
+                # the brick is placed with `rotation` (90, 180, 270).  After
+                # rotation, the part's world-space footprint has its width and
+                # depth swapped (for 90/270) or both flipped (for 180).
+                # The transforms should use the ROTATED extents:
+                #   rot 0/180: world_w = width_studs, world_d = depth_studs
+                #   rot 90/270: world_w = depth_studs, world_d = width_studs
+                # Using the wrong extent is likely the direct cause of the
+                # "one stud off" defect on east and north walls, because
+                # width_studs and depth_studs differ by 1-2 studs for
+                # rectangular bricks like 2x4 or 1x4.
                 result.append(BrickPlacement(
                     p.part, x_fn(p), p.y, z_fn(p), rotation, p.color, p.comment
                 ))
@@ -1098,7 +1202,7 @@ def _tile_row(
 
     Walks from 0 to `span`, placing the widest fitting brick at each step.
     Used by GableRoof slope and gable builders.
-
+    
     Args:
         span: Total studs to fill along the tiling axis.
         y_plate: Vertical position in plates.
@@ -1111,6 +1215,14 @@ def _tile_row(
     Returns:
         List of BrickPlacements for this row.
     """
+    # TODO BUG: When along_x=False and rotation=90, bricks are placed along Z
+    # and advanced by brick.width_studs.  But after 90° rotation, the brick's
+    # local width_studs axis maps to world-Z, and its depth maps to world-X.
+    # The span check `pos + brick.width_studs <= span` is correct for the
+    # tiling direction, but the resulting BrickPlacement stores the brick with
+    # its unrotated width_studs, so the center-origin mismatch from
+    # to_ldraw_line() shifts every roof brick by half a brick along the
+    # tiling axis.  This compounds with the same issue in wall tiling.
     placements: list[BrickPlacement] = []
     pos = 0
     while pos < span:
@@ -1163,7 +1275,7 @@ def _tile_row(
 class GableRoof:
     """A peaked roof made of stepped brick rows.
 
-    The roof's local coordinate space:
+    The roofs local coordinate space:
       - Origin at bottom-left corner of the footprint (same as a Box).
       - Ridge runs along the specified axis.
       - Steps rise from both sides toward the center ridge.
@@ -1290,7 +1402,15 @@ class GableRoof:
             gable_length = z_end - z_start
             if gable_length <= 0:
                 break
-            # West (x=0) and east (x=width) gable walls run along Z, rotated 90°
+            # TODO BUG: East gable is placed at x_pos=self.width, but the box
+            # footprint runs from x=0 to x=width-1 in studs.  With rotation=90
+            # and center-origin parts, this places the gable wall one stud
+            # beyond the box's east edge.  Should probably be
+            #   self.width - WALL_DEPTH_STUDS
+            # to match how the east wall of a Box sits at x=width with depth
+            # going inward (negative x direction via rotation).
+            # Similarly, west gable at x=0 may need to be at x=0 or adjusted
+            # depending on how the 90° rotation maps the brick's depth.
             for x_pos, side in [(0, "west_gable"), (self.width, "east_gable")]:
                 placements.extend(_tile_row(
                     span=gable_length, y_plate=y_plate,
@@ -1331,6 +1451,11 @@ class GableRoof:
             gable_length = x_end - x_start
             if gable_length <= 0:
                 break
+            # TODO BUG: North gable at z_pos=self.depth places the gable wall
+            # one stud beyond the box's north edge (footprint is 0..depth-1).
+            # Should likely be  self.depth - WALL_DEPTH_STUDS  to sit flush
+            # with the north wall.  Same center-origin / boundary issue as the
+            # east gable in _build_ew_gables.
             for z_pos, side in [(0, "south_gable"), (self.depth, "north_gable")]:
                 placements.extend(_tile_row(
                     span=gable_length, y_plate=y_plate,
@@ -1949,5 +2074,3 @@ class Scene:
             "height_plates": max(ys) + 3,
             "part_counts": part_counts,
         }
-
-
