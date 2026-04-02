@@ -21,9 +21,9 @@ LDraw coordinate system (for reference, used only in export):
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from enum import Enum
-from typing import Optional
+from typing import Any
 
 
 # ---------------------------------------------------------------------------
@@ -192,6 +192,18 @@ PARTS: dict[str, Part] = {
 }
 
 
+# Greedy fill order for brick tiling: widest first, 1x1 as last resort.
+# Used by Wall._tile_solid_regions and GableRoof slope/gable builders.
+FILL_BRICKS: list[Part] = [
+    PARTS["brick_2x4"],  # 4 studs wide along face
+    PARTS["brick_2x3"],  # 3 studs
+    PARTS["brick_2x2"],  # 2 studs, 2 deep
+    PARTS["brick_1x4"],  # 4 studs, 1 deep (gap filler)
+    PARTS["brick_1x2"],  # 2 studs, 1 deep
+    PARTS["brick_1x1"],  # last resort
+]
+
+
 def find_part(
     part_type: PartType,
     description: str = "",
@@ -272,7 +284,7 @@ class BuilderError(Exception):
     pass
 
 
-@dataclass
+@dataclass(frozen=True)
 class BrickPlacement:
     """A single placed brick/part in the model.
 
@@ -295,6 +307,11 @@ class BrickPlacement:
     rotation: int = 0
     color: int = Color.WHITE
     comment: str = ""
+
+    def offset_by(self, x: float, y: float, z: float) -> "BrickPlacement":
+        """Return a copy of this placement shifted by (x, y, z)."""
+        return BrickPlacement(self.part, self.x + x, self.y + y, self.z + z,
+                              self.rotation, self.color, self.comment)
 
     def to_ldraw_line(self) -> str:
         """Convert this placement to an LDraw type-1 line with optional comment.
@@ -448,7 +465,7 @@ class Wall:
                 self.grid[gx][gy] = False
 
     def insert(self, part_type: PartType, x: int, y: int,
-               color: Optional[int] = None) -> None:
+               color: int | None = None) -> None:
         """Place a part (window, door) into an existing opening.
 
         Args:
@@ -464,13 +481,19 @@ class Wall:
         part = find_part(part_type)
         y_plates = y * PLATES_PER_BRICK
 
-        # Verify there is an opening at this position
-        if x < self.length and y_plates < self.height_plates:
-            if self.grid[x][y_plates]:
-                raise BuilderError(
-                    f"No opening at position x={x}, y={y} on wall "
-                    f"'{self.name}'. Call .opening(x={x}, y={y}, ...) first."
-                )
+        # Verify the full part footprint falls within an opening.
+        # Checks every (stud, plate) cell the part occupies, not just the corner.
+        if any(
+            self.grid[cx][cy]
+            for cx in range(x, x + part.width_studs)
+            for cy in range(y_plates, y_plates + part.height_plates)
+            if cx < self.length and cy < self.height_plates
+        ):
+            raise BuilderError(
+                f"No opening for '{part_type.value}' at x={x}, y={y} on wall "
+                f"'{self.name}'. Call .opening(x={x}, y={y}, "
+                f"width={part.width_studs}, height={part.height_plates // PLATES_PER_BRICK}) first."
+            )
 
         if color is None:
             if "window" in part_type.value:
@@ -490,7 +513,7 @@ class Wall:
         count: int,
         part_type: PartType,
         spacing: str | int = "even",
-        color: Optional[int] = None,
+        color: int | None = None,
     ) -> None:
         """Cut openings and insert windows in a regular horizontal pattern.
 
@@ -547,7 +570,7 @@ class Wall:
         self,
         y: int,
         overhang: int = 1,
-        color: Optional[int] = None,
+        color: int | None = None,
         part_type: PartType = PartType.PLATE_2X4,
     ) -> None:
         """Add an overhanging ledge/cornice at a given row height.
@@ -564,6 +587,14 @@ class Wall:
 
     # --- Brick Tiling (for export) ---
 
+    def _bond_offset(self, brick_row: int) -> int:
+        """Running bond offset in studs for a given brick row.
+
+        Even rows → 0. Odd rows → half the primary brick width.
+        """
+        primary_width = PARTS[self.fill_part].width_studs
+        return (brick_row % 2) * (primary_width // 2)
+
     def _tile_solid_regions(self, comment_prefix: str = "") -> list[BrickPlacement]:
         """Fill solid grid cells with bricks using a greedy algorithm.
 
@@ -577,34 +608,24 @@ class Wall:
         """
         placements: list[BrickPlacement] = []
 
-        # Available fill bricks, widest first (greedy).
-        # Using 2xN bricks: depth goes INTO wall, width goes ALONG face.
-        fill_bricks = [
-            PARTS["brick_2x4"],  # 4 studs along face
-            PARTS["brick_2x3"],  # 3 studs along face
-            PARTS["brick_2x2"],  # 2 studs along face
-            PARTS["brick_1x4"],  # 4 studs, 1 deep (for thin fills)
-            PARTS["brick_1x2"],  # 2 studs, 1 deep
-            PARTS["brick_1x1"],  # last resort
-        ]
-
         # Process each brick row (every PLATES_PER_BRICK plate rows)
         for brick_row in range(self.height_bricks):
             y_plate = brick_row * PLATES_PER_BRICK
 
-            # Running bond offset: odd rows shift by half primary brick width
-            primary_width = PARTS[self.fill_part].width_studs
-            bond_offset = (primary_width // 2) if (brick_row % 2 == 1) else 0
+            bond_offset = self._bond_offset(brick_row)
 
-            # Tile this row left to right.
-            # On offset rows, place a half-width brick first, then full bricks.
-            x = 0
+            # Anchor pattern globally instead of per-row drifting
+            x = -bond_offset
 
             # Running bond: on odd rows, start with a smaller brick to create
             # the offset pattern. Place a brick of bond_offset width first.
             if bond_offset > 0 and self.grid[0][y_plate]:
                 # Find a brick that fits the offset width
-                for brick in fill_bricks:
+                primary = PARTS[self.fill_part]
+
+                candidates = [primary] + [b for b in FILL_BRICKS if b != primary]
+
+                for brick in candidates:
                     if brick.width_studs == bond_offset:
                         if all(self.grid[cx][y_plate] for cx in range(bond_offset)):
                             placements.append(BrickPlacement(
@@ -617,13 +638,20 @@ class Wall:
                             break
 
             while x < self.length:
+                if x < 0:
+                    x += 1
+                    continue
                 if not self.grid[x][y_plate]:
                     x += 1
                     continue
 
                 # Find the widest brick that fits
                 placed = False
-                for brick in fill_bricks:
+                primary = PARTS[self.fill_part]
+
+                candidates = [primary] + [b for b in FILL_BRICKS if b != primary]
+
+                for brick in candidates:
                     bw = brick.width_studs
                     if x + bw > self.length:
                         continue
@@ -677,14 +705,25 @@ class Wall:
         placements = []
         for y_plate, overhang, color, part_key in self.ledges:
             part = PARTS[part_key]
-            x = 0
-            while x + part.width_studs <= self.length:
+            brick_row = y_plate // PLATES_PER_BRICK
+            bond_offset = self._bond_offset(brick_row)
+            
+            x = -bond_offset
+            while x < self.length:
+                if x < 0:
+                    x += 1
+                    continue
+
                 comment = f"{comment_prefix}{self.name} ledge"
-                placements.append(BrickPlacement(
-                    part=part, x=x, y=y_plate, z=-overhang,
-                    rotation=0, color=color, comment=comment,
-                ))
-                x += part.width_studs
+                
+                if x + part.width_studs <= self.length:
+                    placements.append(BrickPlacement(
+                        part=part, x=x, y=y_plate, z=-overhang,
+                        rotation=0, color=color, comment=comment,
+                    ))
+                    x += part.width_studs
+                else:
+                    x += 1
         return placements
 
     def to_placements(self, comment_prefix: str = "") -> list[BrickPlacement]:
@@ -822,61 +861,37 @@ class Box:
             List of BrickPlacement in Box-local coordinates.
         """
         prefix = f"{comment_prefix}{self.name} > "
+
+        # Each entry: (wall, facing, x_transform, z_transform).
+        # Transforms map wall-local (p.x, p.z) → box-local (x, z).
+        # p.x = position along wall face; p.z = depth offset (0 or negative for ledges).
+        #
+        # South: identity — face runs along X from origin
+        # North: mirror X, shift Z to far edge
+        # West:  swap axes (face→Z, depth→X)
+        # East:  swap + mirror Z, shift X to right edge
+        wall_configs = [
+            (self.south, "south",
+             lambda p: p.x,
+             lambda p: p.z),
+            (self.north, "north",
+             lambda p: self.width - p.x - p.part.width_studs,
+             lambda p: self.depth + p.z),
+            (self.west, "west",
+             lambda p: p.z,
+             lambda p: p.x),
+            (self.east, "east",
+             lambda p: self.width + p.z,
+             lambda p: self.depth - p.x - p.part.width_studs),
+        ]
+
         result = []
-
-        # South wall: face points south (+Z direction in LDraw terms).
-        # Positioned at z=0, along X axis.
-        for p in self.south.to_placements(prefix):
-            result.append(BrickPlacement(
-                part=p.part,
-                x=p.x,                          # along wall face = along X
-                y=p.y,                          # height unchanged
-                z=p.z,                          # wall depth (0 or negative for ledges)
-                rotation=FACING_TO_ROTATION["south"],
-                color=p.color,
-                comment=p.comment,
-            ))
-
-        # North wall: face points north (-Z). Positioned at z=depth.
-        # Wall's local X runs right-to-left when viewed from outside,
-        # so we mirror: box_x = width - wall_x
-        for p in self.north.to_placements(prefix):
-            result.append(BrickPlacement(
-                part=p.part,
-                x=self.width - p.x - p.part.width_studs,            # mirror along X
-                y=p.y,
-                z=self.depth + p.z,             # at far edge + any ledge offset
-                rotation=FACING_TO_ROTATION["north"],
-                color=p.color,
-                comment=p.comment,
-            ))
-
-        # West wall: face points west (-X). Positioned at x=0.
-        # Wall's local X maps to box Z axis.
-        for p in self.west.to_placements(prefix):
-            result.append(BrickPlacement(
-                part=p.part,
-                x=p.z,                          # wall depth becomes X offset
-                y=p.y,
-                z=p.x,                          # wall face direction = Z
-                rotation=FACING_TO_ROTATION["west"],
-                color=p.color,
-                comment=p.comment,
-            ))
-
-        # East wall: face points east (+X). Positioned at x=width.
-        # Wall's local X runs opposite to box Z, so mirror.
-        for p in self.east.to_placements(prefix):
-            result.append(BrickPlacement(
-                part=p.part,
-                x=self.width + p.z,             # at right edge + ledge offset
-                y=p.y,
-                z=self.depth - p.x - p.part.width_studs,            # mirror along Z
-                rotation=FACING_TO_ROTATION["east"],
-                color=p.color,
-                comment=p.comment,
-            ))
-
+        for wall, facing, x_fn, z_fn in wall_configs:
+            rotation = FACING_TO_ROTATION[facing]
+            for p in wall.to_placements(prefix):
+                result.append(BrickPlacement(
+                    p.part, x_fn(p), p.y, z_fn(p), rotation, p.color, p.comment
+                ))
         return result
 
 
@@ -977,15 +992,7 @@ class FloorSlab:
                         continue
 
                     # Check all cells are unfilled
-                    fits = True
-                    for cx in range(x, x + pw):
-                        for cz in range(z, z + pd):
-                            if filled[cx][cz]:
-                                fits = False
-                                break
-                        if not fits:
-                            break
-                    if not fits:
+                    if any(filled[cx][cz] for cx in range(x, x + pw) for cz in range(z, z + pd)):
                         continue
 
                     # Place this plate and mark cells as filled
@@ -1071,6 +1078,60 @@ class Column:
             ))
 
         return placements
+
+
+# ---------------------------------------------------------------------------
+# Section 10: GableRoof helpers
+# ---------------------------------------------------------------------------
+
+def _tile_row(
+    span: int,
+    y_plate: int,
+    x0: float,
+    z0: float,
+    along_x: bool,
+    rotation: int,
+    color: int,
+    comment: str,
+) -> list[BrickPlacement]:
+    """Greedily fill a single brick row using FILL_BRICKS.
+
+    Walks from 0 to `span`, placing the widest fitting brick at each step.
+    Used by GableRoof slope and gable builders.
+
+    Args:
+        span: Total studs to fill along the tiling axis.
+        y_plate: Vertical position in plates.
+        x0, z0: Starting position in studs.
+        along_x: True = tile along X; False = tile along Z.
+        rotation: Brick rotation angle (0 or 90).
+        color: LDraw color code.
+        comment: LDraw comment string for each placed brick.
+
+    Returns:
+        List of BrickPlacements for this row.
+    """
+    placements: list[BrickPlacement] = []
+    pos = 0
+    while pos < span:
+        placed = False
+        for brick in FILL_BRICKS:
+            if pos + brick.width_studs <= span:
+                placements.append(BrickPlacement(
+                    part=brick,
+                    x=x0 + (pos if along_x else 0),
+                    y=y_plate,
+                    z=z0 + (0 if along_x else pos),
+                    rotation=rotation,
+                    color=color,
+                    comment=comment,
+                ))
+                pos += brick.width_studs
+                placed = True
+                break
+        if not placed:
+            pos += 1  # skip unfillable stud (shouldn't happen with 1x1 fallback)
+    return placements
 
 
 # ---------------------------------------------------------------------------
@@ -1162,7 +1223,8 @@ class GableRoof:
 
         self.num_steps = self.slope_span // 2
 
-    def _height_plates(self) -> int:
+    @property
+    def height_plates(self) -> int:
         """Total height of the roof in plates."""
         return self.num_steps * PLATES_PER_BRICK
 
@@ -1200,42 +1262,17 @@ class GableRoof:
         For each step level, place a row of bricks along the full width
         on both the south slope (front) and north slope (back).
         """
-        placements = []
-        fill_bricks = [
-            PARTS["brick_2x4"], PARTS["brick_2x3"], PARTS["brick_2x2"],
-            PARTS["brick_1x4"], PARTS["brick_1x2"], PARTS["brick_1x1"],
-        ]
-
+        placements: list[BrickPlacement] = []
         for step in range(self.num_steps):
             y_plate = step * PLATES_PER_BRICK
-            inset = step + 1  # each step insets 1 more stud from edge
-
-            # South slope row: at z = inset - 1
             z_south = step
-            # North slope row: at z = depth - inset
             z_north = self.depth - step - WALL_DEPTH_STUDS
-
-            # Tile a row of bricks along the full width for each slope side
             for z_pos, side in [(z_south, "south_slope"), (z_north, "north_slope")]:
-                x = 0
-                while x < self.width:
-                    placed = False
-                    for brick in fill_bricks:
-                        bw = brick.width_studs
-                        if x + bw <= self.width:
-                            placements.append(BrickPlacement(
-                                part=brick,
-                                x=x, y=y_plate, z=z_pos,
-                                rotation=0,
-                                color=self.color,
-                                comment=f"{prefix} {side} step_{step}",
-                            ))
-                            x += bw
-                            placed = True
-                            break
-                    if not placed:
-                        x += 1
-
+                placements.extend(_tile_row(
+                    span=self.width, y_plate=y_plate,
+                    x0=0, z0=z_pos, along_x=True, rotation=0,
+                    color=self.color, comment=f"{prefix} {side} step_{step}",
+                ))
         return placements
 
     def _build_ew_gables(self, prefix: str) -> list[BrickPlacement]:
@@ -1245,169 +1282,61 @@ class GableRoof:
         east (x=width) ends of the roof. Each step level is narrower
         than the one below.
         """
-        placements = []
-        fill_bricks = [
-            PARTS["brick_2x4"], PARTS["brick_2x3"], PARTS["brick_2x2"],
-            PARTS["brick_1x4"], PARTS["brick_1x2"], PARTS["brick_1x1"],
-        ]
-
+        placements: list[BrickPlacement] = []
         for step in range(self.num_steps):
             y_plate = step * PLATES_PER_BRICK
-            # At this step, the gable spans from z=step to z=depth-step
             z_start = step
             z_end = self.depth - step
             gable_length = z_end - z_start
-
             if gable_length <= 0:
                 break
-
-            # West gable (at x = 0) — wall running along Z
-            # Uses bricks rotated 90° to run along Z axis
-            z = z_start
-            while z < z_end:
-                placed = False
-                for brick in fill_bricks:
-                    bw = brick.width_studs
-                    if z + bw <= z_end:
-                        placements.append(BrickPlacement(
-                            part=brick,
-                            x=0, y=y_plate, z=z,
-                            rotation=90,
-                            color=self.color,
-                            comment=f"{prefix} west_gable step_{step}",
-                        ))
-                        z += bw
-                        placed = True
-                        break
-                if not placed:
-                    z += 1
-
-            # East gable (at x = width) — same but at other end
-            z = z_start
-            while z < z_end:
-                placed = False
-                for brick in fill_bricks:
-                    bw = brick.width_studs
-                    if z + bw <= z_end:
-                        placements.append(BrickPlacement(
-                            part=brick,
-                            x=self.width, y=y_plate, z=z,
-                            rotation=90,
-                            color=self.color,
-                            comment=f"{prefix} east_gable step_{step}",
-                        ))
-                        z += bw
-                        placed = True
-                        break
-                if not placed:
-                    z += 1
-
+            # West (x=0) and east (x=width) gable walls run along Z, rotated 90°
+            for x_pos, side in [(0, "west_gable"), (self.width, "east_gable")]:
+                placements.extend(_tile_row(
+                    span=gable_length, y_plate=y_plate,
+                    x0=x_pos, z0=z_start, along_x=False, rotation=90,
+                    color=self.color, comment=f"{prefix} {side} step_{step}",
+                ))
         return placements
 
     def _build_ns_slopes(self, prefix: str) -> list[BrickPlacement]:
         """Build slopes for north-south ridge (stepping along X/width).
 
         Same logic as _build_ew_slopes but rotated: steps along X,
-        rows along Z (depth).
+        rows run along Z (depth), bricks rotated 90°.
         """
-        placements = []
-        fill_bricks = [
-            PARTS["brick_2x4"], PARTS["brick_2x3"], PARTS["brick_2x2"],
-            PARTS["brick_1x4"], PARTS["brick_1x2"], PARTS["brick_1x1"],
-        ]
-
+        placements: list[BrickPlacement] = []
         for step in range(self.num_steps):
             y_plate = step * PLATES_PER_BRICK
-
-            # West slope row: at x = step
             x_west = step
-            # East slope row: at x = width - step - brick_depth
             x_east = self.width - step - WALL_DEPTH_STUDS
-
-            # Tile rows along Z (depth) for each slope side.
-            # Bricks are rotated 90° so their length runs along Z.
             for x_pos, side in [(x_west, "west_slope"), (x_east, "east_slope")]:
-                z = 0
-                while z < self.depth:
-                    placed = False
-                    for brick in fill_bricks:
-                        bw = brick.width_studs
-                        if z + bw <= self.depth:
-                            placements.append(BrickPlacement(
-                                part=brick,
-                                x=x_pos, y=y_plate, z=z,
-                                rotation=90,
-                                color=self.color,
-                                comment=f"{prefix} {side} step_{step}",
-                            ))
-                            z += bw
-                            placed = True
-                            break
-                    if not placed:
-                        z += 1
-
+                placements.extend(_tile_row(
+                    span=self.depth, y_plate=y_plate,
+                    x0=x_pos, z0=0, along_x=False, rotation=90,
+                    color=self.color, comment=f"{prefix} {side} step_{step}",
+                ))
         return placements
 
     def _build_ns_gables(self, prefix: str) -> list[BrickPlacement]:
         """Build triangular gable end walls for north-south ridge.
 
-        Gable walls at south (z=0) and north (z=depth) ends.
+        Gable walls at south (z=0) and north (z=depth) ends, running along X.
         """
-        placements = []
-        fill_bricks = [
-            PARTS["brick_2x4"], PARTS["brick_2x3"], PARTS["brick_2x2"],
-            PARTS["brick_1x4"], PARTS["brick_1x2"], PARTS["brick_1x1"],
-        ]
-
+        placements: list[BrickPlacement] = []
         for step in range(self.num_steps):
             y_plate = step * PLATES_PER_BRICK
             x_start = step
             x_end = self.width - step
             gable_length = x_end - x_start
-
             if gable_length <= 0:
                 break
-
-            # South gable (at z = 0) — wall running along X
-            x = x_start
-            while x < x_end:
-                placed = False
-                for brick in fill_bricks:
-                    bw = brick.width_studs
-                    if x + bw <= x_end:
-                        placements.append(BrickPlacement(
-                            part=brick,
-                            x=x, y=y_plate, z=0,
-                            rotation=0,
-                            color=self.color,
-                            comment=f"{prefix} south_gable step_{step}",
-                        ))
-                        x += bw
-                        placed = True
-                        break
-                if not placed:
-                    x += 1
-
-            # North gable (at z = depth)
-            x = x_start
-            while x < x_end:
-                placed = False
-                for brick in fill_bricks:
-                    bw = brick.width_studs
-                    if x + bw <= x_end:
-                        placements.append(BrickPlacement(
-                            part=brick,
-                            x=x, y=y_plate, z=self.depth,
-                            rotation=0,
-                            color=self.color,
-                            comment=f"{prefix} north_gable step_{step}",
-                        ))
-                        x += bw
-                        placed = True
-                        break
-                if not placed:
-                    x += 1
-
+            for z_pos, side in [(0, "south_gable"), (self.depth, "north_gable")]:
+                placements.extend(_tile_row(
+                    span=gable_length, y_plate=y_plate,
+                    x0=x_start, z0=z_pos, along_x=True, rotation=0,
+                    color=self.color, comment=f"{prefix} {side} step_{step}",
+                ))
         return placements
 
 
@@ -1427,16 +1356,9 @@ class GableRoof:
 #   .width: int (for Box, FloorSlab, GableRoof)
 #   .depth: int (for Box, FloorSlab, GableRoof)
 
-Element = Wall | Box | FloorSlab | Column | GableRoof  # forward ref Group added below
-
-
 def _get_height(element) -> int:
     """Get an element's height in plates."""
-    if hasattr(element, "height_plates"):
-        return element.height_plates
-    if hasattr(element, "_height_plates"):
-        return element._height_plates()
-    return 0
+    return getattr(element, "height_plates", 0)
 
 
 def _get_width(element) -> int:
@@ -1498,7 +1420,7 @@ class Group:
         """
         self.name = name
         # Children: (element, x_off, y_off, z_off)
-        self.children: list[tuple[object, float, float, float]] = []
+        self.children: list[tuple[Any, float, float, float]] = []
 
         if elements:
             for elem in elements:
@@ -1580,21 +1502,14 @@ class Group:
         Returns:
             List of BrickPlacement in this group's local coordinates.
         """
-        prefix = f"{comment_prefix}{self.name} > "
+        # Anonymous (empty-named) groups pass the prefix through unchanged —
+        # used by Scene's root group so it doesn't add a spurious "scene > " prefix.
+        prefix = f"{comment_prefix}{self.name} > " if self.name else comment_prefix
         result = []
 
         for elem, x_off, y_off, z_off in self.children:
-            child_placements = elem.to_placements(prefix)
-            for p in child_placements:
-                result.append(BrickPlacement(
-                    part=p.part,
-                    x=p.x + x_off,
-                    y=p.y + y_off,
-                    z=p.z + z_off,
-                    rotation=p.rotation,
-                    color=p.color,
-                    comment=p.comment,
-                ))
+            for p in elem.to_placements(prefix):
+                result.append(p.offset_by(x_off, y_off, z_off))
 
         return result
 
@@ -1759,8 +1674,6 @@ def attach(
             z_off = 0
         elif align == "flush_north":
             z_off = target_d - elem_d
-        elif align == "origin":
-            z_off = 0
         z_off += offset[0]
         y_off = offset[1]
 
@@ -1773,8 +1686,6 @@ def attach(
             z_off = 0
         elif align == "flush_north":
             z_off = target_d - elem_d
-        elif align == "origin":
-            z_off = 0
         z_off += offset[0]
         y_off = offset[1]
 
@@ -1787,8 +1698,6 @@ def attach(
             x_off = 0
         elif align == "flush_east":
             x_off = target_w - elem_w
-        elif align == "origin":
-            x_off = 0
         x_off += offset[0]
         y_off = offset[1]
 
@@ -1801,8 +1710,6 @@ def attach(
             x_off = 0
         elif align == "flush_east":
             x_off = target_w - elem_w
-        elif align == "origin":
-            x_off = 0
         x_off += offset[0]
         y_off = offset[1]
 
@@ -1842,9 +1749,11 @@ class Scene:
     Provides factory methods for creating elements and tracks them
     automatically. Handles final coordinate resolution and LDraw output.
 
+    Internally, all top-level elements are held in an anonymous root Group
+    so placement collection reuses Group.to_placements() with no duplication.
+
     Attributes:
         name: Model name (used in LDraw file header).
-        elements: List of (element, x, y, z) top-level positioned elements.
     """
 
     def __init__(self, name: str = "model"):
@@ -1854,8 +1763,8 @@ class Scene:
             name: Model name for LDraw file header.
         """
         self.name = name
-        # Top-level elements: (element, x_off, y_off, z_off)
-        self.elements: list[tuple[object, float, float, float]] = []
+        # Root group with empty name so it adds no prefix to LDraw comments.
+        self._root = Group(name="")
 
     # --- Factory Methods ---
     # These create elements and add them to the scene at the origin.
@@ -1882,7 +1791,7 @@ class Scene:
             The created Box (already added to scene).
         """
         b = Box(width=width, depth=depth, height=height, color=color, name=name)
-        self.elements.append((b, 0, 0, 0))
+        self._root.add(b)
         return b
 
     def wall(
@@ -1895,7 +1804,7 @@ class Scene:
     ) -> Wall:
         """Create a standalone Wall and add it to the scene."""
         w = Wall(length=length, height=height, facing=facing, color=color, name=name)
-        self.elements.append((w, 0, 0, 0))
+        self._root.add(w)
         return w
 
     def floor_slab(
@@ -1907,7 +1816,7 @@ class Scene:
     ) -> FloorSlab:
         """Create a FloorSlab and add it to the scene."""
         f = FloorSlab(width=width, depth=depth, color=color, name=name)
-        self.elements.append((f, 0, 0, 0))
+        self._root.add(f)
         return f
 
     def column(
@@ -1919,7 +1828,7 @@ class Scene:
     ) -> Column:
         """Create a Column and add it to the scene."""
         c = Column(height=height, color=color, part_type=part_type, name=name)
-        self.elements.append((c, 0, 0, 0))
+        self._root.add(c)
         return c
 
     def gable_roof(
@@ -1932,42 +1841,27 @@ class Scene:
     ) -> GableRoof:
         """Create a GableRoof and add it to the scene."""
         r = GableRoof(width=width, depth=depth, ridge=ridge, color=color, name=name)
-        self.elements.append((r, 0, 0, 0))
+        self._root.add(r)
         return r
 
     def group(self, name: str, elements: list | None = None) -> Group:
         """Create a Group and add it to the scene."""
         g = Group(name=name, elements=elements)
-        self.elements.append((g, 0, 0, 0))
+        self._root.add(g)
         return g
 
     def add(self, element, x: float = 0, y: float = 0, z: float = 0):
         """Add an existing element to the scene at a specific position."""
-        self.elements.append((element, x, y, z))
+        self._root.add(element, x=x, y=y, z=z)
 
     # --- Export ---
 
     def _collect_all_placements(self) -> list[BrickPlacement]:
-        """Recursively collect all BrickPlacements from all elements.
+        """Collect all BrickPlacements in global coordinates.
 
-        Applies top-level offsets to each element's placements.
-
-        Returns:
-            Flat list of all BrickPlacements in global coordinates.
+        Delegates to the root Group, which recursively resolves all children.
         """
-        all_placements = []
-        for elem, x_off, y_off, z_off in self.elements:
-            for p in elem.to_placements():
-                all_placements.append(BrickPlacement(
-                    part=p.part,
-                    x=p.x + x_off,
-                    y=p.y + y_off,
-                    z=p.z + z_off,
-                    rotation=p.rotation,
-                    color=p.color,
-                    comment=p.comment,
-                ))
-        return all_placements
+        return self._root.to_placements()
 
     def export(self, filename: str) -> str:
         """Export the scene as an LDraw .mpd file.
@@ -2057,6 +1951,3 @@ class Scene:
         }
 
 
-# ---------------------------------------------------------------------------
-# End of Pass 5. Next: Smoke test with a complete building.
-# ---------------------------------------------------------------------------
