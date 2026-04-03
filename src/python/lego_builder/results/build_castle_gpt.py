@@ -390,7 +390,7 @@ base_assembly.add(castle_group, x=2, y=0, z=2)  # offset by 2 for baseplate marg
 
 scene.add(base_assembly)
 
-output_file = "medieval_castle.mpd"
+output_file = "medieval_castle_gpt.mpd"
 scene.export(output_file)
 
 # Print stats

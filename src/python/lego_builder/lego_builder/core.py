@@ -70,7 +70,7 @@ class BrickPlacement:
 
         lx, ly, lz = to_ldraw_coords(
             self.x + rotated_width_studs * 0.5,
-            self.y,
+            self.y + part.height_plates, # LDraw parts local origins are at the top studs region, y + height places the top at the height
             self.z + rotated_depth_studs * 0.5,
         )
         matrix = ROTATION_MATRICES.get(rotation, ROTATION_MATRICES[0])

@@ -28,8 +28,8 @@ from __future__ import annotations
 # LDraw Coordinate Constants
 # ---------------------------------------------------------------------------
 
-LDU_PER_STUD = 20    # 1 stud = 20 LDU horizontally
-LDU_PER_PLATE = 8    # 1 plate = 8 LDU vertically
+LDU_PER_STUD = 20     # 1 stud = 20 LDU horizontally
+LDU_PER_PLATE = 8     # 1 plate = 8 LDU vertically
 PLATES_PER_BRICK = 3  # 1 brick height = 3 plate heights
 
 
