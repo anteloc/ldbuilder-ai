@@ -26,18 +26,11 @@ class PartType(Enum):
     """Enumeration of available LEGO parts.
 
     Naming convention:
-      BRICK_WxD     — standard brick, W studs wide, D studs deep
-      PLATE_WxD     — standard plate, W studs wide, D studs deep
-      WINDOW_WxDxH  — window (complete), W wide, D deep, H high (in bricks)
-      DOOR_WxDxH    — door frame, W wide, D deep, H high (in bricks)
-      SLOPE_WxD     — 45° slope brick
-
-    # TODO VERIFY: The naming says "WxD" but BRICK_1X2 has width_studs=2,
-    # depth_studs=1 in the catalog — so the name actually reads as DxW.
-    # This is confusing and may lead the LLM to pick the wrong part size.
-    # The ACTUAL Part dimensions in the catalog are correct per LDraw, but
-    # the enum names are misleading.  Either rename enums to match WxD
-    # (BRICK_2X1) or document that the first number is depth, not width.
+      BRICK_DxW     — standard brick, D studs deep, W studs wide
+      PLATE_DxW     — standard plate, D studs deep, W studs wide
+      WINDOW_DxWxH  — window (complete), D deep, W wide, H high (in bricks)
+      DOOR_DxWxH    — door frame, D deep, W wide, H high (in bricks)
+      SLOPE_DxW     — 45° slope brick
     """
     # --- Bricks (height = 3 plates = 1 brick) ---
     BRICK_1X1 = "brick_1x1"

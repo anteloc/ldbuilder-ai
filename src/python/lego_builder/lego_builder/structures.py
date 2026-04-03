@@ -145,31 +145,20 @@ class Box:
              lambda p: p.z),
             (self.north, "north",
              lambda p: self.width - p.x - p.part.width_studs,
-             lambda p: self.depth + p.z),
+             lambda p: self.depth - WALL_DEPTH_STUDS + p.z),       # ← FIXED
             (self.west, "west",
              lambda p: p.z,
              lambda p: p.x),
             (self.east, "east",
-             lambda p: self.width + p.z,
+             lambda p: self.width - WALL_DEPTH_STUDS + p.z,        # ← FIXED
              lambda p: self.depth - p.x - p.part.width_studs),
         ]
+
 
         result = []
         for wall, facing, x_fn, z_fn in wall_configs:
             rotation = FACING_TO_ROTATION[facing]
             for p in wall.to_placements(prefix):
-                # TODO BUG: The x/z transforms above use p.part.width_studs
-                # (the LOCAL/unrotated width) to compute positions, but then
-                # the brick is placed with `rotation` (90, 180, 270).  After
-                # rotation, the part's world-space footprint has its width and
-                # depth swapped (for 90/270) or both flipped (for 180).
-                # The transforms should use the ROTATED extents:
-                #   rot 0/180: world_w = width_studs, world_d = depth_studs
-                #   rot 90/270: world_w = depth_studs, world_d = width_studs
-                # Using the wrong extent is likely the direct cause of the
-                # "one stud off" defect on east and north walls, because
-                # width_studs and depth_studs differ by 1-2 studs for
-                # rectangular bricks like 2x4 or 1x4.
                 result.append(BrickPlacement(
                     p.part, x_fn(p), p.y, z_fn(p), rotation, p.color, p.comment
                 ))

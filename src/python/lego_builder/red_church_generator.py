@@ -11,7 +11,7 @@ from lego_builder import (
 )
 
 
-OUTPUT_FILE = "red_church.mpd"
+OUTPUT_FILE = "red_church_claude.mpd"
 
 
 def build_red_church() -> Scene:

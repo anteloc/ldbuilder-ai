@@ -216,16 +216,7 @@ class GableRoof:
             gable_length = z_end - z_start
             if gable_length <= 0:
                 break
-            # TODO BUG: East gable is placed at x_pos=self.width, but the box
-            # footprint runs from x=0 to x=width-1 in studs.  With rotation=90
-            # and center-origin parts, this places the gable wall one stud
-            # beyond the box's east edge.  Should probably be
-            #   self.width - WALL_DEPTH_STUDS
-            # to match how the east wall of a Box sits at x=width with depth
-            # going inward (negative x direction via rotation).
-            # Similarly, west gable at x=0 may need to be at x=0 or adjusted
-            # depending on how the 90° rotation maps the brick's depth.
-            for x_pos, side in [(0, "west_gable"), (self.width, "east_gable")]:
+            for x_pos, side in [(0, "west_gable"), (self.width - WALL_DEPTH_STUDS, "east_gable")]:
                 placements.extend(_tile_row(
                     span=gable_length, y_plate=y_plate,
                     x0=x_pos, z0=z_start, along_x=False, rotation=90,
@@ -265,12 +256,7 @@ class GableRoof:
             gable_length = x_end - x_start
             if gable_length <= 0:
                 break
-            # TODO BUG: North gable at z_pos=self.depth places the gable wall
-            # one stud beyond the box's north edge (footprint is 0..depth-1).
-            # Should likely be  self.depth - WALL_DEPTH_STUDS  to sit flush
-            # with the north wall.  Same center-origin / boundary issue as the
-            # east gable in _build_ew_gables.
-            for z_pos, side in [(0, "south_gable"), (self.depth, "north_gable")]:
+            for z_pos, side in [(0, "south_gable"), (self.depth - WALL_DEPTH_STUDS, "north_gable")]:
                 placements.extend(_tile_row(
                     span=gable_length, y_plate=y_plate,
                     x0=x_start, z0=z_pos, along_x=True, rotation=0,

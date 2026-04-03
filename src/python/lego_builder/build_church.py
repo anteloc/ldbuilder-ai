@@ -156,7 +156,7 @@ building.add(tower_with_roof, x=-2, y=tower_y, z=-2)
 # ══════════════════════════════════════════════════════════════════
 scene.add(building)
 
-output_file = "red_church.mpd"
+output_file = "red_church_gpt.mpd"
 scene.export(output_file)
 
 # Print stats
