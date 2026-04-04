@@ -17,10 +17,12 @@ added manually with scene.add().
 
 from __future__ import annotations
 
+from typing import Literal
+
 from .parts import PartType, Color
 from .core import BrickPlacement
 from .wall import Wall
-from .structures import Box, FloorSlab, Column
+from .structures import Box, FloorSlab, Column, WallLayout
 from .roof import GableRoof
 from .assembly import Group
 
@@ -88,6 +90,33 @@ class Scene:
         w = Wall(length=length, height=height, facing=facing, color=color, name=name)
         self._root.add(w)
         return w
+    
+    def wall_layout(
+        self,
+        height: int,
+        color: int = Color.WHITE,
+        name: str = "",
+        initial_direction: Literal["north", "south", "east", "west"] = "east",
+    ) -> WallLayout:
+        """Create an arbitrary layout of N walls with named accessors.
+        Args:
+            name: Identifier for LDraw comments.
+            height: Walls uniform height in brick rows.
+            color: Default LDraw color for all walls.
+            initial_direction: Initial direction for the first wall.
+        Returns:
+            The created WallLayout (already added to scene), walls can be added and concatenated along a continuous path
+            by calling wall_layout.turn(direction) and wall_layout.build_wall(wall_name, length_in_studs), successively.            
+        """
+
+        wl = WallLayout(
+            height=height,
+            color=color,
+            name=name,
+            initial_direction=initial_direction,
+        )
+        self._root.add(wl)
+        return wl
 
     def floor_slab(
         self,

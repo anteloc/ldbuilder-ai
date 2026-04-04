@@ -1,0 +1,1015 @@
+0 FILE lego_house.ldr
+0 lego_house
+0 Name: lego_house.ldr
+0 Author: lego_builder.py
+0 !LDRAW_ORG Unofficial_Model
+
+0 // floor
+1 7 40.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 40.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 120.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 120.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 200.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 200.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 280.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 260.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // floor
+1 7 360.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 400.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 440.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 480.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 520.0 -8.0 20.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 560.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_0
+1 19 620.0 -24.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > divider_south row_0
+1 15 340.0 -24.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 400.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 60.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 40.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 100.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 140.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 40.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 180.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > divider_south row_0
+1 15 340.0 -24.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 400.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 220.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 40.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 260.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > spine_west row_0
+1 15 80.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 120.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > spine_west row_0
+1 15 160.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 200.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > spine_west row_0
+1 15 220.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // floor
+1 7 280.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // spine_layout > spine_west row_0
+1 15 340.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // floor
+1 7 400.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // east_layout > spine_east row_0
+1 15 400.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // floor
+1 7 440.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // east_layout > spine_east row_0
+1 15 460.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // floor
+1 7 520.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 300.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // east_layout > spine_east row_0
+1 15 580.0 -24.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > divider_north row_0
+1 15 620.0 -24.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // floor
+1 7 40.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 340.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 380.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 40.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 420.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_0
+1 15 620.0 -24.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 40.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 80.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 120.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 200.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 280.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 360.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 440.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 520.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 460.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_west row_0
+1 19 20.0 -24.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // floor
+1 7 80.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 160.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 240.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 320.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 400.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 480.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // floor
+1 7 560.0 -8.0 500.0 1 0 0 0 1 0 0 0 1 3020.dat
+0 // outer_shell > outer_shell_east row_0
+1 19 620.0 -24.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 20.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 80.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 160.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 240.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 380.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 440.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 520.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_0
+1 19 600.0 -24.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // outer_shell > outer_shell_south row_1
+1 19 20.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 80.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 160.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 240.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 400.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 480.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 560.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_1
+1 19 620.0 -48.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_1
+1 15 340.0 -48.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_1
+1 15 340.0 -48.0 220.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_1
+1 15 340.0 -48.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > spine_west row_1
+1 15 60.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_1
+1 15 120.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_1
+1 15 200.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_1
+1 15 340.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_1
+1 15 380.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_1
+1 15 440.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_1
+1 15 580.0 -48.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_1
+1 15 620.0 -48.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_1
+1 15 620.0 -48.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 20.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_west row_1
+1 19 20.0 -48.0 540.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 80.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 160.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 240.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 400.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 480.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 560.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_1
+1 19 620.0 -48.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_east row_1
+1 19 620.0 -48.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // outer_shell > outer_shell_south row_2
+1 19 40.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_west row_2
+1 19 20.0 -72.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 120.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 200.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 260.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 400.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 480.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 560.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_2
+1 19 620.0 -72.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_2
+1 19 620.0 -72.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_2
+1 15 340.0 -72.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_2
+1 19 20.0 -72.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_2
+1 19 620.0 -72.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_2
+1 15 340.0 -72.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_2
+1 19 20.0 -72.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_2
+1 19 620.0 -72.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > spine_west row_2
+1 15 80.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_2
+1 15 160.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_2
+1 15 220.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_2
+1 15 340.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_2
+1 15 400.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_2
+1 15 460.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_2
+1 15 580.0 -72.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > divider_north row_2
+1 15 620.0 -72.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_2
+1 19 20.0 -72.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_2
+1 19 620.0 -72.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_2
+1 15 620.0 -72.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_2
+1 19 20.0 -72.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_2
+1 19 620.0 -72.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 20.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 80.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 160.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 240.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 380.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 440.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 520.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_2
+1 19 600.0 -72.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // outer_shell > outer_shell_south row_3
+1 19 20.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 80.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 160.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 240.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 400.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 480.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 560.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_3
+1 19 620.0 -96.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_3
+1 15 340.0 -96.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 140.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // spine_layout > divider_south row_3
+1 15 340.0 -96.0 220.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_3
+1 15 340.0 -96.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > spine_west row_3
+1 15 60.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_3
+1 15 120.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_3
+1 15 200.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_3
+1 15 340.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_3
+1 15 380.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_3
+1 15 440.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_3
+1 15 580.0 -96.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > divider_north row_3
+1 15 620.0 -96.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_3
+1 15 620.0 -96.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_3
+1 19 20.0 -96.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 500.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 20.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 80.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 160.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 240.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 400.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 480.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 560.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_3
+1 19 620.0 -96.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_east row_3
+1 19 620.0 -96.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // outer_shell > outer_shell_south row_4
+1 19 40.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_west row_4
+1 19 20.0 -120.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 120.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 200.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 260.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 400.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 480.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 560.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_4
+1 19 620.0 -120.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_4
+1 19 620.0 -120.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_4
+1 15 340.0 -120.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_4
+1 19 20.0 -120.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_4
+1 19 620.0 -120.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_4
+1 15 340.0 -120.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_4
+1 19 20.0 -120.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_4
+1 19 620.0 -120.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > spine_west row_4
+1 15 80.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_4
+1 15 160.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_4
+1 15 220.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_4
+1 15 340.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_4
+1 15 400.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_4
+1 15 460.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_4
+1 15 580.0 -120.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > divider_north row_4
+1 15 620.0 -120.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_4
+1 19 20.0 -120.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_4
+1 19 620.0 -120.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_4
+1 15 620.0 -120.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_4
+1 19 20.0 -120.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_4
+1 19 620.0 -120.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 20.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 80.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 160.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 240.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 380.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 440.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 520.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_4
+1 19 600.0 -120.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // outer_shell > outer_shell_south row_5
+1 19 20.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 80.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 160.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 240.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 400.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 480.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 560.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_5
+1 19 620.0 -144.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_5
+1 15 340.0 -144.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 140.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // spine_layout > divider_south row_5
+1 15 340.0 -144.0 220.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_5
+1 15 340.0 -144.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > spine_west row_5
+1 15 60.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_5
+1 15 120.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_5
+1 15 200.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_5
+1 15 340.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_5
+1 15 380.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_5
+1 15 440.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_5
+1 15 580.0 -144.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > divider_north row_5
+1 15 620.0 -144.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_5
+1 15 620.0 -144.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_5
+1 19 20.0 -144.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 500.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 20.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 80.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 160.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 240.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 400.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 480.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 560.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_5
+1 19 620.0 -144.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_east row_5
+1 19 620.0 -144.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 // outer_shell > outer_shell_south row_6
+1 19 40.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 40.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 120.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 200.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 280.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 360.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 440.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 520.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_6
+1 19 600.0 -168.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 40.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_6
+1 15 340.0 -168.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 120.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_6
+1 15 340.0 -168.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 200.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_6
+1 15 340.0 -168.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 280.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 280.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > spine_west row_6
+1 15 80.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_6
+1 15 160.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_6
+1 15 240.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_6
+1 15 320.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_6
+1 15 400.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_6
+1 15 480.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_6
+1 15 560.0 -168.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > divider_north row_6
+1 15 620.0 -168.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 360.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_6
+1 15 620.0 -168.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 440.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_6
+1 15 620.0 -168.0 460.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_6
+1 19 20.0 -168.0 520.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_6
+1 19 620.0 -168.0 520.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 40.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 120.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 200.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 280.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 360.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 440.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 520.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_6
+1 19 600.0 -168.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+
+0 // outer_shell > outer_shell_south row_7
+1 19 20.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 20.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 80.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 160.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 240.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 320.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 400.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 480.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 560.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // outer_shell > outer_shell_south row_7
+1 19 620.0 -192.0 20.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 20.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 80.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > divider_south row_7
+1 15 340.0 -192.0 60.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 80.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_7
+1 15 340.0 -192.0 120.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 160.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 160.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_7
+1 15 340.0 -192.0 200.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 240.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 240.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // spine_layout > divider_south row_7
+1 15 340.0 -192.0 260.0 0 0 -1 0 1 0 1 0 0 3003.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 320.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // spine_layout > spine_west row_7
+1 15 60.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // spine_layout > spine_west row_7
+1 15 120.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_7
+1 15 200.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_7
+1 15 280.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // spine_layout > spine_west row_7
+1 15 340.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_7
+1 15 380.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // east_layout > spine_east row_7
+1 15 440.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_7
+1 15 520.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3001.dat
+0 // east_layout > spine_east row_7
+1 15 580.0 -192.0 300.0 -1 0 0 0 1 0 0 0 -1 3003.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 320.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_7
+1 15 620.0 -192.0 300.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // east_layout > divider_north row_7
+1 15 620.0 -192.0 360.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 400.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 400.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // east_layout > divider_north row_7
+1 15 620.0 -192.0 440.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 480.0 0 0 1 0 1 0 -1 0 0 3001.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 480.0 0 0 -1 0 1 0 1 0 0 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 20.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_west row_7
+1 19 20.0 -192.0 540.0 0 0 1 0 1 0 -1 0 0 3003.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 80.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 160.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 240.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 320.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 400.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 480.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 560.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3001.dat
+0 // outer_shell > outer_shell_north row_7
+1 19 620.0 -192.0 540.0 1 0 0 0 1 0 0 0 1 3003.dat
+0 // outer_shell > outer_shell_east row_7
+1 19 620.0 -192.0 540.0 0 0 -1 0 1 0 1 0 0 3003.dat
+
+0 NOFILE

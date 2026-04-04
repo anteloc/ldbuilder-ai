@@ -38,7 +38,7 @@ class WallLayout:
     The LLM creates a WallLayout to define a set of interconnected walls, joined by corners, then modifies
     individual walls via [wall_name] dict keys.
 
-    The LLM acts in a similar way as if it was controlling a Logo turtle:
+    The LLM acts in a similar way as if it was controlling a Logo turtle walking a continuous path and building walls along the way:
     it starts at the origin, facing an initial direction (e.g. north), builds a wall extending in that
     direction forward, turns to another direction, builds another wall in that direction, and so on.
 
