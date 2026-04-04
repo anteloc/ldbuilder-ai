@@ -55,14 +55,6 @@ def _tile_row(
     Returns:
         List of BrickPlacements for this row.
     """
-    # TODO BUG: When along_x=False and rotation=90, bricks are placed along Z
-    # and advanced by brick.width_studs.  But after 90° rotation, the brick's
-    # local width_studs axis maps to world-Z, and its depth maps to world-X.
-    # The span check `pos + brick.width_studs <= span` is correct for the
-    # tiling direction, but the resulting BrickPlacement stores the brick with
-    # its unrotated width_studs, so the center-origin mismatch from
-    # to_ldraw_line() shifts every roof brick by half a brick along the
-    # tiling axis.  This compounds with the same issue in wall tiling.
     placements: list[BrickPlacement] = []
     pos = 0
     while pos < span:
