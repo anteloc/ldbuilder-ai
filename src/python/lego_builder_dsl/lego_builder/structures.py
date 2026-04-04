@@ -8,10 +8,83 @@ Column: vertical stack of identical bricks.
 
 from __future__ import annotations
 
+from typing import Literal
+
 from .coords import PLATES_PER_BRICK, FACING_TO_ROTATION
 from .parts import PartType, Part, PARTS, find_part, Color
 from .core import BuilderError, BrickPlacement
 from .wall import Wall, WALL_DEPTH_STUDS
+
+# ---------------------------------------------------------------------------
+# WallLayout Class
+# ---------------------------------------------------------------------------
+#
+# A WallLayout is a convenience that creates a series of joined walls forming 
+# an arbitrary shape composed by walls extending east, west, north or south, joined by corners.
+# It handles wall positioning so the LLM never calculates wall coordinates.
+#
+# The WallLayout lives in its own local coordinate space:
+#   - Origin (0, 0, 0) is at the starting point for the first wall.
+#   - X axis represents east-west orientation, while Z axis represents north-south, and Y is up.
+#
+# TODO Wall layout (viewed from above)
+#
+# 
+
+
+class WallLayout:
+    """An arbitrary layout of N walls with named accessors.
+
+    The LLM creates a WallLayout to define a set of interconnected walls, joined by corners, then modifies
+    individual walls via [wall_name] dict keys.
+
+    The LLM acts in a similar way as if it was controlling a Logo turtle: 
+    it starts at the origin, facing an initial direction (e.g. north), builds a wall extending in that 
+    direction forward, turns to another direction, builds another wall in that direction, and so on.
+
+    Attributes:
+        name: Identifier for LDraw comments.
+        height: Walls uniform height in brick rows.
+        color: Default LDraw color for all walls.
+        fill_part: Part catalog key for wall fill bricks.
+        initial_direction: Initial facing direction for the first wall (e.g. "north").
+    """
+    def __init__(
+        self,
+        height: int,
+        color: int = Color.WHITE,
+        fill_part: str = PartType.BRICK_2X4.value,
+        name: str = "",
+        initial_direction: Literal["north", "south", "east", "west"] = "north",
+    ):
+        pass # TODO implement, with attributes and initial state for wall layout (e.g. current position, facing direction, list of walls)
+
+    def turn(self, direction: Literal["north", "south", "east", "west"]):
+        """Turn facing to a new direction for the next wall. 
+        Turning to the opposite direction is **not allowed** (would create overlapping walls)."""
+        pass # TODO implement, with error handling for invalid turns (e.g. opposite direction)
+
+    def build_wall(self, wall_name: str, length: int):
+        """Build a wall with the given name, extending in the current facing direction, 
+        with a given length in studs."""
+        pass # TODO implement, with error handling for duplicate wall names, invalid lengths (e.g. negative)
+
+    def walls(self) -> list[Wall]:
+        """Return all walls in the layout as a list."""
+        return []  # TODO implement
+
+    def to_placements(self, comment_prefix: str = "") -> list[BrickPlacement]:
+        """Generate BrickPlacements for all walls, positioned correctly.
+
+        Transforms each wall's local-space placements into the WallLayout's
+        local coordinate space. The WallLayout itself may later be transformed
+        by a Group or place() call.
+
+        Returns:
+            List of BrickPlacement in WallLayout-local coordinates.
+        """
+        return []  # TODO implement
+
 
 
 # ---------------------------------------------------------------------------
