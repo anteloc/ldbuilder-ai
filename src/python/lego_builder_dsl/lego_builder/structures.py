@@ -29,7 +29,7 @@ from .wall import Wall, WALL_DEPTH_STUDS
 #
 # TODO Wall layout (viewed from above)
 #
-# 
+#
 
 
 class WallLayout:
@@ -38,17 +38,32 @@ class WallLayout:
     The LLM creates a WallLayout to define a set of interconnected walls, joined by corners, then modifies
     individual walls via [wall_name] dict keys.
 
-    The LLM acts in a similar way as if it was controlling a Logo turtle: 
-    it starts at the origin, facing an initial direction (e.g. north), builds a wall extending in that 
+    The LLM acts in a similar way as if it was controlling a Logo turtle:
+    it starts at the origin, facing an initial direction (e.g. north), builds a wall extending in that
     direction forward, turns to another direction, builds another wall in that direction, and so on.
 
     Attributes:
         name: Identifier for LDraw comments.
-        height: Walls uniform height in brick rows.
+        height_bricks: Walls uniform height in brick rows.
+        height_plates: Walls uniform height in plates.
         color: Default LDraw color for all walls.
         fill_part: Part catalog key for wall fill bricks.
-        initial_direction: Initial facing direction for the first wall (e.g. "north").
     """
+
+    # Wall facing is derived from travel direction to match Box coordinate conventions:
+    #   travel east  → south-facing wall  (Box south-wall analog, runs E-W)
+    #   travel west  → north-facing wall  (Box north-wall analog, runs E-W)
+    #   travel north → west-facing wall   (Box west-wall analog,  runs N-S)
+    #   travel south → east-facing wall   (Box east-wall analog,  runs N-S)
+    _TRAVEL_TO_FACING: dict[str, str] = {
+        "east": "south", "west": "north",
+        "north": "west", "south": "east",
+    }
+    _OPPOSITES: dict[str, str] = {
+        "north": "south", "south": "north",
+        "east": "west",   "west": "east",
+    }
+
     def __init__(
         self,
         height: int,
@@ -57,21 +72,69 @@ class WallLayout:
         name: str = "",
         initial_direction: Literal["north", "south", "east", "west"] = "north",
     ):
-        pass # TODO implement, with attributes and initial state for wall layout (e.g. current position, facing direction, list of walls)
+        self.name = name or "layout"
+        self.height_bricks = height
+        self.height_plates = height * PLATES_PER_BRICK
+        self.color = color
+        self.fill_part = fill_part
+
+        self._facing: str = initial_direction
+        self._position: tuple[int, int] = (0, 0)  # (x, z) outer-corner, layout-local
+
+        # Ordered list of (wall, cx_start, cz_start, travel_direction).
+        # cx/cz are the outer-corner coords recorded when build_wall() was called.
+        self._wall_records: list[tuple[Wall, int, int, str]] = []
+        self._wall_map: dict[str, Wall] = {}
 
     def turn(self, direction: Literal["north", "south", "east", "west"]):
-        """Turn facing to a new direction for the next wall. 
+        """Turn facing to a new direction for the next wall.
         Turning to the opposite direction is **not allowed** (would create overlapping walls)."""
-        pass # TODO implement, with error handling for invalid turns (e.g. opposite direction)
+        if direction == self._OPPOSITES[self._facing]:
+            raise BuilderError(
+                f"Cannot turn to opposite direction '{direction}' "
+                f"(currently facing '{self._facing}'): would create overlapping walls."
+            )
+        self._facing = direction
 
     def build_wall(self, wall_name: str, length: int):
-        """Build a wall with the given name, extending in the current facing direction, 
+        """Build a wall with the given name, extending in the current facing direction,
         with a given length in studs."""
-        pass # TODO implement, with error handling for duplicate wall names, invalid lengths (e.g. negative)
+        if wall_name in self._wall_map:
+            raise BuilderError(f"Duplicate wall name '{wall_name}' in layout '{self.name}'")
+        if length < 1:
+            raise BuilderError(f"Wall length must be >= 1, got {length}")
+
+        wall = Wall(
+            length=length,
+            height=self.height_bricks,
+            facing=self._TRAVEL_TO_FACING[self._facing],
+            color=self.color,
+            fill_part=self.fill_part,
+            name=wall_name,
+        )
+
+        cx, cz = self._position
+        self._wall_records.append((wall, cx, cz, self._facing))
+        self._wall_map[wall_name] = wall
+
+        # Advance the turtle to the next outer corner.
+        advances: dict[str, tuple[int, int]] = {
+            "east":  (cx + length, cz),
+            "west":  (cx - length, cz),
+            "north": (cx, cz + length),
+            "south": (cx, cz - length),
+        }
+        self._position = advances[self._facing]
+
+    def __getitem__(self, wall_name: str) -> Wall:
+        """Access a wall by name for modification (add openings, inserts, ledges)."""
+        if wall_name not in self._wall_map:
+            raise KeyError(f"No wall named '{wall_name}' in layout '{self.name}'")
+        return self._wall_map[wall_name]
 
     def walls(self) -> list[Wall]:
         """Return all walls in the layout as a list."""
-        return []  # TODO implement
+        return [record[0] for record in self._wall_records]
 
     def to_placements(self, comment_prefix: str = "") -> list[BrickPlacement]:
         """Generate BrickPlacements for all walls, positioned correctly.
@@ -80,10 +143,41 @@ class WallLayout:
         local coordinate space. The WallLayout itself may later be transformed
         by a Group or place() call.
 
+        Coordinate transforms mirror Box conventions exactly (see Box.to_placements):
+          east travel  → south wall: x=cx+p.x,                   z=cz+p.z,                rot=180
+          west travel  → north wall: x=cx-p.x-part.width,        z=cz-WALL_DEPTH+p.z,     rot=0
+          north travel → west wall:  x=cx+p.z,                   z=cz+p.x,                rot=270
+          south travel → east wall:  x=cx-WALL_DEPTH+p.z,        z=cz-p.x-part.width,     rot=90
+
         Returns:
             List of BrickPlacement in WallLayout-local coordinates.
         """
-        return []  # TODO implement
+        prefix = f"{comment_prefix}{self.name} > "
+        result = []
+
+        for wall, cx, cz, travel_dir in self._wall_records:
+            _facing = self._TRAVEL_TO_FACING[travel_dir]
+            rotation = FACING_TO_ROTATION[_facing]
+
+            for p in wall.to_placements(prefix):
+                if travel_dir == "east":
+                    x = cx + p.x
+                    z = cz + p.z
+                elif travel_dir == "west":
+                    x = cx - p.x - p.part.width_studs
+                    z = cz - WALL_DEPTH_STUDS + p.z
+                elif travel_dir == "north":
+                    x = cx + p.z
+                    z = cz + p.x
+                else:  # south
+                    x = cx - WALL_DEPTH_STUDS + p.z
+                    z = cz - p.x - p.part.width_studs
+
+                result.append(BrickPlacement(
+                    p.part, x, p.y, z, rotation, p.color, p.comment
+                ))
+
+        return result
 
 
 

@@ -57,6 +57,7 @@ from .wall import (
 
 # Structures
 from .structures import (
+    WallLayout,
     Box,
     FloorSlab,
     Column,
