@@ -60,6 +60,7 @@ class Scene:
         depth: int,
         height: int,
         color: int = Color.WHITE,
+        fill_part: PartType = PartType.BRICK_2X4,
         name: str = "",
     ) -> Box:
         """Create a Box and add it to the scene.
@@ -74,7 +75,7 @@ class Scene:
         Returns:
             The created Box (already added to scene).
         """
-        b = Box(width=width, depth=depth, height=height, color=color, name=name)
+        b = Box(width=width, depth=depth, height=height, color=color, fill_part=fill_part.value, name=name)
         self._root.add(b)
         return b
 
@@ -84,10 +85,11 @@ class Scene:
         height: int,
         facing: str,
         color: int = Color.WHITE,
+        fill_part: PartType = PartType.BRICK_2X4,
         name: str = "",
     ) -> Wall:
         """Create a standalone Wall and add it to the scene."""
-        w = Wall(length=length, height=height, facing=facing, color=color, name=name)
+        w = Wall(length=length, height=height, facing=facing, color=color, fill_part=fill_part.value, name=name)
         self._root.add(w)
         return w
     
@@ -95,6 +97,7 @@ class Scene:
         self,
         height: int,
         color: int = Color.WHITE,
+        fill_part: PartType = PartType.BRICK_2X4,
         name: str = "",
         initial_direction: Literal["north", "south", "east", "west"] = "east",
     ) -> WallLayout:
@@ -103,6 +106,7 @@ class Scene:
             name: Identifier for LDraw comments.
             height: Walls uniform height in brick rows.
             color: Default LDraw color for all walls.
+            fill_part: PartType used to fill the walls (e.g. BRICK_2X4).
             initial_direction: Initial direction for the first wall.
         Returns:
             The created WallLayout (already added to scene), walls can be added and concatenated along a continuous path
@@ -112,6 +116,7 @@ class Scene:
         wl = WallLayout(
             height=height,
             color=color,
+            fill_part=fill_part.value,
             name=name,
             initial_direction=initial_direction,
         )
@@ -123,10 +128,11 @@ class Scene:
         width: int,
         depth: int,
         color: int = Color.LIGHT_GREY,
+        fill_part: PartType = PartType.PLATE_2X4,
         name: str = "",
     ) -> FloorSlab:
         """Create a FloorSlab and add it to the scene."""
-        f = FloorSlab(width=width, depth=depth, color=color, name=name)
+        f = FloorSlab(width=width, depth=depth, color=color, fill_part=fill_part.value, name=name)
         self._root.add(f)
         return f
 
